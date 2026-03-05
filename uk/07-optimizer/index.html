@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="7-byom">Розділ 7: Оптимізатор (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
+<h1 id="7-byom">Розділ 7: Оптимізатор (<abbr title="Принеси свою модель — система Cat-Scan для підключення власної зовнішньої моделі оцінювання для формування пропозицій з оптимізації.">BYOM</abbr>)<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
 <p><em>Аудиторія: медіабаєри, інженери з оптимізації</em></p>
-<p>Оптимізатор — це автоматизований двигун оптимізації Cat-Scan. «<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>» означає
+<p>Оптимізатор — це автоматизований двигун оптимізації Cat-Scan. «<abbr title="Принеси свою модель — система Cat-Scan для підключення власної зовнішньої моделі оцінювання для формування пропозицій з оптимізації.">BYOM</abbr>» означає
 Bring Your Own Model: ви реєструєте зовнішню точку скорингу, і Cat-Scan
 використовує її для генерації пропозицій змін конфігурації.</p>
 <h2 id="_1">Як це працює<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1624,20 +1624,20 @@ segments       config         reject         updated
 <h2 id="_7">Економіка<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>Оптимізатор також відстежує економічні аспекти оптимізації:</p>
 <ul>
-<li><strong>Ефективний <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: скільки ви фактично платите за тисячу показів з
+<li><strong>Ефективний <abbr title="Вартість за тисячу — ціна за 1 000 рекламних показів.">CPM</abbr></strong>: скільки ви фактично платите за тисячу показів з
   урахуванням витрат.</li>
 <li><strong>Базова вартість хостингу</strong>: вартість інфраструктури вашого бідера,
   налаштована в параметрах оптимізатора. Використовується для розрахунку,
-  чи компенсують заощадження від зниження <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> витрати на хостинг.</li>
-<li><strong>Зведення ефективності</strong>: загальне співвідношення корисного <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> до
-  загального <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>.</li>
+  чи компенсують заощадження від зниження <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr> витрати на хостинг.</li>
+<li><strong>Зведення ефективності</strong>: загальне співвідношення корисного <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr> до
+  загального <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr>.</li>
 </ul>
 <p>Налаштуйте вартість хостингу в <code>/settings/system</code> &gt; Налаштування оптимізатора.</p>
 <h2 id="_8">Перегляд пропозицій<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>Кожна пропозиція показує:
 - <strong>Оцінки сегментів</strong>, що лежать в основі рекомендації
 - <strong>Конкретні зміни</strong> полів претаргетингу (додавання, видалення, оновлення)
-- <strong>Прогнозований вплив</strong> на <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, співвідношення витрат і бюджет</p>
+- <strong>Прогнозований вплив</strong> на <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr>, співвідношення витрат і бюджет</p>
 <p>Ви можете:
 - <strong>Схвалити</strong>: позначає пропозицію як прийняту
 - <strong>Застосувати</strong>: надсилає схвалені зміни до Google

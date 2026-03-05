@@ -1503,29 +1503,29 @@
 
 <h1 id="0-cat-scan">الفصل 0: ما هو Cat-Scan؟<a class="headerlink" href="#0-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>الجمهور: الجميع</em></p>
-<p>Cat-Scan هو منصة لتحسين <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> مخصصة لمشتري Google Authorized Buyers. يمنحك
+<p>Cat-Scan هو منصة لتحسين <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> مخصصة لمشتري Google Authorized Buyers. يمنحك
 رؤية واضحة حول كيفية استخدام (وهدر) حصة طلبات المزايدة في الثانية الخاصة
 بمزايدك، ويوفر لك الأدوات اللازمة لتحسينها.</p>
 <p><img alt="مسار QPS" src="../../assets/qps-funnel.svg" /></p>
 <h2 id="_1">المشكلة الجوهرية<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>عندما تدير مقعدًا على منصة Google Authorized Buyers، ترسل Google إلى
 نقطة نهاية المزايد الخاص بك تدفقًا من طلبات المزايدة. أنت تدفع ثمن هذا التدفق:
-فهو يستهلك حصة <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> المخصصة لك، وموارد الحوسبة الخاصة بالمزايد، وعرض النطاق
+فهو يستهلك حصة <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> المخصصة لك، وموارد الحوسبة الخاصة بالمزايد، وعرض النطاق
 الترددي لشبكتك.</p>
 <p>لكن ليس كل طلب مزايدة مفيدًا. كثير منها يصل لمخزون إعلاني لن تشتريه أبدًا:
 بلدان لا تستهدفها، ناشرون لم تسمع بهم من قبل، أحجام إعلانات لا تملك تصميمات
 إبداعية لها. ومع ذلك يتعين على المزايد استقبال كل طلب ورفضه.</p>
-<p>في الإعداد النموذجي، <strong>أكثر من نصف حصة <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخاصة بك يُهدر.</strong></p>
+<p>في الإعداد النموذجي، <strong>أكثر من نصف حصة <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الخاصة بك يُهدر.</strong></p>
 <h2 id="cat-scan">ما الذي يفعله Cat-Scan حيال ذلك<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
 <p>يعمل Cat-Scan إلى جانب المزايد الخاص بك ويوفر ثلاثة أشياء:</p>
 <h3 id="1">1. الرؤية<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>يعيد بناء تقارير الأداء من ملفات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> المُصدَّرة من Google (نظرًا لعدم وجود
-API للتقارير) ويعرض لك مسار <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> الكامل: من <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخام مرورًا بالمزايدات،
+<p>يعيد بناء تقارير الأداء من ملفات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> المُصدَّرة من Google (نظرًا لعدم وجود
+API للتقارير) ويعرض لك مسار <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr> الكامل: من <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الخام مرورًا بالمزايدات،
 والفوز، ومرات الظهور، والنقرات، والإنفاق. ويقسّم ذلك حسب الموقع الجغرافي،
 والناشر، وحجم الإعلان، والتصميم الإبداعي، وإعدادات الاستهداف المسبق.</p>
 <p>يتيح لك ذلك الإجابة عن أسئلة مثل:
-- أي البلدان تستهلك <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> دون تحقيق أي فوز؟
-- أي الناشرين لديهم <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> مرتفع لكن بإنفاق صفري؟
+- أي البلدان تستهلك <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> دون تحقيق أي فوز؟
+- أي الناشرين لديهم <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> مرتفع لكن بإنفاق صفري؟
 - أي أحجام الإعلانات تتلقى زيارات لكن بدون تصميم إبداعي مطابق؟
 - أي إعدادات الاستهداف المسبق تؤدي بشكل جيد مقابل تلك التي تؤدي بشكل سيئ؟</p>
 <h3 id="2">2. التحكم<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
@@ -1556,7 +1556,7 @@ API للتقارير) ويعرض لك مسار <abbr title="Real-Time Bidding �
 <td>حساب مشترٍ على Google Authorized Buyers، يُعرَّف بمعرّف <code>buyer_account_id</code>. يمكن للمؤسسة الواحدة امتلاك عدة مقاعد.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr></strong></td>
 <td>الاستعلامات في الثانية: الحد الأقصى لمعدل طلبات المزايدة التي تطلب من Google إرسالها إلى المزايد الخاص بك. تخنق Google الحجم الفعلي بناءً على مستوى حسابك، لذا تريد استخدام كل طلب بكفاءة.</td>
 </tr>
 <tr>
@@ -1564,16 +1564,16 @@ API للتقارير) ويعرض لك مسار <abbr title="Real-Time Bidding �
 <td>مرشحات من جانب الخادم تُخبر Google بطلبات المزايدة التي يجب إرسالها إليك. تتحكم في: المناطق الجغرافية، أحجام الإعلانات، التنسيقات، المنصات، أنواع التصميمات الإبداعية. تحصل على 10 لكل مقعد.</td>
 </tr>
 <tr>
-<td><strong>مسار <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>مسار <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr></strong></td>
 <td>التقدم من طلب المزايدة المستلَم، إلى تقديم العرض، إلى الفوز بالمزاد، إلى عرض الظهور، إلى النقرة، إلى التحويل. كل خطوة فيها انخفاض؛ Cat-Scan يوضح لك أين يحدث ذلك.</td>
 </tr>
 <tr>
 <td><strong>الهدر</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> المستهلك بواسطة طلبات مزايدة لا يستطيع أو لا يريد المزايد الخاص بك استخدامها. الهدف هو تقليل الهدر دون فقدان الزيارات القيّمة.</td>
+<td><abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> المستهلك بواسطة طلبات مزايدة لا يستطيع أو لا يريد المزايد الخاص بك استخدامها. الهدف هو تقليل الهدر دون فقدان الزيارات القيّمة.</td>
 </tr>
 <tr>
 <td><strong>الإعداد</strong></td>
-<td>اختصار لإعداد الاستهداف المسبق. لكل إعداد حالة (نشط/معلّق)، وحد أقصى لـ <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>، وقواعد تضمين/استبعاد للمناطق الجغرافية والأحجام والتنسيقات والمنصات.</td>
+<td>اختصار لإعداد الاستهداف المسبق. لكل إعداد حالة (نشط/معلّق)، وحد أقصى لـ <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>، وقواعد تضمين/استبعاد للمناطق الجغرافية والأحجام والتنسيقات والمنصات.</td>
 </tr>
 </tbody>
 </table>

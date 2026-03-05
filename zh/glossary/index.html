@@ -1306,29 +1306,29 @@
 <td>Postgres 中的 <code>buyer_account_id</code>。存储在 <code>seats</code> 表。通过 <code>GET /seats</code> 同步。</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr></strong></td>
 <td>每秒查询数，即你要求 Google 发送的最大竞价请求速率。Google 会根据账户等级节流实际量。</td>
-<td>每个预定向配置的上限设置。实际入站速率通过 <code>rtb_daily</code> 中的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗指标监控。</td>
+<td>每个预定向配置的上限设置。实际入站速率通过 <code>rtb_daily</code> 中的 <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 漏斗指标监控。</td>
 </tr>
 <tr>
 <td><strong>浪费</strong></td>
-<td>被你的竞价器拒绝的出价请求所消耗的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>，包括错误的地区、错误的尺寸、没有匹配的素材。花了钱却什么都没得到。</td>
+<td>被你的竞价器拒绝的出价请求所消耗的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>，包括错误的地区、错误的尺寸、没有匹配的素材。花了钱却什么都没得到。</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>。从 <code>rtb_daily</code> 聚合计算。在漏斗 API 中可见。</td>
 </tr>
 <tr>
 <td><strong>预定向配置</strong></td>
 <td>控制哪些出价请求到达你的竞价器的规则。每个席位最多 10 个。控制地区、尺寸、格式、平台、发布商。</td>
-<td>从 Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API 同步的可变实体。存储在 <code>pretargeting_configs</code>。通过 <code>/settings/pretargeting</code> 管理。快照支持回滚。</td>
+<td>从 Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> API 同步的可变实体。存储在 <code>pretargeting_configs</code>。通过 <code>/settings/pretargeting</code> 管理。快照支持回滚。</td>
 </tr>
 <tr>
 <td><strong>漏斗</strong></td>
-<td>从出价请求到花费的递进：<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; 出价 -&gt; 胜出 -&gt; 展示 -&gt; 点击 -&gt; 花费。每一步都有衰减。</td>
+<td>从出价请求到花费的递进：<abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> -&gt; 出价 -&gt; 胜出 -&gt; 展示 -&gt; 点击 -&gt; 花费。每一步都有衰减。</td>
 <td>从 <code>rtb_daily</code> 指标计算。由 <code>GET /analytics/rtb-funnel</code> 提供。前端缓存 30 分钟。</td>
 </tr>
 <tr>
 <td><strong>素材</strong></td>
 <td>广告资产：图片、视频、HTML 或原生。有格式、尺寸、目标 URL 和效果历史。</td>
-<td><code>creatives</code> 表中的行。缩略图在 blob 存储中。从 Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API 同步。效果数据来自 <code>rtb_daily</code> 联合查询。</td>
+<td><code>creatives</code> 表中的行。缩略图在 blob 存储中。从 Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> API 同步。效果数据来自 <code>rtb_daily</code> 联合查询。</td>
 </tr>
 <tr>
 <td><strong>活动</strong></td>
@@ -1337,7 +1337,7 @@
 </tr>
 <tr>
 <td><strong>配置卡</strong></td>
-<td>显示预定向配置状态、最大 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>、地区、尺寸、格式和平台的界面面板。</td>
+<td>显示预定向配置状态、最大 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>、地区、尺寸、格式和平台的界面面板。</td>
 <td><code>PretargetingConfigCard</code> React 组件。数据来自 <code>GET /settings/pretargeting-configs</code>。</td>
 </tr>
 <tr>
@@ -1347,16 +1347,16 @@
 </tr>
 <tr>
 <td><strong>导入</strong></td>
-<td>将 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 效果数据导入 Cat-Scan，通过手动上传或 Gmail 自动导入。</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 解析、验证、去重（通过 <code>row_hash</code> 唯一约束），插入目标表。大于 5MB 的文件分块上传。</td>
+<td>将 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 效果数据导入 Cat-Scan，通过手动上传或 Gmail 自动导入。</td>
+<td><abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 解析、验证、去重（通过 <code>row_hash</code> 唯一约束），插入目标表。大于 5MB 的文件分块上传。</td>
 </tr>
 <tr>
 <td><strong>回滚</strong></td>
 <td>将预定向配置变更恢复到之前状态。先预览试运行，然后确认。</td>
-<td>快照恢复：读取 <code>pretargeting_snapshots</code>，将差异应用到 Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API，记录新快照。<code>POST /snapshots/rollback</code>。</td>
+<td>快照恢复：读取 <code>pretargeting_snapshots</code>，将差异应用到 Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> API，记录新快照。<code>POST /snapshots/rollback</code>。</td>
 </tr>
 <tr>
-<td><strong>优化器 / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>优化器 / <abbr title="自带模型 — Cat-Scan 的系统，用于接入您自己的外部评分模型以生成优化建议。">BYOM</abbr></strong></td>
 <td>自动评分分段并提出配置变更建议的系统。使用你自己的外部模型。</td>
 <td>评分端点通过 HTTP POST 调用。提案存储在 <code>optimizer_proposals</code>。生命周期：评分 -&gt; 提案 -&gt; 批准 -&gt; 应用。</td>
 </tr>
@@ -1366,14 +1366,14 @@
 <td>评分和提案 API 的 <code>canary_profile</code> 参数。影响置信度阈值和变更幅度限制。</td>
 </tr>
 <tr>
-<td><strong>有效 <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong></td>
+<td><strong>有效 <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr></strong></td>
 <td>你实际为每千次展示支付的费用，包含浪费和基础设施成本。</td>
 <td>在 <code>OptimizerEconomicsService</code> 中计算。结合 <code>rtb_daily</code> 的花费数据和配置的托管成本。</td>
 </tr>
 <tr>
 <td><strong>转化</strong></td>
 <td>展示后发生的有价值用户行为（购买、注册）。反馈回来以优化定向。</td>
-<td>通过像素（<code>GET /conversions/pixel</code>）或 Webhook（<code>POST /conversions/webhook</code>）摄入的事件。存储在转化表中。Webhook 使用 <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 验证。</td>
+<td>通过像素（<code>GET /conversions/pixel</code>）或 Webhook（<code>POST /conversions/webhook</code>）摄入的事件。存储在转化表中。Webhook 使用 <abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 验证。</td>
 </tr>
 <tr>
 <td><strong>胜出率</strong></td>
@@ -1381,14 +1381,14 @@
 <td><code>rtb_daily</code> 中的 <code>auction_wins / bids_placed</code>。</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="点击率 — 点击次数除以展示次数，以百分比表示。">CTR</abbr></strong></td>
 <td>点击 / 展示。衡量你的素材的吸引力。</td>
 <td><code>rtb_daily</code> 中的 <code>clicks / impressions</code>。</td>
 </tr>
 <tr>
 <td><strong>运行时健康门控</strong></td>
 <td>（非买方术语）</td>
-<td><code>v1-runtime-health-strict.yml</code> CI 工作流。运行端到端检查：API 健康、数据健康、转化、优化器、<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> SLO。每项检查返回 PASS/FAIL/BLOCKED。</td>
+<td><code>v1-runtime-health-strict.yml</code> CI 工作流。运行端到端检查：API 健康、数据健康、转化、优化器、<abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> SLO。每项检查返回 PASS/FAIL/BLOCKED。</td>
 </tr>
 <tr>
 <td><strong>合约检查</strong></td>

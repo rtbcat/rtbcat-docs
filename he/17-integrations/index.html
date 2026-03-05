@@ -1479,7 +1479,7 @@
 <p><strong>מה זה מאפשר:</strong>
 - גילוי מושבים (<code>discoverSeats</code>)
 - סנכרון תצורת Pretargeting (<code>syncPretargetingConfigs</code>)
-- סנכרון נקודות קצה <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (<code>syncRTBEndpoints</code>)
+- סנכרון נקודות קצה <abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr> (<code>syncRTBEndpoints</code>)
 - איסוף קריאייטיבים (<code>collectCreatives</code>)</p>
 <p><strong>סטטוס פרויקט:</strong>
 בדקו את תקינות פרויקט ה-GCP ב-<code>/settings/accounts</code> או דרך
@@ -1503,10 +1503,10 @@
 <tr>
 <td><strong>סנכרון Pretargeting</strong></td>
 <td>מצב תצורת Pretargeting נוכחי מ-Google</td>
-<td>לאחר שינויים חיצוניים בממשק <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>לאחר שינויים חיצוניים בממשק <abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>סנכרון נקודות קצה <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>סנכרון נקודות קצה <abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr></strong></td>
 <td>כתובות URL וסטטוס של נקודות קצה של מגיש הצעות</td>
 <td>הקמה ראשונית, לאחר שינויים בנקודות קצה</td>
 </tr>
@@ -1518,11 +1518,11 @@
 </tbody>
 </table>
 <h2 id="gmail">אינטגרציית Gmail<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers שולחת דוחות <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> יומיים בדואר אלקטרוני. Cat-Scan יכולה לקלוט אותם באופן אוטומטי.</p>
+<p>Google Authorized Buyers שולחת דוחות <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> יומיים בדואר אלקטרוני. Cat-Scan יכולה לקלוט אותם באופן אוטומטי.</p>
 <p><strong>הקמה:</strong>
 1. עברו ל-<code>/settings/accounts</code> &gt; לשונית Gmail Reports.
-2. הרשו ל-Cat-Scan לגשת לחשבון Gmail שמקבל דוחות <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
-3. Cat-Scan תסרוק הודעות דוח חדשות ותייבא קבצי <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> מצורפים.</p>
+2. הרשו ל-Cat-Scan לגשת לחשבון Gmail שמקבל דוחות <abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr>.
+3. Cat-Scan תסרוק הודעות דוח חדשות ותייבא קבצי <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> מצורפים.</p>
 <p><strong>ניטור:</strong>
 - <code>GET /gmail/status</code>: מצב נוכחי, מספר הודעות שלא נקראו, סיבה אחרונה
 - <code>POST /gmail/import/start</code>: הפעלה ידנית של מחזור ייבוא
@@ -1571,7 +1571,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>אימות <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>אימות <abbr title="קוד אימות הודעות מבוסס גיבוב — חתימה קריפטוגרפית המשמשת לאימות מטעני webhook.">HMAC</abbr></strong></td>
 <td>מבטיח שהבקשות אותנטיות (חתומות עם סוד משותף)</td>
 <td>סוד משותף מוגדר בהגדרות webhook</td>
 </tr>
@@ -1588,7 +1588,7 @@
 </tbody>
 </table>
 <p><strong>ניטור:</strong>
-- <code>GET /conversions/security/status</code>: סטטוס <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, סטטוס הגבלת קצב, סטטוס רעננות
+- <code>GET /conversions/security/status</code>: סטטוס <abbr title="קוד אימות הודעות מבוסס גיבוב — חתימה קריפטוגרפית המשמשת לאימות מטעני webhook.">HMAC</abbr>, סטטוס הגבלת קצב, סטטוס רעננות
 - <code>GET /conversions/health</code>: תקינות קליטה וצבירה כוללת
 - <code>GET /conversions/readiness</code>: האם נתוני ההמרות עדכניים מספיק כדי לסמוך עליהם</p>
 <h2 id="_1">קישורים<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>

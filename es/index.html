@@ -1560,12 +1560,12 @@
 miles de consultas salen del exchange de Authorized Buyers hacia su endpoint. Su bidder
 evalúa cada una, decide si pujar y responde, todo en cuestión de milisegundos.</p>
 <p>Esto es lo que la mayoría pasa por alto: <strong>la gran mayoría de esa señal es
-ruido.</strong> Un seat típico que ingiere 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> podría encontrar que 30,000 de esas
+ruido.</strong> Un seat típico que ingiere 50,000 <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> podría encontrar que 30,000 de esas
 consultas son para inventario que el comprador de medios nunca iba a adquirir: geografías
 incorrectas, dominios de editores irrelevantes, tamaños de anuncios sin creatividad
 compatible. Su bidder aún tiene que recibir, analizar y rechazar cada una. Eso cuesta
 ancho de banda, cómputo y dinero.</p>
-<p>El diagrama de arriba lo muestra como lluvia. El <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> de Google es la boquilla en la
+<p>El diagrama de arriba lo muestra como lluvia. El <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> de Google es la boquilla en la
 parte superior; las gotas se dispersan por un área amplia. Su bidder es el pequeño balde
 en la parte inferior. Todo lo que no cae en el balde (las gotas que caen a izquierda y
 derecha) es desperdicio. Usted pagó por ello. No obtuvo nada a cambio.</p>
@@ -1576,16 +1576,16 @@ en la fuente, usando las configuraciones de pretargeting que Google proporciona.
 <h3 id="por-que-esto-es-mas-dificil-de-lo-que-parece">Por qué esto es más difícil de lo que parece<a class="headerlink" href="#por-que-esto-es-mas-dificil-de-lo-que-parece" title="Permanent link">&para;</a></h3>
 <p>Google Authorized Buyers le da solo <strong>10 configuraciones de pretargeting por seat</strong>, más
 regiones geográficas amplias (este de EE. UU., oeste de EE. UU., Europa, Asia). No hay
-una API de informes. Todos los datos de rendimiento provienen de exportaciones <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> que
-llegan por correo electrónico. La interfaz de pretargeting de <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> en sí es funcional pero
+una API de informes. Todos los datos de rendimiento provienen de exportaciones <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> que
+llegan por correo electrónico. La interfaz de pretargeting de <abbr title="Authorized Buyers — la plataforma de publicidad programática de Google (anteriormente AdX / DoubleClick Ad Exchange).">AB</abbr> en sí es funcional pero
 dificulta ver el panorama completo entre configuraciones, o deshacer un cambio que salió
 mal.</p>
 <p>Cat-Scan cierra estas brechas:</p>
 <ul>
-<li><strong>Reconstruye los informes a partir de exportaciones <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></strong> (carga manual o ingesta
+<li><strong>Reconstruye los informes a partir de exportaciones <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr></strong> (carga manual o ingesta
   automática de Gmail), deduplicando en la importación para que el reprocesamiento nunca
   cuente dos veces.</li>
-<li>Muestra el <strong>embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> completo</strong>, desde el <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> sin procesar pasando por pujas,
+<li>Muestra el <strong>embudo <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr> completo</strong>, desde el <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> sin procesar pasando por pujas,
   victorias, impresiones, clics y gasto, desglosado por cualquier dimensión: geografía,
   editor, tamaño de anuncio, creatividad, configuración.</li>
 <li>Proporciona <strong>gestión segura de pretargeting</strong> con historial, cambios por etapas,
@@ -1598,7 +1598,7 @@ mal.</p>
 <p>Este manual tiene dos pistas porque Cat-Scan sirve a dos roles muy diferentes:</p>
 <p><strong>Compradores de medios y gestores de campañas</strong> usan Cat-Scan para entender a dónde va
 su presupuesto, encontrar desperdicio, gestionar creatividades, ajustar pretargeting y
-aprobar propuestas de optimización. Piensan en <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>, tasas de ganancia y <abbr title="Return On Ad Spend — revenue generated per dollar spent on advertising.">ROAS</abbr>. Sus
+aprobar propuestas de optimización. Piensan en <abbr title="Coste por mil — el precio pagado por cada 1.000 impresiones publicitarias.">CPM</abbr>, tasas de ganancia y <abbr title="Retorno de la inversión publicitaria — ingresos generados por cada dólar gastado en publicidad.">ROAS</abbr>. Sus
 capítulos se centran en lo que muestra la interfaz, qué significan los números y qué
 acciones tomar.</p>
 <p><strong>DevOps e ingenieros de plataforma</strong> usan Cat-Scan para desplegar, monitorear y
@@ -1630,7 +1630,7 @@ correspondan a su rol.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Capítulo 0: ¿Qué es Cat-Scan?</a>
   Qué hace la plataforma, para quién es y los conceptos clave que necesita antes de
-  cualquier otra cosa: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, el embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  cualquier otra cosa: seats, <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr>, pretargeting, el embudo <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Capítulo 1: Inicio de Sesión</a>
@@ -1647,16 +1647,16 @@ correspondan a su rol.</p>
 <p>Para compradores de medios, gestores de campañas e ingenieros de optimización.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Capítulo 3: Comprendiendo Su Embudo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>
+<p><a href="03-qps-funnel/">Capítulo 3: Comprendiendo Su Embudo de <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></a>
   La página principal. Cómo leer el desglose del embudo: impresiones, pujas, victorias,
-  gasto, tasa de ganancia, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Qué significa "desperdicio" en términos concretos.
+  gasto, tasa de ganancia, <abbr title="Tasa de clics — clics divididos entre impresiones, expresado como porcentaje.">CTR</abbr>, <abbr title="Coste por mil — el precio pagado por cada 1.000 impresiones publicitarias.">CPM</abbr>. Qué significa "desperdicio" en términos concretos.
   Tarjetas de configuración y qué controlan sus campos.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">Capítulo 4: Análisis del Desperdicio por Dimensión</a>
   Las tres vistas de análisis de desperdicio y cuándo usar cada una:</p>
 </li>
-<li><strong>Geográfico</strong> (<code>/qps/geo</code>): qué países y ciudades consumen <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> sin
+<li><strong>Geográfico</strong> (<code>/qps/geo</code>): qué países y ciudades consumen <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> sin
     convertir.</li>
 <li><strong>Editor</strong> (<code>/qps/publisher</code>): qué dominios y aplicaciones tienen bajo
     rendimiento.</li>
@@ -1675,27 +1675,27 @@ correspondan a su rol.</p>
 <li>
 <p><a href="06-pretargeting/">Capítulo 6: Configuración de Pretargeting</a>
   Qué controla una configuración de pretargeting (geografías, tamaños, formatos,
-  plataformas, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> máximo). Cómo leer una tarjeta de configuración. Aplicar cambios con
+  plataformas, <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> máximo). Cómo leer una tarjeta de configuración. Aplicar cambios con
   vista previa de simulación. La línea de tiempo del historial de cambios (<code>/history</code>).
   Reversión: cómo funciona, por qué existe y cuándo usarla.</p>
 </li>
 <li>
-<p><a href="07-optimizer/">Capítulo 7: El Optimizador (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>
+<p><a href="07-optimizer/">Capítulo 7: El Optimizador (<abbr title="Trae tu propio modelo — el sistema de Cat-Scan para conectar tu propio modelo de puntuación externo para generar propuestas de optimización.">BYOM</abbr>)</a>
   Traiga Su Propio Modelo: registrar un endpoint de puntuación externo, validarlo,
   activarlo. El ciclo de vida puntuar-proponer-aprobar-aplicar. Presets de workflow:
-  seguro, equilibrado, agresivo. Economía: <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> efectivo, línea base de costo de
+  seguro, equilibrado, agresivo. Economía: <abbr title="Coste por mil — el precio pagado por cada 1.000 impresiones publicitarias.">CPM</abbr> efectivo, línea base de costo de
   alojamiento, resumen de eficiencia. Cómo luce una propuesta y cómo evaluarla.</p>
 </li>
 <li>
 <p><a href="08-conversions/">Capítulo 8: Conversiones y Atribución</a>
   Conectar una fuente de conversiones. Integración de píxel. Configuración de webhooks:
-  firmas <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, secretos compartidos, limitación de tasa. Verificaciones de preparación.
+  firmas <abbr title="Código de autenticación de mensajes basado en hash — una firma criptográfica utilizada para verificar las cargas de webhook.">HMAC</abbr>, secretos compartidos, limitación de tasa. Verificaciones de preparación.
   Estadísticas de ingesta. Qué significa "salud de conversiones" y cómo leer la página
   de estado de seguridad.</p>
 </li>
 <li>
 <p><a href="09-data-import/">Capítulo 9: Importación de Datos</a>
-  Cómo entran los datos a Cat-Scan y por qué esto importa. Carga manual de <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+  Cómo entran los datos a Cat-Scan y por qué esto importa. Carga manual de <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr>
   (<code>/import</code>): arrastrar y soltar, mapeo de columnas, validación, carga fragmentada para
   archivos grandes. Importación automática de Gmail: cómo funciona, cómo verificar el
   estado, qué sucede cuando falla. La cuadrícula de frescura de datos: qué significa
@@ -1779,10 +1779,10 @@ correspondan a su rol.</p>
 <p><a href="17-integrations/">Capítulo 17: Integraciones</a>
   Cuentas de servicio GCP y conexión de proyectos. API de Google Authorized Buyers:
   descubrimiento de seats, sincronización de configuraciones de pretargeting,
-  sincronización de endpoints <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>. Integración de Gmail: OAuth2 para ingesta automática
+  sincronización de endpoints <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr>. Integración de Gmail: OAuth2 para ingesta automática
   de informes. Proveedores de IA de lenguaje: Gemini, Claude, Grok (para detección de
   idioma de creatividades y alertas de discrepancia). Webhooks de conversiones: registro
-  de endpoints, verificación <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, limitación de tasa, monitoreo de frescura.</p>
+  de endpoints, verificación <abbr title="Código de autenticación de mensajes basado en hash — una firma criptográfica utilizada para verificar las cargas de webhook.">HMAC</abbr>, limitación de tasa, monitoreo de frescura.</p>
 </li>
 </ul>
 <h3 id="parte-iii-referencia">Parte III: Referencia<a class="headerlink" href="#parte-iii-referencia" title="Permanent link">&para;</a></h3>
@@ -1792,7 +1792,7 @@ correspondan a su rol.</p>
 <p><a href="glossary/">Glosario</a>
   Cada término en dos perspectivas. Columna del comprador de medios: "pretargeting" es
   "las reglas que controlan qué solicitudes de puja llegan a su bidder". Columna DevOps:
-  "pretargeting" es "una entidad mutable sincronizada desde la API de <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>, almacenada en
+  "pretargeting" es "una entidad mutable sincronizada desde la API de <abbr title="Authorized Buyers — la plataforma de publicidad programática de Google (anteriormente AdX / DoubleClick Ad Exchange).">AB</abbr>, almacenada en
   <code>pretargeting_configs</code>, expuesta vía <code>/settings/pretargeting</code>". Ambos necesitan la
   misma palabra; ninguno usa la definición del otro.</p>
 </li>

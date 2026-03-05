@@ -1521,7 +1521,7 @@ y te ayudan a evaluar el rendimiento real de la campaña.</p>
 <ul>
 <li>Más fiable que los pixels (sin bloqueadores de anuncios, sin dependencias del lado del cliente).</li>
 <li>Requiere integración del lado del servidor.</li>
-<li>Soporta verificación de firma <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> para mayor seguridad.</li>
+<li>Soporta verificación de firma <abbr title="Código de autenticación de mensajes basado en hash — una firma criptográfica utilizada para verificar las cargas de webhook.">HMAC</abbr> para mayor seguridad.</li>
 </ul>
 <h2 id="seguridad-de-webhooks">Seguridad de webhooks<a class="headerlink" href="#seguridad-de-webhooks" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan proporciona seguridad por capas para webhooks:</p>
@@ -1534,7 +1534,7 @@ y te ayudan a evaluar el rendimiento real de la campaña.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Verificación <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Verificación <abbr title="Código de autenticación de mensajes basado en hash — una firma criptográfica utilizada para verificar las cargas de webhook.">HMAC</abbr></strong></td>
 <td>Cada solicitud de webhook se firma con un secreto compartido. Cat-Scan rechaza las solicitudes sin firma o con firma incorrecta.</td>
 </tr>
 <tr>

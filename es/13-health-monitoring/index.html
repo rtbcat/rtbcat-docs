@@ -1650,7 +1650,7 @@
 <h2 id="scripts-de-salud-en-tiempo-de-ejecucion">Scripts de salud en tiempo de ejecución<a class="headerlink" href="#scripts-de-salud-en-tiempo-de-ejecucion" title="Permanent link">&para;</a></h2>
 <p>Estos scripts son la columna vertebral operativa para verificar que el sistema funciona de extremo a extremo.</p>
 <h3 id="diagnose_v1_buyer_report_coveragesh"><code>diagnose_v1_buyer_report_coverage.sh</code><a class="headerlink" href="#diagnose_v1_buyer_report_coveragesh" title="Permanent link">&para;</a></h3>
-<p>Diagnostica por qué un comprador específico tiene cobertura de <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> faltante.</p>
+<p>Diagnostica por qué un comprador específico tiene cobertura de <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> faltante.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CATSCAN_CANARY_EMAIL</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_EMAIL&gt;&quot;</span>
 scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--buyer-id<span class="w"> </span>&lt;BUYER_ID&gt;<span class="w"> </span><span class="se">\</span>
@@ -1659,7 +1659,7 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 </code></pre></div>
 <p>Verificaciones (en orden):
 1. Mapeo de asientos: buyer_id -&gt; bidder_id
-2. Matriz de importación: aprobado/fallido/no_importado por tipo de <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+2. Matriz de importación: aprobado/fallido/no_importado por tipo de <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr>
 3. Frescura de datos: cobertura de celdas importadas/faltantes
 4. Historial de importación: registros de importación recientes
 5. Estado de Gmail: cantidad de no leídos, último motivo, última fecha de métrica</p>
@@ -1670,8 +1670,8 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 <li>Salud de la API</li>
 <li>Salud de los datos (frescura y cobertura de dimensiones)</li>
 <li>Salud y preparación de conversiones</li>
-<li>Latencia de inicio de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
-<li>Resumen de SLO de la página de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
+<li>Latencia de inicio de <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></li>
+<li>Resumen de SLO de la página de <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></li>
 <li>Economía y modelos del optimizador</li>
 <li>Validación de endpoints del modelo</li>
 <li>Flujo de score+propose</li>

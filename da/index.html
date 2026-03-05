@@ -1561,12 +1561,12 @@ titusindvis af forespørgsler ud fra Authorized Buyers-børsen mod dit endpoint.
 Din bidder evaluerer hver enkelt, beslutter om der skal bydes, og svarer —
 det hele inden for få millisekunder.</p>
 <p>Her er det, de fleste overser: <strong>langt størstedelen af det signal er støj.</strong>
-Et typisk seat, der modtager 50.000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, kan opleve, at 30.000 af de
+Et typisk seat, der modtager 50.000 <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>, kan opleve, at 30.000 af de
 forespørgsler vedrører inventory, som mediakøberen aldrig ville have købt:
 forkerte geografier, irrelevante publisher-domæner, annonceformater uden
 matchende kreativ. Din bidder skal stadig modtage, parse og afvise hver enkelt.
 Det koster båndbredde, compute og penge.</p>
-<p>Diagrammet ovenfor viser det som regn. Googles <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> er dysen i toppen;
+<p>Diagrammet ovenfor viser det som regn. Googles <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> er dysen i toppen;
 dråberne spredes over et bredt område. Din bidder er den lille spand i bunden.
 Alt, der rammer ved siden af spanden (dråberne til venstre og højre), er spild.
 Du betalte for det. Du fik intet tilbage.</p>
@@ -1579,15 +1579,15 @@ Google stiller til rådighed.</p>
 <p>Google Authorized Buyers giver dig kun <strong>10 pretargeting-konfigurationer per
 seat</strong>, plus grove geografiske grupper (østlige USA, vestlige USA, Europa,
 Asien). Der er ingen Reporting API. Alle performancedata kommer fra
-<abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-eksporter, der ankommer via e-mail. Authorized Buyers' pretargeting-UI er
+<abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-eksporter, der ankommer via e-mail. Authorized Buyers' pretargeting-UI er
 funktionelt, men gør det vanskeligt at se det samlede billede på tværs af
 konfigurationer eller at fortryde en ændring, der gik galt.</p>
 <p>Cat-Scan lukker disse huller:</p>
 <ul>
-<li>Den <strong>genopbygger rapportering fra <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-eksporter</strong> (manuel upload eller
+<li>Den <strong>genopbygger rapportering fra <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-eksporter</strong> (manuel upload eller
   automatisk Gmail-indlæsning), med deduplikering ved import, så
   genbehandling aldrig dobbelttæller.</li>
-<li>Den viser den <strong>fulde <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragt</strong>, fra rå <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> gennem bud, vindere,
+<li>Den viser den <strong>fulde <abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-tragt</strong>, fra rå <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> gennem bud, vindere,
   visninger, klik og forbrug, opdelt efter enhver dimension: geografi,
   publisher, annonceformat, kreativ, konfiguration.</li>
 <li>Den tilbyder <strong>sikker pretargeting-styring</strong> med historik, trinvise
@@ -1600,8 +1600,8 @@ konfigurationer eller at fortryde en ændring, der gik galt.</p>
 <p>Denne manual har to spor, fordi Cat-Scan betjener to meget forskellige roller:</p>
 <p><strong>Mediakøbere og kampagneansvarlige</strong> bruger Cat-Scan til at forstå, hvor
 deres budget ender, finde spild, administrere kreativer, finjustere
-pretargeting og godkende optimeringsforslag. De tænker i <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>, vindrater og
-<abbr title="Return On Ad Spend — revenue generated per dollar spent on advertising.">ROAS</abbr>. Deres kapitler fokuserer på, hvad UI'et viser, hvad tallene betyder, og
+pretargeting og godkende optimeringsforslag. De tænker i <abbr title="Pris pr. tusind visninger — prisen betalt pr. 1.000 annoncevisninger.">CPM</abbr>, vindrater og
+<abbr title="Afkast af annonceudgifter — omsætning genereret pr. krone brugt på annoncering.">ROAS</abbr>. Deres kapitler fokuserer på, hvad UI'et viser, hvad tallene betyder, og
 hvilke handlinger der skal foretages.</p>
 <p><strong>DevOps- og platformingeniører</strong> bruger Cat-Scan til at deploye, overvåge og
 fejlsøge systemet. De tænker i containere, health-endpoints og query plans.
@@ -1632,7 +1632,7 @@ der matcher din rolle.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Kapitel 0: Hvad er Cat-Scan?</a>
   Hvad platformen gør, hvem den er til, og de kernebegreber, du skal kende,
-  før noget andet: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragten.</p>
+  før noget andet: seats, <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>, pretargeting, <abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-tragten.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Kapitel 1: Log ind</a>
@@ -1649,16 +1649,16 @@ der matcher din rolle.</p>
 <p>For mediakøbere, kampagneansvarlige og optimeringsingeniører.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Kapitel 3: Forstå din <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-tragt</a>
+<p><a href="03-qps-funnel/">Kapitel 3: Forstå din <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>-tragt</a>
   Forsiden. Sådan læser du tragtopdelingen: visninger, bud, vindere,
-  forbrug, vindrate, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Hvad "spild" betyder i konkrete termer.
+  forbrug, vindrate, <abbr title="Klikrate — klik divideret med visninger, udtrykt som en procentdel.">CTR</abbr>, <abbr title="Pris pr. tusind visninger — prisen betalt pr. 1.000 annoncevisninger.">CPM</abbr>. Hvad "spild" betyder i konkrete termer.
   Konfigurationskort og hvad deres felter styrer.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">Kapitel 4: Analyse af spild efter dimension</a>
   De tre spildanalysevisninger, og hvornår du bruger dem:</p>
 </li>
-<li><strong>Geografisk</strong> (<code>/qps/geo</code>): hvilke lande og byer bruger <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> uden at
+<li><strong>Geografisk</strong> (<code>/qps/geo</code>): hvilke lande og byer bruger <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> uden at
     konvertere.</li>
 <li><strong>Publisher</strong> (<code>/qps/publisher</code>): hvilke domæner og apps underpræsterer.</li>
 <li>
@@ -1676,28 +1676,28 @@ der matcher din rolle.</p>
 <li>
 <p><a href="06-pretargeting/">Kapitel 6: Pretargeting-konfiguration</a>
   Hvad en pretargeting-konfiguration styrer (geografier, formater, platforme,
-  maks. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Sådan læser du et konfigurationskort. Anvend ændringer med
+  maks. <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>). Sådan læser du et konfigurationskort. Anvend ændringer med
   dry-run-forhåndsvisning. Ændringshistorik-tidslinjen (<code>/history</code>). Rollback:
   hvordan det virker, hvorfor det findes, og hvornår du bruger det.</p>
 </li>
 <li>
-<p><a href="07-optimizer/">Kapitel 7: Optimizeren (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>
+<p><a href="07-optimizer/">Kapitel 7: Optimizeren (<abbr title="Medbring din egen model — Cat-Scans system til at tilslutte din egen eksterne scoringsmodel til optimeringsforslag.">BYOM</abbr>)</a>
   Bring Your Own Model: registrér et eksternt scoringsendpoint, validér det,
   aktivér det. Score-foreslå-godkend-anvend-livscyklussen. Workflow-presets:
-  safe, balanced, aggressive. Økonomi: effektiv <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>, hostingomkostningsbaseline,
+  safe, balanced, aggressive. Økonomi: effektiv <abbr title="Pris pr. tusind visninger — prisen betalt pr. 1.000 annoncevisninger.">CPM</abbr>, hostingomkostningsbaseline,
   effektivitetsresumé. Sådan ser et forslag ud, og hvordan du evaluerer det.</p>
 </li>
 <li>
 <p><a href="08-conversions/">Kapitel 8: Konverteringer og attribution</a>
   Tilslut en konverteringskilde. Pixelintegration. Webhook-opsætning:
-  <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-signaturer, delte hemmeligheder, rate limiting. Parathedstjek.
+  <abbr title="Hash-baseret meddelelsesgodkendelseskode — en kryptografisk signatur, der bruges til at verificere webhook-data.">HMAC</abbr>-signaturer, delte hemmeligheder, rate limiting. Parathedstjek.
   Indlæsningsstatistik. Hvad "konverteringssundhed" betyder, og hvordan du
   læser sikkerhedsstatussiden.</p>
 </li>
 <li>
 <p><a href="09-data-import/">Kapitel 9: Dataimport</a>
   Hvordan data kommer ind i Cat-Scan, og hvorfor det er vigtigt. Manuel
-  <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-upload (<code>/import</code>): drag-drop, kolonnemapping, validering, chunked upload
+  <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-upload (<code>/import</code>): drag-drop, kolonnemapping, validering, chunked upload
   til store filer. Gmail-autoimport: hvordan det virker, hvordan du tjekker
   status, hvad der sker, når det fejler. Datafriskheds-gitteret: hvad
   "importeret" vs. "manglende" betyder per dato og rapporttype.
@@ -1711,7 +1711,7 @@ der matcher din rolle.</p>
 </li>
 </ul>
 <h3 id="del-ii-devops-sporet">Del II: DevOps-sporet<a class="headerlink" href="#del-ii-devops-sporet" title="Permanent link">&para;</a></h3>
-<p>For platformingeniører, <abbr title="Site Reliability Engineering — the discipline of operating reliable production systems.">SRE</abbr>'er og systemadministratorer.</p>
+<p>For platformingeniører, <abbr title="Site Reliability Engineering — disciplinen inden for drift af pålidelige produktionssystemer.">SRE</abbr>'er og systemadministratorer.</p>
 <ul>
 <li>
 <p><a href="11-architecture/">Kapitel 11: Arkitekturoversigt</a>
@@ -1780,11 +1780,11 @@ der matcher din rolle.</p>
 <li>
 <p><a href="17-integrations/">Kapitel 17: Integrationer</a>
   GCP-servicekonti og projektforbindelse. Google Authorized Buyers API:
-  seat discovery, pretargeting-konfigurationssynk, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-endpoint-synk.
+  seat discovery, pretargeting-konfigurationssynk, <abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-endpoint-synk.
   Gmail-integration: OAuth2 til automatisk rapportindlæsning.
   Sprog-AI-udbydere: Gemini, Claude, Grok (til kreativ sproggenkendelse og
   mismatch-advarsler). Konverterings-webhooks: endpoint-registrering,
-  <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-verifikation, rate limiting, friskheds-monitorering.</p>
+  <abbr title="Hash-baseret meddelelsesgodkendelseskode — en kryptografisk signatur, der bruges til at verificere webhook-data.">HMAC</abbr>-verifikation, rate limiting, friskheds-monitorering.</p>
 </li>
 </ul>
 <h3 id="del-iii-reference">Del III: Reference<a class="headerlink" href="#del-iii-reference" title="Permanent link">&para;</a></h3>
@@ -1794,7 +1794,7 @@ der matcher din rolle.</p>
 <p><a href="glossary/">Ordliste</a>
   Hvert begreb på to niveauer. Mediakøberkolonnen: "pretargeting" er "de regler,
   der styrer, hvilke budforespørgsler der når din bidder." DevOps-kolonnen:
-  "pretargeting" er "en muterbar entitet synkroniseret fra <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API'et, gemt i
+  "pretargeting" er "en muterbar entitet synkroniseret fra <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr> API'et, gemt i
   <code>pretargeting_configs</code>, tilgængelig via <code>/settings/pretargeting</code>." Begge har
   brug for det samme ord; ingen bruger den andens definition.</p>
 </li>

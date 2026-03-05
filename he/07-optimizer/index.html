@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="7-byom">פרק 7: האופטימייזר (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
+<h1 id="7-byom">פרק 7: האופטימייזר (<abbr title="הבא את המודל שלך — מערכת Cat-Scan לחיבור מודל דירוג חיצוני משלך להפקת הצעות אופטימיזציה.">BYOM</abbr>)<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
 <p><em>קהל יעד: קונים מדיה, מהנדסי אופטימיזציה</em></p>
-<p>האופטימייזר הוא מנוע האופטימיזציה האוטומטי של Cat-Scan. "<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>" מייצג
+<p>האופטימייזר הוא מנוע האופטימיזציה האוטומטי של Cat-Scan. "<abbr title="הבא את המודל שלך — מערכת Cat-Scan לחיבור מודל דירוג חיצוני משלך להפקת הצעות אופטימיזציה.">BYOM</abbr>" מייצג
 Bring Your Own Model: אתם רושמים נקודת קצה חיצונית לניקוד, ו-Cat-Scan
 משתמש בה ליצירת הצעות לשינויי הגדרה.</p>
 <h2 id="_1">איך זה עובד<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1623,19 +1623,19 @@ segments       config         reject         updated
 <h2 id="_7">כלכלה<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>האופטימייזר גם עוקב אחר הכלכלה של האופטימיזציה:</p>
 <ul>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> אפקטיבי</strong>: מה אתם באמת משלמים לכל אלף חשיפות,
+<li><strong><abbr title="עלות לאלף חשיפות — המחיר המשולם עבור 1,000 חשיפות פרסום.">CPM</abbr> אפקטיבי</strong>: מה אתם באמת משלמים לכל אלף חשיפות,
   תוך התחשבות בבזבוז.</li>
 <li><strong>בסיס עלות אירוח</strong>: עלות התשתית של הבידר שלכם, מוגדרת
-  בהגדרת האופטימייזר. משמשת לחישוב האם החיסכון מהפחתת <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
+  בהגדרת האופטימייזר. משמשת לחישוב האם החיסכון מהפחתת <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr>
   מכסה את עלות האירוח.</li>
-<li><strong>סיכום יעילות</strong>: יחס כולל של <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שימושי ל-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> כולל.</li>
+<li><strong>סיכום יעילות</strong>: יחס כולל של <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שימושי ל-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> כולל.</li>
 </ul>
 <p>הגדירו את עלות האירוח שלכם ב-<code>/settings/system</code> &gt; הגדרת אופטימייזר.</p>
 <h2 id="_8">סקירת הצעות<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>כל הצעה מציגה:
 - <strong>ציוני פלחים</strong> שהניעו את ההמלצה
 - <strong>שינויים ספציפיים</strong> בשדות pretargeting (הוספות, הסרות, עדכונים)
-- <strong>השפעה צפויה</strong> על <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, יחס בזבוז והוצאה</p>
+- <strong>השפעה צפויה</strong> על <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr>, יחס בזבוז והוצאה</p>
 <p>ניתן:
 - <strong>לאשר</strong>: מסמן את ההצעה כמתקבלת
 - <strong>להחיל</strong>: דוחף את השינויים המאושרים ל-Google

@@ -1584,7 +1584,7 @@
 <tr>
 <td><code>rtb_daily</code></td>
 <td>~84 millones</td>
-<td>Rendimiento <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> diario por comprador, creativo, geo, etc.</td>
+<td>Rendimiento <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr> diario por comprador, creativo, geo, etc.</td>
 </tr>
 <tr>
 <td><code>rtb_bidstream</code></td>
@@ -1614,7 +1614,7 @@
 <tr>
 <td><code>import_history</code></td>
 <td>pequeña</td>
-<td>Registros de importación de <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></td>
+<td>Registros de importación de <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr></td>
 </tr>
 <tr>
 <td><code>users</code>, <code>permissions</code>, <code>audit_log</code></td>
@@ -1672,7 +1672,7 @@
 <h2 id="rol-de-bigquery">Rol de BigQuery<a class="headerlink" href="#rol-de-bigquery" title="Permanent link">&para;</a></h2>
 <p>BigQuery almacena datos crudos y granulares, y ejecuta trabajos de analítica por lotes. No se utiliza para consultas API en tiempo real. El patrón es:</p>
 <ol>
-<li>Los datos <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> crudos se cargan en tablas de BigQuery.</li>
+<li>Los datos <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> crudos se cargan en tablas de BigQuery.</li>
 <li>Los trabajos por lotes agregan los datos.</li>
 <li>Los resultados pre-agregados se escriben en Postgres.</li>
 <li>La API sirve desde Postgres.</li>

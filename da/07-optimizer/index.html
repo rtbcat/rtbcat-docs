@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="kapitel-7-optimeringsvrktjet-byom">Kapitel 7: Optimeringsværktøjet (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#kapitel-7-optimeringsvrktjet-byom" title="Permanent link">&para;</a></h1>
+<h1 id="kapitel-7-optimeringsvrktjet-byom">Kapitel 7: Optimeringsværktøjet (<abbr title="Medbring din egen model — Cat-Scans system til at tilslutte din egen eksterne scoringsmodel til optimeringsforslag.">BYOM</abbr>)<a class="headerlink" href="#kapitel-7-optimeringsvrktjet-byom" title="Permanent link">&para;</a></h1>
 <p><em>Målgruppe: medieindkøbere, optimeringsingeniører</em></p>
-<p>Optimeringsværktøjet er Cat-Scans automatiserede optimeringsmotor. "<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>" står for
+<p>Optimeringsværktøjet er Cat-Scans automatiserede optimeringsmotor. "<abbr title="Medbring din egen model — Cat-Scans system til at tilslutte din egen eksterne scoringsmodel til optimeringsforslag.">BYOM</abbr>" står for
 Bring Your Own Model: du registrerer et eksternt scoringsendpoint, og
 Cat-Scan bruger det til at generere forslag til konfigurationsændringer.</p>
 <h2 id="hvordan-det-virker">Hvordan det virker<a class="headerlink" href="#hvordan-det-virker" title="Permanent link">&para;</a></h2>
@@ -1623,19 +1623,19 @@ segmenter      konfigurations-afvis          opdateres
 <h2 id="konomi">Økonomi<a class="headerlink" href="#konomi" title="Permanent link">&para;</a></h2>
 <p>Optimeringsværktøjet sporer også optimeringens økonomi:</p>
 <ul>
-<li><strong>Effektiv <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: hvad du faktisk betaler per tusind visninger,
+<li><strong>Effektiv <abbr title="Pris pr. tusind visninger — prisen betalt pr. 1.000 annoncevisninger.">CPM</abbr></strong>: hvad du faktisk betaler per tusind visninger,
   når der tages højde for spild.</li>
 <li><strong>Hostingomkostningsgrundlag</strong>: din bidders infrastrukturomkostning, konfigureret i
-  optimeringsopsætningen. Bruges til at beregne, om besparelser fra <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-reduktion
+  optimeringsopsætningen. Bruges til at beregne, om besparelser fra <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>-reduktion
   opvejer hosting.</li>
-<li><strong>Effektivitetsoversigt</strong>: samlet forholdstal mellem nyttigt <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> og totalt <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>.</li>
+<li><strong>Effektivitetsoversigt</strong>: samlet forholdstal mellem nyttigt <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> og totalt <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>.</li>
 </ul>
 <p>Konfigurer dine hostingomkostninger under <code>/settings/system</code> &gt; Optimizer Setup.</p>
 <h2 id="gennemgang-af-forslag">Gennemgang af forslag<a class="headerlink" href="#gennemgang-af-forslag" title="Permanent link">&para;</a></h2>
 <p>Hvert forslag viser:
 - <strong>Segmentscorer</strong>, der drev anbefalingen
 - <strong>Specifikke ændringer</strong> af pretargeting-felter (tilføjelser, fjernelser, opdateringer)
-- <strong>Projiceret effekt</strong> på <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, spildforhold og forbrug</p>
+- <strong>Projiceret effekt</strong> på <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>, spildforhold og forbrug</p>
 <p>Du kan:
 - <strong>Approve</strong>: markerer forslaget som accepteret
 - <strong>Apply</strong>: sender de godkendte ændringer til Google

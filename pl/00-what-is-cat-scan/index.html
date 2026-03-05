@@ -1503,31 +1503,31 @@
 
 <h1 id="rozdzia-0-czym-jest-cat-scan">Rozdział 0: Czym jest Cat-Scan?<a class="headerlink" href="#rozdzia-0-czym-jest-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>Odbiorcy: wszyscy</em></p>
-<p>Cat-Scan to platforma do optymalizacji <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> dla Google Authorized Buyers. Daje
-wgląd w to, jak przydział zapytań na sekundę (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>) Twojego biddera jest
+<p>Cat-Scan to platforma do optymalizacji <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> dla Google Authorized Buyers. Daje
+wgląd w to, jak przydział zapytań na sekundę (<abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>) Twojego biddera jest
 wykorzystywany (i marnowany), oraz udostępnia narzędzia do jego poprawy.</p>
 <p><img alt="Lejek QPS" src="../../assets/qps-funnel.svg" /></p>
 <h2 id="gowny-problem">Główny problem<a class="headerlink" href="#gowny-problem" title="Permanent link">&para;</a></h2>
 <p>Gdy prowadzisz konto kupującego (seat) na giełdzie Google Authorized Buyers,
 Google wysyła na endpoint Twojego biddera strumień zapytań ofertowych (bid
-requests). Płacisz za ten strumień: zużywa on przydzielony Ci <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, moc
+requests). Płacisz za ten strumień: zużywa on przydzielony Ci <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>, moc
 obliczeniową biddera oraz przepustowość sieci.</p>
 <p>Ale nie każde zapytanie ofertowe jest przydatne. Wiele z nich dotyczy
 zasobów reklamowych, których nigdy byś nie kupił: kraje, na które nie
 targetujesz, wydawcy, o których nigdy nie słyszałeś, rozmiary reklam, na które
 nie masz kreacji. Twój bidder i tak musi odebrać i odrzucić każde takie
 zapytanie.</p>
-<p>W typowej konfiguracji <strong>ponad połowa Twojego <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> to marnotrawstwo.</strong></p>
+<p>W typowej konfiguracji <strong>ponad połowa Twojego <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> to marnotrawstwo.</strong></p>
 <h2 id="co-cat-scan-z-tym-robi">Co Cat-Scan z tym robi<a class="headerlink" href="#co-cat-scan-z-tym-robi" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan działa obok Twojego biddera i zapewnia trzy rzeczy:</p>
 <h3 id="1-widocznosc">1. Widoczność<a class="headerlink" href="#1-widocznosc" title="Permanent link">&para;</a></h3>
-<p>Odtwarza raportowanie wydajności z eksportów <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> od Google (ponieważ nie
-istnieje Reporting API) i pokazuje pełny lejek <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>: od surowego <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> przez
+<p>Odtwarza raportowanie wydajności z eksportów <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr> od Google (ponieważ nie
+istnieje Reporting API) i pokazuje pełny lejek <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr>: od surowego <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> przez
 oferty, wygrane, wyświetlenia, kliknięcia i wydatki. Rozbija to według
 geografii, wydawcy, rozmiaru reklamy, kreacji i konfiguracji pretargetingu.</p>
 <p>Pozwala to odpowiedzieć na pytania takie jak:
-- Które kraje zużywają <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, ale nie generują żadnych wygranych?
-- Którzy wydawcy mają wysoki <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, ale zerowe wydatki?
+- Które kraje zużywają <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>, ale nie generują żadnych wygranych?
+- Którzy wydawcy mają wysoki <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>, ale zerowe wydatki?
 - Które rozmiary reklam otrzymują ruch, ale nie mają pasującej kreacji?
 - Które konfiguracje pretargetingu działają dobrze, a które słabo?</p>
 <h3 id="2-kontrola">2. Kontrola<a class="headerlink" href="#2-kontrola" title="Permanent link">&para;</a></h3>
@@ -1559,7 +1559,7 @@ wchodzi w życie bez weryfikacji przez człowieka.</p>
 <td>Konto kupującego w Google Authorized Buyers, identyfikowane przez <code>buyer_account_id</code>. Jedna organizacja może mieć wiele kont (seats).</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr></strong></td>
 <td>Queries Per Second (zapytania na sekundę): maksymalna częstotliwość zapytań ofertowych, o które prosisz Google, aby wysyłał do Twojego biddera. Google ogranicza rzeczywisty wolumen w zależności od poziomu Twojego konta, dlatego chcesz wykorzystać każde zapytanie efektywnie.</td>
 </tr>
 <tr>
@@ -1567,16 +1567,16 @@ wchodzi w życie bez weryfikacji przez człowieka.</p>
 <td>Filtry po stronie serwera, które mówią Google, jakie zapytania ofertowe Ci wysyłać. Kontrolują: regiony geograficzne, rozmiary reklam, formaty, platformy, typy kreacji. Masz ich 10 na jeden seat.</td>
 </tr>
 <tr>
-<td><strong>Lejek <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>Lejek <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr></strong></td>
 <td>Progresja od otrzymanego zapytania ofertowego, przez złożoną ofertę, wygraną aukcję, wyświetloną reklamę, kliknięcie, aż po konwersję. Na każdym etapie następuje odpływ; Cat-Scan pokazuje, gdzie.</td>
 </tr>
 <tr>
 <td><strong>Marnotrawstwo</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> zużywany przez zapytania ofertowe, których Twój bidder nie może lub nie chce wykorzystać. Celem jest zmniejszenie marnotrawstwa bez utraty wartościowego ruchu.</td>
+<td><abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> zużywany przez zapytania ofertowe, których Twój bidder nie może lub nie chce wykorzystać. Celem jest zmniejszenie marnotrawstwa bez utraty wartościowego ruchu.</td>
 </tr>
 <tr>
 <td><strong>Config</strong></td>
-<td>Skrót od konfiguracji pretargetingu. Każda ma stan (aktywna/zawieszona), maksymalny <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> oraz reguły włączania/wykluczania dla regionów, rozmiarów, formatów i platform.</td>
+<td>Skrót od konfiguracji pretargetingu. Każda ma stan (aktywna/zawieszona), maksymalny <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> oraz reguły włączania/wykluczania dla regionów, rozmiarów, formatów i platform.</td>
 </tr>
 </tbody>
 </table>

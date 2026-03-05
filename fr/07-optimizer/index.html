@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="chapitre-7-loptimiseur-byom">Chapitre 7 : L'optimiseur (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#chapitre-7-loptimiseur-byom" title="Permanent link">&para;</a></h1>
+<h1 id="chapitre-7-loptimiseur-byom">Chapitre 7 : L'optimiseur (<abbr title="Apportez votre propre modèle — le système de Cat-Scan pour connecter votre propre modèle de notation externe afin de générer des propositions d'optimisation.">BYOM</abbr>)<a class="headerlink" href="#chapitre-7-loptimiseur-byom" title="Permanent link">&para;</a></h1>
 <p><em>Public : acheteurs media, ingenieurs en optimisation</em></p>
-<p>L'optimiseur est le moteur d'optimisation automatisee de Cat-Scan. "<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>" signifie Bring Your Own Model (Apportez Votre Propre Modele) : vous enregistrez un endpoint de scoring externe, et Cat-Scan l'utilise pour generer des propositions de modification de configuration.</p>
+<p>L'optimiseur est le moteur d'optimisation automatisee de Cat-Scan. "<abbr title="Apportez votre propre modèle — le système de Cat-Scan pour connecter votre propre modèle de notation externe afin de générer des propositions d'optimisation.">BYOM</abbr>" signifie Bring Your Own Model (Apportez Votre Propre Modele) : vous enregistrez un endpoint de scoring externe, et Cat-Scan l'utilise pour generer des propositions de modification de configuration.</p>
 <h2 id="comment-ca-fonctionne">Comment ca fonctionne<a class="headerlink" href="#comment-ca-fonctionne" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>  Score          Propose          Revue          Applique
 ────────────&gt; ────────────&gt; ────────────&gt; ────────────&gt;
@@ -1617,19 +1617,19 @@ les segments   des modifs     approuvez     est mise
 <h2 id="aspects-economiques">Aspects economiques<a class="headerlink" href="#aspects-economiques" title="Permanent link">&para;</a></h2>
 <p>L'optimiseur suit egalement les aspects economiques de l'optimisation :</p>
 <ul>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> effectif</strong> : ce que vous payez reellement pour mille impressions,
+<li><strong><abbr title="Coût pour mille — le prix payé pour 1 000 impressions publicitaires.">CPM</abbr> effectif</strong> : ce que vous payez reellement pour mille impressions,
   en tenant compte du gaspillage.</li>
 <li><strong>Cout d'hebergement de reference</strong> : le cout d'infrastructure de votre bidder, configure dans
-  les parametres de l'optimiseur. Utilise pour calculer si les economies liees a la reduction de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
+  les parametres de l'optimiseur. Utilise pour calculer si les economies liees a la reduction de <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr>
   compensent l'hebergement.</li>
-<li><strong>Resume d'efficacite</strong> : ratio global de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> utile par rapport au <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> total.</li>
+<li><strong>Resume d'efficacite</strong> : ratio global de <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> utile par rapport au <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> total.</li>
 </ul>
 <p>Configurez votre cout d'hebergement dans <code>/settings/system</code> &gt; Configuration de l'optimiseur.</p>
 <h2 id="examiner-les-propositions">Examiner les propositions<a class="headerlink" href="#examiner-les-propositions" title="Permanent link">&para;</a></h2>
 <p>Chaque proposition affiche :
 - <strong>Scores des segments</strong> ayant motive la recommandation
 - <strong>Modifications specifiques</strong> des champs de pretargeting (ajouts, suppressions, mises a jour)
-- <strong>Impact projete</strong> sur le <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, le ratio de gaspillage et les depenses</p>
+- <strong>Impact projete</strong> sur le <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr>, le ratio de gaspillage et les depenses</p>
 <p>Vous pouvez :
 - <strong>Approuver</strong> : marque la proposition comme acceptee
 - <strong>Appliquer</strong> : pousse les modifications approuvees vers Google

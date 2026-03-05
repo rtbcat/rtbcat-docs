@@ -1479,7 +1479,7 @@
 <p><strong>启用功能：</strong>
 - 席位发现（<code>discoverSeats</code>）
 - 预定向配置同步（<code>syncPretargetingConfigs</code>）
-- <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 端点同步（<code>syncRTBEndpoints</code>）
+- <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 端点同步（<code>syncRTBEndpoints</code>）
 - 素材收集（<code>collectCreatives</code>）</p>
 <p><strong>项目状态：</strong>
 在 <code>/settings/accounts</code> 或通过 <code>GET /integrations/gcp/project-status</code>
@@ -1503,10 +1503,10 @@
 <tr>
 <td><strong>预定向同步</strong></td>
 <td>Google 上当前的预定向配置状态</td>
-<td>在 <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> 界面进行外部变更后</td>
+<td>在 <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> 界面进行外部变更后</td>
 </tr>
 <tr>
-<td><strong><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 端点同步</strong></td>
+<td><strong><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 端点同步</strong></td>
 <td>竞价器端点 URL 和状态</td>
 <td>初始设置、端点变更后</td>
 </tr>
@@ -1518,12 +1518,12 @@
 </tbody>
 </table>
 <h2 id="gmail">Gmail 集成<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers 每天通过邮件发送 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 报告。Cat-Scan 可自动
+<p>Google Authorized Buyers 每天通过邮件发送 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 报告。Cat-Scan 可自动
 导入这些报告。</p>
 <p><strong>设置：</strong>
 1. 前往 <code>/settings/accounts</code> &gt; Gmail 报告标签页。
-2. 授权 Cat-Scan 访问接收 <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> 报告的 Gmail 账户。
-3. Cat-Scan 将轮询新的报告邮件并导入附件 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>。</p>
+2. 授权 Cat-Scan 访问接收 <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> 报告的 Gmail 账户。
+3. Cat-Scan 将轮询新的报告邮件并导入附件 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr>。</p>
 <p><strong>监控：</strong>
 - <code>GET /gmail/status</code>：当前状态、未读数、最后原因
 - <code>POST /gmail/import/start</code>：手动触发导入周期
@@ -1574,7 +1574,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 验证</strong></td>
+<td><strong><abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 验证</strong></td>
 <td>确保请求真实性（使用共享密钥签名）</td>
 <td>在 Webhook 设置中配置共享密钥</td>
 </tr>
@@ -1591,7 +1591,7 @@
 </tbody>
 </table>
 <p><strong>监控：</strong>
-- <code>GET /conversions/security/status</code>：<abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 状态、速率限制
+- <code>GET /conversions/security/status</code>：<abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 状态、速率限制
   状态、新鲜度状态
 - <code>GET /conversions/health</code>：整体摄入和聚合健康
 - <code>GET /conversions/readiness</code>：转化数据是否足够新鲜可信</p>

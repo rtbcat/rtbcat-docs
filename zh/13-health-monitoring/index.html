@@ -1651,7 +1651,7 @@
 <h2 id="_2">运行时健康脚本<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>这些脚本是验证系统端到端正常工作的运维基础。</p>
 <h3 id="diagnose_v1_buyer_report_coveragesh"><code>diagnose_v1_buyer_report_coverage.sh</code><a class="headerlink" href="#diagnose_v1_buyer_report_coveragesh" title="Permanent link">&para;</a></h3>
-<p>诊断特定买方 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 覆盖缺失的原因。</p>
+<p>诊断特定买方 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 覆盖缺失的原因。</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CATSCAN_CANARY_EMAIL</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_EMAIL&gt;&quot;</span>
 scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--buyer-id<span class="w"> </span>&lt;BUYER_ID&gt;<span class="w"> </span><span class="se">\</span>
@@ -1660,7 +1660,7 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 </code></pre></div>
 <p>按顺序检查：
 1. 席位映射：buyer_id -&gt; bidder_id
-2. 导入矩阵：按 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 类型的通过/失败/未导入
+2. 导入矩阵：按 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 类型的通过/失败/未导入
 3. 数据新鲜度：已导入/缺失单元格覆盖
 4. 导入历史：最近的导入行
 5. Gmail 状态：未读数、最后原因、最新指标日期</p>
@@ -1671,8 +1671,8 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 <li>API 健康</li>
 <li>数据健康（新鲜度和维度覆盖）</li>
 <li>转化健康和就绪状态</li>
-<li><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 启动延迟</li>
-<li><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 页面 SLO 摘要</li>
+<li><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 启动延迟</li>
+<li><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 页面 SLO 摘要</li>
 <li>优化器经济指标和模型</li>
 <li>模型端点验证</li>
 <li>评分+建议工作流</li>

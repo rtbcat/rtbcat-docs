@@ -1584,7 +1584,7 @@
 <tr>
 <td><code>rtb_daily</code></td>
 <td>~84 миллиона</td>
-<td>Ежедневные показатели <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> по байеру, креативу, гео и т. д.</td>
+<td>Ежедневные показатели <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr> по байеру, креативу, гео и т. д.</td>
 </tr>
 <tr>
 <td><code>rtb_bidstream</code></td>
@@ -1614,7 +1614,7 @@
 <tr>
 <td><code>import_history</code></td>
 <td>мало</td>
-<td>Записи об импорте <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></td>
+<td>Записи об импорте <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr></td>
 </tr>
 <tr>
 <td><code>users</code>, <code>permissions</code>, <code>audit_log</code></td>
@@ -1671,7 +1671,7 @@
 <h2 id="bigquery">Роль BigQuery<a class="headerlink" href="#bigquery" title="Permanent link">&para;</a></h2>
 <p>BigQuery хранит сырые гранулярные данные и выполняет пакетные аналитические задачи. Он не используется для запросов API в реальном времени. Схема работы:</p>
 <ol>
-<li>Сырые <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-данные загружаются в таблицы BigQuery.</li>
+<li>Сырые <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-данные загружаются в таблицы BigQuery.</li>
 <li>Пакетные задачи агрегируют данные.</li>
 <li>Предварительно агрегированные результаты записываются в Postgres.</li>
 <li>API обслуживает запросы из Postgres.</li>

@@ -1547,12 +1547,12 @@
 
 <h1 id="chapitre-9-import-de-donnees">Chapitre 9 : Import de donnees<a class="headerlink" href="#chapitre-9-import-de-donnees" title="Permanent link">&para;</a></h1>
 <p><em>Public : acheteurs media, responsables de campagne</em></p>
-<p>L'analyse de Cat-Scan repose entierement sur les donnees de performance de Google Authorized Buyers. Comme Google ne fournit pas d'API de reporting, toutes les donnees proviennent d'exports <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>. Ce chapitre explique comment importer des donnees dans Cat-Scan et comment verifier qu'elles arrivent correctement.</p>
+<p>L'analyse de Cat-Scan repose entierement sur les donnees de performance de Google Authorized Buyers. Comme Google ne fournit pas d'API de reporting, toutes les donnees proviennent d'exports <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr>. Ce chapitre explique comment importer des donnees dans Cat-Scan et comment verifier qu'elles arrivent correctement.</p>
 <h2 id="pourquoi-cest-important">Pourquoi c'est important<a class="headerlink" href="#pourquoi-cest-important" title="Permanent link">&para;</a></h2>
-<p>Sans donnees importees, Cat-Scan n'a rien a analyser. L'entonnoir, les vues de gaspillage, les performances creatives et l'optimiseur dependent tous de donnees <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> recentes. Si vos donnees sont obsoletes, vos decisions reposent sur des informations perimees.</p>
+<p>Sans donnees importees, Cat-Scan n'a rien a analyser. L'entonnoir, les vues de gaspillage, les performances creatives et l'optimiseur dependent tous de donnees <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> recentes. Si vos donnees sont obsoletes, vos decisions reposent sur des informations perimees.</p>
 <h2 id="deux-modes-darrivee-des-donnees">Deux modes d'arrivee des donnees<a class="headerlink" href="#deux-modes-darrivee-des-donnees" title="Permanent link">&para;</a></h2>
-<h3 id="1-import-csv-manuel-import">1. Import <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> manuel (<code>/import</code>)<a class="headerlink" href="#1-import-csv-manuel-import" title="Permanent link">&para;</a></h3>
-<p>Glissez-deposez un fichier <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> exporte depuis Google Authorized Buyers.</p>
+<h3 id="1-import-csv-manuel-import">1. Import <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> manuel (<code>/import</code>)<a class="headerlink" href="#1-import-csv-manuel-import" title="Permanent link">&para;</a></h3>
+<p>Glissez-deposez un fichier <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> exporte depuis Google Authorized Buyers.</p>
 <p><img alt="Page d'import de donnees avec zone de depot et grille de fraicheur" src="../../images/screenshot-import.png" /></p>
 <p><strong>Flux de travail :</strong></p>
 <ol>
@@ -1575,7 +1575,7 @@
 <thead>
 <tr>
 <th>Type</th>
-<th>Modele de nom <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></th>
+<th>Modele de nom <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr></th>
 <th>Contenu</th>
 </tr>
 </thead>
@@ -1583,7 +1583,7 @@
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>Performance <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> quotidienne : impressions, encheres, gains, depenses</td>
+<td>Performance <abbr title="Enchères en temps réel — le protocole d'enchères où les impressions publicitaires sont achetées et vendues en millisecondes.">RTB</abbr> quotidienne : impressions, encheres, gains, depenses</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1612,7 +1612,7 @@
 <ul>
 <li>Google Authorized Buyers envoie des rapports quotidiens par e-mail.</li>
 <li>L'integration Gmail de Cat-Scan lit ces e-mails et importe automatiquement les
-  pieces jointes <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</li>
+  pieces jointes <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr>.</li>
 <li>Verifiez le statut dans <code>/settings/accounts</code> &gt; onglet Rapports Gmail, ou via
   <code>/gmail/status</code> dans l'API.</li>
 </ul>
@@ -1636,7 +1636,7 @@
 </ul>
 <p>Le <strong>pourcentage de couverture</strong> resume le degre de completude de vos donnees sur la fenetre d'observation. La porte de sante du runtime l'utilise pour determiner si le systeme est operationnel.</p>
 <h2 id="deduplication">Deduplication<a class="headerlink" href="#deduplication" title="Permanent link">&para;</a></h2>
-<p>Reimporter le meme <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (ou laisser Gmail retraiter le meme e-mail) ne <strong>double pas</strong> le comptage des donnees. Chaque ligne est hashee, et les doublons sont ignores a l'insertion. Cela signifie qu'il est toujours possible de reimporter en toute securite.</p>
+<p>Reimporter le meme <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> (ou laisser Gmail retraiter le meme e-mail) ne <strong>double pas</strong> le comptage des donnees. Chaque ligne est hashee, et les doublons sont ignores a l'insertion. Cela signifie qu'il est toujours possible de reimporter en toute securite.</p>
 <h2 id="historique-des-imports">Historique des imports<a class="headerlink" href="#historique-des-imports" title="Permanent link">&para;</a></h2>
 <p>Le tableau d'historique des imports sur <code>/import</code> affiche les 20 derniers imports :</p>
 <ul>
@@ -1661,7 +1661,7 @@
 </tr>
 <tr>
 <td>L'import echoue avec une erreur de validation</td>
-<td>Incoherence de colonnes. Comparez le tableau des colonnes requises avec votre <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</td>
+<td>Incoherence de colonnes. Comparez le tableau des colonnes requises avec votre <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr>.</td>
 </tr>
 <tr>
 <td>L'import Gmail affiche "stopped"</td>
@@ -1669,13 +1669,13 @@
 </tr>
 <tr>
 <td>Le pourcentage de couverture baisse</td>
-<td>Les rapports arrivent mais pour moins de dates que prevu. Verifiez le calendrier d'export dans Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>Les rapports arrivent mais pour moins de dates que prevu. Verifiez le calendrier d'export dans Google <abbr title="Authorized Buyers — la plateforme publicitaire programmatique de Google (anciennement AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="voir-aussi">Voir aussi<a class="headerlink" href="#voir-aussi" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Comprendre votre entonnoir <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a> : depend des donnees importees</li>
+<li><a href="../03-qps-funnel/">Comprendre votre entonnoir <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr></a> : depend des donnees importees</li>
 <li><a href="../10-reading-reports/">Lire vos rapports</a> : ce que vous pouvez faire avec les
   donnees une fois importees</li>
 <li>Pour les DevOps : details sur les requetes de fraicheur des donnees et depannage, voir

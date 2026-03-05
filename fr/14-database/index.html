@@ -1586,7 +1586,7 @@ sur <code>localhost:5432</code>.</p>
 <tr>
 <td><code>rtb_daily</code></td>
 <td>~84 millions</td>
-<td>Performance <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> quotidienne par acheteur, créatif, zone géographique, etc.</td>
+<td>Performance <abbr title="Enchères en temps réel — le protocole d'enchères où les impressions publicitaires sont achetées et vendues en millisecondes.">RTB</abbr> quotidienne par acheteur, créatif, zone géographique, etc.</td>
 </tr>
 <tr>
 <td><code>rtb_bidstream</code></td>
@@ -1616,7 +1616,7 @@ sur <code>localhost:5432</code>.</p>
 <tr>
 <td><code>import_history</code></td>
 <td>faible</td>
-<td>Enregistrements des imports <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></td>
+<td>Enregistrements des imports <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr></td>
 </tr>
 <tr>
 <td><code>users</code>, <code>permissions</code>, <code>audit_log</code></td>
@@ -1697,7 +1697,7 @@ qu'il est moins coûteux de parcourir 84 millions de lignes que de faire
 d'analyse par lots. Il n'est pas utilisé pour les requêtes API en temps réel.
 Le schéma est le suivant :</p>
 <ol>
-<li>Les données <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> brutes sont chargées dans les tables BigQuery.</li>
+<li>Les données <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> brutes sont chargées dans les tables BigQuery.</li>
 <li>Des tâches par lots agrègent les données.</li>
 <li>Les résultats pré-agrégés sont écrits dans Postgres.</li>
 <li>L'API sert les données depuis Postgres.</li>

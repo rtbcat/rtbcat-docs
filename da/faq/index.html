@@ -1638,13 +1638,13 @@ til, hvor mange der forventes. Almindelige årsager til huller:</p>
 <p>Tjek datafriskheds-gitteret på <code>/import</code> for at se præcis, hvilke celler der
 mangler. Se <a href="../09-data-import/">Dataimport</a>.</p>
 <h3 id="kber-hvad-er-forskellen-mellem-spild-og-lav-vindrate">[Køber] Hvad er forskellen mellem "spild" og "lav vindrate"?<a class="headerlink" href="#kber-hvad-er-forskellen-mellem-spild-og-lav-vindrate" title="Permanent link">&para;</a></h3>
-<p><strong>Spild</strong> = budforespørgsler, din bidder <em>afviste</em> uden at byde. Det er <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>,
+<p><strong>Spild</strong> = budforespørgsler, din bidder <em>afviste</em> uden at byde. Det er <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>,
 du betalte for, men slet ikke kunne bruge. Løs det med pretargeting.</p>
 <p><strong>Lav vindrate</strong> = budforespørgsler, din bidder <em>bød på</em>, men tabte
 auktionen. Det betyder, at dine bud ikke er konkurrencedygtige nok. Løs det
 med budstrategi, ikke pretargeting.</p>
 <p>Begge vises i tragten, men kræver forskellige handlinger. Se
-<a href="../03-qps-funnel/">Forstå din <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-tragt</a>.</p>
+<a href="../03-qps-funnel/">Forstå din <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>-tragt</a>.</p>
 <h3 id="kber-kan-jeg-fortryde-en-pretargeting-ndring">[Køber] Kan jeg fortryde en pretargeting-ændring?<a class="headerlink" href="#kber-kan-jeg-fortryde-en-pretargeting-ndring" title="Permanent link">&para;</a></h3>
 <p>Ja. Gå til <code>/history</code>, find ændringen, klik "Forhåndsvis rollback" for at se,
 hvad der vil blive tilbageført, og bekræft derefter. Selve rollbacken
@@ -1696,10 +1696,10 @@ genstart den, vent 10 sekunder, og genstart derefter API-containeren. Se
 <a href="../15-troubleshooting/">Fejlsøgning</a> for den fulde procedure.</p>
 <hr />
 <h3 id="begge-hvor-kommer-cat-scans-data-fra">[Begge] Hvor kommer Cat-Scans data fra?<a class="headerlink" href="#begge-hvor-kommer-cat-scans-data-fra" title="Permanent link">&para;</a></h3>
-<p>Google Authorized Buyers <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-eksporter. Der er ingen Reporting API. Data
-ankommer enten via manuel <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-upload eller automatisk Gmail-indlæsning. Se
+<p>Google Authorized Buyers <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-eksporter. Der er ingen Reporting API. Data
+ankommer enten via manuel <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-upload eller automatisk Gmail-indlæsning. Se
 <a href="../09-data-import/">Dataimport</a>.</p>
-<h3 id="begge-er-det-sikkert-at-genimportere-den-samme-csv">[Begge] Er det sikkert at genimportere den samme <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>?<a class="headerlink" href="#begge-er-det-sikkert-at-genimportere-den-samme-csv" title="Permanent link">&para;</a></h3>
+<h3 id="begge-er-det-sikkert-at-genimportere-den-samme-csv">[Begge] Er det sikkert at genimportere den samme <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>?<a class="headerlink" href="#begge-er-det-sikkert-at-genimportere-den-samme-csv" title="Permanent link">&para;</a></h3>
 <p>Ja. Hver række hashes og deduplikeres. Genimportering dobbelttæller aldrig.</p>
 <h3 id="begge-hvilke-sprog-understtter-uiet">[Begge] Hvilke sprog understøtter UI'et?<a class="headerlink" href="#begge-hvilke-sprog-understtter-uiet" title="Permanent link">&para;</a></h3>
 <p>Engelsk, nederlandsk og kinesisk (forenklet). Sprogvælgeren findes i

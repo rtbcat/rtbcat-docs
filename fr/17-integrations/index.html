@@ -1481,7 +1481,7 @@ les API Google.</p>
 <p><strong>Ce que cela active :</strong>
 - Découverte des sièges (<code>discoverSeats</code>)
 - Synchronisation de la configuration de pretargeting (<code>syncPretargetingConfigs</code>)
-- Synchronisation des endpoints <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (<code>syncRTBEndpoints</code>)
+- Synchronisation des endpoints <abbr title="Enchères en temps réel — le protocole d'enchères où les impressions publicitaires sont achetées et vendues en millisecondes.">RTB</abbr> (<code>syncRTBEndpoints</code>)
 - Collecte des créatifs (<code>collectCreatives</code>)</p>
 <p><strong>Statut du projet :</strong>
 Vérifier la santé du projet GCP dans <code>/settings/accounts</code> ou via
@@ -1506,10 +1506,10 @@ est valide, que le projet est accessible et que les API requises sont activées.
 <tr>
 <td><strong>Synchronisation du pretargeting</strong></td>
 <td>État actuel de la configuration de pretargeting depuis Google</td>
-<td>Après des modifications externes dans l'interface <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>Après des modifications externes dans l'interface <abbr title="Authorized Buyers — la plateforme publicitaire programmatique de Google (anciennement AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>Synchronisation des endpoints <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>Synchronisation des endpoints <abbr title="Enchères en temps réel — le protocole d'enchères où les impressions publicitaires sont achetées et vendues en millisecondes.">RTB</abbr></strong></td>
 <td>URL et état des endpoints du bidder</td>
 <td>Configuration initiale, après des modifications d'endpoints</td>
 </tr>
@@ -1521,13 +1521,13 @@ est valide, que le projet est accessible et que les API requises sont activées.
 </tbody>
 </table>
 <h2 id="integration-gmail">Intégration Gmail<a class="headerlink" href="#integration-gmail" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers envoie par e-mail des rapports <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> quotidiens.
+<p>Google Authorized Buyers envoie par e-mail des rapports <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> quotidiens.
 Cat-Scan peut les ingérer automatiquement.</p>
 <p><strong>Configuration :</strong>
 1. Accéder à <code>/settings/accounts</code> &gt; onglet Gmail Reports.
-2. Autoriser Cat-Scan à accéder au compte Gmail qui reçoit les rapports <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
+2. Autoriser Cat-Scan à accéder au compte Gmail qui reçoit les rapports <abbr title="Authorized Buyers — la plateforme publicitaire programmatique de Google (anciennement AdX / DoubleClick Ad Exchange).">AB</abbr>.
 3. Cat-Scan interrogera la boîte de réception pour détecter les nouveaux
-   e-mails de rapport et importera les <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> en pièce jointe.</p>
+   e-mails de rapport et importera les <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> en pièce jointe.</p>
 <p><strong>Surveillance :</strong>
 - <code>GET /gmail/status</code> : état actuel, nombre de non-lus, dernier motif
 - <code>POST /gmail/import/start</code> : déclencher manuellement un cycle d'import
@@ -1582,7 +1582,7 @@ des webhooks.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Vérification <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Vérification <abbr title="Code d'authentification de message basé sur le hachage — une signature cryptographique utilisée pour vérifier les charges utiles des webhooks.">HMAC</abbr></strong></td>
 <td>Garantit l'authenticité des requêtes (signées avec un secret partagé)</td>
 <td>Secret partagé configuré dans les paramètres du webhook</td>
 </tr>
@@ -1599,7 +1599,7 @@ des webhooks.</p>
 </tbody>
 </table>
 <p><strong>Surveillance :</strong>
-- <code>GET /conversions/security/status</code> : statut <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, statut de la limitation
+- <code>GET /conversions/security/status</code> : statut <abbr title="Code d'authentification de message basé sur le hachage — une signature cryptographique utilisée pour vérifier les charges utiles des webhooks.">HMAC</abbr>, statut de la limitation
   de débit, statut de la fraîcheur
 - <code>GET /conversions/health</code> : santé globale de l'ingestion et de l'agrégation
 - <code>GET /conversions/readiness</code> : indique si les données de conversion sont

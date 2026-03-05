@@ -1548,17 +1548,17 @@
 <h1 id="hoofdstuk-9-data-importeren">Hoofdstuk 9: Data importeren<a class="headerlink" href="#hoofdstuk-9-data-importeren" title="Permanent link">&para;</a></h1>
 <p><em>Doelgroep: media-inkopers, campagnemanagers</em></p>
 <p>De analyse van Cat-Scan is volledig afhankelijk van prestatiedata uit Google Authorized
-Buyers. Omdat Google geen Reporting API biedt, komen alle data uit <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-exports.
+Buyers. Omdat Google geen Reporting API biedt, komen alle data uit <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-exports.
 Dit hoofdstuk legt uit hoe u data in Cat-Scan krijgt en hoe u controleert of
 deze binnenkomt.</p>
 <h2 id="waarom-dit-belangrijk-is">Waarom dit belangrijk is<a class="headerlink" href="#waarom-dit-belangrijk-is" title="Permanent link">&para;</a></h2>
 <p>Zonder geimporteerde data heeft Cat-Scan niets om te analyseren. De funnel,
 verspillingsweergaven, creatieve prestaties en de optimizer zijn allemaal afhankelijk
-van actuele <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-data. Als uw data verouderd is, baseert u beslissingen op oude
+van actuele <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-data. Als uw data verouderd is, baseert u beslissingen op oude
 informatie.</p>
 <h2 id="twee-manieren-waarop-data-binnenkomt">Twee manieren waarop data binnenkomt<a class="headerlink" href="#twee-manieren-waarop-data-binnenkomt" title="Permanent link">&para;</a></h2>
-<h3 id="1-handmatige-csv-upload-import">1. Handmatige <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-upload (<code>/import</code>)<a class="headerlink" href="#1-handmatige-csv-upload-import" title="Permanent link">&para;</a></h3>
-<p>Sleep een <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-bestand dat uit Google Authorized Buyers is geexporteerd naar het uploadvak.</p>
+<h3 id="1-handmatige-csv-upload-import">1. Handmatige <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-upload (<code>/import</code>)<a class="headerlink" href="#1-handmatige-csv-upload-import" title="Permanent link">&para;</a></h3>
+<p>Sleep een <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-bestand dat uit Google Authorized Buyers is geexporteerd naar het uploadvak.</p>
 <p><img alt="Data-importpagina met uploadzone en versheidsraster" src="../../images/screenshot-import.png" /></p>
 <p><strong>Werkwijze:</strong></p>
 <ol>
@@ -1581,7 +1581,7 @@ informatie.</p>
 <thead>
 <tr>
 <th>Type</th>
-<th><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-naampatroon</th>
+<th><abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-naampatroon</th>
 <th>Wat het bevat</th>
 </tr>
 </thead>
@@ -1589,7 +1589,7 @@ informatie.</p>
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>Dagelijkse <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-prestaties: impressies, biedingen, wins, uitgaven</td>
+<td>Dagelijkse <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-prestaties: impressies, biedingen, wins, uitgaven</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1618,7 +1618,7 @@ informatie.</p>
 <ul>
 <li>Google Authorized Buyers stuurt dagelijkse rapporten per e-mail.</li>
 <li>De Gmail-integratie van Cat-Scan leest deze e-mails en importeert de
-  <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-bijlagen automatisch.</li>
+  <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-bijlagen automatisch.</li>
 <li>Controleer de status bij <code>/settings/accounts</code> &gt; Gmail Reports-tab, of via
   <code>/gmail/status</code> in de API.</li>
 </ul>
@@ -1645,7 +1645,7 @@ gate) toont een <strong>datum x rapporttype-matrix</strong>:</p>
 terugkijkvenster. De runtime health gate gebruikt dit om te bepalen of het
 systeem operationeel is.</p>
 <h2 id="deduplicatie">Deduplicatie<a class="headerlink" href="#deduplicatie" title="Permanent link">&para;</a></h2>
-<p>Dezelfde <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> opnieuw importeren (of Gmail hetzelfde e-mailbericht opnieuw laten
+<p>Dezelfde <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr> opnieuw importeren (of Gmail hetzelfde e-mailbericht opnieuw laten
 verwerken) zorgt er <strong>niet</strong> voor dat data dubbel geteld wordt. Elke rij wordt
 gehasht en duplicaten worden bij het invoegen overgeslagen. Dit betekent dat
 opnieuw importeren altijd veilig is.</p>
@@ -1673,7 +1673,7 @@ opnieuw importeren altijd veilig is.</p>
 </tr>
 <tr>
 <td>Import mislukt met validatiefout</td>
-<td>Kolommen komen niet overeen. Controleer de tabel met vereiste kolommen ten opzichte van uw <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</td>
+<td>Kolommen komen niet overeen. Controleer de tabel met vereiste kolommen ten opzichte van uw <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>.</td>
 </tr>
 <tr>
 <td>Gmail-import toont "stopped"</td>
@@ -1681,13 +1681,13 @@ opnieuw importeren altijd veilig is.</p>
 </tr>
 <tr>
 <td>Dekkingspercentage daalt</td>
-<td>Rapporten komen binnen, maar voor minder datums dan verwacht. Controleer het exportschema in Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>Rapporten komen binnen, maar voor minder datums dan verwacht. Controleer het exportschema in Google <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Uw <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-funnel begrijpen</a>: is afhankelijk van geimporteerde data</li>
+<li><a href="../03-qps-funnel/">Uw <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>-funnel begrijpen</a>: is afhankelijk van geimporteerde data</li>
 <li><a href="../10-reading-reports/">Uw rapporten lezen</a>: wat u kunt doen met de data
   na import</li>
 <li>Voor DevOps: internals en probleemoplossing van data-versheidsquery's, zie

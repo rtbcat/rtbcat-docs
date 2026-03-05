@@ -1561,13 +1561,13 @@ dziesiątki tysięcy zapytań napływają z giełdy Authorized Buyers do Twojego
 endpointu. Twój bidder analizuje każde z nich, decyduje, czy licytować,
 i odpowiada — wszystko w ciągu kilku milisekund.</p>
 <p>Jest jedna rzecz, której większość osób nie dostrzega: <strong>zdecydowana większość
-tego sygnału to szum.</strong> Typowy seat przetwarzający 50 000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> może odkryć,
+tego sygnału to szum.</strong> Typowy seat przetwarzający 50 000 <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> może odkryć,
 że 30 000 z tych zapytań dotyczy zasobów reklamowych, których media buyer
 nigdy nie zamierzał kupić: nieodpowiednie lokalizacje geograficzne, nieistotne
 domeny wydawców, rozmiary reklam bez pasujących kreacji. Twój bidder i tak musi
 odebrać, przetworzyć i odrzucić każde z nich. To kosztuje transfer, moc
 obliczeniową i pieniądze.</p>
-<p>Powyższy diagram przedstawia to jak opady deszczu. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> od Google to dysza
+<p>Powyższy diagram przedstawia to jak opady deszczu. <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> od Google to dysza
 na górze; krople rozpryskują się na szeroki obszar. Twój bidder to małe
 wiadro na dole. Wszystko, co mija wiadro (krople spadające na lewo i prawo),
 to marnotrawstwo. Zapłaciłeś za to. Nie uzyskałeś nic w zamian.</p>
@@ -1580,15 +1580,15 @@ udostępniane przez Google.</p>
 <p>Google Authorized Buyers daje Ci tylko <strong>10 konfiguracji pretargetingu na
 seat</strong>, plus przybliżone zakresy geograficzne (Wschodnie USA, Zachodnie USA,
 Europa, Azja). Nie istnieje Reporting API. Wszystkie dane o wynikach pochodzą
-z eksportów <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> przesyłanych e-mailem. Sam interfejs pretargetingu <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> jest
+z eksportów <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr> przesyłanych e-mailem. Sam interfejs pretargetingu <abbr title="Authorized Buyers — programatyczna platforma reklamowa Google (dawniej AdX / DoubleClick Ad Exchange).">AB</abbr> jest
 funkcjonalny, ale utrudnia przeglądanie pełnego obrazu między konfiguracjami
 lub cofnięcie zmiany, która poszła nie tak.</p>
 <p>Cat-Scan wypełnia te luki:</p>
 <ul>
-<li><strong>Odbudowuje raportowanie z eksportów <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></strong> (ręczny upload lub automatyczne
+<li><strong>Odbudowuje raportowanie z eksportów <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr></strong> (ręczny upload lub automatyczne
   pobieranie z Gmaila), deduplikując podczas importu, więc ponowne
   przetwarzanie nigdy nie powoduje podwójnego zliczania.</li>
-<li>Pokazuje <strong>pełny lejek <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong> — od surowego <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> przez licytacje, wygrane,
+<li>Pokazuje <strong>pełny lejek <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr></strong> — od surowego <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> przez licytacje, wygrane,
   odsłony, kliknięcia i wydatki — z podziałem na dowolny wymiar: geografię,
   wydawcę, rozmiar reklamy, kreację, konfigurację.</li>
 <li>Zapewnia <strong>bezpieczne zarządzanie pretargetingiem</strong> z historią zmian,
@@ -1603,8 +1603,8 @@ lub cofnięcie zmiany, która poszła nie tak.</p>
 różne role:</p>
 <p><strong>Media buyerzy i managerowie kampanii</strong> używają Cat-Scan, aby zrozumieć,
 na co idzie ich budżet, znaleźć marnotrawstwo, zarządzać kreacjami, dostrajać
-pretargeting i zatwierdzać propozycje optymalizacji. Myślą w kategoriach <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>,
-współczynnika wygranych i <abbr title="Return On Ad Spend — revenue generated per dollar spent on advertising.">ROAS</abbr>. Ich rozdziały skupiają się na tym, co pokazuje
+pretargeting i zatwierdzać propozycje optymalizacji. Myślą w kategoriach <abbr title="Koszt za tysiąc — cena płacona za 1000 wyświetleń reklam.">CPM</abbr>,
+współczynnika wygranych i <abbr title="Zwrot z wydatków na reklamę — przychód wygenerowany na każdego dolara wydanego na reklamę.">ROAS</abbr>. Ich rozdziały skupiają się na tym, co pokazuje
 interfejs, co oznaczają liczby i jakie działania podjąć.</p>
 <p><strong>Inżynierowie DevOps i platformowi</strong> używają Cat-Scan do wdrażania,
 monitorowania i rozwiązywania problemów systemu. Myślą w kategoriach
@@ -1636,7 +1636,7 @@ odpowiadającymi Twojej roli.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Rozdział 0: Czym jest Cat-Scan?</a>
   Czym zajmuje się platforma, dla kogo jest i jakie podstawowe pojęcia musisz
-  znać: seaty, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, lejek <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  znać: seaty, <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>, pretargeting, lejek <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Rozdział 1: Logowanie</a>
@@ -1653,16 +1653,16 @@ odpowiadającymi Twojej roli.</p>
 <p>Dla media buyerów, managerów kampanii i inżynierów optymalizacji.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Rozdział 3: Zrozumienie lejka <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>
+<p><a href="03-qps-funnel/">Rozdział 3: Zrozumienie lejka <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr></a>
   Strona główna. Jak czytać podział lejka: odsłony, licytacje, wygrane,
-  wydatki, współczynnik wygranych, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Co oznacza „marnotrawstwo"
+  wydatki, współczynnik wygranych, <abbr title="Współczynnik klikalności — kliknięcia podzielone przez wyświetlenia, wyrażone jako procent.">CTR</abbr>, <abbr title="Koszt za tysiąc — cena płacona za 1000 wyświetleń reklam.">CPM</abbr>. Co oznacza „marnotrawstwo"
   w konkretnych kategoriach. Karty konfiguracji i co kontrolują ich pola.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">Rozdział 4: Analiza marnotrawstwa według wymiaru</a>
   Trzy widoki analizy marnotrawstwa i kiedy używać każdego z nich:</p>
 </li>
-<li><strong>Geograficzny</strong> (<code>/qps/geo</code>): które kraje i miasta pochłaniają <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> bez
+<li><strong>Geograficzny</strong> (<code>/qps/geo</code>): które kraje i miasta pochłaniają <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> bez
     konwersji.</li>
 <li><strong>Wydawca</strong> (<code>/qps/publisher</code>): które domeny i aplikacje mają słabe wyniki.</li>
 <li>
@@ -1680,28 +1680,28 @@ odpowiadającymi Twojej roli.</p>
 <li>
 <p><a href="06-pretargeting/">Rozdział 6: Konfiguracja pretargetingu</a>
   Co kontroluje konfiguracja pretargetingu (regiony, rozmiary, formaty,
-  platformy, maksymalne <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Jak czytać kartę konfiguracji. Wdrażanie zmian
+  platformy, maksymalne <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>). Jak czytać kartę konfiguracji. Wdrażanie zmian
   z podglądem próbnym. Oś czasu historii zmian (<code>/history</code>). Cofanie: jak
   działa, dlaczego istnieje i kiedy go używać.</p>
 </li>
 <li>
-<p><a href="07-optimizer/">Rozdział 7: Optymalizator (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>
+<p><a href="07-optimizer/">Rozdział 7: Optymalizator (<abbr title="Przynieś swój własny model — system Cat-Scan do podłączenia własnego zewnętrznego modelu oceny w celu generowania propozycji optymalizacji.">BYOM</abbr>)</a>
   Bring Your Own Model: rejestracja zewnętrznego endpointu scoringowego,
   walidacja, aktywacja. Cykl życia: punktacja-propozycja-zatwierdzenie-
   wdrożenie. Presety przepływu pracy: ostrożny, zrównoważony, agresywny.
-  Ekonomia: efektywne <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>, bazowy koszt hostingu, podsumowanie wydajności.
+  Ekonomia: efektywne <abbr title="Koszt za tysiąc — cena płacona za 1000 wyświetleń reklam.">CPM</abbr>, bazowy koszt hostingu, podsumowanie wydajności.
   Jak wygląda propozycja i jak ją ocenić.</p>
 </li>
 <li>
 <p><a href="08-conversions/">Rozdział 8: Konwersje i atrybucja</a>
   Podłączanie źródła konwersji. Integracja piksela. Konfiguracja webhooka:
-  podpisy <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, współdzielone sekrety, limitowanie żądań. Kontrole gotowości.
+  podpisy <abbr title="Kod uwierzytelniania wiadomości oparty na skrócie — podpis kryptograficzny używany do weryfikacji ładunków webhook.">HMAC</abbr>, współdzielone sekrety, limitowanie żądań. Kontrole gotowości.
   Statystyki pozyskiwania danych. Co oznacza „zdrowie konwersji" i jak czytać
   stronę statusu bezpieczeństwa.</p>
 </li>
 <li>
 <p><a href="09-data-import/">Rozdział 9: Import danych</a>
-  Jak dane trafiają do Cat-Scan i dlaczego to ważne. Ręczny upload <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+  Jak dane trafiają do Cat-Scan i dlaczego to ważne. Ręczny upload <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr>
   (<code>/import</code>): przeciągnij i upuść, mapowanie kolumn, walidacja, upload
   częściowy dla dużych plików. Automatyczny import z Gmaila: jak działa, jak
   sprawdzić status, co się dzieje, gdy zawiedzie. Siatka aktualności danych:
@@ -1716,7 +1716,7 @@ odpowiadającymi Twojej roli.</p>
 </li>
 </ul>
 <h3 id="czesc-ii-sciezka-devops">Część II: Ścieżka DevOps<a class="headerlink" href="#czesc-ii-sciezka-devops" title="Permanent link">&para;</a></h3>
-<p>Dla inżynierów platformowych, <abbr title="Site Reliability Engineering — the discipline of operating reliable production systems.">SRE</abbr> i administratorów systemów.</p>
+<p>Dla inżynierów platformowych, <abbr title="Inżynieria niezawodności witryn — dyscyplina obsługi niezawodnych systemów produkcyjnych.">SRE</abbr> i administratorów systemów.</p>
 <ul>
 <li>
 <p><a href="11-architecture/">Rozdział 11: Przegląd architektury</a>
@@ -1790,10 +1790,10 @@ odpowiadającymi Twojej roli.</p>
 <p><a href="17-integrations/">Rozdział 17: Integracje</a>
   Konta serwisowe GCP i połączenie z projektem. Google Authorized Buyers API:
   wykrywanie seatów, synchronizacja konfiguracji pretargetingu, synchronizacja
-  endpointów <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>. Integracja z Gmailem: OAuth2 do automatycznego pobierania
+  endpointów <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr>. Integracja z Gmailem: OAuth2 do automatycznego pobierania
   raportów. Dostawcy AI językowego: Gemini, Claude, Grok (do wykrywania języka
   kreacji i alertów o niezgodnościach). Webhooki konwersji: rejestracja
-  endpointu, weryfikacja <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, limitowanie żądań, monitorowanie aktualności.</p>
+  endpointu, weryfikacja <abbr title="Kod uwierzytelniania wiadomości oparty na skrócie — podpis kryptograficzny używany do weryfikacji ładunków webhook.">HMAC</abbr>, limitowanie żądań, monitorowanie aktualności.</p>
 </li>
 </ul>
 <h3 id="czesc-iii-materiay-referencyjne">Część III: Materiały referencyjne<a class="headerlink" href="#czesc-iii-materiay-referencyjne" title="Permanent link">&para;</a></h3>
@@ -1804,7 +1804,7 @@ odpowiadającymi Twojej roli.</p>
   Każdy termin w dwóch perspektywach. Kolumna media buyera: „pretargeting" to
   „reguły kontrolujące, które zapytania o licytację docierają do Twojego
   biddera." Kolumna DevOps: „pretargeting" to „mutowalny obiekt synchronizowany
-  z <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, przechowywany w <code>pretargeting_configs</code>, dostępny przez
+  z <abbr title="Authorized Buyers — programatyczna platforma reklamowa Google (dawniej AdX / DoubleClick Ad Exchange).">AB</abbr> API, przechowywany w <code>pretargeting_configs</code>, dostępny przez
   <code>/settings/pretargeting</code>." Obie strony potrzebują tego samego słowa; żadna nie
   posługuje się definicją drugiej.</p>
 </li>

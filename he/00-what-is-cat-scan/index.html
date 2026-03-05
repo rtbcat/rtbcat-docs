@@ -1503,29 +1503,29 @@
 
 <h1 id="0-cat-scan">פרק 0: מהו Cat-Scan?<a class="headerlink" href="#0-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>קהל יעד: כולם</em></p>
-<p>Cat-Scan היא פלטפורמת אופטימיזציית <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> עבור Google Authorized Buyers. היא מספקת
-לכם שקיפות לגבי האופן שבו הקצאת ה-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> של הבידר שלכם מנוצלת (ומבוזבזת),
+<p>Cat-Scan היא פלטפורמת אופטימיזציית <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> עבור Google Authorized Buyers. היא מספקת
+לכם שקיפות לגבי האופן שבו הקצאת ה-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> של הבידר שלכם מנוצלת (ומבוזבזת),
 ומעמידה לרשותכם כלים לשיפורה.</p>
 <p><img alt="משפך QPS" src="../../assets/qps-funnel.svg" /></p>
 <h2 id="_1">הבעיה המרכזית<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>כאשר אתם מפעילים חשבון (seat) בבורסת Google Authorized Buyers, גוגל שולחת
 לנקודת הקצה של הבידר שלכם זרם של בקשות הצעה (bid requests). אתם משלמים על זרם
-זה: הוא צורך את הקצאת ה-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שלכם, את כוח המחשוב של הבידר ואת רוחב הפס של
+זה: הוא צורך את הקצאת ה-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שלכם, את כוח המחשוב של הבידר ואת רוחב הפס של
 הרשת.</p>
 <p>אך לא כל בקשת הצעה היא שימושית. רבות מגיעות עבור מלאי שלעולם לא הייתם רוכשים:
 מדינות שאינכם מטרגטים, מפרסמים שמעולם לא שמעתם עליהם, גדלי מודעות שאין לכם
 קריאייטיבים עבורם. הבידר שלכם עדיין נדרש לקבל ולדחות כל אחת מהן.</p>
-<p>בהגדרה טיפוסית, <strong>יותר ממחצית ה-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שלכם הוא בזבוז.</strong></p>
+<p>בהגדרה טיפוסית, <strong>יותר ממחצית ה-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שלכם הוא בזבוז.</strong></p>
 <h2 id="cat-scan">מה Cat-Scan עושה בנידון<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan פועלת לצד הבידר שלכם ומספקת שלושה דברים:</p>
 <h3 id="1">1. שקיפות<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>היא בונה מחדש דוחות ביצועים ממשלוחי <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> של גוגל (מאחר שאין Reporting API)
-ומציגה לכם את משפך ה-<abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> המלא: מ-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> גולמי דרך הצעות, זכיות, חשיפות, קליקים
+<p>היא בונה מחדש דוחות ביצועים ממשלוחי <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> של גוגל (מאחר שאין Reporting API)
+ומציגה לכם את משפך ה-<abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr> המלא: מ-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> גולמי דרך הצעות, זכיות, חשיפות, קליקים
 והוצאה. הנתונים מפורטים לפי גיאוגרפיה, מפרסם, גודל מודעה, קריאייטיב ותצורת
 pretargeting.</p>
 <p>זה מאפשר לכם לענות על שאלות כמו:
-- אילו מדינות צורכות <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> אך אינן מייצרות זכיות?
-- אילו מפרסמים מציגים <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> גבוה אך הוצאה אפסית?
+- אילו מדינות צורכות <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> אך אינן מייצרות זכיות?
+- אילו מפרסמים מציגים <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> גבוה אך הוצאה אפסית?
 - אילו גדלי מודעות מקבלים תעבורה אך אין להם קריאייטיב תואם?
 - אילו תצורות pretargeting מתפקדות היטב לעומת אלו שלא?</p>
 <h3 id="2">2. שליטה<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
@@ -1555,7 +1555,7 @@ pretargeting.</p>
 <td>חשבון קונה ב-Google Authorized Buyers, מזוהה באמצעות <code>buyer_account_id</code>. לארגון אחד יכולים להיות מספר חשבונות.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr></strong></td>
 <td>Queries Per Second: קצב בקשות ההצעה המרבי שאתם מבקשים מגוגל לשלוח לבידר שלכם. גוגל מווסתת את הנפח בפועל בהתאם לרמת החשבון שלכם, לכן חשוב לנצל כל בקשה ביעילות.</td>
 </tr>
 <tr>
@@ -1563,16 +1563,16 @@ pretargeting.</p>
 <td>מסננים בצד השרת שמורים לגוגל אילו בקשות הצעה לשלוח לכם. שולטים ב: גיאוגרפיות, גדלי מודעות, פורמטים, פלטפורמות וסוגי קריאייטיב. מקבלים 10 לכל חשבון.</td>
 </tr>
 <tr>
-<td><strong>משפך <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>משפך <abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr></strong></td>
 <td>ההתקדמות מבקשת הצעה שהתקבלה, דרך הצעה שהוגשה, זכייה במכירה פומבית, חשיפה שהוצגה, קליק והמרה. בכל שלב יש נשירה; Cat-Scan מראה לכם היכן.</td>
 </tr>
 <tr>
 <td><strong>בזבוז</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שנצרך על ידי בקשות הצעה שהבידר שלכם אינו יכול או אינו מעוניין לנצל. המטרה היא להפחית בזבוז מבלי לאבד תעבורה בעלת ערך.</td>
+<td><abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שנצרך על ידי בקשות הצעה שהבידר שלכם אינו יכול או אינו מעוניין לנצל. המטרה היא להפחית בזבוז מבלי לאבד תעבורה בעלת ערך.</td>
 </tr>
 <tr>
 <td><strong>Config</strong></td>
-<td>קיצור של תצורת pretargeting. לכל תצורה יש מצב (פעיל/מושהה), <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> מרבי וכללי הכללה/החרגה לגיאוגרפיות, גדלים, פורמטים ופלטפורמות.</td>
+<td>קיצור של תצורת pretargeting. לכל תצורה יש מצב (פעיל/מושהה), <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> מרבי וכללי הכללה/החרגה לגיאוגרפיות, גדלים, פורמטים ופלטפורמות.</td>
 </tr>
 </tbody>
 </table>

@@ -1479,7 +1479,7 @@
 <p><strong>Що це дає:</strong>
 - Виявлення місць (<code>discoverSeats</code>)
 - Синхронізація конфігурацій претаргетингу (<code>syncPretargetingConfigs</code>)
-- Синхронізація ендпоінтів <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (<code>syncRTBEndpoints</code>)
+- Синхронізація ендпоінтів <abbr title="Торги в реальному часі — аукціонний протокол, де рекламні покази купуються та продаються за мілісекунди.">RTB</abbr> (<code>syncRTBEndpoints</code>)
 - Збір креативів (<code>collectCreatives</code>)</p>
 <p><strong>Стан проєкту:</strong>
 Перевірте стан проєкту GCP за адресою <code>/settings/accounts</code> або через
@@ -1503,10 +1503,10 @@
 <tr>
 <td><strong>Синхронізація претаргетингу</strong></td>
 <td>Поточний стан конфігурації претаргетингу з Google</td>
-<td>Після зовнішніх змін в інтерфейсі <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>Після зовнішніх змін в інтерфейсі <abbr title="Authorized Buyers — програматична рекламна платформа Google (раніше AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>Синхронізація ендпоінтів <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>Синхронізація ендпоінтів <abbr title="Торги в реальному часі — аукціонний протокол, де рекламні покази купуються та продаються за мілісекунди.">RTB</abbr></strong></td>
 <td>URL-адреси та статус ендпоінтів біддера</td>
 <td>Початкове налаштування, після зміни ендпоінтів</td>
 </tr>
@@ -1518,11 +1518,11 @@
 </tbody>
 </table>
 <h2 id="gmail">Інтеграція з Gmail<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers надсилає щоденні <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-звіти електронною поштою. Cat-Scan може автоматично їх імпортувати.</p>
+<p>Google Authorized Buyers надсилає щоденні <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-звіти електронною поштою. Cat-Scan може автоматично їх імпортувати.</p>
 <p><strong>Налаштування:</strong>
 1. Перейдіть до <code>/settings/accounts</code> &gt; вкладка Gmail Reports.
-2. Авторизуйте Cat-Scan для доступу до облікового запису Gmail, який отримує звіти <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
-3. Cat-Scan опитуватиме пошту на наявність нових листів зі звітами та імпортуватиме вкладені <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-файли.</p>
+2. Авторизуйте Cat-Scan для доступу до облікового запису Gmail, який отримує звіти <abbr title="Authorized Buyers — програматична рекламна платформа Google (раніше AdX / DoubleClick Ad Exchange).">AB</abbr>.
+3. Cat-Scan опитуватиме пошту на наявність нових листів зі звітами та імпортуватиме вкладені <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-файли.</p>
 <p><strong>Моніторинг:</strong>
 - <code>GET /gmail/status</code>: поточний стан, кількість непрочитаних, остання причина
 - <code>POST /gmail/import/start</code>: ручний запуск циклу імпорту
@@ -1571,7 +1571,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Перевірка <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Перевірка <abbr title="Код автентифікації повідомлень на основі хешу — криптографічний підпис для перевірки даних вебхуків.">HMAC</abbr></strong></td>
 <td>Забезпечує автентичність запитів (підписані спільним секретом)</td>
 <td>Спільний секрет налаштовується у параметрах вебхука</td>
 </tr>
@@ -1588,7 +1588,7 @@
 </tbody>
 </table>
 <p><strong>Моніторинг:</strong>
-- <code>GET /conversions/security/status</code>: стан <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, стан обмеження частоти запитів, стан актуальності
+- <code>GET /conversions/security/status</code>: стан <abbr title="Код автентифікації повідомлень на основі хешу — криптографічний підпис для перевірки даних вебхуків.">HMAC</abbr>, стан обмеження частоти запитів, стан актуальності
 - <code>GET /conversions/health</code>: загальний стан прийому та агрегації
 - <code>GET /conversions/readiness</code>: чи достатньо свіжі дані конверсій для довіри</p>
 <h2 id="_2">Пов'язані розділи<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>

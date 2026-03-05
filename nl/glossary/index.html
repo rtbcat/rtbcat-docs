@@ -1307,29 +1307,29 @@ systeem terugvindt.</p>
 <td><code>buyer_account_id</code> in Postgres. Opgeslagen in de <code>seats</code>-tabel. Gesynchroniseerd via <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr></strong></td>
 <td>Queries Per Second: het maximale tempo van biedverzoeken dat u Google vraagt te verzenden. Google beperkt het werkelijke volume op basis van uw accountniveau.</td>
-<td>Geconfigureerde limiet per pretargeting-configuratie. Werkelijk inkomend tempo gemonitord via <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnelmetingen in <code>rtb_daily</code>.</td>
+<td>Geconfigureerde limiet per pretargeting-configuratie. Werkelijk inkomend tempo gemonitord via <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-funnelmetingen in <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Verspilling</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> verbruikt door biedverzoeken die uw bidder afwijst (verkeerde geo's, verkeerde formaten, geen passende creative). Geld uitgegeven aan niets.</td>
+<td><abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> verbruikt door biedverzoeken die uw bidder afwijst (verkeerde geo's, verkeerde formaten, geen passende creative). Geld uitgegeven aan niets.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Berekend uit <code>rtb_daily</code>-aggregaten. Zichtbaar in de funnel-API.</td>
 </tr>
 <tr>
 <td><strong>Pretargeting-configuratie</strong></td>
 <td>De regels die bepalen welke biedverzoeken uw bidder bereiken. U krijgt er 10 per seat. Regelt geo's, formaten, advertentietypen, platformen, uitgevers.</td>
-<td>Muteerbare entiteit gesynchroniseerd vanuit de Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. Opgeslagen in <code>pretargeting_configs</code>. Beheerd via <code>/settings/pretargeting</code>. Snapshots maken terugdraaien mogelijk.</td>
+<td>Muteerbare entiteit gesynchroniseerd vanuit de Google <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr> API. Opgeslagen in <code>pretargeting_configs</code>. Beheerd via <code>/settings/pretargeting</code>. Snapshots maken terugdraaien mogelijk.</td>
 </tr>
 <tr>
 <td><strong>Funnel</strong></td>
-<td>De voortgang van biedverzoek naar besteding: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Biedingen -&gt; Gewonnen -&gt; Impressies -&gt; Klikken -&gt; Besteding. Elke stap heeft uitval.</td>
+<td>De voortgang van biedverzoek naar besteding: <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> -&gt; Biedingen -&gt; Gewonnen -&gt; Impressies -&gt; Klikken -&gt; Besteding. Elke stap heeft uitval.</td>
 <td>Berekend uit <code>rtb_daily</code>-metingen. Geserveerd door <code>GET /analytics/rtb-funnel</code>. Frontend cachet gedurende 30 minuten.</td>
 </tr>
 <tr>
 <td><strong>Creative</strong></td>
 <td>Een advertentie-asset: afbeelding, video, HTML of native. Heeft een formaat, afmeting, bestemmings-URL en prestatiegeschiedenis.</td>
-<td>Rij in de <code>creatives</code>-tabel. Thumbnails in blob storage. Gesynchroniseerd vanuit de Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. Prestaties via <code>rtb_daily</code>-joins.</td>
+<td>Rij in de <code>creatives</code>-tabel. Thumbnails in blob storage. Gesynchroniseerd vanuit de Google <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr> API. Prestaties via <code>rtb_daily</code>-joins.</td>
 </tr>
 <tr>
 <td><strong>Campagne</strong></td>
@@ -1338,7 +1338,7 @@ systeem terugvindt.</p>
 </tr>
 <tr>
 <td><strong>Configuratiekaart</strong></td>
-<td>Het UI-paneel dat de status van een pretargeting-configuratie toont, met max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, geo's, formaten, advertentietypen en platformen.</td>
+<td>Het UI-paneel dat de status van een pretargeting-configuratie toont, met max <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>, geo's, formaten, advertentietypen en platformen.</td>
 <td><code>PretargetingConfigCard</code> React-component. Data van <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1348,16 +1348,16 @@ systeem terugvindt.</p>
 </tr>
 <tr>
 <td><strong>Import</strong></td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-prestatiedata in Cat-Scan laden, hetzij via handmatige upload of Gmail auto-import.</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> geparsed, gevalideerd, ontdubbeld (via <code>row_hash</code> unique constraint), ingevoegd in doeltabellen. Gedeelde upload voor bestanden &gt; 5MB.</td>
+<td><abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-prestatiedata in Cat-Scan laden, hetzij via handmatige upload of Gmail auto-import.</td>
+<td><abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr> geparsed, gevalideerd, ontdubbeld (via <code>row_hash</code> unique constraint), ingevoegd in doeltabellen. Gedeelde upload voor bestanden &gt; 5MB.</td>
 </tr>
 <tr>
 <td><strong>Terugdraaien</strong></td>
 <td>Een pretargeting-configuratiewijziging terugzetten naar de vorige staat. Voorvertoning met dry-run, daarna bevestigen.</td>
-<td>Snapshotherstel: leest <code>pretargeting_snapshots</code>, past delta toe op Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, registreert nieuwe snapshot. <code>POST /snapshots/rollback</code>.</td>
+<td>Snapshotherstel: leest <code>pretargeting_snapshots</code>, past delta toe op Google <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr> API, registreert nieuwe snapshot. <code>POST /snapshots/rollback</code>.</td>
 </tr>
 <tr>
-<td><strong>Optimizer / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>Optimizer / <abbr title="Breng je eigen model mee — Cat-Scans systeem om je eigen externe scoringsmodel te koppelen voor optimalisatievoorstellen.">BYOM</abbr></strong></td>
 <td>Geautomatiseerd systeem dat segmenten scoort en configuratiewijzigingen voorstelt. Gebruikt uw eigen externe model.</td>
 <td>Score-endpoint aangeroepen via HTTP POST. Voorstellen opgeslagen in <code>optimizer_proposals</code>. Levenscyclus: scoren -&gt; voorstellen -&gt; goedkeuren -&gt; toepassen.</td>
 </tr>
@@ -1367,14 +1367,14 @@ systeem terugvindt.</p>
 <td><code>canary_profile</code> parameter voor de score-and-propose API. Beïnvloedt betrouwbaarheidsdrempels en limieten voor wijzigingsomvang.</td>
 </tr>
 <tr>
-<td><strong>Effectieve <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong></td>
+<td><strong>Effectieve <abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr></strong></td>
 <td>Wat u daadwerkelijk betaalt per duizend impressies, rekening houdend met verspilling en infrastructuurkosten.</td>
 <td>Berekend in <code>OptimizerEconomicsService</code>. Combineert bestedingsdata uit <code>rtb_daily</code> met geconfigureerde hostingkosten.</td>
 </tr>
 <tr>
 <td><strong>Conversie</strong></td>
 <td>Een waardevolle gebruikersactie (aankoop, registratie) die wordt bijgehouden na een impressie. Wordt teruggekoppeld om targeting te optimaliseren.</td>
-<td>Event geïngesteerd via pixel (<code>GET /conversions/pixel</code>) of webhook (<code>POST /conversions/webhook</code>). Opgeslagen in conversietabellen. <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-geverifieerd voor webhooks.</td>
+<td>Event geïngesteerd via pixel (<code>GET /conversions/pixel</code>) of webhook (<code>POST /conversions/webhook</code>). Opgeslagen in conversietabellen. <abbr title="Hash-gebaseerde berichtauthenticatiecode — een cryptografische handtekening die wordt gebruikt om webhook-payloads te verifiëren.">HMAC</abbr>-geverifieerd voor webhooks.</td>
 </tr>
 <tr>
 <td><strong>Winstpercentage</strong></td>
@@ -1382,14 +1382,14 @@ systeem terugvindt.</p>
 <td><code>auction_wins / bids_placed</code> uit <code>rtb_daily</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="Klikfrequentie — klikken gedeeld door impressies, uitgedrukt als percentage.">CTR</abbr></strong></td>
 <td>Klikken / Impressies. Hoe aantrekkelijk uw creatives zijn.</td>
 <td><code>clicks / impressions</code> uit <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Runtime health gate</strong></td>
 <td>(Geen koperterm)</td>
-<td><code>v1-runtime-health-strict.yml</code> CI-workflow. Voert end-to-end checks uit: API-gezondheid, datagezondheid, conversies, optimizer, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> SLO. Retourneert PASS/FAIL/BLOCKED per check.</td>
+<td><code>v1-runtime-health-strict.yml</code> CI-workflow. Voert end-to-end checks uit: API-gezondheid, datagezondheid, conversies, optimizer, <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> SLO. Retourneert PASS/FAIL/BLOCKED per check.</td>
 </tr>
 <tr>
 <td><strong>Contractcheck</strong></td>

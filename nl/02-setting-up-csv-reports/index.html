@@ -1799,11 +1799,11 @@
   
 
 
-<h1 id="setting-up-your-csv-reports">Setting Up Your <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> Reports<a class="headerlink" href="#setting-up-your-csv-reports" title="Permanent link">&para;</a></h1>
+<h1 id="setting-up-your-csv-reports">Setting Up Your <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr> Reports<a class="headerlink" href="#setting-up-your-csv-reports" title="Permanent link">&para;</a></h1>
 <p><em>Audience: media buyers, account managers</em></p>
 <p>Before Cat-Scan can analyze anything, it needs data. Google Authorized Buyers
-has no Reporting API, so all data flows through <strong>five scheduled <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> reports</strong>
-that you create once in your Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> account.</p>
+has no Reporting API, so all data flows through <strong>five scheduled <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr> reports</strong>
+that you create once in your Google <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr> account.</p>
 <div class="admonition warning">
 <p class="admonition-title">Why five separate reports?</p>
 <p>Google's reporting columns are not all compatible with each other. For
@@ -2132,7 +2132,7 @@ down. Cat-Scan uses these to slice your data.</p>
 <tbody>
 <tr>
 <td>Report type</td>
-<td><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></td>
+<td><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr></td>
 </tr>
 <tr>
 <td>Time range</td>
@@ -2177,7 +2177,7 @@ metrics that the Quality report cannot include.</p>
 <tbody>
 <tr>
 <td>Report type</td>
-<td><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></td>
+<td><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr></td>
 </tr>
 <tr>
 <td>Time range</td>
@@ -2214,7 +2214,7 @@ per country, and how many survive each stage of the funnel.</p>
 <tbody>
 <tr>
 <td>Report type</td>
-<td><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></td>
+<td><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr></td>
 </tr>
 <tr>
 <td>Time range</td>
@@ -2250,7 +2250,7 @@ addition to) geography.</p>
 <tbody>
 <tr>
 <td>Report type</td>
-<td><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></td>
+<td><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr></td>
 </tr>
 <tr>
 <td>Time range</td>
@@ -2281,7 +2281,7 @@ auction -- critical for diagnosing pretargeting issues.</p>
 <tbody>
 <tr>
 <td>Report type</td>
-<td><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></td>
+<td><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr></td>
 </tr>
 <tr>
 <td>Time range</td>
@@ -2317,11 +2317,11 @@ one tells you a specific reason Google rejected your bid before auction entry.</
 <tr>
 <td><code>CREATIVE_NOT_APPROVED</code></td>
 <td>The creative hasn't passed Google's review, or was disapproved</td>
-<td>Check creative status in Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>. Fix policy violations.</td>
+<td>Check creative status in Google <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr>. Fix policy violations.</td>
 </tr>
 <tr>
 <td><code>BID_BELOW_AUCTION_FLOOR</code></td>
-<td>Your bid price was below the publisher's minimum <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></td>
+<td>Your bid price was below the publisher's minimum <abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr></td>
 <td>Raise bid or exclude low-value inventory via pretargeting</td>
 </tr>
 <tr>
@@ -2408,7 +2408,7 @@ system detects the report type automatically from the column headers:</p>
 <li>Has <strong>Creative ID</strong> + <strong>Bids in auction</strong>? -&gt; Bids in Auction</li>
 </ul>
 <h2 id="how-cat-scan-uses-each-metric">How Cat-Scan uses each metric<a class="headerlink" href="#how-cat-scan-uses-each-metric" title="Permanent link">&para;</a></h2>
-<p>This maps raw <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> metrics to what you see in the Cat-Scan UI.</p>
+<p>This maps raw <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr> metrics to what you see in the Cat-Scan UI.</p>
 <table>
 <thead>
 <tr>
@@ -2419,7 +2419,7 @@ system detects the report type automatically from the column headers:</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> funnel</strong> (home page)</td>
+<td><strong><abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> funnel</strong> (home page)</td>
 <td>Bid requests, Reached queries, Bids, Bids in auction, Auctions won, Impressions, Clicks, Spend</td>
 <td>Pipeline (both) + Quality</td>
 </tr>
@@ -2434,12 +2434,12 @@ system detects the report type automatically from the column headers:</p>
 <td>Pipeline + Bids in Auction</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="Klikfrequentie — klikken gedeeld door impressies, uitgedrukt als percentage.">CTR</abbr></strong></td>
 <td><code>Clicks / Impressions</code></td>
 <td>Any report with both</td>
 </tr>
 <tr>
-<td><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong></td>
+<td><strong><abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr></strong></td>
 <td><code>(Spend / Impressions) * 1000</code></td>
 <td>Quality</td>
 </tr>
@@ -2522,7 +2522,7 @@ system detects the report type automatically from the column headers:</p>
 </tr>
 <tr>
 <td>Missing "Hour" dimension on Pipeline reports</td>
-<td>No hourly granularity in <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> analysis</td>
+<td>No hourly granularity in <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> analysis</td>
 <td>Add Hour to Pipeline -- Geo and Pipeline -- Publisher</td>
 </tr>
 <tr>
@@ -2538,7 +2538,7 @@ system detects the report type automatically from the column headers:</p>
   setup checklist</li>
 <li><a href="../09-data-import/">Data Import</a>: detailed import mechanics, chunked
   uploads, and troubleshooting</li>
-<li><a href="../03-qps-funnel/"><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Funnel</a>: once data is flowing, start analyzing</li>
+<li><a href="../03-qps-funnel/"><abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> Funnel</a>: once data is flowing, start analyzing</li>
 </ul>
 
 

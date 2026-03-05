@@ -1638,13 +1638,13 @@
 відсутні. Див. <a href="../09-data-import/">Імпорт даних</a>.</p>
 <h3 id="win-rate">[Баєр] Яка різниця між «втратами» та «низьким win rate»?<a class="headerlink" href="#win-rate" title="Permanent link">&para;</a></h3>
 <p><strong>Втрати</strong> = запити на ставки, які ваш біддер <em>відхилив</em> без участі в торгах. Це
-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, за який ви заплатили, але не змогли використати взагалі. Виправляється
+<abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr>, за який ви заплатили, але не змогли використати взагалі. Виправляється
 претаргетингом.</p>
 <p><strong>Низький win rate</strong> = запити на ставки, на які ваш біддер <em>зробив ставку</em>, але
 програв аукціон. Це означає, що ваші ставки недостатньо конкурентні. Виправляється
 стратегією ставок, а не претаргетингом.</p>
 <p>Обидва показники відображаються у воронці, але потребують різних дій. Див.
-<a href="../03-qps-funnel/">Розуміння вашої воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>.</p>
+<a href="../03-qps-funnel/">Розуміння вашої воронки <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr></a>.</p>
 <h3 id="_2">[Баєр] Чи можу я скасувати зміну претаргетингу?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Так. Перейдіть до <code>/history</code>, знайдіть зміну, натисніть «Попередній перегляд
 відкату», щоб побачити, що буде скасовано, потім підтвердіть. Сам відкат також
@@ -1695,10 +1695,10 @@
 <a href="../15-troubleshooting/">Усунення несправностей</a> для повної процедури.</p>
 <hr />
 <h3 id="cat-scan">[Обидва] Звідки Cat-Scan бере дані?<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h3>
-<p><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-експорти Google Authorized Buyers. Reporting API не існує. Дані надходять
-або через ручне завантаження <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>, або через автоматичне отримання з Gmail. Див.
+<p><abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-експорти Google Authorized Buyers. Reporting API не існує. Дані надходять
+або через ручне завантаження <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>, або через автоматичне отримання з Gmail. Див.
 <a href="../09-data-import/">Імпорт даних</a>.</p>
-<h3 id="csv">[Обидва] Чи безпечно повторно імпортувати той самий <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>?<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<h3 id="csv">[Обидва] Чи безпечно повторно імпортувати той самий <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>?<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
 <p>Так. Кожен рядок хешується та дедуплікується. Повторний імпорт ніколи не
 подвоює дані.</p>
 <h3 id="_5">[Обидва] Які мови підтримує інтерфейс?<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>

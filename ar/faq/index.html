@@ -1637,13 +1637,13 @@
 <p>تحقق من شبكة تحديث البيانات على <code>/import</code> لمعرفة الخلايا المفقودة بالتحديد.
 راجع <a href="../09-data-import/">استيراد البيانات</a>.</p>
 <h3 id="_2">[مشتري وسائط] ما الفرق بين "الهدر" و"معدل الفوز المنخفض"؟<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p><strong>الهدر</strong> = طلبات مزايدة <em>رفضها</em> مزايدك دون مزايدة عليها. هذا <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> دفعت ثمنه
+<p><strong>الهدر</strong> = طلبات مزايدة <em>رفضها</em> مزايدك دون مزايدة عليها. هذا <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> دفعت ثمنه
 لكن لم تستطع استخدامه على الإطلاق. أصلحه بالاستهداف المسبق.</p>
 <p><strong>معدل الفوز المنخفض</strong> = طلبات مزايدة <em>زايد عليها</em> مزايدك لكنه خسر المزاد.
 هذا يعني أن مزايداتك ليست تنافسية بما فيه الكفاية. أصلحه باستراتيجية
 المزايدة، وليس الاستهداف المسبق.</p>
 <p>كلاهما يظهر في القمع لكنهما يتطلبان إجراءات مختلفة. راجع
-<a href="../03-qps-funnel/">فهم قمع <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخاص بك</a>.</p>
+<a href="../03-qps-funnel/">فهم قمع <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الخاص بك</a>.</p>
 <h3 id="_3">[مشتري وسائط] هل يمكنني التراجع عن تغيير في الاستهداف المسبق؟<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>نعم. اذهب إلى <code>/history</code>، اعثر على التغيير، انقر "معاينة التراجع" لرؤية ما
 سيتم إرجاعه، ثم أكّد. التراجع نفسه يُسجَّل. راجع
@@ -1692,10 +1692,10 @@ BLOCKED:</p>
 <a href="../15-troubleshooting/">استكشاف الأخطاء وإصلاحها</a> للإجراء الكامل.</p>
 <hr />
 <h3 id="cat-scan">[الجميع] من أين تأتي بيانات Cat-Scan؟<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h3>
-<p>تصديرات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> من Google Authorized Buyers. لا توجد API للتقارير. تصل البيانات
-إما عبر رفع <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> يدوي أو استيراد تلقائي من Gmail. راجع
+<p>تصديرات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> من Google Authorized Buyers. لا توجد API للتقارير. تصل البيانات
+إما عبر رفع <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> يدوي أو استيراد تلقائي من Gmail. راجع
 <a href="../09-data-import/">استيراد البيانات</a>.</p>
-<h3 id="csv">[الجميع] هل من الآمن إعادة استيراد نفس ملف <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>؟<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<h3 id="csv">[الجميع] هل من الآمن إعادة استيراد نفس ملف <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr>؟<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
 <p>نعم. يتم تجزئة كل صف وإزالة التكرارات. إعادة الاستيراد لا تؤدي أبداً إلى
 العدّ المزدوج.</p>
 <h3 id="_6">[الجميع] ما اللغات التي تدعمها واجهة المستخدم؟<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>

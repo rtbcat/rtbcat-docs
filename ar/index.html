@@ -1561,12 +1561,12 @@
 يقيّم مزايدك كل طلب، ويقرر ما إذا كان سيزايد عليه، ثم يستجيب — كل ذلك في
 غضون بضعة أجزاء من الألف من الثانية.</p>
 <p>هنا ما يغفل عنه معظم الناس: <strong>الغالبية العظمى من هذه الإشارات هي مجرد
-ضوضاء.</strong> مقعد نموذجي يستقبل 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> قد يجد أن 30,000 من تلك الاستعلامات
+ضوضاء.</strong> مقعد نموذجي يستقبل 50,000 <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> قد يجد أن 30,000 من تلك الاستعلامات
 تخص مخزوناً لم يكن المشتري الإعلامي لينفق عليه أبداً: مواقع جغرافية خاطئة،
 نطاقات ناشرين غير ذات صلة، أحجام إعلانية لا تتطابق مع أي تصميم إبداعي.
 ومع ذلك، يتعين على مزايدك استقبال كل طلب وتحليله ورفضه. وهذا يكلف نطاقاً
 ترددياً وحوسبة وأموالاً.</p>
-<p>يُظهر الرسم البياني أعلاه ذلك كهطول المطر. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> من Google هو الفوهة في
+<p>يُظهر الرسم البياني أعلاه ذلك كهطول المطر. <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> من Google هو الفوهة في
 الأعلى؛ والقطرات تنتشر على مساحة واسعة. مزايدك هو الدلو الصغير في الأسفل.
 كل ما يخطئ الدلو (القطرات التي تسقط يميناً ويساراً) هو هدر. لقد دفعت ثمنه
 ولم تحصل على شيء في المقابل.</p>
@@ -1578,15 +1578,15 @@
 <p>يمنحك Google Authorized Buyers <strong>10 إعدادات استهداف مسبق فقط لكل مقعد</strong>،
 بالإضافة إلى تقسيمات جغرافية تقريبية (شرق الولايات المتحدة، غرب الولايات
 المتحدة، أوروبا، آسيا). لا توجد API للتقارير. جميع بيانات الأداء تأتي من
-تصديرات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> تصل عبر البريد الإلكتروني. واجهة الاستهداف المسبق في <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> نفسها
+تصديرات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> تصل عبر البريد الإلكتروني. واجهة الاستهداف المسبق في <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr> نفسها
 عملية لكنها تجعل من الصعب رؤية الصورة الكاملة عبر الإعدادات، أو التراجع عن
 تغيير لم يسر كما هو مطلوب.</p>
 <p>Cat-Scan يسد هذه الثغرات:</p>
 <ul>
-<li>يقوم <strong>بإعادة بناء التقارير من تصديرات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></strong> (رفع يدوي أو استيراد تلقائي
+<li>يقوم <strong>بإعادة بناء التقارير من تصديرات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr></strong> (رفع يدوي أو استيراد تلقائي
   من Gmail)، مع إزالة التكرارات عند الاستيراد بحيث لا تحدث عملية إعادة
   المعالجة عدّاً مزدوجاً أبداً.</li>
-<li>يعرض <strong>قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> الكامل</strong>، من <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخام مروراً بالمزايدات والفوز ومرات الظهور
+<li>يعرض <strong>قمع <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr> الكامل</strong>، من <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الخام مروراً بالمزايدات والفوز ومرات الظهور
   والنقرات والإنفاق، مقسّماً حسب أي بُعد: المنطقة الجغرافية، الناشر، حجم
   الإعلان، التصميم الإبداعي، الإعداد.</li>
 <li>يوفر <strong>إدارة آمنة للاستهداف المسبق</strong> مع سجل التغييرات والتعديلات المرحلية
@@ -1598,7 +1598,7 @@
 <p>هذا الدليل له مساران لأن Cat-Scan يخدم دورين مختلفين تماماً:</p>
 <p><strong>مشترو الوسائط ومديرو الحملات</strong> يستخدمون Cat-Scan لفهم أين تذهب ميزانيتهم،
 وإيجاد الهدر، وإدارة التصاميم الإبداعية، وضبط الاستهداف المسبق، والموافقة
-على مقترحات التحسين. يفكرون بمصطلحات <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> ومعدلات الفوز وROAS. تركز فصولهم
+على مقترحات التحسين. يفكرون بمصطلحات <abbr title="التكلفة لكل ألف ظهور — السعر المدفوع لكل 1,000 ظهور إعلان.">CPM</abbr> ومعدلات الفوز وROAS. تركز فصولهم
 على ما تعرضه واجهة المستخدم، وماذا تعني الأرقام، وما الإجراءات التي يجب
 اتخاذها.</p>
 <p><strong>مهندسو DevOps ومهندسو المنصات</strong> يستخدمون Cat-Scan للنشر والمراقبة واستكشاف
@@ -1629,7 +1629,7 @@
 <li>
 <p><a href="00-what-is-cat-scan/">الفصل 0: ما هو Cat-Scan؟</a>
   ماذا تفعل المنصة، ولمن هي، والمفاهيم الأساسية التي تحتاجها قبل أي شيء
-  آخر: المقاعد، <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>، الاستهداف المسبق، قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  آخر: المقاعد، <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>، الاستهداف المسبق، قمع <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">الفصل 1: تسجيل الدخول</a>
@@ -1646,16 +1646,16 @@
 <p>لمشتري الوسائط ومديري الحملات ومهندسي التحسين.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">الفصل 3: فهم قمع <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخاص بك</a>
+<p><a href="03-qps-funnel/">الفصل 3: فهم قمع <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الخاص بك</a>
   الصفحة الرئيسية. كيف تقرأ تحليل القمع: مرات الظهور، المزايدات، الفوز،
-  الإنفاق، معدل الفوز، <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>، <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. ماذا يعني "الهدر" بمصطلحات ملموسة.
+  الإنفاق، معدل الفوز، <abbr title="معدل النقر — النقرات مقسومة على مرات الظهور، معبراً عنها كنسبة مئوية.">CTR</abbr>، <abbr title="التكلفة لكل ألف ظهور — السعر المدفوع لكل 1,000 ظهور إعلان.">CPM</abbr>. ماذا يعني "الهدر" بمصطلحات ملموسة.
   بطاقات الإعداد وما تتحكم به حقولها.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">الفصل 4: تحليل الهدر حسب البُعد</a>
   عروض تحليل الهدر الثلاثة ومتى تستخدم كلاً منها:</p>
 </li>
-<li><strong>الجغرافي</strong> (<code>/qps/geo</code>): أي البلدان والمدن تستهلك <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> دون تحويل.</li>
+<li><strong>الجغرافي</strong> (<code>/qps/geo</code>): أي البلدان والمدن تستهلك <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> دون تحويل.</li>
 <li><strong>الناشر</strong> (<code>/qps/publisher</code>): أي النطاقات والتطبيقات ذات الأداء الضعيف.</li>
 <li>
 <p><strong>الحجم</strong> (<code>/qps/size</code>): أي أحجام الإعلانات تستقبل حركة مرور لكن ليس
@@ -1672,26 +1672,26 @@
 <li>
 <p><a href="06-pretargeting/">الفصل 6: إعداد الاستهداف المسبق</a>
   ما يتحكم به إعداد الاستهداف المسبق (المناطق الجغرافية، الأحجام، التنسيقات،
-  المنصات، الحد الأقصى لـ <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). كيف تقرأ بطاقة الإعداد. تطبيق التغييرات مع
+  المنصات، الحد الأقصى لـ <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>). كيف تقرأ بطاقة الإعداد. تطبيق التغييرات مع
   معاينة التشغيل التجريبي. الجدول الزمني لسجل التغييرات (<code>/history</code>).
   التراجع: كيف يعمل، لماذا موجود، ومتى تستخدمه.</p>
 </li>
 <li>
-<p><a href="07-optimizer/">الفصل 7: المحسّن (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>
+<p><a href="07-optimizer/">الفصل 7: المحسّن (<abbr title="أحضر نموذجك الخاص — نظام Cat-Scan لتوصيل نموذج تسجيل خارجي خاص بك لتقديم مقترحات التحسين.">BYOM</abbr>)</a>
   أحضر نموذجك الخاص: تسجيل نقطة تقييم خارجية، التحقق منها، تفعيلها. دورة
   حياة التقييم-الاقتراح-الموافقة-التطبيق. إعدادات سير العمل المسبقة: آمن،
-  متوازن، جريء. الاقتصاديات: <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> الفعلي، خط أساس تكلفة الاستضافة، ملخص
+  متوازن، جريء. الاقتصاديات: <abbr title="التكلفة لكل ألف ظهور — السعر المدفوع لكل 1,000 ظهور إعلان.">CPM</abbr> الفعلي، خط أساس تكلفة الاستضافة، ملخص
   الكفاءة. كيف يبدو المقترح وكيف تقيّمه.</p>
 </li>
 <li>
 <p><a href="08-conversions/">الفصل 8: التحويلات والإسناد</a>
-  ربط مصدر تحويل. تكامل البكسل. إعداد Webhook: توقيعات <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>، المفاتيح
+  ربط مصدر تحويل. تكامل البكسل. إعداد Webhook: توقيعات <abbr title="رمز مصادقة الرسائل المبني على التجزئة — توقيع تشفيري يُستخدم للتحقق من حمولات webhook.">HMAC</abbr>، المفاتيح
   المشتركة، تحديد المعدل. فحوصات الجاهزية. إحصائيات الاستيعاب. ماذا تعني
   "صحة التحويل" وكيف تقرأ صفحة حالة الأمان.</p>
 </li>
 <li>
 <p><a href="09-data-import/">الفصل 9: استيراد البيانات</a>
-  كيف تدخل البيانات إلى Cat-Scan، ولماذا هذا مهم. رفع <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> يدوي (<code>/import</code>):
+  كيف تدخل البيانات إلى Cat-Scan، ولماذا هذا مهم. رفع <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> يدوي (<code>/import</code>):
   السحب والإفلات، تعيين الأعمدة، التحقق، الرفع المجزّأ للملفات الكبيرة.
   الاستيراد التلقائي من Gmail: كيف يعمل، كيف تتحقق من الحالة، ماذا يحدث عند
   فشله. شبكة تحديث البيانات: ماذا تعني "مستورد" مقابل "مفقود" لكل تاريخ
@@ -1776,10 +1776,10 @@ generate_series + EXISTS.</li>
 <li>
 <p><a href="17-integrations/">الفصل 17: التكاملات</a>
   حسابات خدمة GCP واتصال المشروع. Google Authorized Buyers API: اكتشاف
-  المقاعد، مزامنة إعدادات الاستهداف المسبق، مزامنة نقاط اتصال <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>. تكامل
+  المقاعد، مزامنة إعدادات الاستهداف المسبق، مزامنة نقاط اتصال <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr>. تكامل
   Gmail: OAuth2 لاستيراد التقارير تلقائياً. مزودو الذكاء الاصطناعي اللغوي:
   Gemini، Claude، Grok (لاكتشاف لغة التصميم الإبداعي وتنبيهات عدم التطابق).
-  خطافات التحويل: تسجيل نقطة الاتصال، التحقق من <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>، تحديد المعدل، مراقبة
+  خطافات التحويل: تسجيل نقطة الاتصال، التحقق من <abbr title="رمز مصادقة الرسائل المبني على التجزئة — توقيع تشفيري يُستخدم للتحقق من حمولات webhook.">HMAC</abbr>، تحديد المعدل، مراقبة
   التحديث.</p>
 </li>
 </ul>
@@ -1790,7 +1790,7 @@ generate_series + EXISTS.</li>
 <p><a href="glossary/">المسرد</a>
   كل مصطلح بمنظورين. عمود مشتري الوسائط: "الاستهداف المسبق" هو "القواعد التي
   تتحكم في أي طلبات مزايدة تصل إلى مزايدك." عمود DevOps: "الاستهداف المسبق"
-  هو "كيان قابل للتعديل يتم مزامنته من <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API، مخزّن في
+  هو "كيان قابل للتعديل يتم مزامنته من <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr> API، مخزّن في
   <code>pretargeting_configs</code>، متاح عبر <code>/settings/pretargeting</code>." كلاهما يحتاج نفس
   الكلمة؛ ولا أحد منهما يستخدم تعريف الآخر.</p>
 </li>

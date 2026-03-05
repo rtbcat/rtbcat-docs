@@ -1549,15 +1549,15 @@
 <p><em>الجمهور المستهدف: مشترو الوسائط، مديرو الحملات</em></p>
 <p>يعتمد تحليل Cat-Scan كليًا على بيانات الأداء من Google Authorized
 Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جميع البيانات من تصدير
-ملفات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>. يشرح هذا الفصل كيفية إدخال البيانات إلى Cat-Scan وكيفية التحقق
+ملفات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr>. يشرح هذا الفصل كيفية إدخال البيانات إلى Cat-Scan وكيفية التحقق
 من وصولها.</p>
 <h2 id="_1">لماذا هذا مهم<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>بدون بيانات مُستورَدة، لا يملك Cat-Scan شيئًا لتحليله. يعتمد كل من قمع التحويل وعروض الهدر
-وأداء التصميمات الإبداعية والمُحسِّن على بيانات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> حديثة. إذا
+وأداء التصميمات الإبداعية والمُحسِّن على بيانات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> حديثة. إذا
 كانت بياناتك قديمة، فإن قراراتك مبنية على معلومات متأخرة.</p>
 <h2 id="_2">طريقتان لوصول البيانات<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1-csv-import">1. رفع <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> يدوي (<code>/import</code>)<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
-<p>اسحب وأفلت ملف <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> مُصدَّر من Google Authorized Buyers.</p>
+<h3 id="1-csv-import">1. رفع <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> يدوي (<code>/import</code>)<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
+<p>اسحب وأفلت ملف <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> مُصدَّر من Google Authorized Buyers.</p>
 <p><img alt="صفحة استيراد البيانات مع منطقة الرفع وشبكة الحداثة" src="../../images/screenshot-import.png" /></p>
 <p><strong>سير العمل:</strong></p>
 <ol>
@@ -1580,7 +1580,7 @@ Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جم
 <thead>
 <tr>
 <th>النوع</th>
-<th>نمط اسم <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></th>
+<th>نمط اسم <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr></th>
 <th>ما يحتويه</th>
 </tr>
 </thead>
@@ -1588,7 +1588,7 @@ Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جم
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>أداء <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> اليومي: الظهور، المزايدات، الفوز، الإنفاق</td>
+<td>أداء <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr> اليومي: الظهور، المزايدات، الفوز، الإنفاق</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1616,7 +1616,7 @@ Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جم
 <p>يمكن لـ Cat-Scan استيعاب التقارير تلقائيًا من حساب Gmail متصل.</p>
 <ul>
 <li>يرسل Google Authorized Buyers تقارير يومية عبر البريد الإلكتروني.</li>
-<li>يقرأ تكامل Gmail في Cat-Scan هذه الرسائل ويستورد مرفقات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+<li>يقرأ تكامل Gmail في Cat-Scan هذه الرسائل ويستورد مرفقات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr>
   تلقائيًا.</li>
 <li>تحقق من الحالة في <code>/settings/accounts</code> &gt; تبويب تقارير Gmail، أو عبر
   <code>/gmail/status</code> في API.</li>
@@ -1644,7 +1644,7 @@ Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جم
 نافذة الاسترجاع. تستخدمها بوابة صحة وقت التشغيل لتحديد ما إذا كان النظام
 يعمل بشكل صحيح.</p>
 <h2 id="_4">إزالة التكرارات<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>إعادة استيراد نفس ملف <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (أو إعادة معالجة Gmail لنفس البريد الإلكتروني) <strong>لا</strong>
+<p>إعادة استيراد نفس ملف <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> (أو إعادة معالجة Gmail لنفس البريد الإلكتروني) <strong>لا</strong>
 تُضاعف حساب البيانات. يُحسب تجزئة لكل صف، وتُتخطّى التكرارات عند
 الإدراج. هذا يعني أنه من الآمن دائمًا إعادة الاستيراد.</p>
 <h2 id="_5">سجل الاستيراد<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
@@ -1671,7 +1671,7 @@ Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جم
 </tr>
 <tr>
 <td>فشل الاستيراد بخطأ تحقق</td>
-<td>عدم تطابق الأعمدة. قارن جدول الأعمدة المطلوبة بملف <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> الخاص بك.</td>
+<td>عدم تطابق الأعمدة. قارن جدول الأعمدة المطلوبة بملف <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> الخاص بك.</td>
 </tr>
 <tr>
 <td>استيراد Gmail يعرض "stopped"</td>
@@ -1679,13 +1679,13 @@ Buyers. نظرًا لعدم توفير Google لـ Reporting API، تأتي جم
 </tr>
 <tr>
 <td>نسبة التغطية تنخفض</td>
-<td>التقارير تصل ولكن لتواريخ أقل من المتوقع. تحقق من جدول التصدير في Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>التقارير تصل ولكن لتواريخ أقل من المتوقع. تحقق من جدول التصدير في Google <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_7">مواضيع ذات صلة<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">فهم قمع <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخاص بك</a>: يعتمد على البيانات المُستورَدة</li>
+<li><a href="../03-qps-funnel/">فهم قمع <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الخاص بك</a>: يعتمد على البيانات المُستورَدة</li>
 <li><a href="../10-reading-reports/">قراءة تقاريرك</a>: ما يمكنك فعله بالبيانات
   بعد استيرادها</li>
 <li>لفريق DevOps: تفاصيل استعلام حداثة البيانات واستكشاف الأخطاء وإصلاحها، انظر

@@ -1503,31 +1503,31 @@
 
 <h1 id="hoofdstuk-0-wat-is-cat-scan">Hoofdstuk 0: Wat is Cat-Scan?<a class="headerlink" href="#hoofdstuk-0-wat-is-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>Doelgroep: iedereen</em></p>
-<p>Cat-Scan is een <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-optimalisatieplatform voor Google Authorized Buyers. Het
+<p>Cat-Scan is een <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>-optimalisatieplatform voor Google Authorized Buyers. Het
 geeft u inzicht in hoe de queries-per-seconde-toewijzing van uw bidder wordt
 gebruikt (en verspild) en biedt de tools om dit te verbeteren.</p>
 <p><img alt="QPS-trechter" src="../../assets/qps-funnel.svg" /></p>
 <h2 id="het-kernprobleem">Het kernprobleem<a class="headerlink" href="#het-kernprobleem" title="Permanent link">&para;</a></h2>
 <p>Wanneer u een seat op Google's Authorized Buyers-exchange beheert, stuurt
 Google een stroom biedverzoeken naar uw bidder-endpoint. U betaalt voor deze
-stroom: het verbruikt uw toegewezen <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, de rekenkracht van uw bidder en uw
+stroom: het verbruikt uw toegewezen <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>, de rekenkracht van uw bidder en uw
 netwerkbandbreedte.</p>
 <p>Maar niet elk biedverzoek is bruikbaar. Veel verzoeken komen binnen voor
 inventaris die u nooit zou kopen: landen die u niet target, uitgevers waar u
 nog nooit van heeft gehoord, advertentieformaten waarvoor u geen creatives
 heeft. Uw bidder moet elk verzoek toch ontvangen en afwijzen.</p>
-<p>In een typische opzet is <strong>meer dan de helft van uw <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> verspilling.</strong></p>
+<p>In een typische opzet is <strong>meer dan de helft van uw <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> verspilling.</strong></p>
 <h2 id="wat-cat-scan-hieraan-doet">Wat Cat-Scan hieraan doet<a class="headerlink" href="#wat-cat-scan-hieraan-doet" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan werkt naast uw bidder en biedt drie zaken:</p>
 <h3 id="1-inzicht">1. Inzicht<a class="headerlink" href="#1-inzicht" title="Permanent link">&para;</a></h3>
-<p>Het reconstrueert prestatierapporten uit Google's <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-exports (aangezien er
-geen Reporting API is) en toont u de volledige <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-trechter: van ruwe <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> via
+<p>Het reconstrueert prestatierapporten uit Google's <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-exports (aangezien er
+geen Reporting API is) en toont u de volledige <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-trechter: van ruwe <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> via
 biedingen, winsten, impressies, klikken en uitgaven. Dit wordt uitgesplitst
 naar geografie, uitgever, advertentieformaat, creative en
 pretargeting-configuratie.</p>
 <p>Hiermee kunt u vragen beantwoorden zoals:
-- Welke landen verbruiken <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> maar genereren geen winsten?
-- Welke uitgevers hebben een hoge <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> maar nul uitgaven?
+- Welke landen verbruiken <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> maar genereren geen winsten?
+- Welke uitgevers hebben een hoge <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> maar nul uitgaven?
 - Welke advertentieformaten ontvangen verkeer maar hebben geen bijpassende creative?
 - Welke pretargeting-configuraties presteren goed versus slecht?</p>
 <h3 id="2-controle">2. Controle<a class="headerlink" href="#2-controle" title="Permanent link">&para;</a></h3>
@@ -1559,7 +1559,7 @@ zonder menselijke beoordeling.</p>
 <td>Een kopersaccount op Google Authorized Buyers, geïdentificeerd door een <code>buyer_account_id</code>. Eén organisatie kan meerdere seats hebben.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr></strong></td>
 <td>Queries Per Second: het maximale aantal biedverzoeken per seconde dat u Google vraagt naar uw bidder te sturen. Google beperkt het werkelijke volume op basis van uw accountniveau, dus u wilt elk verzoek efficiënt benutten.</td>
 </tr>
 <tr>
@@ -1567,16 +1567,16 @@ zonder menselijke beoordeling.</p>
 <td>Server-side filters die Google vertellen welke biedverzoeken het u moet sturen. Bepaalt: geografieën, advertentieformaten, formaten, platformen, creative-types. U krijgt er 10 per seat.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-trechter</strong></td>
+<td><strong><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-trechter</strong></td>
 <td>De voortgang van ontvangen biedverzoek, naar geplaatst bod, naar gewonnen veiling, naar vertoonde impressie, naar klik, naar conversie. Elke stap heeft uitval; Cat-Scan laat u zien waar.</td>
 </tr>
 <tr>
 <td><strong>Verspilling</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> verbruikt door biedverzoeken die uw bidder niet kan of wil gebruiken. Het doel is verspilling te verminderen zonder waardevol verkeer te verliezen.</td>
+<td><abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> verbruikt door biedverzoeken die uw bidder niet kan of wil gebruiken. Het doel is verspilling te verminderen zonder waardevol verkeer te verliezen.</td>
 </tr>
 <tr>
 <td><strong>Config</strong></td>
-<td>Afkorting voor pretargeting-configuratie. Elke configuratie heeft een status (actief/opgeschort), een maximale <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, en inclusie/exclusieregels voor geo's, formaten, formaten en platformen.</td>
+<td>Afkorting voor pretargeting-configuratie. Elke configuratie heeft een status (actief/opgeschort), een maximale <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>, en inclusie/exclusieregels voor geo's, formaten, formaten en platformen.</td>
 </tr>
 </tbody>
 </table>

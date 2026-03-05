@@ -1650,7 +1650,7 @@
 <h2 id="runtime-sundhedsscripts">Runtime-sundhedsscripts<a class="headerlink" href="#runtime-sundhedsscripts" title="Permanent link">&para;</a></h2>
 <p>Disse scripts er det operationelle fundament for at verificere, at systemet fungerer end-to-end.</p>
 <h3 id="diagnose_v1_buyer_report_coveragesh"><code>diagnose_v1_buyer_report_coverage.sh</code><a class="headerlink" href="#diagnose_v1_buyer_report_coveragesh" title="Permanent link">&para;</a></h3>
-<p>Diagnosticerer hvorfor en bestemt køber mangler <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-dækning.</p>
+<p>Diagnosticerer hvorfor en bestemt køber mangler <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-dækning.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CATSCAN_CANARY_EMAIL</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_EMAIL&gt;&quot;</span>
 scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--buyer-id<span class="w"> </span>&lt;BUYER_ID&gt;<span class="w"> </span><span class="se">\</span>
@@ -1659,7 +1659,7 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 </code></pre></div>
 <p>Tjek (i rækkefølge):
 1. Sæde-mapping: buyer_id -&gt; bidder_id
-2. Importmatrix: bestået/fejlet/ikke_importeret pr. <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-type
+2. Importmatrix: bestået/fejlet/ikke_importeret pr. <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-type
 3. Datafriskhed: importeret/manglende celledækning
 4. Importhistorik: seneste importrækker
 5. Gmail-status: antal ulæste, seneste årsag, nyeste metrikdato</p>
@@ -1670,8 +1670,8 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 <li>API-sundhed</li>
 <li>Datasundhed (friskhed og dimensionsdækning)</li>
 <li>Konverteringssundhed og parathed</li>
-<li><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-startlatens</li>
-<li><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-side SLO-resumé</li>
+<li><abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>-startlatens</li>
+<li><abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>-side SLO-resumé</li>
 <li>Optimeringsøkonomi og modeller</li>
 <li>Modelendpoint-validering</li>
 <li>Score+propose-workflow</li>

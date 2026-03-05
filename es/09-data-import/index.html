@@ -1549,15 +1549,15 @@
 <p><em>Audiencia: compradores de medios, gestores de campañas</em></p>
 <p>El análisis de Cat-Scan depende completamente de los datos de rendimiento de Google Authorized
 Buyers. Dado que Google no proporciona una API de informes, todos los datos provienen de
-exportaciones <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>. Este capítulo explica cómo introducir datos en Cat-Scan y cómo verificar
+exportaciones <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr>. Este capítulo explica cómo introducir datos en Cat-Scan y cómo verificar
 que están llegando.</p>
 <h2 id="por-que-esto-importa">Por qué esto importa<a class="headerlink" href="#por-que-esto-importa" title="Permanent link">&para;</a></h2>
 <p>Sin datos importados, Cat-Scan no tiene nada que analizar. El embudo, las vistas de desperdicio,
-el rendimiento de creativos y el optimizador dependen de datos <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> actualizados. Si tus datos
+el rendimiento de creativos y el optimizador dependen de datos <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> actualizados. Si tus datos
 están desactualizados, tus decisiones se basan en información antigua.</p>
 <h2 id="dos-formas-en-que-llegan-los-datos">Dos formas en que llegan los datos<a class="headerlink" href="#dos-formas-en-que-llegan-los-datos" title="Permanent link">&para;</a></h2>
-<h3 id="1-carga-manual-de-csv-import">1. Carga manual de <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (<code>/import</code>)<a class="headerlink" href="#1-carga-manual-de-csv-import" title="Permanent link">&para;</a></h3>
-<p>Arrastra y suelta un archivo <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> exportado desde Google Authorized Buyers.</p>
+<h3 id="1-carga-manual-de-csv-import">1. Carga manual de <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> (<code>/import</code>)<a class="headerlink" href="#1-carga-manual-de-csv-import" title="Permanent link">&para;</a></h3>
+<p>Arrastra y suelta un archivo <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> exportado desde Google Authorized Buyers.</p>
 <p><img alt="Página de importación de datos con zona de carga y cuadrícula de frescura" src="../../images/screenshot-import.png" /></p>
 <p><strong>Flujo de trabajo:</strong></p>
 <ol>
@@ -1580,7 +1580,7 @@ están desactualizados, tus decisiones se basan en información antigua.</p>
 <thead>
 <tr>
 <th>Tipo</th>
-<th>Patrón de nombre <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></th>
+<th>Patrón de nombre <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr></th>
 <th>Qué contiene</th>
 </tr>
 </thead>
@@ -1588,7 +1588,7 @@ están desactualizados, tus decisiones se basan en información antigua.</p>
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>Rendimiento <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> diario: impresiones, pujas, ganados, gasto</td>
+<td>Rendimiento <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr> diario: impresiones, pujas, ganados, gasto</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1616,7 +1616,7 @@ están desactualizados, tus decisiones se basan en información antigua.</p>
 <p>Cat-Scan puede ingerir automáticamente informes desde una cuenta de Gmail conectada.</p>
 <ul>
 <li>Google Authorized Buyers envía informes diarios por correo electrónico.</li>
-<li>La integración de Gmail de Cat-Scan lee estos correos e importa los archivos <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+<li>La integración de Gmail de Cat-Scan lee estos correos e importa los archivos <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr>
   adjuntos automáticamente.</li>
 <li>Verifica el estado en <code>/settings/accounts</code> &gt; pestaña Gmail Reports, o a través de
   <code>/gmail/status</code> en la API.</li>
@@ -1644,7 +1644,7 @@ en tiempo de ejecución) muestra una <strong>matriz fecha x tipo de informe</str
 ventana de retrospectiva. La puerta de salud en tiempo de ejecución usa este dato para determinar
 si el sistema está operativo.</p>
 <h2 id="deduplicacion">Deduplicación<a class="headerlink" href="#deduplicacion" title="Permanent link">&para;</a></h2>
-<p>Reimportar el mismo <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (o que Gmail reprocese el mismo correo) <strong>no</strong>
+<p>Reimportar el mismo <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> (o que Gmail reprocese el mismo correo) <strong>no</strong>
 duplica los datos. Cada fila se hashea y los duplicados se omiten al insertar.
 Esto significa que siempre es seguro reimportar.</p>
 <h2 id="historial-de-importacion">Historial de importación<a class="headerlink" href="#historial-de-importacion" title="Permanent link">&para;</a></h2>
@@ -1671,7 +1671,7 @@ Esto significa que siempre es seguro reimportar.</p>
 </tr>
 <tr>
 <td>La importación falla con error de validación</td>
-<td>Desajuste de columnas. Compara la tabla de columnas requeridas con tu <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</td>
+<td>Desajuste de columnas. Compara la tabla de columnas requeridas con tu <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr>.</td>
 </tr>
 <tr>
 <td>La importación de Gmail muestra "stopped"</td>
@@ -1679,13 +1679,13 @@ Esto significa que siempre es seguro reimportar.</p>
 </tr>
 <tr>
 <td>Porcentaje de cobertura disminuyendo</td>
-<td>Los informes llegan, pero para menos fechas de lo esperado. Verifica el calendario de exportación en Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>Los informes llegan, pero para menos fechas de lo esperado. Verifica el calendario de exportación en Google <abbr title="Authorized Buyers — la plataforma de publicidad programática de Google (anteriormente AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="relacionado">Relacionado<a class="headerlink" href="#relacionado" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Entender tu embudo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>: depende de los datos importados</li>
+<li><a href="../03-qps-funnel/">Entender tu embudo de <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></a>: depende de los datos importados</li>
 <li><a href="../10-reading-reports/">Lectura de informes</a>: qué puedes hacer con los datos
   una vez importados</li>
 <li>Para DevOps: detalles internos de la consulta de frescura de datos y resolución de problemas, consulta

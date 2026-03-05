@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="7-byom">الفصل 7: المُحسِّن (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
+<h1 id="7-byom">الفصل 7: المُحسِّن (<abbr title="أحضر نموذجك الخاص — نظام Cat-Scan لتوصيل نموذج تسجيل خارجي خاص بك لتقديم مقترحات التحسين.">BYOM</abbr>)<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
 <p><em>الجمهور المستهدف: مشترو الوسائط، مهندسو التحسين</em></p>
-<p>المُحسِّن هو محرك التحسين الآلي في Cat-Scan. يرمز "<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>" إلى
+<p>المُحسِّن هو محرك التحسين الآلي في Cat-Scan. يرمز "<abbr title="أحضر نموذجك الخاص — نظام Cat-Scan لتوصيل نموذج تسجيل خارجي خاص بك لتقديم مقترحات التحسين.">BYOM</abbr>" إلى
 Bring Your Own Model (أحضر نموذجك الخاص): تُسجّل نقطة نهاية تقييم خارجية، ويستخدمها
 Cat-Scan لإنشاء مقترحات تغيير الإعدادات.</p>
 <h2 id="_1">كيف يعمل<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1623,19 +1623,19 @@ segments       config         reject         updated
 <h2 id="_7">الجوانب الاقتصادية<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>يتتبع المُحسِّن أيضًا الجوانب الاقتصادية للتحسين:</p>
 <ul>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> الفعلي</strong>: ما تدفعه فعليًا لكل ألف ظهور،
+<li><strong><abbr title="التكلفة لكل ألف ظهور — السعر المدفوع لكل 1,000 ظهور إعلان.">CPM</abbr> الفعلي</strong>: ما تدفعه فعليًا لكل ألف ظهور،
   مع احتساب الهدر.</li>
 <li><strong>خط الأساس لتكلفة الاستضافة</strong>: تكلفة البنية التحتية لنظام المزايدة الخاص بك، تُهيّأ في
-  إعداد المُحسِّن. تُستخدم لحساب ما إذا كانت الوفورات من تقليل <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
+  إعداد المُحسِّن. تُستخدم لحساب ما إذا كانت الوفورات من تقليل <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>
   تعوّض تكاليف الاستضافة.</li>
-<li><strong>ملخص الكفاءة</strong>: النسبة الإجمالية لـ <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> المفيد إلى <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الإجمالي.</li>
+<li><strong>ملخص الكفاءة</strong>: النسبة الإجمالية لـ <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> المفيد إلى <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> الإجمالي.</li>
 </ul>
 <p>هيّئ تكلفة الاستضافة في <code>/settings/system</code> &gt; إعداد المُحسِّن.</p>
 <h2 id="_8">مراجعة المقترحات<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>يعرض كل مقترح:
 - <strong>درجات الشرائح</strong> التي دفعت التوصية
 - <strong>التغييرات المحددة</strong> في حقول الاستهداف المسبق (إضافات، إزالات، تحديثات)
-- <strong>التأثير المتوقع</strong> على <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> ونسبة الهدر والإنفاق</p>
+- <strong>التأثير المتوقع</strong> على <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> ونسبة الهدر والإنفاق</p>
 <p>يمكنك:
 - <strong>الموافقة</strong>: تُعلّم المقترح كمقبول
 - <strong>التطبيق</strong>: تدفع التغييرات الموافق عليها إلى Google

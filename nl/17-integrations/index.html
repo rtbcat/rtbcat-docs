@@ -1479,7 +1479,7 @@
 <p><strong>Wat het mogelijk maakt:</strong>
 - Seat-ontdekking (<code>discoverSeats</code>)
 - Pretargeting-configuratiesynchronisatie (<code>syncPretargetingConfigs</code>)
-- <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-endpoint-synchronisatie (<code>syncRTBEndpoints</code>)
+- <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-endpoint-synchronisatie (<code>syncRTBEndpoints</code>)
 - Creative-verzameling (<code>collectCreatives</code>)</p>
 <p><strong>Projectstatus:</strong>
 Controleer de gezondheid van het GCP-project via <code>/settings/accounts</code> of via
@@ -1503,10 +1503,10 @@ Controleer de gezondheid van het GCP-project via <code>/settings/accounts</code>
 <tr>
 <td><strong>Pretargeting-synchronisatie</strong></td>
 <td>Huidige pretargeting-configuratiestatus van Google</td>
-<td>Na externe wijzigingen in de <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>-interface</td>
+<td>Na externe wijzigingen in de <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr>-interface</td>
 </tr>
 <tr>
-<td><strong><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-endpoint-synchronisatie</strong></td>
+<td><strong><abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-endpoint-synchronisatie</strong></td>
 <td>Bidder-endpoint-URL's en status</td>
 <td>Initiële setup, na endpoint-wijzigingen</td>
 </tr>
@@ -1518,11 +1518,11 @@ Controleer de gezondheid van het GCP-project via <code>/settings/accounts</code>
 </tbody>
 </table>
 <h2 id="gmail-integratie">Gmail-integratie<a class="headerlink" href="#gmail-integratie" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers stuurt dagelijks <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-rapporten per e-mail. Cat-Scan kan deze automatisch verwerken.</p>
+<p>Google Authorized Buyers stuurt dagelijks <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-rapporten per e-mail. Cat-Scan kan deze automatisch verwerken.</p>
 <p><strong>Configuratie:</strong>
 1. Ga naar <code>/settings/accounts</code> &gt; tabblad Gmail-rapporten.
-2. Autoriseer Cat-Scan om toegang te krijgen tot het Gmail-account dat <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>-rapporten ontvangt.
-3. Cat-Scan pollt voor nieuwe rapportmails en importeert bijgevoegde <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>'s.</p>
+2. Autoriseer Cat-Scan om toegang te krijgen tot het Gmail-account dat <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr>-rapporten ontvangt.
+3. Cat-Scan pollt voor nieuwe rapportmails en importeert bijgevoegde <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>'s.</p>
 <p><strong>Monitoring:</strong>
 - <code>GET /gmail/status</code>: huidige status, aantal ongelezen, laatste reden
 - <code>POST /gmail/import/start</code>: handmatig een importcyclus starten
@@ -1571,7 +1571,7 @@ Controleer de gezondheid van het GCP-project via <code>/settings/accounts</code>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-verificatie</strong></td>
+<td><strong><abbr title="Hash-gebaseerde berichtauthenticatiecode — een cryptografische handtekening die wordt gebruikt om webhook-payloads te verifiëren.">HMAC</abbr>-verificatie</strong></td>
 <td>Garandeert dat verzoeken authentiek zijn (ondertekend met gedeeld geheim)</td>
 <td>Gedeeld geheim geconfigureerd in webhook-instellingen</td>
 </tr>
@@ -1588,7 +1588,7 @@ Controleer de gezondheid van het GCP-project via <code>/settings/accounts</code>
 </tbody>
 </table>
 <p><strong>Monitoring:</strong>
-- <code>GET /conversions/security/status</code>: <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-status, snelheidsbeperkingsstatus, versheidssstatus
+- <code>GET /conversions/security/status</code>: <abbr title="Hash-gebaseerde berichtauthenticatiecode — een cryptografische handtekening die wordt gebruikt om webhook-payloads te verifiëren.">HMAC</abbr>-status, snelheidsbeperkingsstatus, versheidssstatus
 - <code>GET /conversions/health</code>: algehele gezondheid van inname en aggregatie
 - <code>GET /conversions/readiness</code>: of conversiedata vers genoeg is om te vertrouwen</p>
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>

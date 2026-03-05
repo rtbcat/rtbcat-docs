@@ -1560,10 +1560,10 @@
 Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条请求进行评估、
 决定是否出价、然后在几毫秒内做出响应。</p>
 <p>大多数人忽略了一个关键事实：<strong>这些信号中的绝大部分都是噪音。</strong> 一个典型的
-席位在接收 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 时，其中可能有 30,000 条请求对应的是媒体买手永远不会
+席位在接收 50,000 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 时，其中可能有 30,000 条请求对应的是媒体买手永远不会
 购买的库存：错误的地理位置、不相关的发布商域名、没有匹配素材的广告尺寸。
 你的竞价器仍然需要接收、解析并拒绝每一条请求。这消耗了带宽、算力和费用。</p>
-<p>上面的图示将其比作降雨。Google 的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 是顶部的喷嘴，水滴向大面积扩散。
+<p>上面的图示将其比作降雨。Google 的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 是顶部的喷嘴，水滴向大面积扩散。
 你的竞价器是底部的小桶。所有落在桶外面的水滴（左侧和右侧的部分）就是
 浪费。你为此付了费，却没有任何回报。</p>
 <p><strong>Cat-Scan 的存在就是为了让桶变宽、让雨变窄。</strong></p>
@@ -1572,13 +1572,13 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <h3 id="_2">为什么这比想象中更难<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Google Authorized Buyers 每个席位只提供 <strong>10 个预定向配置</strong>，外加粗略的
 地理分区（美东、美西、欧洲、亚洲）。没有报告 API，所有效果数据来自通过
-邮件发送的 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导出文件。<abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> 预定向界面本身虽然可用，但很难全面查看跨配置
+邮件发送的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 导出文件。<abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> 预定向界面本身虽然可用，但很难全面查看跨配置
 的整体情况，也很难撤销出错的更改。</p>
 <p>Cat-Scan 弥补了这些差距：</p>
 <ul>
-<li>它<strong>从 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导出文件重建报告</strong>（手动上传或 Gmail 自动导入），导入时
+<li>它<strong>从 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 导出文件重建报告</strong>（手动上传或 Gmail 自动导入），导入时
   自动去重，重复处理不会造成重复计数。</li>
-<li>它展示<strong>完整的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗</strong>，从原始 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 到出价、胜出、展示、点击和
+<li>它展示<strong>完整的 <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 漏斗</strong>，从原始 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 到出价、胜出、展示、点击和
   花费，可按任意维度拆分：地理、发布商、广告尺寸、素材、配置。</li>
 <li>它提供<strong>安全的预定向管理</strong>，包括历史记录、分阶段变更、试运行预览和
   一键回滚。</li>
@@ -1588,7 +1588,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <h3 id="_3">本手册面向谁<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>本手册分为两个路径，因为 Cat-Scan 服务于两个截然不同的角色：</p>
 <p><strong>媒体买手和投放经理</strong>使用 Cat-Scan 了解预算流向、发现浪费、管理素材、
-调整预定向以及审批优化建议。他们关注 <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>、胜出率和 <abbr title="Return On Ad Spend — revenue generated per dollar spent on advertising.">ROAS</abbr>。他们的章节聚焦于
+调整预定向以及审批优化建议。他们关注 <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr>、胜出率和 <abbr title="广告支出回报率 — 每花费一美元广告费产生的收入。">ROAS</abbr>。他们的章节聚焦于
 界面展示内容、数据含义以及应采取的行动。</p>
 <p><strong>运维和平台工程师</strong>使用 Cat-Scan 部署、监控和排障。他们关注容器、健康
 端点和查询计划。他们的章节聚焦于架构、部署流水线、数据库操作和故障手册。</p>
@@ -1611,8 +1611,8 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <ul>
 <li>
 <p><a href="00-what-is-cat-scan/">第 0 章：什么是 Cat-Scan？</a>
-  平台做什么、面向谁，以及你需要先了解的核心概念：席位、<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>、预定向、
-  <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗。</p>
+  平台做什么、面向谁，以及你需要先了解的核心概念：席位、<abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>、预定向、
+  <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 漏斗。</p>
 </li>
 <li>
 <p><a href="01-logging-in/">第 1 章：登录</a>
@@ -1628,15 +1628,15 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <p>面向媒体买手、投放经理和优化工程师。</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">第 3 章：理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗</a>
-  首页内容。如何解读漏斗：展示、出价、胜出、花费、胜出率、<abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>、<abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>。
+<p><a href="03-qps-funnel/">第 3 章：理解你的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 漏斗</a>
+  首页内容。如何解读漏斗：展示、出价、胜出、花费、胜出率、<abbr title="点击率 — 点击次数除以展示次数，以百分比表示。">CTR</abbr>、<abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr>。
   "浪费"的具体含义。配置卡片及其字段控制的内容。</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">第 4 章：按维度分析浪费</a>
   三个浪费分析视图及其使用场景：</p>
 </li>
-<li><strong>地理</strong>（<code>/qps/geo</code>）：哪些国家和城市消耗 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 却没有转化。</li>
+<li><strong>地理</strong>（<code>/qps/geo</code>）：哪些国家和城市消耗 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 却没有转化。</li>
 <li><strong>发布商</strong>（<code>/qps/publisher</code>）：哪些域名和应用表现不佳。</li>
 <li>
 <p><strong>尺寸</strong>（<code>/qps/size</code>）：哪些广告尺寸有流量但没有匹配素材。
@@ -1650,24 +1650,24 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 </li>
 <li>
 <p><a href="06-pretargeting/">第 6 章：预定向配置</a>
-  预定向配置控制什么（地区、尺寸、格式、平台、最大 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>）。如何解读配置
+  预定向配置控制什么（地区、尺寸、格式、平台、最大 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>）。如何解读配置
   卡片。通过试运行预览应用变更。变更历史时间线（<code>/history</code>）。回滚：
   工作原理、存在意义和使用时机。</p>
 </li>
 <li>
-<p><a href="07-optimizer/">第 7 章：优化器（<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>）</a>
+<p><a href="07-optimizer/">第 7 章：优化器（<abbr title="自带模型 — Cat-Scan 的系统，用于接入您自己的外部评分模型以生成优化建议。">BYOM</abbr>）</a>
   自带模型：注册外部评分端点、验证、激活。评分-建议-审批-应用的生命周期。
-  工作流预设：保守、平衡、激进。经济指标：有效 <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>、托管成本基线、效率
+  工作流预设：保守、平衡、激进。经济指标：有效 <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr>、托管成本基线、效率
   摘要。建议的内容及评估方法。</p>
 </li>
 <li>
 <p><a href="08-conversions/">第 8 章：转化与归因</a>
-  连接转化来源。像素集成。Webhook 设置：<abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 签名、共享密钥、速率限制。
+  连接转化来源。像素集成。Webhook 设置：<abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 签名、共享密钥、速率限制。
   就绪检查。摄入统计。"转化健康"的含义及安全状态页面的解读。</p>
 </li>
 <li>
 <p><a href="09-data-import/">第 9 章：数据导入</a>
-  数据如何进入 Cat-Scan，以及为什么这很重要。手动 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 上传
+  数据如何进入 Cat-Scan，以及为什么这很重要。手动 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 上传
   （<code>/import</code>）：拖放、列映射、验证、大文件分块上传。Gmail 自动导入：
   工作原理、状态检查、失败处理。数据新鲜度网格：每个日期和报告类型的
   "已导入"与"缺失"含义。去重保证。</p>
@@ -1679,7 +1679,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 </li>
 </ul>
 <h3 id="_8">第二部分：运维路径<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>面向平台工程师、<abbr title="Site Reliability Engineering — the discipline of operating reliable production systems.">SRE</abbr> 和系统管理员。</p>
+<p>面向平台工程师、<abbr title="站点可靠性工程 — 运维可靠生产系统的学科。">SRE</abbr> 和系统管理员。</p>
 <ul>
 <li>
 <p><a href="11-architecture/">第 11 章：架构概述</a>
@@ -1741,9 +1741,9 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <li>
 <p><a href="17-integrations/">第 17 章：集成</a>
   GCP 服务账户和项目连接。Google Authorized Buyers API：席位发现、预定向
-  配置同步、<abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 端点同步。Gmail 集成：用于自动报告导入的 OAuth2。
+  配置同步、<abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 端点同步。Gmail 集成：用于自动报告导入的 OAuth2。
   语言 AI 供应商：Gemini、Claude、Grok（用于素材语言检测和不匹配告警）。
-  转化 Webhook：端点注册、<abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 验证、速率限制、新鲜度监控。</p>
+  转化 Webhook：端点注册、<abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 验证、速率限制、新鲜度监控。</p>
 </li>
 </ul>
 <h3 id="_9">第三部分：参考<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
@@ -1752,7 +1752,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <li>
 <p><a href="glossary/">术语表</a>
   每个术语有两种语言。媒体买手栏："预定向"是"控制哪些竞价请求到达你的
-  竞价器的规则"。运维栏："预定向"是"从 <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API 同步的可变实体，存储在
+  竞价器的规则"。运维栏："预定向"是"从 <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> API 同步的可变实体，存储在
   <code>pretargeting_configs</code> 中，通过 <code>/settings/pretargeting</code> 暴露"。双方
   使用同一个词；各自有不同的定义。</p>
 </li>

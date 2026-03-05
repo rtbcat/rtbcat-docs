@@ -1650,7 +1650,7 @@
 <h2 id="_2">סקריפטים לבדיקת תקינות בזמן ריצה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>סקריפטים אלה מהווים את השדרה התפעולית לאימות שהמערכת פועלת מקצה לקצה.</p>
 <h3 id="diagnose_v1_buyer_report_coveragesh"><code>diagnose_v1_buyer_report_coverage.sh</code><a class="headerlink" href="#diagnose_v1_buyer_report_coveragesh" title="Permanent link">&para;</a></h3>
-<p>מאבחן מדוע לקונה מסוים חסרה כיסוי <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</p>
+<p>מאבחן מדוע לקונה מסוים חסרה כיסוי <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr>.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CATSCAN_CANARY_EMAIL</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_EMAIL&gt;&quot;</span>
 scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--buyer-id<span class="w"> </span>&lt;BUYER_ID&gt;<span class="w"> </span><span class="se">\</span>
@@ -1659,7 +1659,7 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 </code></pre></div>
 <p>בדיקות (לפי סדר):
 1. מיפוי מושבים: buyer_id -&gt; bidder_id
-2. מטריצת ייבוא: הצלחה/כישלון/לא יובא לפי סוג <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+2. מטריצת ייבוא: הצלחה/כישלון/לא יובא לפי סוג <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr>
 3. רעננות נתונים: כיסוי תאים מיובאים/חסרים
 4. היסטוריית ייבוא: שורות ייבוא אחרונות
 5. סטטוס Gmail: מספר הודעות שלא נקראו, סיבה אחרונה, תאריך מטריקה אחרון</p>
@@ -1670,8 +1670,8 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 <li>תקינות API</li>
 <li>תקינות נתונים (רעננות וכיסוי ממדים)</li>
 <li>תקינות המרות ומוכנות</li>
-<li>זמן טעינת <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
-<li>סיכום SLO של דף <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
+<li>זמן טעינת <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr></li>
+<li>סיכום SLO של דף <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr></li>
 <li>כלכלת אופטימייזר ומודלים</li>
 <li>אימות נקודות קצה של מודלים</li>
 <li>תהליך Score+propose</li>

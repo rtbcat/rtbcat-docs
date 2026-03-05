@@ -1479,7 +1479,7 @@
 <p><strong>Co umożliwia:</strong>
 - Odkrywanie stanowisk (<code>discoverSeats</code>)
 - Synchronizacja konfiguracji pretargetingu (<code>syncPretargetingConfigs</code>)
-- Synchronizacja endpointów <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (<code>syncRTBEndpoints</code>)
+- Synchronizacja endpointów <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr> (<code>syncRTBEndpoints</code>)
 - Zbieranie kreacji (<code>collectCreatives</code>)</p>
 <p><strong>Status projektu:</strong>
 Sprawdź stan projektu GCP w <code>/settings/accounts</code> lub przez
@@ -1503,10 +1503,10 @@ Sprawdź stan projektu GCP w <code>/settings/accounts</code> lub przez
 <tr>
 <td><strong>Synchronizacja pretargetingu</strong></td>
 <td>Aktualny stan konfiguracji pretargetingu z Google</td>
-<td>Po zewnętrznych zmianach w interfejsie <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>Po zewnętrznych zmianach w interfejsie <abbr title="Authorized Buyers — programatyczna platforma reklamowa Google (dawniej AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>Synchronizacja endpointów <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>Synchronizacja endpointów <abbr title="Licytacja w czasie rzeczywistym — protokół aukcji, w którym wyświetlenia reklam są kupowane i sprzedawane w milisekundach.">RTB</abbr></strong></td>
 <td>Adresy URL i status endpointów licytujących</td>
 <td>Początkowa konfiguracja, po zmianach endpointów</td>
 </tr>
@@ -1518,11 +1518,11 @@ Sprawdź stan projektu GCP w <code>/settings/accounts</code> lub przez
 </tbody>
 </table>
 <h2 id="integracja-z-gmailem">Integracja z Gmailem<a class="headerlink" href="#integracja-z-gmailem" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers wysyła dzienne raporty <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> mailem. Cat-Scan może je automatycznie pobierać i przetwarzać.</p>
+<p>Google Authorized Buyers wysyła dzienne raporty <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr> mailem. Cat-Scan może je automatycznie pobierać i przetwarzać.</p>
 <p><strong>Konfiguracja:</strong>
 1. Przejdź do <code>/settings/accounts</code> &gt; zakładka Gmail Reports.
-2. Autoryzuj Cat-Scan do dostępu do konta Gmail otrzymującego raporty <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
-3. Cat-Scan będzie odpytywać skrzynkę o nowe e-maile z raportami i importować załączone pliki <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</p>
+2. Autoryzuj Cat-Scan do dostępu do konta Gmail otrzymującego raporty <abbr title="Authorized Buyers — programatyczna platforma reklamowa Google (dawniej AdX / DoubleClick Ad Exchange).">AB</abbr>.
+3. Cat-Scan będzie odpytywać skrzynkę o nowe e-maile z raportami i importować załączone pliki <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr>.</p>
 <p><strong>Monitoring:</strong>
 - <code>GET /gmail/status</code>: aktualny stan, liczba nieprzeczytanych, ostatni powód
 - <code>POST /gmail/import/start</code>: ręczne uruchomienie cyklu importu
@@ -1571,7 +1571,7 @@ Sprawdź stan projektu GCP w <code>/settings/accounts</code> lub przez
 </thead>
 <tbody>
 <tr>
-<td><strong>Weryfikacja <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Weryfikacja <abbr title="Kod uwierzytelniania wiadomości oparty na skrócie — podpis kryptograficzny używany do weryfikacji ładunków webhook.">HMAC</abbr></strong></td>
 <td>Zapewnia autentyczność żądań (podpisane wspólnym sekretem)</td>
 <td>Wspólny sekret skonfigurowany w ustawieniach webhooka</td>
 </tr>
@@ -1588,7 +1588,7 @@ Sprawdź stan projektu GCP w <code>/settings/accounts</code> lub przez
 </tbody>
 </table>
 <p><strong>Monitoring:</strong>
-- <code>GET /conversions/security/status</code>: status <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, status ograniczania
+- <code>GET /conversions/security/status</code>: status <abbr title="Kod uwierzytelniania wiadomości oparty na skrócie — podpis kryptograficzny używany do weryfikacji ładunków webhook.">HMAC</abbr>, status ograniczania
   częstotliwości, status świeżości
 - <code>GET /conversions/health</code>: ogólny stan pozyskiwania i agregacji
 - <code>GET /conversions/readiness</code>: czy dane konwersji są wystarczająco świeże,

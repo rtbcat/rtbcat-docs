@@ -1307,29 +1307,29 @@ systemet.</p>
 <td><code>buyer_account_id</code> i Postgres. Gemt i <code>seats</code>-tabellen. Synkroniseret via <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr></strong></td>
 <td>Queries Per Second: den maksimale rate af budforespørgsler, du beder Google om at sende. Google begrænser den faktiske mængde baseret på dit kontoniveau.</td>
-<td>Konfigureret loft per pretargeting-konfiguration. Faktisk indgående rate overvåges via <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragtmetrikker i <code>rtb_daily</code>.</td>
+<td>Konfigureret loft per pretargeting-konfiguration. Faktisk indgående rate overvåges via <abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-tragtmetrikker i <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Spild</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> forbrugt af budforespørgsler, din bidder afviser (forkerte geografier, forkerte formater, ingen matchende kreativ). Penge brugt på ingenting.</td>
+<td><abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> forbrugt af budforespørgsler, din bidder afviser (forkerte geografier, forkerte formater, ingen matchende kreativ). Penge brugt på ingenting.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Beregnet fra <code>rtb_daily</code>-aggregater. Synlig i tragt-API'et.</td>
 </tr>
 <tr>
 <td><strong>Pretargeting-konfiguration</strong></td>
 <td>De regler, der styrer, hvilke budforespørgsler der når din bidder. Du får 10 per seat. Styrer geografier, formater, platforme, publishers.</td>
-<td>Muterbar entitet synkroniseret fra Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. Gemt i <code>pretargeting_configs</code>. Administreret via <code>/settings/pretargeting</code>. Snapshots muliggør rollback.</td>
+<td>Muterbar entitet synkroniseret fra Google <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr> API. Gemt i <code>pretargeting_configs</code>. Administreret via <code>/settings/pretargeting</code>. Snapshots muliggør rollback.</td>
 </tr>
 <tr>
 <td><strong>Tragt</strong></td>
-<td>Progressionen fra budforespørgsel til forbrug: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Bud -&gt; Vindere -&gt; Visninger -&gt; Klik -&gt; Forbrug. Hvert trin har frafald.</td>
+<td>Progressionen fra budforespørgsel til forbrug: <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> -&gt; Bud -&gt; Vindere -&gt; Visninger -&gt; Klik -&gt; Forbrug. Hvert trin har frafald.</td>
 <td>Beregnet fra <code>rtb_daily</code>-metrikker. Serveret af <code>GET /analytics/rtb-funnel</code>. Frontend cacher i 30 minutter.</td>
 </tr>
 <tr>
 <td><strong>Kreativ</strong></td>
 <td>Et annonceaktiv: billede, video, HTML eller native. Har et format, en størrelse, en destinations-URL og en performancehistorik.</td>
-<td>Række i <code>creatives</code>-tabellen. Thumbnails i blob storage. Synkroniseret fra Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. Performance fra <code>rtb_daily</code>-joins.</td>
+<td>Række i <code>creatives</code>-tabellen. Thumbnails i blob storage. Synkroniseret fra Google <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr> API. Performance fra <code>rtb_daily</code>-joins.</td>
 </tr>
 <tr>
 <td><strong>Kampagne</strong></td>
@@ -1338,7 +1338,7 @@ systemet.</p>
 </tr>
 <tr>
 <td><strong>Konfigurationskort</strong></td>
-<td>UI-panelet, der viser en pretargeting-konfigurations tilstand, maks. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, geografier, formater og platforme.</td>
+<td>UI-panelet, der viser en pretargeting-konfigurations tilstand, maks. <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>, geografier, formater og platforme.</td>
 <td><code>PretargetingConfigCard</code> React-komponent. Data fra <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1348,16 +1348,16 @@ systemet.</p>
 </tr>
 <tr>
 <td><strong>Import</strong></td>
-<td>At få <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-performancedata ind i Cat-Scan, enten via manuel upload eller Gmail-autoimport.</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> parset, valideret, deduplikeret (via <code>row_hash</code> unique constraint), indsat i måltabeller. Chunked upload for filer &gt; 5MB.</td>
+<td>At få <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-performancedata ind i Cat-Scan, enten via manuel upload eller Gmail-autoimport.</td>
+<td><abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr> parset, valideret, deduplikeret (via <code>row_hash</code> unique constraint), indsat i måltabeller. Chunked upload for filer &gt; 5MB.</td>
 </tr>
 <tr>
 <td><strong>Rollback</strong></td>
 <td>Tilbageføring af en pretargeting-konfigurationsændring til dens tidligere tilstand. Forhåndsvis med dry-run, derefter bekræft.</td>
-<td>Snapshot-gendannelse: læser <code>pretargeting_snapshots</code>, anvender delta til Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, registrerer nyt snapshot. <code>POST /snapshots/rollback</code>.</td>
+<td>Snapshot-gendannelse: læser <code>pretargeting_snapshots</code>, anvender delta til Google <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr> API, registrerer nyt snapshot. <code>POST /snapshots/rollback</code>.</td>
 </tr>
 <tr>
-<td><strong>Optimizer / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>Optimizer / <abbr title="Medbring din egen model — Cat-Scans system til at tilslutte din egen eksterne scoringsmodel til optimeringsforslag.">BYOM</abbr></strong></td>
 <td>Automatiseret system, der scorer segmenter og foreslår konfigurationsændringer. Bruger din egen eksterne model.</td>
 <td>Score-endpoint kaldet via HTTP POST. Forslag gemt i <code>optimizer_proposals</code>. Livscyklus: score -&gt; foreslå -&gt; godkend -&gt; anvend.</td>
 </tr>
@@ -1367,14 +1367,14 @@ systemet.</p>
 <td><code>canary_profile</code>-parameter til score-and-propose API. Påvirker konfidenstærskler og ændringsomfangsgrænser.</td>
 </tr>
 <tr>
-<td><strong>Effektiv <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong></td>
+<td><strong>Effektiv <abbr title="Pris pr. tusind visninger — prisen betalt pr. 1.000 annoncevisninger.">CPM</abbr></strong></td>
 <td>Hvad du faktisk betaler per tusind visninger, når spild og infrastrukturomkostninger medregnes.</td>
 <td>Beregnet i <code>OptimizerEconomicsService</code>. Kombinerer forbrugsdata fra <code>rtb_daily</code> med konfigurerede hostingomkostninger.</td>
 </tr>
 <tr>
 <td><strong>Konvertering</strong></td>
 <td>En værdifuld brugerhandling (køb, tilmelding) sporet efter en visning. Fødes tilbage for at optimere targeting.</td>
-<td>Hændelse indlæst via pixel (<code>GET /conversions/pixel</code>) eller webhook (<code>POST /conversions/webhook</code>). Gemt i konverteringstabeller. <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-verificeret for webhooks.</td>
+<td>Hændelse indlæst via pixel (<code>GET /conversions/pixel</code>) eller webhook (<code>POST /conversions/webhook</code>). Gemt i konverteringstabeller. <abbr title="Hash-baseret meddelelsesgodkendelseskode — en kryptografisk signatur, der bruges til at verificere webhook-data.">HMAC</abbr>-verificeret for webhooks.</td>
 </tr>
 <tr>
 <td><strong>Vindrate</strong></td>
@@ -1382,14 +1382,14 @@ systemet.</p>
 <td><code>auction_wins / bids_placed</code> fra <code>rtb_daily</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="Klikrate — klik divideret med visninger, udtrykt som en procentdel.">CTR</abbr></strong></td>
 <td>Klik / Visninger. Hvor engagerende dine kreativer er.</td>
 <td><code>clicks / impressions</code> fra <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Runtime health-gate</strong></td>
 <td>(Ikke et køberbegreb)</td>
-<td><code>v1-runtime-health-strict.yml</code> CI-workflow. Kører end-to-end-tjek: API health, data health, konverteringer, optimizer, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> SLO. Returnerer PASS/FAIL/BLOCKED per tjek.</td>
+<td><code>v1-runtime-health-strict.yml</code> CI-workflow. Kører end-to-end-tjek: API health, data health, konverteringer, optimizer, <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr> SLO. Returnerer PASS/FAIL/BLOCKED per tjek.</td>
 </tr>
 <tr>
 <td><strong>Contract check</strong></td>

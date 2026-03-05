@@ -1306,29 +1306,29 @@
 <td><code>buyer_account_id</code> в Postgres. Хранится в таблице <code>seats</code>. Синхронизируется через <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></strong></td>
 <td>Queries Per Second: максимальная частота запросов ставок, которую вы запрашиваете у Google. Google регулирует фактический объем в зависимости от уровня вашего аккаунта.</td>
-<td>Настраиваемый лимит для каждого конфига претаргетинга. Фактическая входящая частота отслеживается через метрики <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-воронки в <code>rtb_daily</code>.</td>
+<td>Настраиваемый лимит для каждого конфига претаргетинга. Фактическая входящая частота отслеживается через метрики <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>-воронки в <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Потери (Waste)</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, потребляемый запросами ставок, которые ваш биддер отклоняет (неподходящие регионы, размеры, нет подходящего креатива). Деньги, потраченные впустую.</td>
+<td><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, потребляемый запросами ставок, которые ваш биддер отклоняет (неподходящие регионы, размеры, нет подходящего креатива). Деньги, потраченные впустую.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Вычисляется из агрегатов <code>rtb_daily</code>. Доступно через API воронки.</td>
 </tr>
 <tr>
 <td><strong>Конфиг претаргетинга</strong></td>
 <td>Правила, определяющие, какие запросы ставок достигают вашего биддера. На каждое место выделяется 10 конфигов. Управляет географиями, размерами, форматами, платформами, издателями.</td>
-<td>Изменяемая сущность, синхронизируемая из Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. Хранится в <code>pretargeting_configs</code>. Управляется через <code>/settings/pretargeting</code>. Снимки позволяют выполнять откат.</td>
+<td>Изменяемая сущность, синхронизируемая из Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr> API. Хранится в <code>pretargeting_configs</code>. Управляется через <code>/settings/pretargeting</code>. Снимки позволяют выполнять откат.</td>
 </tr>
 <tr>
 <td><strong>Воронка (Funnel)</strong></td>
-<td>Последовательность от запроса ставки до расхода: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Ставки -&gt; Победы -&gt; Показы -&gt; Клики -&gt; Расход. На каждом этапе есть потери.</td>
+<td>Последовательность от запроса ставки до расхода: <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> -&gt; Ставки -&gt; Победы -&gt; Показы -&gt; Клики -&gt; Расход. На каждом этапе есть потери.</td>
 <td>Вычисляется из метрик <code>rtb_daily</code>. Предоставляется через <code>GET /analytics/rtb-funnel</code>. Фронтенд кэширует на 30 минут.</td>
 </tr>
 <tr>
 <td><strong>Креатив</strong></td>
 <td>Рекламный материал: изображение, видео, HTML или нативный формат. Имеет формат, размер, целевой URL и историю эффективности.</td>
-<td>Строка в таблице <code>creatives</code>. Миниатюры в blob-хранилище. Синхронизируется из Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. Эффективность из JOIN с <code>rtb_daily</code>.</td>
+<td>Строка в таблице <code>creatives</code>. Миниатюры в blob-хранилище. Синхронизируется из Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr> API. Эффективность из JOIN с <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Кампания</strong></td>
@@ -1337,7 +1337,7 @@
 </tr>
 <tr>
 <td><strong>Карточка конфига</strong></td>
-<td>Панель интерфейса, показывающая состояние конфига претаргетинга, максимальный <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, географии, размеры, форматы и платформы.</td>
+<td>Панель интерфейса, показывающая состояние конфига претаргетинга, максимальный <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, географии, размеры, форматы и платформы.</td>
 <td>React-компонент <code>PretargetingConfigCard</code>. Данные из <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1347,16 +1347,16 @@
 </tr>
 <tr>
 <td><strong>Импорт</strong></td>
-<td>Загрузка <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> с данными об эффективности в Cat-Scan -- вручную или через автоимпорт из Gmail.</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> парсится, валидируется, дедуплицируется (через уникальное ограничение <code>row_hash</code>), вставляется в целевые таблицы. Поблочная загрузка для файлов &gt; 5 МБ.</td>
+<td>Загрузка <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> с данными об эффективности в Cat-Scan -- вручную или через автоимпорт из Gmail.</td>
+<td><abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> парсится, валидируется, дедуплицируется (через уникальное ограничение <code>row_hash</code>), вставляется в целевые таблицы. Поблочная загрузка для файлов &gt; 5 МБ.</td>
 </tr>
 <tr>
 <td><strong>Откат</strong></td>
 <td>Возврат изменения конфига претаргетинга к предыдущему состоянию. Предварительный просмотр с пробным прогоном, затем подтверждение.</td>
-<td>Восстановление из снимка: считывает <code>pretargeting_snapshots</code>, применяет дельту к Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, записывает новый снимок. <code>POST /snapshots/rollback</code>.</td>
+<td>Восстановление из снимка: считывает <code>pretargeting_snapshots</code>, применяет дельту к Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr> API, записывает новый снимок. <code>POST /snapshots/rollback</code>.</td>
 </tr>
 <tr>
-<td><strong>Оптимизатор / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>Оптимизатор / <abbr title="Принеси свою модель — система Cat-Scan для подключения собственной внешней модели оценки для формирования предложений по оптимизации.">BYOM</abbr></strong></td>
 <td>Автоматизированная система, которая оценивает сегменты и предлагает изменения конфигов. Использует вашу собственную внешнюю модель.</td>
 <td>Эндпоинт оценки вызывается через HTTP POST. Предложения хранятся в <code>optimizer_proposals</code>. Жизненный цикл: оценка -&gt; предложение -&gt; одобрение -&gt; применение.</td>
 </tr>
@@ -1366,14 +1366,14 @@
 <td>Параметр <code>canary_profile</code> в API score-and-propose. Влияет на пороги уверенности и лимиты масштаба изменений.</td>
 </tr>
 <tr>
-<td><strong>Эффективный <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong></td>
+<td><strong>Эффективный <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr></strong></td>
 <td>Сколько вы фактически платите за тысячу показов с учетом потерь и инфраструктурных расходов.</td>
 <td>Вычисляется в <code>OptimizerEconomicsService</code>. Объединяет данные о расходах из <code>rtb_daily</code> с настроенной стоимостью хостинга.</td>
 </tr>
 <tr>
 <td><strong>Конверсия</strong></td>
 <td>Ценное действие пользователя (покупка, регистрация), отслеживаемое после показа. Используется для обратной связи и оптимизации таргетинга.</td>
-<td>Событие принимается через пиксель (<code>GET /conversions/pixel</code>) или вебхук (<code>POST /conversions/webhook</code>). Хранится в таблицах конверсий. <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-верификация для вебхуков.</td>
+<td>Событие принимается через пиксель (<code>GET /conversions/pixel</code>) или вебхук (<code>POST /conversions/webhook</code>). Хранится в таблицах конверсий. <abbr title="Код аутентификации сообщений на основе хеша — криптографическая подпись для проверки полезных данных вебхуков.">HMAC</abbr>-верификация для вебхуков.</td>
 </tr>
 <tr>
 <td><strong>Процент побед (Win rate)</strong></td>
@@ -1381,14 +1381,14 @@
 <td><code>auction_wins / bids_placed</code> из <code>rtb_daily</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="Показатель кликабельности — клики, разделённые на показы, выраженные в процентах.">CTR</abbr></strong></td>
 <td>Клики / Показы. Насколько привлекательны ваши креативы.</td>
 <td><code>clicks / impressions</code> из <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Проверка состояния среды выполнения</strong></td>
 <td>(Не термин покупателя)</td>
-<td>CI-воркфлоу <code>v1-runtime-health-strict.yml</code>. Выполняет сквозные проверки: состояние API, полнота данных, конверсии, оптимизатор, SLO по <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Возвращает PASS/FAIL/BLOCKED для каждой проверки.</td>
+<td>CI-воркфлоу <code>v1-runtime-health-strict.yml</code>. Выполняет сквозные проверки: состояние API, полнота данных, конверсии, оптимизатор, SLO по <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>. Возвращает PASS/FAIL/BLOCKED для каждой проверки.</td>
 </tr>
 <tr>
 <td><strong>Проверка контрактов</strong></td>

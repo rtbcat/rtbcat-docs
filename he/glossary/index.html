@@ -1306,29 +1306,29 @@
 <td><code>buyer_account_id</code> ב-Postgres. מאוחסן בטבלת <code>seats</code>. מסונכרן דרך <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr></strong></td>
 <td>שאילתות לשנייה: הקצב המקסימלי של בקשות הצעת מחיר שאתם מבקשים מ-Google לשלוח. Google מגבילה את הנפח בפועל לפי דרגת החשבון שלכם.</td>
-<td>מגבלה מוגדרת לכל תצורת פרה-טרגוט. קצב כניסה בפועל מנוטר דרך מדדי משפך <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> ב-<code>rtb_daily</code>.</td>
+<td>מגבלה מוגדרת לכל תצורת פרה-טרגוט. קצב כניסה בפועל מנוטר דרך מדדי משפך <abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr> ב-<code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>בזבוז (Waste)</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שנצרך על ידי בקשות הצעת מחיר שהמכרז שלכם דוחה (אזורים גאוגרפיים שגויים, גדלים שגויים, אין קריאייטיב תואם). כסף שהוצא על כלום.</td>
+<td><abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שנצרך על ידי בקשות הצעת מחיר שהמכרז שלכם דוחה (אזורים גאוגרפיים שגויים, גדלים שגויים, אין קריאייטיב תואם). כסף שהוצא על כלום.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. מחושב מצבירות <code>rtb_daily</code>. נראה ב-API של המשפך.</td>
 </tr>
 <tr>
 <td><strong>תצורת פרה-טרגוט (Pretargeting config)</strong></td>
 <td>הכללים ששולטים אילו בקשות הצעת מחיר מגיעות למכרז שלכם. מקבלים 10 לכל מושב. שולטת באזורים גאוגרפיים, גדלים, פורמטים, פלטפורמות, מפרסמים.</td>
-<td>ישות ניתנת לשינוי המסונכרנת מ-Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. מאוחסנת ב-<code>pretargeting_configs</code>. מנוהלת דרך <code>/settings/pretargeting</code>. תמונות מצב מאפשרות חזרה לאחור.</td>
+<td>ישות ניתנת לשינוי המסונכרנת מ-Google <abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr> API. מאוחסנת ב-<code>pretargeting_configs</code>. מנוהלת דרך <code>/settings/pretargeting</code>. תמונות מצב מאפשרות חזרה לאחור.</td>
 </tr>
 <tr>
 <td><strong>משפך (Funnel)</strong></td>
-<td>ההתקדמות מבקשת הצעת מחיר להוצאה: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; הצעות -&gt; זכיות -&gt; חשיפות -&gt; קליקים -&gt; הוצאה. בכל שלב יש נשירה.</td>
+<td>ההתקדמות מבקשת הצעת מחיר להוצאה: <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> -&gt; הצעות -&gt; זכיות -&gt; חשיפות -&gt; קליקים -&gt; הוצאה. בכל שלב יש נשירה.</td>
 <td>מחושב ממדדי <code>rtb_daily</code>. מוגש על ידי <code>GET /analytics/rtb-funnel</code>. צד הלקוח שומר במטמון ל-30 דקות.</td>
 </tr>
 <tr>
 <td><strong>קריאייטיב (Creative)</strong></td>
 <td>נכס מודעה: תמונה, וידאו, HTML או מקורי. יש לו פורמט, גודל, כתובת URL של יעד והיסטוריית ביצועים.</td>
-<td>שורה בטבלת <code>creatives</code>. תמונות ממוזערות באחסון blob. מסונכרן מ-Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. ביצועים מצירופי <code>rtb_daily</code>.</td>
+<td>שורה בטבלת <code>creatives</code>. תמונות ממוזערות באחסון blob. מסונכרן מ-Google <abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr> API. ביצועים מצירופי <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>קמפיין (Campaign)</strong></td>
@@ -1337,7 +1337,7 @@
 </tr>
 <tr>
 <td><strong>כרטיס תצורה (Config card)</strong></td>
-<td>פאנל ממשק המשתמש המציג את מצב תצורת פרה-טרגוט, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> מקסימלי, אזורים גאוגרפיים, גדלים, פורמטים ופלטפורמות.</td>
+<td>פאנל ממשק המשתמש המציג את מצב תצורת פרה-טרגוט, <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> מקסימלי, אזורים גאוגרפיים, גדלים, פורמטים ופלטפורמות.</td>
 <td>רכיב React <code>PretargetingConfigCard</code>. נתונים מ-<code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1347,16 +1347,16 @@
 </tr>
 <tr>
 <td><strong>ייבוא (Import)</strong></td>
-<td>הכנסת נתוני ביצועים בפורמט <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> ל-Cat-Scan, בהעלאה ידנית או בייבוא אוטומטי מ-Gmail.</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> מנותח, מתוקף, עובר הסרת כפילויות (דרך אילוץ ייחודיות <code>row_hash</code>), ומוכנס לטבלאות היעד. העלאה בנתחים לקבצים מעל 5MB.</td>
+<td>הכנסת נתוני ביצועים בפורמט <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> ל-Cat-Scan, בהעלאה ידנית או בייבוא אוטומטי מ-Gmail.</td>
+<td><abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> מנותח, מתוקף, עובר הסרת כפילויות (דרך אילוץ ייחודיות <code>row_hash</code>), ומוכנס לטבלאות היעד. העלאה בנתחים לקבצים מעל 5MB.</td>
 </tr>
 <tr>
 <td><strong>חזרה לאחור (Rollback)</strong></td>
 <td>החזרת שינוי בתצורת פרה-טרגוט למצב הקודם. תצוגה מקדימה עם הרצת ניסיון, ואז אישור.</td>
-<td>שחזור תמונת מצב: קורא מ-<code>pretargeting_snapshots</code>, מחיל הבדלים ל-Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, רושם תמונת מצב חדשה. <code>POST /snapshots/rollback</code>.</td>
+<td>שחזור תמונת מצב: קורא מ-<code>pretargeting_snapshots</code>, מחיל הבדלים ל-Google <abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr> API, רושם תמונת מצב חדשה. <code>POST /snapshots/rollback</code>.</td>
 </tr>
 <tr>
-<td><strong>אופטימייזר / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>אופטימייזר / <abbr title="הבא את המודל שלך — מערכת Cat-Scan לחיבור מודל דירוג חיצוני משלך להפקת הצעות אופטימיזציה.">BYOM</abbr></strong></td>
 <td>מערכת אוטומטית שמדרגת פלחים ומציעה שינויי תצורה. משתמשת במודל חיצוני שלכם.</td>
 <td>נקודת קצה לדירוג נקראת דרך HTTP POST. הצעות מאוחסנות ב-<code>optimizer_proposals</code>. מחזור חיים: דירוג -&gt; הצעה -&gt; אישור -&gt; החלה.</td>
 </tr>
@@ -1366,14 +1366,14 @@
 <td>פרמטר <code>canary_profile</code> ל-API של דירוג-והצעה. משפיע על ספי ביטחון ומגבלות היקף שינוי.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> אפקטיבי (Effective <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>)</strong></td>
+<td><strong><abbr title="עלות לאלף חשיפות — המחיר המשולם עבור 1,000 חשיפות פרסום.">CPM</abbr> אפקטיבי (Effective <abbr title="עלות לאלף חשיפות — המחיר המשולם עבור 1,000 חשיפות פרסום.">CPM</abbr>)</strong></td>
 <td>מה שאתם משלמים בפועל לכל אלף חשיפות, בהתחשב בבזבוז ועלויות תשתית.</td>
 <td>מחושב ב-<code>OptimizerEconomicsService</code>. משלב נתוני הוצאה מ-<code>rtb_daily</code> עם עלות אירוח מוגדרת.</td>
 </tr>
 <tr>
 <td><strong>המרה (Conversion)</strong></td>
 <td>פעולת משתמש בעלת ערך (רכישה, הרשמה) שנרשמת לאחר חשיפה. מוזנת חזרה לאופטימיזציית טרגוט.</td>
-<td>אירוע נקלט דרך פיקסל (<code>GET /conversions/pixel</code>) או webhook (<code>POST /conversions/webhook</code>). מאוחסן בטבלאות המרות. מאומת באמצעות <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> עבור webhooks.</td>
+<td>אירוע נקלט דרך פיקסל (<code>GET /conversions/pixel</code>) או webhook (<code>POST /conversions/webhook</code>). מאוחסן בטבלאות המרות. מאומת באמצעות <abbr title="קוד אימות הודעות מבוסס גיבוב — חתימה קריפטוגרפית המשמשת לאימות מטעני webhook.">HMAC</abbr> עבור webhooks.</td>
 </tr>
 <tr>
 <td><strong>אחוז זכייה (Win rate)</strong></td>
@@ -1381,14 +1381,14 @@
 <td><code>auction_wins / bids_placed</code> מ-<code>rtb_daily</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="שיעור הקלקות — קליקים חלקי חשיפות, מבוטא באחוזים.">CTR</abbr></strong></td>
 <td>קליקים / חשיפות. עד כמה הקריאייטיבים שלכם מעוררים מעורבות.</td>
 <td><code>clicks / impressions</code> מ-<code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>שער בדיקת תקינות בזמן ריצה (Runtime health gate)</strong></td>
 <td>(לא מונח של קונה)</td>
-<td>תהליך CI <code>v1-runtime-health-strict.yml</code>. מריץ בדיקות מקצה לקצה: תקינות API, תקינות נתונים, המרות, אופטימייזר, SLO של <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. מחזיר PASS/FAIL/BLOCKED לכל בדיקה.</td>
+<td>תהליך CI <code>v1-runtime-health-strict.yml</code>. מריץ בדיקות מקצה לקצה: תקינות API, תקינות נתונים, המרות, אופטימייזר, SLO של <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr>. מחזיר PASS/FAIL/BLOCKED לכל בדיקה.</td>
 </tr>
 <tr>
 <td><strong>בדיקת חוזה (Contract check)</strong></td>

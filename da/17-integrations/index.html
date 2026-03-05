@@ -1479,7 +1479,7 @@
 <p><strong>Hvad det muliggør:</strong>
 - Sædeopdagelse (<code>discoverSeats</code>)
 - Pretargeting-konfigurationssynkronisering (<code>syncPretargetingConfigs</code>)
-- <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-endpoint-synkronisering (<code>syncRTBEndpoints</code>)
+- <abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-endpoint-synkronisering (<code>syncRTBEndpoints</code>)
 - Kreativindsamling (<code>collectCreatives</code>)</p>
 <p><strong>Projektstatus:</strong>
 Tjek GCP-projektsundhed på <code>/settings/accounts</code> eller via
@@ -1503,10 +1503,10 @@ Tjek GCP-projektsundhed på <code>/settings/accounts</code> eller via
 <tr>
 <td><strong>Pretargeting-synkronisering</strong></td>
 <td>Aktuel pretargeting-konfigurationstilstand fra Google</td>
-<td>Efter eksterne ændringer i <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>-brugerfladen</td>
+<td>Efter eksterne ændringer i <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr>-brugerfladen</td>
 </tr>
 <tr>
-<td><strong><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-endpoint-synkronisering</strong></td>
+<td><strong><abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-endpoint-synkronisering</strong></td>
 <td>Bidder-endpoint-URL'er og status</td>
 <td>Indledende opsætning, efter endpointændringer</td>
 </tr>
@@ -1518,11 +1518,11 @@ Tjek GCP-projektsundhed på <code>/settings/accounts</code> eller via
 </tbody>
 </table>
 <h2 id="gmail-integration">Gmail-integration<a class="headerlink" href="#gmail-integration" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers sender daglige <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-rapporter via e-mail. Cat-Scan kan indlæse disse automatisk.</p>
+<p>Google Authorized Buyers sender daglige <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-rapporter via e-mail. Cat-Scan kan indlæse disse automatisk.</p>
 <p><strong>Opsætning:</strong>
 1. Gå til <code>/settings/accounts</code> &gt; Gmail Reports-fanen.
-2. Autoriser Cat-Scan til at tilgå den Gmail-konto, der modtager <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>-rapporter.
-3. Cat-Scan poller efter nye rapportmails og importerer vedhæftede <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-filer.</p>
+2. Autoriser Cat-Scan til at tilgå den Gmail-konto, der modtager <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr>-rapporter.
+3. Cat-Scan poller efter nye rapportmails og importerer vedhæftede <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-filer.</p>
 <p><strong>Overvågning:</strong>
 - <code>GET /gmail/status</code>: aktuel tilstand, antal ulæste, seneste årsag
 - <code>POST /gmail/import/start</code>: udløs manuelt en importcyklus
@@ -1571,7 +1571,7 @@ Tjek GCP-projektsundhed på <code>/settings/accounts</code> eller via
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-verifikation</strong></td>
+<td><strong><abbr title="Hash-baseret meddelelsesgodkendelseskode — en kryptografisk signatur, der bruges til at verificere webhook-data.">HMAC</abbr>-verifikation</strong></td>
 <td>Sikrer at forespørgsler er autentiske (signeret med delt hemmelighed)</td>
 <td>Delt hemmelighed konfigureret i webhook-indstillinger</td>
 </tr>
@@ -1588,7 +1588,7 @@ Tjek GCP-projektsundhed på <code>/settings/accounts</code> eller via
 </tbody>
 </table>
 <p><strong>Overvågning:</strong>
-- <code>GET /conversions/security/status</code>: <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-status, hastighedsbegrænsningstatus, friskheds­status
+- <code>GET /conversions/security/status</code>: <abbr title="Hash-baseret meddelelsesgodkendelseskode — en kryptografisk signatur, der bruges til at verificere webhook-data.">HMAC</abbr>-status, hastighedsbegrænsningstatus, friskheds­status
 - <code>GET /conversions/health</code>: overordnet indlæsnings- og aggregeringssundhed
 - <code>GET /conversions/readiness</code>: om konverteringsdata er friske nok til at stole på</p>
 <h2 id="relateret">Relateret<a class="headerlink" href="#relateret" title="Permanent link">&para;</a></h2>

@@ -1650,7 +1650,7 @@
 <h2 id="_2">Скрипты проверки состояния<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Эти скрипты являются основой оперативной проверки работоспособности системы от начала до конца.</p>
 <h3 id="diagnose_v1_buyer_report_coveragesh"><code>diagnose_v1_buyer_report_coverage.sh</code><a class="headerlink" href="#diagnose_v1_buyer_report_coveragesh" title="Permanent link">&para;</a></h3>
-<p>Диагностирует причины отсутствия <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-покрытия для конкретного байера.</p>
+<p>Диагностирует причины отсутствия <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-покрытия для конкретного байера.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CATSCAN_CANARY_EMAIL</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_EMAIL&gt;&quot;</span>
 scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--buyer-id<span class="w"> </span>&lt;BUYER_ID&gt;<span class="w"> </span><span class="se">\</span>
@@ -1659,7 +1659,7 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 </code></pre></div>
 <p>Проверки (по порядку):
 1. Маппинг мест: buyer_id -&gt; bidder_id
-2. Матрица импорта: pass/fail/not_imported по типу <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+2. Матрица импорта: pass/fail/not_imported по типу <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>
 3. Свежесть данных: покрытие ячеек imported/missing
 4. История импорта: последние записи импорта
 5. Статус Gmail: количество непрочитанных, последняя причина, дата последней метрики</p>
@@ -1670,8 +1670,8 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 <li>Работоспособность API</li>
 <li>Полнота данных (свежесть и покрытие измерений)</li>
 <li>Состояние и готовность конверсий</li>
-<li>Задержка запуска <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
-<li>Сводка SLO страницы <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
+<li>Задержка запуска <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></li>
+<li>Сводка SLO страницы <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></li>
 <li>Экономика оптимизатора и модели</li>
 <li>Валидация эндпоинтов моделей</li>
 <li>Рабочий процесс score+propose</li>

@@ -1548,16 +1548,16 @@
 <h1 id="kapitel-9-dataimport">Kapitel 9: Dataimport<a class="headerlink" href="#kapitel-9-dataimport" title="Permanent link">&para;</a></h1>
 <p><em>Målgruppe: medieindkøbere, kampagneansvarlige</em></p>
 <p>Cat-Scans analyse afhænger helt af ydelsesdata fra Google Authorized
-Buyers. Da Google ikke tilbyder et Reporting API, kommer alle data fra <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-
+Buyers. Da Google ikke tilbyder et Reporting API, kommer alle data fra <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-
 eksporter. Dette kapitel forklarer, hvordan du får data ind i Cat-Scan, og hvordan du
 verificerer, at de ankommer.</p>
 <h2 id="hvorfor-dette-er-vigtigt">Hvorfor dette er vigtigt<a class="headerlink" href="#hvorfor-dette-er-vigtigt" title="Permanent link">&para;</a></h2>
 <p>Uden importerede data har Cat-Scan intet at analysere. Tragten, spildvisninger,
-kreativ ydelse og optimeringsværktøjet afhænger alle af friske <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-data. Hvis
+kreativ ydelse og optimeringsværktøjet afhænger alle af friske <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-data. Hvis
 dine data er forældede, er dine beslutninger baseret på gammel information.</p>
 <h2 id="to-mader-data-ankommer-pa">To måder data ankommer på<a class="headerlink" href="#to-mader-data-ankommer-pa" title="Permanent link">&para;</a></h2>
-<h3 id="1-manuel-csv-upload-import">1. Manuel <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-upload (<code>/import</code>)<a class="headerlink" href="#1-manuel-csv-upload-import" title="Permanent link">&para;</a></h3>
-<p>Træk og slip en <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-fil eksporteret fra Google Authorized Buyers.</p>
+<h3 id="1-manuel-csv-upload-import">1. Manuel <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-upload (<code>/import</code>)<a class="headerlink" href="#1-manuel-csv-upload-import" title="Permanent link">&para;</a></h3>
+<p>Træk og slip en <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-fil eksporteret fra Google Authorized Buyers.</p>
 <p><img alt="Dataimportside med uploadzone og ferskhedsgitter" src="../../images/screenshot-import.png" /></p>
 <p><strong>Arbejdsgang:</strong></p>
 <ol>
@@ -1580,7 +1580,7 @@ dine data er forældede, er dine beslutninger baseret på gammel information.</p
 <thead>
 <tr>
 <th>Type</th>
-<th><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-navnemønster</th>
+<th><abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-navnemønster</th>
 <th>Hvad den indeholder</th>
 </tr>
 </thead>
@@ -1588,7 +1588,7 @@ dine data er forældede, er dine beslutninger baseret på gammel information.</p
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>Daglig <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-ydelse: visninger, bud, gevinster, forbrug</td>
+<td>Daglig <abbr title="Realtidsbudgivning — auktionsprotokollen, hvor annoncevisninger købes og sælges på millisekunder.">RTB</abbr>-ydelse: visninger, bud, gevinster, forbrug</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1616,7 +1616,7 @@ dine data er forældede, er dine beslutninger baseret på gammel information.</p
 <p>Cat-Scan kan automatisk indlæse rapporter fra en tilknyttet Gmail-konto.</p>
 <ul>
 <li>Google Authorized Buyers sender daglige rapporter pr. e-mail.</li>
-<li>Cat-Scans Gmail-integration læser disse e-mails og importerer <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-
+<li>Cat-Scans Gmail-integration læser disse e-mails og importerer <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>-
   vedhæftningerne automatisk.</li>
 <li>Tjek status under <code>/settings/accounts</code> &gt; Gmail Reports-fanen, eller via
   <code>/gmail/status</code> i API'et.</li>
@@ -1644,7 +1644,7 @@ viser en <strong>dato x rapporttype-matrix</strong>:</p>
 tilbagekigsvinduet. Runtime-sundhedsporten bruger dette til at afgøre, om systemet
 er operationelt.</p>
 <h2 id="deduplikering">Deduplikering<a class="headerlink" href="#deduplikering" title="Permanent link">&para;</a></h2>
-<p>Genimport af den samme <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (eller at Gmail genbehandler den samme e-mail) tæller
+<p>Genimport af den samme <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr> (eller at Gmail genbehandler den samme e-mail) tæller
 <strong>ikke</strong> data dobbelt. Hver række hashes, og dubletter springes over ved
 indsættelse. Det betyder, at det altid er sikkert at genimportere.</p>
 <h2 id="importhistorik">Importhistorik<a class="headerlink" href="#importhistorik" title="Permanent link">&para;</a></h2>
@@ -1671,7 +1671,7 @@ indsættelse. Det betyder, at det altid er sikkert at genimportere.</p>
 </tr>
 <tr>
 <td>Import fejler med valideringsfejl</td>
-<td>Kolonneuoverensstemmelse. Tjek tabellen med påkrævede kolonner op mod din <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</td>
+<td>Kolonneuoverensstemmelse. Tjek tabellen med påkrævede kolonner op mod din <abbr title="Kommaseparerede værdier — det filformat, Google Authorized Buyers bruger til rapporteksport.">CSV</abbr>.</td>
 </tr>
 <tr>
 <td>Gmail-import viser "stopped"</td>
@@ -1679,13 +1679,13 @@ indsættelse. Det betyder, at det altid er sikkert at genimportere.</p>
 </tr>
 <tr>
 <td>Dækningsprocenten falder</td>
-<td>Rapporter ankommer, men for færre datoer end forventet. Tjek eksportplanen i Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>Rapporter ankommer, men for færre datoer end forventet. Tjek eksportplanen i Google <abbr title="Authorized Buyers — Googles programmatiske annonceplatform (tidligere AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="relateret">Relateret<a class="headerlink" href="#relateret" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Forstå din <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-tragt</a>: afhænger af importerede data</li>
+<li><a href="../03-qps-funnel/">Forstå din <abbr title="Forespørgsler pr. sekund — den hastighed, hvormed Google sender budanmodninger til din budgiver. Hver anmodning koster beregning og båndbredde, så spildt QPS er spildte penge.">QPS</abbr>-tragt</a>: afhænger af importerede data</li>
 <li><a href="../10-reading-reports/">Læs dine rapporter</a>: hvad du kan gøre med
   dataene, når de er importeret</li>
 <li>For DevOps: interne data-ferskhedsforespørgsler og fejlsøgning, se

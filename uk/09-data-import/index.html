@@ -1548,15 +1548,15 @@
 <h1 id="9">Розділ 9: Імпорт даних<a class="headerlink" href="#9" title="Permanent link">&para;</a></h1>
 <p><em>Аудиторія: медіабаєри, менеджери кампаній</em></p>
 <p>Аналітика Cat-Scan повністю залежить від даних продуктивності з Google Authorized
-Buyers. Оскільки Google не надає Reporting API, всі дані надходять з <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-експортів.
+Buyers. Оскільки Google не надає Reporting API, всі дані надходять з <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-експортів.
 Цей розділ пояснює, як завантажити дані в Cat-Scan та як перевірити їх надходження.</p>
 <h2 id="_1">Чому це важливо<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Без імпортованих даних Cat-Scan нічого не може аналізувати. Воронка, перегляди
-витрат, ефективність креативів та оптимізатор — усе залежить від свіжих <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-даних.
+витрат, ефективність креативів та оптимізатор — усе залежить від свіжих <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-даних.
 Якщо ваші дані застаріли, ваші рішення базуються на старій інформації.</p>
 <h2 id="_2">Два способи надходження даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1-csv-import">1. Ручне завантаження <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (<code>/import</code>)<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
-<p>Перетягніть <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-файл, експортований із Google Authorized Buyers.</p>
+<h3 id="1-csv-import">1. Ручне завантаження <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr> (<code>/import</code>)<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
+<p>Перетягніть <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-файл, експортований із Google Authorized Buyers.</p>
 <p><img alt="Сторінка імпорту даних із зоною завантаження та сіткою свіжості" src="../../images/screenshot-import.png" /></p>
 <p><strong>Робочий процес:</strong></p>
 <ol>
@@ -1580,7 +1580,7 @@ Buyers. Оскільки Google не надає Reporting API, всі дані �
 <thead>
 <tr>
 <th>Тип</th>
-<th>Шаблон назви <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></th>
+<th>Шаблон назви <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr></th>
 <th>Що містить</th>
 </tr>
 </thead>
@@ -1588,7 +1588,7 @@ Buyers. Оскільки Google не надає Reporting API, всі дані �
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>Щоденна <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-продуктивність: покази, ставки, перемоги, витрати</td>
+<td>Щоденна <abbr title="Торги в реальному часі — аукціонний протокол, де рекламні покази купуються та продаються за мілісекунди.">RTB</abbr>-продуктивність: покази, ставки, перемоги, витрати</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1617,7 +1617,7 @@ Buyers. Оскільки Google не надає Reporting API, всі дані �
 <ul>
 <li>Google Authorized Buyers надсилає щоденні звіти електронною поштою.</li>
 <li>Інтеграція Cat-Scan із Gmail читає ці листи та автоматично імпортує
-  <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-вкладення.</li>
+  <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>-вкладення.</li>
 <li>Перевірте статус у <code>/settings/accounts</code> &gt; вкладка «Звіти Gmail» або через
   <code>/gmail/status</code> в API.</li>
 </ul>
@@ -1644,7 +1644,7 @@ Buyers. Оскільки Google не надає Reporting API, всі дані �
 ретроспективного аналізу. Шлюз перевірки працездатності використовує цей
 показник для визначення, чи система працездатна.</p>
 <h2 id="_4">Дедуплікація<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>Повторний імпорт того самого <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (або повторна обробка Gmail того самого листа)
+<p>Повторний імпорт того самого <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr> (або повторна обробка Gmail того самого листа)
 <strong>не</strong> подвоює дані. Кожний рядок хешується, і дублікати пропускаються при
 вставці. Це означає, що повторний імпорт завжди безпечний.</p>
 <h2 id="_5">Історія імпорту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
@@ -1671,7 +1671,7 @@ Buyers. Оскільки Google не надає Reporting API, всі дані �
 </tr>
 <tr>
 <td>Імпорт не вдається з помилкою валідації</td>
-<td>Невідповідність колонок. Порівняйте таблицю необхідних колонок із вашим <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</td>
+<td>Невідповідність колонок. Порівняйте таблицю необхідних колонок із вашим <abbr title="Значення, розділені комами — формат файлів, який Google Authorized Buyers використовує для експорту звітів.">CSV</abbr>.</td>
 </tr>
 <tr>
 <td>Імпорт Gmail показує «stopped»</td>
@@ -1679,13 +1679,13 @@ Buyers. Оскільки Google не надає Reporting API, всі дані �
 </tr>
 <tr>
 <td>Відсоток покриття падає</td>
-<td>Звіти надходять, але за менше дат, ніж очікувалося. Перевірте розклад експорту в Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>Звіти надходять, але за менше дат, ніж очікувалося. Перевірте розклад експорту в Google <abbr title="Authorized Buyers — програматична рекламна платформа Google (раніше AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_7">Пов'язане<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Розуміння воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>: залежить від імпортованих даних</li>
+<li><a href="../03-qps-funnel/">Розуміння воронки <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr></a>: залежить від імпортованих даних</li>
 <li><a href="../10-reading-reports/">Читання звітів</a>: що можна робити з даними після
   імпорту</li>
 <li>Для DevOps: внутрішня логіка запитів свіжості даних та усунення несправностей,

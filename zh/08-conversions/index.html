@@ -1520,7 +1520,7 @@
 <ul>
 <li>比像素更可靠（无广告拦截器、无客户端依赖）。</li>
 <li>需要服务端集成。</li>
-<li>支持 <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 签名验证以确保安全。</li>
+<li>支持 <abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 签名验证以确保安全。</li>
 </ul>
 <h2 id="webhook_1">Webhook 安全<a class="headerlink" href="#webhook_1" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan 提供分层 Webhook 安全：</p>
@@ -1533,7 +1533,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> 验证</strong></td>
+<td><strong><abbr title="基于哈希的消息认证码 — 用于验证 webhook 载荷的加密签名。">HMAC</abbr> 验证</strong></td>
 <td>每个 Webhook 请求使用共享密钥签名。Cat-Scan 拒绝未签名或签名错误的请求。</td>
 </tr>
 <tr>

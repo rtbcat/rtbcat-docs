@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="7-byom">第 7 章：优化器（<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>）<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
+<h1 id="7-byom">第 7 章：优化器（<abbr title="自带模型 — Cat-Scan 的系统，用于接入您自己的外部评分模型以生成优化建议。">BYOM</abbr>）<a class="headerlink" href="#7-byom" title="Permanent link">&para;</a></h1>
 <p><em>适用读者：媒体买手、优化工程师</em></p>
-<p>优化器是 Cat-Scan 的自动优化引擎。"<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>"代表自带模型（Bring Your Own
+<p>优化器是 Cat-Scan 的自动优化引擎。"<abbr title="自带模型 — Cat-Scan 的系统，用于接入您自己的外部评分模型以生成优化建议。">BYOM</abbr>"代表自带模型（Bring Your Own
 Model），即你注册一个外部评分端点，Cat-Scan 用它来生成配置变更建议。</p>
 <h2 id="_1">工作原理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>  评分          建议          审核          应用
@@ -1617,17 +1617,17 @@ Model），即你注册一个外部评分端点，Cat-Scan 用它来生成配置
 <h2 id="_7">经济指标<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>优化器还跟踪优化的经济效果：</p>
 <ul>
-<li><strong>有效 <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>：你实际支付的每千次展示成本，考虑了浪费因素。</li>
+<li><strong>有效 <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr></strong>：你实际支付的每千次展示成本，考虑了浪费因素。</li>
 <li><strong>托管成本基线</strong>：你的竞价器基础设施成本，在优化器设置中配置。用于
-  计算 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 降低带来的节省是否抵消托管成本。</li>
-<li><strong>效率摘要</strong>：有用 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 与总 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 的整体比率。</li>
+  计算 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 降低带来的节省是否抵消托管成本。</li>
+<li><strong>效率摘要</strong>：有用 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 与总 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 的整体比率。</li>
 </ul>
 <p>在 <code>/settings/system</code> &gt; 优化器设置中配置你的托管成本。</p>
 <h2 id="_8">审核建议<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>每个建议显示：
 - 驱动推荐的<strong>细分评分</strong>
 - 对预定向字段的<strong>具体变更</strong>（添加、删除、更新）
-- 对 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>、浪费比率和花费的<strong>预估影响</strong></p>
+- 对 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>、浪费比率和花费的<strong>预估影响</strong></p>
 <p>你可以：
 - <strong>批准</strong>：标记建议为已接受
 - <strong>应用</strong>：将已批准的变更推送到 Google

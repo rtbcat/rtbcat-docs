@@ -1638,13 +1638,13 @@ cuántas se esperan. Razones comunes de los vacíos:</p>
 <p>Consulte la cuadrícula de frescura de datos en <code>/import</code> para ver exactamente qué celdas
 faltan. Vea <a href="../09-data-import/">Importación de Datos</a>.</p>
 <h3 id="comprador-cual-es-la-diferencia-entre-desperdicio-y-baja-tasa-de-ganancia">[Comprador] ¿Cuál es la diferencia entre "desperdicio" y "baja tasa de ganancia"?<a class="headerlink" href="#comprador-cual-es-la-diferencia-entre-desperdicio-y-baja-tasa-de-ganancia" title="Permanent link">&para;</a></h3>
-<p><strong>Desperdicio</strong> = solicitudes de puja que su bidder <em>rechazó</em> sin pujar. Esto es <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
+<p><strong>Desperdicio</strong> = solicitudes de puja que su bidder <em>rechazó</em> sin pujar. Esto es <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr>
 por el que pagó pero que no pudo utilizar en absoluto. Corríjalo con pretargeting.</p>
 <p><strong>Baja tasa de ganancia</strong> = solicitudes de puja sobre las que su bidder <em>pujó</em> pero perdió
 la subasta. Esto significa que sus pujas no son lo suficientemente competitivas. Corríjalo
 con la estrategia de puja, no con pretargeting.</p>
 <p>Ambos aparecen en el embudo pero requieren acciones diferentes. Vea
-<a href="../03-qps-funnel/">Comprendiendo Su Embudo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>.</p>
+<a href="../03-qps-funnel/">Comprendiendo Su Embudo de <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></a>.</p>
 <h3 id="comprador-puedo-deshacer-un-cambio-de-pretargeting">[Comprador] ¿Puedo deshacer un cambio de pretargeting?<a class="headerlink" href="#comprador-puedo-deshacer-un-cambio-de-pretargeting" title="Permanent link">&para;</a></h3>
 <p>Sí. Vaya a <code>/history</code>, encuentre el cambio, haga clic en "Vista previa de reversión" para
 ver qué se revertirá y luego confirme. La reversión en sí queda registrada. Vea
@@ -1695,10 +1695,10 @@ reinícielo, espere 10 segundos y luego reinicie el contenedor de la API. Vea
 <a href="../15-troubleshooting/">Resolución de Problemas</a> para el procedimiento completo.</p>
 <hr />
 <h3 id="ambos-de-donde-provienen-los-datos-de-cat-scan">[Ambos] ¿De dónde provienen los datos de Cat-Scan?<a class="headerlink" href="#ambos-de-donde-provienen-los-datos-de-cat-scan" title="Permanent link">&para;</a></h3>
-<p>De las exportaciones <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> de Google Authorized Buyers. No hay una API de informes. Los datos
-llegan ya sea por carga manual de <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> o por ingesta automática de Gmail. Vea
+<p>De las exportaciones <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> de Google Authorized Buyers. No hay una API de informes. Los datos
+llegan ya sea por carga manual de <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> o por ingesta automática de Gmail. Vea
 <a href="../09-data-import/">Importación de Datos</a>.</p>
-<h3 id="ambos-es-seguro-reimportar-el-mismo-csv">[Ambos] ¿Es seguro reimportar el mismo <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>?<a class="headerlink" href="#ambos-es-seguro-reimportar-el-mismo-csv" title="Permanent link">&para;</a></h3>
+<h3 id="ambos-es-seguro-reimportar-el-mismo-csv">[Ambos] ¿Es seguro reimportar el mismo <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr>?<a class="headerlink" href="#ambos-es-seguro-reimportar-el-mismo-csv" title="Permanent link">&para;</a></h3>
 <p>Sí. Cada fila se hashea y se deduplica. Reimportar nunca cuenta dos veces.</p>
 <h3 id="ambos-que-idiomas-soporta-la-interfaz">[Ambos] ¿Qué idiomas soporta la interfaz?<a class="headerlink" href="#ambos-que-idiomas-soporta-la-interfaz" title="Permanent link">&para;</a></h3>
 <p>Inglés, neerlandés y chino (simplificado). El selector de idioma está en la barra lateral.</p>

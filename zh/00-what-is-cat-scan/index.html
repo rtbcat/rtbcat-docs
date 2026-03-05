@@ -1503,26 +1503,26 @@
 
 <h1 id="0-cat-scan">第 0 章：什么是 Cat-Scan？<a class="headerlink" href="#0-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>适用读者：所有人</em></p>
-<p>Cat-Scan 是一个面向 Google Authorized Buyers 的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 优化平台。它让你了解
-竞价器的每秒查询量（<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>）分配的使用情况（以及浪费情况），并提供改进工具。</p>
+<p>Cat-Scan 是一个面向 Google Authorized Buyers 的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 优化平台。它让你了解
+竞价器的每秒查询量（<abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>）分配的使用情况（以及浪费情况），并提供改进工具。</p>
 <p><img alt="QPS 漏斗" src="../assets/qps-funnel.svg" /></p>
 <h2 id="_1">核心问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>当你在 Google Authorized Buyers 交易平台上运营一个席位时，Google 会向你的
-竞价器端点发送竞价请求流。你为此付费：它消耗你分配的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>、竞价器的算力
+竞价器端点发送竞价请求流。你为此付费：它消耗你分配的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>、竞价器的算力
 和网络带宽。</p>
 <p>但并非每个竞价请求都有用。许多请求对应的是你永远不会购买的库存：你不定向
 的国家、你从未听说过的发布商、没有匹配素材的广告尺寸。你的竞价器仍然需要
 接收并拒绝每一条请求。</p>
-<p>在典型场景中，<strong>超过一半的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 是浪费的。</strong></p>
+<p>在典型场景中，<strong>超过一半的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 是浪费的。</strong></p>
 <h2 id="cat-scan">Cat-Scan 如何解决<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan 与你的竞价器配合工作，提供三方面能力：</p>
 <h3 id="1">1. 可见性<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>它从 Google 的 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导出文件重建效果报告（因为没有报告 API），展示完整的
-<abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗：从原始 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 到出价、胜出、展示、点击和花费。可按任意维度拆分：
+<p>它从 Google 的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 导出文件重建效果报告（因为没有报告 API），展示完整的
+<abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 漏斗：从原始 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 到出价、胜出、展示、点击和花费。可按任意维度拆分：
 地理、发布商、广告尺寸、素材、预定向配置。</p>
 <p>这让你能回答以下问题：
-- 哪些国家消耗了 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 却没有产生胜出？
-- 哪些发布商 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 很高但花费为零？
+- 哪些国家消耗了 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 却没有产生胜出？
+- 哪些发布商 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 很高但花费为零？
 - 哪些广告尺寸收到了流量但没有匹配素材？
 - 哪些预定向配置表现好、哪些表现差？</p>
 <h3 id="2">2. 控制力<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
@@ -1551,7 +1551,7 @@
 <td>Google Authorized Buyers 上的买方账户，通过 <code>buyer_account_id</code> 标识。一个组织可以有多个席位。</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr></strong></td>
 <td>每秒查询量（Queries Per Second），即你要求 Google 发送的最大竞价请求速率。Google 会根据你的账户等级进行节流，因此实际收到的量通常低于上限，需要高效使用。</td>
 </tr>
 <tr>
@@ -1559,16 +1559,16 @@
 <td>服务端过滤器，告诉 Google 向你发送哪些竞价请求。控制：地理位置、广告尺寸、格式、平台。每个席位有 10 个。</td>
 </tr>
 <tr>
-<td><strong><abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗</strong></td>
-<td>从接收竞价请求到花费的过程：<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; 出价 -&gt; 胜出 -&gt; 展示 -&gt; 点击 -&gt; 转化。每一步都有流失；Cat-Scan 展示流失发生的位置。</td>
+<td><strong><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 漏斗</strong></td>
+<td>从接收竞价请求到花费的过程：<abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> -&gt; 出价 -&gt; 胜出 -&gt; 展示 -&gt; 点击 -&gt; 转化。每一步都有流失；Cat-Scan 展示流失发生的位置。</td>
 </tr>
 <tr>
 <td><strong>浪费</strong></td>
-<td>竞价器无法或不愿使用的竞价请求所消耗的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>。目标是在不失去有价值流量的前提下减少浪费。</td>
+<td>竞价器无法或不愿使用的竞价请求所消耗的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>。目标是在不失去有价值流量的前提下减少浪费。</td>
 </tr>
 <tr>
 <td><strong>配置</strong></td>
-<td>预定向配置的简称。每个配置有状态（激活/暂停）、最大 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>，以及地区、尺寸、格式和平台的包含/排除规则。</td>
+<td>预定向配置的简称。每个配置有状态（激活/暂停）、最大 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>，以及地区、尺寸、格式和平台的包含/排除规则。</td>
 </tr>
 </tbody>
 </table>

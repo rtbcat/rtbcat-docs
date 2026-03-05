@@ -1479,7 +1479,7 @@
 <p><strong>Что это обеспечивает:</strong>
 - Обнаружение мест (<code>discoverSeats</code>)
 - Синхронизация конфигурации претаргетинга (<code>syncPretargetingConfigs</code>)
-- Синхронизация <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-эндпоинтов (<code>syncRTBEndpoints</code>)
+- Синхронизация <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>-эндпоинтов (<code>syncRTBEndpoints</code>)
 - Сбор креативов (<code>collectCreatives</code>)</p>
 <p><strong>Статус проекта:</strong>
 Проверьте состояние проекта GCP в <code>/settings/accounts</code> или через <code>GET /integrations/gcp/project-status</code>. Этот эндпоинт подтверждает валидность сервисного аккаунта, доступность проекта и активацию необходимых API.</p>
@@ -1502,10 +1502,10 @@
 <tr>
 <td><strong>Синхронизация претаргетинга</strong></td>
 <td>Текущее состояние конфигурации претаргетинга из Google</td>
-<td>После внешних изменений в интерфейсе <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>После внешних изменений в интерфейсе <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>Синхронизация <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-эндпоинтов</strong></td>
+<td><strong>Синхронизация <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>-эндпоинтов</strong></td>
 <td>URL-адреса и статусы эндпоинтов биддера</td>
 <td>Начальная настройка, после изменения эндпоинтов</td>
 </tr>
@@ -1517,11 +1517,11 @@
 </tbody>
 </table>
 <h2 id="gmail">Интеграция с Gmail<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers отправляет ежедневные <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-отчёты по электронной почте. Cat-Scan может импортировать их автоматически.</p>
+<p>Google Authorized Buyers отправляет ежедневные <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-отчёты по электронной почте. Cat-Scan может импортировать их автоматически.</p>
 <p><strong>Настройка:</strong>
 1. Перейдите в <code>/settings/accounts</code> &gt; вкладка Gmail Reports.
-2. Авторизуйте Cat-Scan для доступа к Gmail-аккаунту, получающему отчёты <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
-3. Cat-Scan будет опрашивать почту на наличие новых писем с отчётами и импортировать вложенные <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>.</p>
+2. Авторизуйте Cat-Scan для доступа к Gmail-аккаунту, получающему отчёты <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr>.
+3. Cat-Scan будет опрашивать почту на наличие новых писем с отчётами и импортировать вложенные <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>.</p>
 <p><strong>Мониторинг:</strong>
 - <code>GET /gmail/status</code>: текущее состояние, количество непрочитанных, последняя причина
 - <code>POST /gmail/import/start</code>: ручной запуск цикла импорта
@@ -1570,7 +1570,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Проверка <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Проверка <abbr title="Код аутентификации сообщений на основе хеша — криптографическая подпись для проверки полезных данных вебхуков.">HMAC</abbr></strong></td>
 <td>Гарантирует подлинность запросов (подписаны общим секретом)</td>
 <td>Общий секрет настраивается в параметрах вебхука</td>
 </tr>
@@ -1587,7 +1587,7 @@
 </tbody>
 </table>
 <p><strong>Мониторинг:</strong>
-- <code>GET /conversions/security/status</code>: статус <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, статус ограничения частоты, статус свежести
+- <code>GET /conversions/security/status</code>: статус <abbr title="Код аутентификации сообщений на основе хеша — криптографическая подпись для проверки полезных данных вебхуков.">HMAC</abbr>, статус ограничения частоты, статус свежести
 - <code>GET /conversions/health</code>: общее состояние приёма и агрегации
 - <code>GET /conversions/readiness</code>: достаточно ли свежи данные конверсий для использования</p>
 <h2 id="_3">Связанные разделы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>

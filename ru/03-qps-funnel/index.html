@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="3-qps">Глава 3: Понимание воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr><a class="headerlink" href="#3-qps" title="Permanent link">&para;</a></h1>
+<h1 id="3-qps">Глава 3: Понимание воронки <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr><a class="headerlink" href="#3-qps" title="Permanent link">&para;</a></h1>
 <p><em>Аудитория: медиабайеры, менеджеры кампаний</em></p>
 <p>Это главная страница Cat-Scan (<code>/</code>). Всё начинается здесь.</p>
 <h2 id="_1">Что вы видите<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Страница <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Waste Optimizer отображает воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (путь от запроса на ставку
+<p>Страница <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> Waste Optimizer отображает воронку <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr> (путь от запроса на ставку
 до расхода) и показывает, где происходит падение объёма.</p>
 <p><img alt="Главная страница QPS Waste Optimizer" src="../../images/screenshot-qps-home.png" /></p>
 <h3 id="_2">Воронка<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1518,7 +1518,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></strong></td>
 <td>Максимальное количество запросов на ставку в секунду, которое вы запрашиваете у Google. Google регулирует фактический объём в зависимости от уровня аккаунта, поэтому обычно вы получаете меньше установленного лимита.</td>
 </tr>
 <tr>
@@ -1543,22 +1543,22 @@
 </tr>
 </tbody>
 </table>
-<p>Разрыв между этапами — это пространство для оптимизации. Большое падение от <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
+<p>Разрыв между этапами — это пространство для оптимизации. Большое падение от <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>
 к ставкам означает, что биддер отклоняет большую часть того, что отправляет
 Google — типичные потери, которые можно устранить претаргетингом.</p>
 <h3 id="_3">Ключевые метрики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Win rate (процент побед)</strong>: Wins / Bids. Насколько конкурентоспособны ваши ставки.</li>
-<li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr> (кликабельность)</strong>: Clicks / Impressions. Насколько привлекательны ваши креативы.</li>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> (стоимость за тысячу показов)</strong>: Cost per thousand impressions. Сколько вы платите за видимость.</li>
-<li><strong>Waste ratio (доля потерь)</strong>: (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Доля трафика, который вы не можете использовать.</li>
+<li><strong><abbr title="Показатель кликабельности — клики, разделённые на показы, выраженные в процентах.">CTR</abbr> (кликабельность)</strong>: Clicks / Impressions. Насколько привлекательны ваши креативы.</li>
+<li><strong><abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr> (стоимость за тысячу показов)</strong>: Cost per thousand impressions. Сколько вы платите за видимость.</li>
+<li><strong>Waste ratio (доля потерь)</strong>: (<abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> - Bids) / <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>. Доля трафика, который вы не можете использовать.</li>
 </ul>
 <h3 id="_4">Карточки конфигураций претаргетинга<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Под воронкой отображаются карточки каждой из ваших конфигураций претаргетинга
 (до 10 на место). Каждая карточка содержит:</p>
 <ul>
 <li><strong>Состояние</strong>: Active (активна) или Suspended (приостановлена)</li>
-<li><strong>Максимальный <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong>: лимит запросов на ставку для данной конфигурации</li>
+<li><strong>Максимальный <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></strong>: лимит запросов на ставку для данной конфигурации</li>
 <li><strong>Форматы</strong>: VIDEO, DISPLAY_IMAGE, DISPLAY_HTML, NATIVE</li>
 <li><strong>Платформы</strong>: DESKTOP, MOBILE_APP, MOBILE_WEB, CONNECTED_TV</li>
 <li><strong>Географии</strong>: включённые и исключённые географические цели</li>

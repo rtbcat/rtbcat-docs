@@ -1519,7 +1519,7 @@
 <ul>
 <li>Plus fiable que les pixels (pas de bloqueurs de publicite, pas de dependances cote client).</li>
 <li>Necessite une integration cote serveur.</li>
-<li>Prend en charge la verification de signature <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> pour la securite.</li>
+<li>Prend en charge la verification de signature <abbr title="Code d'authentification de message basé sur le hachage — une signature cryptographique utilisée pour vérifier les charges utiles des webhooks.">HMAC</abbr> pour la securite.</li>
 </ul>
 <h2 id="securite-des-webhooks">Securite des webhooks<a class="headerlink" href="#securite-des-webhooks" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan fournit une securite webhook multicouche :</p>
@@ -1532,7 +1532,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Verification <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Verification <abbr title="Code d'authentification de message basé sur le hachage — une signature cryptographique utilisée pour vérifier les charges utiles des webhooks.">HMAC</abbr></strong></td>
 <td>Chaque requete webhook est signee avec un secret partage. Cat-Scan rejette les requetes non signees ou mal signees.</td>
 </tr>
 <tr>

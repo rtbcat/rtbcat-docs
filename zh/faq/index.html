@@ -1637,11 +1637,11 @@
 <a href="../09-data-import/">数据导入</a>。</p>
 <h3 id="_2">[买方] "浪费"和"低胜出率"有什么区别？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><strong>浪费</strong> = 你的竞价器<em>拒绝</em>且未出价的出价请求。这是你付费但完全无法使用
-的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>。通过预定向修复。</p>
+的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>。通过预定向修复。</p>
 <p><strong>低胜出率</strong> = 你的竞价器<em>出了价</em>但在拍卖中失败的请求。说明你的出价不够
 有竞争力。通过出价策略修复，而非预定向。</p>
 <p>两者都在漏斗中显示，但需要不同的应对措施。参见
-<a href="../03-qps-funnel/">理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗</a>。</p>
+<a href="../03-qps-funnel/">理解你的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 漏斗</a>。</p>
 <h3 id="_3">[买方] 我可以撤销预定向变更吗？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>可以。前往 <code>/history</code>，找到变更，点击"预览回滚"查看将恢复的内容，然后
 确认。回滚操作本身也会被记录。参见
@@ -1686,9 +1686,9 @@
 <a href="../15-troubleshooting/">故障排除</a>。</p>
 <hr />
 <h3 id="cat-scan">[通用] Cat-Scan 的数据来自哪里？<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h3>
-<p>Google Authorized Buyers <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导出。没有 Reporting API。数据通过手动
-<abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 上传或 Gmail 自动导入到达。参见<a href="../09-data-import/">数据导入</a>。</p>
-<h3 id="csv">[通用] 重新导入同一个 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 安全吗？<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<p>Google Authorized Buyers <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 导出。没有 Reporting API。数据通过手动
+<abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 上传或 Gmail 自动导入到达。参见<a href="../09-data-import/">数据导入</a>。</p>
+<h3 id="csv">[通用] 重新导入同一个 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 安全吗？<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
 <p>安全。每行数据都经过哈希去重。重新导入不会重复计数。</p>
 <h3 id="_11">[通用] 界面支持哪些语言？<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>英语、荷兰语和简体中文。语言选择器在侧边栏中。</p>

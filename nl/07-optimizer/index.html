@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="hoofdstuk-7-de-optimizer-byom">Hoofdstuk 7: De Optimizer (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#hoofdstuk-7-de-optimizer-byom" title="Permanent link">&para;</a></h1>
+<h1 id="hoofdstuk-7-de-optimizer-byom">Hoofdstuk 7: De Optimizer (<abbr title="Breng je eigen model mee — Cat-Scans systeem om je eigen externe scoringsmodel te koppelen voor optimalisatievoorstellen.">BYOM</abbr>)<a class="headerlink" href="#hoofdstuk-7-de-optimizer-byom" title="Permanent link">&para;</a></h1>
 <p><em>Doelgroep: media-inkopers, optimalisatie-engineers</em></p>
-<p>De optimizer is de geautomatiseerde optimalisatie-engine van Cat-Scan. "<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>" staat
+<p>De optimizer is de geautomatiseerde optimalisatie-engine van Cat-Scan. "<abbr title="Breng je eigen model mee — Cat-Scans systeem om je eigen externe scoringsmodel te koppelen voor optimalisatievoorstellen.">BYOM</abbr>" staat
 voor Bring Your Own Model: u registreert een extern scoring-endpoint, en Cat-Scan
 gebruikt dit om voorstellen voor configuratiewijzigingen te genereren.</p>
 <h2 id="hoe-het-werkt">Hoe het werkt<a class="headerlink" href="#hoe-het-werkt" title="Permanent link">&para;</a></h2>
@@ -1623,19 +1623,19 @@ segmenten      configuratie-  of wijst af    wordt
 <h2 id="economie">Economie<a class="headerlink" href="#economie" title="Permanent link">&para;</a></h2>
 <p>De optimizer houdt ook de economische aspecten van optimalisatie bij:</p>
 <ul>
-<li><strong>Effectieve <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: wat u daadwerkelijk betaalt per duizend impressies,
+<li><strong>Effectieve <abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr></strong>: wat u daadwerkelijk betaalt per duizend impressies,
   rekening houdend met verspilling.</li>
 <li><strong>Hostingkosten-basislijn</strong>: de infrastructuurkosten van uw bidder, geconfigureerd
   in de optimizer-setup. Wordt gebruikt om te berekenen of besparingen door
-  <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-reductie opwegen tegen de hosting.</li>
-<li><strong>Efficientiesamenvatting</strong>: totaalverhouding van nuttige <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> tot totale <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>.</li>
+  <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>-reductie opwegen tegen de hosting.</li>
+<li><strong>Efficientiesamenvatting</strong>: totaalverhouding van nuttige <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> tot totale <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>.</li>
 </ul>
 <p>Configureer uw hostingkosten bij <code>/settings/system</code> &gt; Optimizer Setup.</p>
 <h2 id="voorstellen-beoordelen">Voorstellen beoordelen<a class="headerlink" href="#voorstellen-beoordelen" title="Permanent link">&para;</a></h2>
 <p>Elk voorstel toont:
 - <strong>Segmentscores</strong> die de aanbeveling hebben gestuurd
 - <strong>Specifieke wijzigingen</strong> aan pretargeting-velden (toevoegingen, verwijderingen, updates)
-- <strong>Verwachte impact</strong> op <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, verspillingsratio en uitgaven</p>
+- <strong>Verwachte impact</strong> op <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>, verspillingsratio en uitgaven</p>
 <p>U kunt:
 - <strong>Approve</strong>: markeer het voorstel als geaccepteerd
 - <strong>Apply</strong>: pas de goedgekeurde wijzigingen toe bij Google

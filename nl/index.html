@@ -1561,12 +1561,12 @@ tienduizenden queries vanuit de Authorized Buyers-exchange richting uw endpoint.
 Uw bidder beoordeelt elk verzoek, beslist of hij biedt en antwoordt, allemaal
 binnen enkele milliseconden.</p>
 <p>Dit is wat de meeste mensen missen: <strong>het overgrote deel van dat signaal is
-ruis.</strong> Een typische seat die 50.000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> ontvangt, kan ontdekken dat 30.000 van
+ruis.</strong> Een typische seat die 50.000 <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> ontvangt, kan ontdekken dat 30.000 van
 die queries betrekking hebben op inventaris die de mediakoper nooit zou kopen:
 verkeerde regio's, irrelevante uitgeverdomeinen, advertentieformaten zonder
 passende creative. Uw bidder moet ze allemaal nog steeds ontvangen, parsen en
 afwijzen. Dat kost bandbreedte, rekenkracht en geld.</p>
-<p>Het diagram hierboven laat het zien als regenval. De <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> van Google is de
+<p>Het diagram hierboven laat het zien als regenval. De <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> van Google is de
 sproeikop bovenaan; de druppels waaieren uit over een groot oppervlak. Uw bidder
 is de kleine emmer onderaan. Alles wat de emmer mist (de druppels die links en
 rechts terechtkomen) is verspilling. U hebt ervoor betaald. U hebt er niets
@@ -1579,16 +1579,16 @@ configuraties die Google biedt.</p>
 <h3 id="waarom-dit-moeilijker-is-dan-het-klinkt">Waarom dit moeilijker is dan het klinkt<a class="headerlink" href="#waarom-dit-moeilijker-is-dan-het-klinkt" title="Permanent link">&para;</a></h3>
 <p>Google Authorized Buyers geeft u slechts <strong>10 pretargeting-configuraties per
 seat</strong>, plus grove geografische groepen (Oost-VS, West-VS, Europa, Azië). Er is
-geen Reporting API. Alle prestatiedata komt uit <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-exports die per e-mail
-binnenkomen. De <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> pretargeting-UI zelf is functioneel, maar maakt het lastig
+geen Reporting API. Alle prestatiedata komt uit <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-exports die per e-mail
+binnenkomen. De <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr> pretargeting-UI zelf is functioneel, maar maakt het lastig
 om het volledige beeld te zien over configuraties heen, of om een verkeerde
 wijziging ongedaan te maken.</p>
 <p>Cat-Scan overbrugt deze tekortkomingen:</p>
 <ul>
-<li>Het <strong>herbouwt rapportages vanuit <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-exports</strong> (handmatige upload of
+<li>Het <strong>herbouwt rapportages vanuit <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-exports</strong> (handmatige upload of
   automatische Gmail-ingestie), met ontdubbeling bij import zodat herverwerking
   nooit dubbel telt.</li>
-<li>Het toont de <strong>volledige <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnel</strong>, van ruwe <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> via biedingen, gewonnen
+<li>Het toont de <strong>volledige <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-funnel</strong>, van ruwe <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> via biedingen, gewonnen
   veilingen, impressies, klikken en bestedingen, uitgesplitst naar elke
   dimensie: geografie, uitgever, advertentieformaat, creative, configuratie.</li>
 <li>Het biedt <strong>veilig pretargetingbeheer</strong> met geschiedenis, gefaseerde
@@ -1602,8 +1602,8 @@ wijziging ongedaan te maken.</p>
 rollen bedient:</p>
 <p><strong>Mediakopers en campagnemanagers</strong> gebruiken Cat-Scan om te begrijpen waar hun
 budget naartoe gaat, verspilling te vinden, creatives te beheren, pretargeting
-af te stemmen en optimalisatievoorstellen goed te keuren. Zij denken in <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>,
-winstpercentages en <abbr title="Return On Ad Spend — revenue generated per dollar spent on advertising.">ROAS</abbr>. Hun hoofdstukken richten zich op wat de UI laat zien,
+af te stemmen en optimalisatievoorstellen goed te keuren. Zij denken in <abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr>,
+winstpercentages en <abbr title="Rendement op advertentie-uitgaven — opbrengst per uitgegeven dollar aan advertenties.">ROAS</abbr>. Hun hoofdstukken richten zich op wat de UI laat zien,
 wat de cijfers betekenen en welke acties ze moeten ondernemen.</p>
 <p><strong>DevOps- en platformengineers</strong> gebruiken Cat-Scan om het systeem uit te
 rollen, te monitoren en problemen op te lossen. Zij denken in containers,
@@ -1635,7 +1635,7 @@ die bij uw rol passen.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Hoofdstuk 0: Wat is Cat-Scan?</a>
   Wat het platform doet, voor wie het is en de kernconcepten die u nodig hebt
-  voordat u verder gaat: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, de <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnel.</p>
+  voordat u verder gaat: seats, <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>, pretargeting, de <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-funnel.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Hoofdstuk 1: Inloggen</a>
@@ -1652,16 +1652,16 @@ die bij uw rol passen.</p>
 <p>Voor mediakopers, campagnemanagers en optimalisatie-engineers.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Hoofdstuk 3: Inzicht in uw <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-funnel</a>
+<p><a href="03-qps-funnel/">Hoofdstuk 3: Inzicht in uw <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>-funnel</a>
   De startpagina. Hoe u de funneluitsplitsing leest: impressies, biedingen,
-  gewonnen veilingen, besteding, winstpercentage, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Wat "verspilling"
+  gewonnen veilingen, besteding, winstpercentage, <abbr title="Klikfrequentie — klikken gedeeld door impressies, uitgedrukt als percentage.">CTR</abbr>, <abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr>. Wat "verspilling"
   in concrete termen betekent. Configuratiekaarten en wat hun velden regelen.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">Hoofdstuk 4: Verspilling analyseren per dimensie</a>
   De drie verspillingsanalyseweergaven en wanneer u welke gebruikt:</p>
 </li>
-<li><strong>Geografisch</strong> (<code>/qps/geo</code>): welke landen en steden <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> opslokken zonder
+<li><strong>Geografisch</strong> (<code>/qps/geo</code>): welke landen en steden <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr> opslokken zonder
     te converteren.</li>
 <li><strong>Uitgever</strong> (<code>/qps/publisher</code>): welke domeinen en apps
     ondermaats presteren.</li>
@@ -1680,21 +1680,21 @@ die bij uw rol passen.</p>
 <li>
 <p><a href="06-pretargeting/">Hoofdstuk 6: Pretargeting-configuratie</a>
   Wat een pretargeting-configuratie regelt (geo's, formaten, advertentietypen,
-  platformen, max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Hoe u een configuratiekaart leest. Wijzigingen toepassen
+  platformen, max <abbr title="Queries per seconde — het aantal biedverzoeken dat Google naar je bieder stuurt. Elk verzoek kost rekenkracht en bandbreedte, dus verspilde QPS is verspild geld.">QPS</abbr>). Hoe u een configuratiekaart leest. Wijzigingen toepassen
   met dry-run voorvertoning. De wijzigingsgeschiedenistijdlijn (<code>/history</code>).
   Terugdraaien: hoe het werkt, waarom het bestaat en wanneer u het gebruikt.</p>
 </li>
 <li>
-<p><a href="07-optimizer/">Hoofdstuk 7: De Optimizer (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>
+<p><a href="07-optimizer/">Hoofdstuk 7: De Optimizer (<abbr title="Breng je eigen model mee — Cat-Scans systeem om je eigen externe scoringsmodel te koppelen voor optimalisatievoorstellen.">BYOM</abbr>)</a>
   Bring Your Own Model: een extern scoring-endpoint registreren, valideren en
   activeren. De scoren-voorstellen-goedkeuren-toepassen levenscyclus.
-  Workflowpresets: veilig, gebalanceerd, agressief. Economie: effectieve <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>,
+  Workflowpresets: veilig, gebalanceerd, agressief. Economie: effectieve <abbr title="Kosten per duizend — de prijs betaald per 1.000 advertentie-impressies.">CPM</abbr>,
   hostingkosten-basislijn, efficiëntiesamenvatting. Hoe een voorstel eruitziet
   en hoe u er een beoordeelt.</p>
 </li>
 <li>
 <p><a href="08-conversions/">Hoofdstuk 8: Conversies en attributie</a>
-  Een conversiebron aansluiten. Pixelintegratie. Webhook-setup: <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-
+  Een conversiebron aansluiten. Pixelintegratie. Webhook-setup: <abbr title="Hash-gebaseerde berichtauthenticatiecode — een cryptografische handtekening die wordt gebruikt om webhook-payloads te verifiëren.">HMAC</abbr>-
   handtekeningen, gedeelde geheimen, snelheidsbeperking. Gereedheids-checks.
   Ingestiestatistieken. Wat "conversiegezondheid" betekent en hoe u de
   beveiligingsstatuspagina leest.</p>
@@ -1702,7 +1702,7 @@ die bij uw rol passen.</p>
 <li>
 <p><a href="09-data-import/">Hoofdstuk 9: Data-import</a>
   Hoe data in Cat-Scan terechtkomt en waarom dit belangrijk is. Handmatige
-  <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-upload (<code>/import</code>): drag-drop, kolomkoppeling, validatie, gedeelde upload
+  <abbr title="Door komma's gescheiden waarden — het bestandsformaat dat Google Authorized Buyers gebruikt voor rapportexport.">CSV</abbr>-upload (<code>/import</code>): drag-drop, kolomkoppeling, validatie, gedeelde upload
   voor grote bestanden. Gmail auto-import: hoe het werkt, hoe u de status
   controleert, wat er gebeurt als het mislukt. Het dataversheidsraster: wat
   "geïmporteerd" vs. "ontbrekend" betekent per datum en rapporttype.
@@ -1717,7 +1717,7 @@ die bij uw rol passen.</p>
 </li>
 </ul>
 <h3 id="deel-ii-devops-spoor">Deel II: DevOps-spoor<a class="headerlink" href="#deel-ii-devops-spoor" title="Permanent link">&para;</a></h3>
-<p>Voor platformengineers, <abbr title="Site Reliability Engineering — the discipline of operating reliable production systems.">SRE</abbr>'s en systeembeheerders.</p>
+<p>Voor platformengineers, <abbr title="Site Reliability Engineering — de discipline van het beheren van betrouwbare productiesystemen.">SRE</abbr>'s en systeembeheerders.</p>
 <ul>
 <li>
 <p><a href="11-architecture/">Hoofdstuk 11: Architectuuroverzicht</a>
@@ -1786,10 +1786,10 @@ die bij uw rol passen.</p>
 <li>
 <p><a href="17-integrations/">Hoofdstuk 17: Integraties</a>
   GCP-serviceaccounts en projectverbinding. Google Authorized Buyers API:
-  stoelontdekking, pretargeting-configuratiesynchronisatie, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-endpoint-
+  stoelontdekking, pretargeting-configuratiesynchronisatie, <abbr title="Real-time bieden — het veilingprotocol waarbij advertentie-impressies in milliseconden worden gekocht en verkocht.">RTB</abbr>-endpoint-
   synchronisatie. Gmail-integratie: OAuth2 voor automatische rapportingestie.
   Taal-AI-providers: Gemini, Claude, Grok (voor detectie van creativetaal en
-  mismatch-meldingen). Conversie-webhooks: endpointregistratie, <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>-
+  mismatch-meldingen). Conversie-webhooks: endpointregistratie, <abbr title="Hash-gebaseerde berichtauthenticatiecode — een cryptografische handtekening die wordt gebruikt om webhook-payloads te verifiëren.">HMAC</abbr>-
   verificatie, snelheidsbeperking, versheidsmonitoring.</p>
 </li>
 </ul>
@@ -1800,7 +1800,7 @@ die bij uw rol passen.</p>
 <p><a href="glossary/">Woordenlijst</a>
   Elke term in twee talen. Mediakoperkolom: "pretargeting" is "de regels die
   bepalen welke biedverzoeken uw bidder bereiken." DevOps-kolom: "pretargeting"
-  is "een muteerbare entiteit gesynchroniseerd vanuit de <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, opgeslagen in
+  is "een muteerbare entiteit gesynchroniseerd vanuit de <abbr title="Authorized Buyers — Googles programmatisch advertentieplatform (voorheen AdX / DoubleClick Ad Exchange).">AB</abbr> API, opgeslagen in
   <code>pretargeting_configs</code>, beschikbaar via <code>/settings/pretargeting</code>." Beiden
   hebben hetzelfde woord nodig; geen van beiden gebruikt de definitie van de
   ander.</p>

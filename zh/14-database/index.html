@@ -1585,7 +1585,7 @@ Cloud SQL Auth Proxy 边车容器连接 <code>localhost:5432</code>。</p>
 <tr>
 <td><code>rtb_daily</code></td>
 <td>~8400 万</td>
-<td>每个买方、素材、地区等的每日 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 效果</td>
+<td>每个买方、素材、地区等的每日 <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 效果</td>
 </tr>
 <tr>
 <td><code>rtb_bidstream</code></td>
@@ -1615,7 +1615,7 @@ Cloud SQL Auth Proxy 边车容器连接 <code>localhost:5432</code>。</p>
 <tr>
 <td><code>import_history</code></td>
 <td>少量</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导入记录</td>
+<td><abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 导入记录</td>
 </tr>
 <tr>
 <td><code>users</code>、<code>permissions</code>、<code>audit_log</code></td>
@@ -1685,7 +1685,7 @@ COUNT），当 GROUP BY 结果集相对于表较大时，查询规划器会选�
 <p>BigQuery 存储原始、细粒度数据并运行批处理分析任务。它不用于实时 API 查询。
 模式：</p>
 <ol>
-<li>原始 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 数据加载到 BigQuery 表。</li>
+<li>原始 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 数据加载到 BigQuery 表。</li>
 <li>批处理任务聚合数据。</li>
 <li>预聚合结果写入 Postgres。</li>
 <li>API 从 Postgres 提供服务。</li>

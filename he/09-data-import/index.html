@@ -1549,15 +1549,15 @@
 <p><em>קהל יעד: קונים מדיה, מנהלי קמפיינים</em></p>
 <p>הניתוח של Cat-Scan תלוי לחלוטין בנתוני ביצועים מ-Google Authorized
 Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונים מגיעים מייצוא
-<abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>. פרק זה מסביר כיצד להכניס נתונים ל-Cat-Scan וכיצד לוודא
+<abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr>. פרק זה מסביר כיצד להכניס נתונים ל-Cat-Scan וכיצד לוודא
 שהם מגיעים.</p>
 <h2 id="_1">למה זה חשוב<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>ללא נתונים מיובאים, ל-Cat-Scan אין מה לנתח. המשפך, תצוגות הבזבוז,
-ביצועי קריאייטיב והאופטימייזר כולם תלויים בנתוני <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> עדכניים. אם
+ביצועי קריאייטיב והאופטימייזר כולם תלויים בנתוני <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> עדכניים. אם
 הנתונים שלכם מיושנים, ההחלטות שלכם מבוססות על מידע ישן.</p>
 <h2 id="_2">שתי דרכים להגעת נתונים<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1-csv-import">1. העלאת <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> ידנית (<code>/import</code>)<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
-<p>גררו ושחררו קובץ <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> שיוצא מ-Google Authorized Buyers.</p>
+<h3 id="1-csv-import">1. העלאת <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> ידנית (<code>/import</code>)<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
+<p>גררו ושחררו קובץ <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> שיוצא מ-Google Authorized Buyers.</p>
 <p><img alt="דף ייבוא נתונים עם אזור העלאה ורשת רעננות" src="../../images/screenshot-import.png" /></p>
 <p><strong>תהליך העבודה:</strong></p>
 <ol>
@@ -1580,7 +1580,7 @@ Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונ
 <thead>
 <tr>
 <th>סוג</th>
-<th>תבנית שם <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></th>
+<th>תבנית שם <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr></th>
 <th>מה הוא מכיל</th>
 </tr>
 </thead>
@@ -1588,7 +1588,7 @@ Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונ
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>ביצועי <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> יומיים: חשיפות, הצעות מחיר, זכיות, הוצאה</td>
+<td>ביצועי <abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr> יומיים: חשיפות, הצעות מחיר, זכיות, הוצאה</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1617,7 +1617,7 @@ Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונ
 <ul>
 <li>Google Authorized Buyers שולח דוחות יומיים באימייל.</li>
 <li>אינטגרציית ה-Gmail של Cat-Scan קוראת את האימיילים האלה ומייבאת את קבצי
-  ה-<abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> המצורפים באופן אוטומטי.</li>
+  ה-<abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> המצורפים באופן אוטומטי.</li>
 <li>בדקו סטטוס ב-<code>/settings/accounts</code> &gt; לשונית דוחות Gmail, או דרך
   <code>/gmail/status</code> ב-API.</li>
 </ul>
@@ -1644,7 +1644,7 @@ Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונ
 חלון המבט לאחור. שער בריאות זמן הריצה משתמש בזה כדי לקבוע אם המערכת
 פעילה.</p>
 <h2 id="_4">ניקוי כפילויות<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>ייבוא מחדש של אותו <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> (או ש-Gmail מעבד מחדש את אותו אימייל) <strong>לא</strong>
+<p>ייבוא מחדש של אותו <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> (או ש-Gmail מעבד מחדש את אותו אימייל) <strong>לא</strong>
 גורם לספירה כפולה של נתונים. כל שורה עוברת חישוב גיבוב, וכפילויות מדולגות
 בעת ההכנסה. המשמעות היא שתמיד בטוח לייבא מחדש.</p>
 <h2 id="_5">היסטוריית ייבוא<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
@@ -1671,7 +1671,7 @@ Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונ
 </tr>
 <tr>
 <td>ייבוא נכשל עם שגיאת אימות</td>
-<td>חוסר התאמה בעמודות. בדקו את טבלת העמודות הנדרשות מול ה-<abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> שלכם.</td>
+<td>חוסר התאמה בעמודות. בדקו את טבלת העמודות הנדרשות מול ה-<abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> שלכם.</td>
 </tr>
 <tr>
 <td>ייבוא Gmail מציג "stopped"</td>
@@ -1679,13 +1679,13 @@ Buyers. מאחר ש-Google אינה מספקת API לדיווח, כל הנתונ
 </tr>
 <tr>
 <td>אחוז כיסוי יורד</td>
-<td>דוחות מגיעים אך עבור פחות תאריכים מהצפוי. בדקו את לוח הזמנים של הייצוא ב-Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
+<td>דוחות מגיעים אך עבור פחות תאריכים מהצפוי. בדקו את לוח הזמנים של הייצוא ב-Google <abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_7">קישורים נוספים<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">הבנת משפך ה-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שלכם</a>: תלוי בנתונים מיובאים</li>
+<li><a href="../03-qps-funnel/">הבנת משפך ה-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שלכם</a>: תלוי בנתונים מיובאים</li>
 <li><a href="../10-reading-reports/">קריאת הדוחות שלכם</a>: מה אפשר לעשות עם
   הנתונים לאחר הייבוא</li>
 <li>ל-DevOps: פרטי שאילתת רעננות נתונים ופתרון בעיות, ראו

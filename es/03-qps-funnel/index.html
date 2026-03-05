@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="capitulo-3-entender-tu-embudo-de-qps">Capítulo 3: Entender tu embudo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr><a class="headerlink" href="#capitulo-3-entender-tu-embudo-de-qps" title="Permanent link">&para;</a></h1>
+<h1 id="capitulo-3-entender-tu-embudo-de-qps">Capítulo 3: Entender tu embudo de <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr><a class="headerlink" href="#capitulo-3-entender-tu-embudo-de-qps" title="Permanent link">&para;</a></h1>
 <p><em>Audiencia: compradores de medios, gestores de campañas</em></p>
 <p>Esta es la página de inicio de Cat-Scan (<code>/</code>). Todo comienza aquí.</p>
 <h2 id="que-ves">Qué ves<a class="headerlink" href="#que-ves" title="Permanent link">&para;</a></h2>
-<p>La página del <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Waste Optimizer muestra tu embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (el recorrido desde la
+<p>La página del <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> Waste Optimizer muestra tu embudo <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr> (el recorrido desde la
 solicitud de puja hasta el gasto) y resalta dónde se pierde volumen.</p>
 <p><img alt="Página de inicio del QPS Waste Optimizer" src="../../images/screenshot-qps-home.png" /></p>
 <h3 id="el-embudo">El embudo<a class="headerlink" href="#el-embudo" title="Permanent link">&para;</a></h3>
@@ -1518,7 +1518,7 @@ solicitud de puja hasta el gasto) y resalta dónde se pierde volumen.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></strong></td>
 <td>Las solicitudes de puja máximas por segundo que le pides a Google que envíe. Google regula el volumen real según el nivel de tu cuenta, por lo que normalmente recibes menos de tu límite.</td>
 </tr>
 <tr>
@@ -1544,21 +1544,21 @@ solicitud de puja hasta el gasto) y resalta dónde se pierde volumen.</p>
 </tbody>
 </table>
 <p>La brecha entre cada etapa es donde existe oportunidad de optimización. Una gran
-caída entre <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> y Bids significa que tu bidder rechaza la mayor parte de lo que
+caída entre <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> y Bids significa que tu bidder rechaza la mayor parte de lo que
 Google le envía: desperdicio clásico que el pretargeting puede corregir.</p>
 <h3 id="metricas-clave">Métricas clave<a class="headerlink" href="#metricas-clave" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Win rate</strong>: Wins / Bids. Qué tan competitivas son tus pujas.</li>
-<li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong>: Clicks / Impressions. Qué tan atractivas son tus creatividades.</li>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: Costo por mil impresiones. Lo que pagas por visibilidad.</li>
-<li><strong>Waste ratio</strong>: (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. La fracción de tráfico que no puedes utilizar.</li>
+<li><strong><abbr title="Tasa de clics — clics divididos entre impresiones, expresado como porcentaje.">CTR</abbr></strong>: Clicks / Impressions. Qué tan atractivas son tus creatividades.</li>
+<li><strong><abbr title="Coste por mil — el precio pagado por cada 1.000 impresiones publicitarias.">CPM</abbr></strong>: Costo por mil impresiones. Lo que pagas por visibilidad.</li>
+<li><strong>Waste ratio</strong>: (<abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr> - Bids) / <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr>. La fracción de tráfico que no puedes utilizar.</li>
 </ul>
 <h3 id="tarjetas-de-configuracion-de-pretargeting">Tarjetas de configuración de pretargeting<a class="headerlink" href="#tarjetas-de-configuracion-de-pretargeting" title="Permanent link">&para;</a></h3>
 <p>Debajo del embudo verás tarjetas para cada una de tus configuraciones de
 pretargeting (hasta 10 por seat). Cada tarjeta muestra:</p>
 <ul>
 <li><strong>State</strong>: Activa o Suspendida</li>
-<li><strong>Max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong>: El límite de solicitudes de puja que acepta esta configuración</li>
+<li><strong>Max <abbr title="Consultas por segundo — la tasa de solicitudes de puja que Google envía a tu pujador. Cada solicitud cuesta procesamiento y ancho de banda, así que QPS desperdiciado es dinero desperdiciado.">QPS</abbr></strong>: El límite de solicitudes de puja que acepta esta configuración</li>
 <li><strong>Formats</strong>: VIDEO, DISPLAY_IMAGE, DISPLAY_HTML, NATIVE</li>
 <li><strong>Platforms</strong>: DESKTOP, MOBILE_APP, MOBILE_WEB, CONNECTED_TV</li>
 <li><strong>Geos</strong>: Objetivos geográficos incluidos y excluidos</li>

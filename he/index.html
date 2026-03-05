@@ -1560,11 +1560,11 @@
 שאילתות זורמות מבורסת Authorized Buyers לעבר נקודת הקצה שלך. המכרז שלך מעריך
 כל אחת מהן, מחליט אם להציע הצעת מחיר, ומגיב — והכל תוך אלפיות שנייה בודדות.</p>
 <p>הנה מה שרוב האנשים מפספסים: <strong>הרוב המוחלט של האותות הוא רעש.</strong> מושב טיפוסי
-שקולט 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> עשוי לגלות ש-30,000 מהשאילתות האלה הן עבור מלאי שהקונה
+שקולט 50,000 <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> עשוי לגלות ש-30,000 מהשאילתות האלה הן עבור מלאי שהקונה
 מעולם לא התכוון לרכוש: אזורים גאוגרפיים לא רלוונטיים, דומיינים של מפרסמים
 לא מתאימים, גדלי מודעות ללא קריאייטיב תואם. המכרז שלך עדיין צריך לקבל,
 לנתח ולדחות כל אחת מהן. זה עולה רוחב פס, משאבי מחשוב וכסף.</p>
-<p>התרשים למעלה מתאר את זה כגשם. ה-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> של Google הוא הזרביב בחלק העליון;
+<p>התרשים למעלה מתאר את זה כגשם. ה-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> של Google הוא הזרביב בחלק העליון;
 הטיפות מתפזרות על פני שטח רחב. המכרז שלך הוא הדלי הקטן בתחתית. כל מה
 שמחמיץ את הדלי (הטיפות שנופלות ימינה ושמאלה) הוא בזבוז. שילמת על זה.
 לא קיבלת דבר בתמורה.</p>
@@ -1575,14 +1575,14 @@
 <h3 id="_2">למה זה קשה יותר ממה שנדמה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Google Authorized Buyers נותנת לך רק <strong>10 תצורות פרה-טרגוט לכל מושב</strong>, בתוספת
 קטגוריות גאוגרפיות גסות (מזרח ארה"ב, מערב ארה"ב, אירופה, אסיה). אין API
-לדוחות. כל נתוני הביצועים מגיעים מייצוא <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> שנשלח בדוא"ל. ממשק המשתמש של
-<abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> לפרה-טרגוט הוא פונקציונלי אך מקשה לראות את התמונה המלאה על פני תצורות,
+לדוחות. כל נתוני הביצועים מגיעים מייצוא <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> שנשלח בדוא"ל. ממשק המשתמש של
+<abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr> לפרה-טרגוט הוא פונקציונלי אך מקשה לראות את התמונה המלאה על פני תצורות,
 או לבטל שינוי שהשתבש.</p>
 <p>Cat-Scan סוגר את הפערים האלה:</p>
 <ul>
-<li>הוא <strong>בונה מחדש דיווח מייצוא <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></strong> (העלאה ידנית או קליטה אוטומטית מ-Gmail),
+<li>הוא <strong>בונה מחדש דיווח מייצוא <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr></strong> (העלאה ידנית או קליטה אוטומטית מ-Gmail),
   עם הסרת כפילויות בעת הייבוא כך שעיבוד חוזר לעולם לא סופר פעמיים.</li>
-<li>הוא מציג את <strong>משפך ה-<abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> המלא</strong>, מ-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> גולמי דרך הצעות מחיר, זכיות,
+<li>הוא מציג את <strong>משפך ה-<abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr> המלא</strong>, מ-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> גולמי דרך הצעות מחיר, זכיות,
   חשיפות, קליקים והוצאה, עם פירוט לפי כל ממד: גאוגרפיה, מפרסם, גודל
   מודעה, קריאייטיב, תצורה.</li>
 <li>הוא מספק <strong>ניהול פרה-טרגוט בטוח</strong> עם היסטוריה, שינויים מדורגים, תצוגה
@@ -1595,7 +1595,7 @@
 <p>למדריך הזה שני מסלולים כי Cat-Scan משרת שני תפקידים שונים מאוד:</p>
 <p><strong>קוני מדיה ומנהלי קמפיינים</strong> משתמשים ב-Cat-Scan כדי להבין לאן התקציב שלהם
 הולך, למצוא בזבוז, לנהל קריאייטיבים, לכוונן פרה-טרגוט ולאשר הצעות
-אופטימיזציה. הם חושבים במונחים של <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>, אחוזי זכייה ו-<abbr title="Return On Ad Spend — revenue generated per dollar spent on advertising.">ROAS</abbr>. הפרקים שלהם
+אופטימיזציה. הם חושבים במונחים של <abbr title="עלות לאלף חשיפות — המחיר המשולם עבור 1,000 חשיפות פרסום.">CPM</abbr>, אחוזי זכייה ו-<abbr title="תשואה על הוצאות פרסום — הכנסות שנוצרו לכל דולר שהוצא על פרסום.">ROAS</abbr>. הפרקים שלהם
 מתמקדים במה שממשק המשתמש מציג, מה המספרים אומרים ואילו פעולות לבצע.</p>
 <p><strong>מהנדסי DevOps ומהנדסי פלטפורמה</strong> משתמשים ב-Cat-Scan כדי לפרוס, לנטר
 ולפתור בעיות במערכת. הם חושבים בקונטיינרים, נקודות קצה לבדיקת תקינות
@@ -1625,7 +1625,7 @@
 <li>
 <p><a href="00-what-is-cat-scan/">פרק 0: מהו Cat-Scan?</a>
   מה הפלטפורמה עושה, למי היא מיועדת, ומושגי הליבה שצריך לפני כל דבר אחר:
-  מושבים, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, פרה-טרגוט, משפך ה-<abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  מושבים, <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr>, פרה-טרגוט, משפך ה-<abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">פרק 1: כניסה למערכת</a>
@@ -1642,16 +1642,16 @@
 <p>לקוני מדיה, מנהלי קמפיינים ומהנדסי אופטימיזציה.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">פרק 3: הבנת משפך ה-<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> שלך</a>
+<p><a href="03-qps-funnel/">פרק 3: הבנת משפך ה-<abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> שלך</a>
   דף הבית. כיצד לקרוא את פירוט המשפך: חשיפות, הצעות מחיר, זכיות, הוצאה,
-  אחוז זכייה, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. מה "בזבוז" אומר במונחים מוחשיים. כרטיסי תצורה ומה
+  אחוז זכייה, <abbr title="שיעור הקלקות — קליקים חלקי חשיפות, מבוטא באחוזים.">CTR</abbr>, <abbr title="עלות לאלף חשיפות — המחיר המשולם עבור 1,000 חשיפות פרסום.">CPM</abbr>. מה "בזבוז" אומר במונחים מוחשיים. כרטיסי תצורה ומה
   השדות שלהם שולטים.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">פרק 4: ניתוח בזבוז לפי ממד</a>
   שלוש תצוגות ניתוח הבזבוז ומתי להשתמש בכל אחת:</p>
 </li>
-<li><strong>גאוגרפי</strong> (<code>/qps/geo</code>): אילו מדינות וערים צורכות <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> מבלי להמיר.</li>
+<li><strong>גאוגרפי</strong> (<code>/qps/geo</code>): אילו מדינות וערים צורכות <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> מבלי להמיר.</li>
 <li><strong>מפרסמים</strong> (<code>/qps/publisher</code>): אילו דומיינים ואפליקציות מתפקדים
     מתחת לציפיות.</li>
 <li>
@@ -1668,26 +1668,26 @@
 <li>
 <p><a href="06-pretargeting/">פרק 6: תצורת פרה-טרגוט</a>
   מה תצורת פרה-טרגוט שולטת (אזורים גאוגרפיים, גדלים, פורמטים, פלטפורמות,
-  <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> מקסימלי). כיצד לקרוא כרטיס תצורה. החלת שינויים עם תצוגה מקדימה של
+  <abbr title="שאילתות לשנייה — קצב בקשות ההצעה ש-Google שולחת למציע שלך. כל בקשה עולה חישוב ורוחב פס, כך ש-QPS מבוזבז הוא כסף מבוזבז.">QPS</abbr> מקסימלי). כיצד לקרוא כרטיס תצורה. החלת שינויים עם תצוגה מקדימה של
   הרצת ניסיון. ציר הזמן של היסטוריית השינויים (<code>/history</code>). חזרה לאחור: כיצד
   זה עובד, למה זה קיים ומתי להשתמש בזה.</p>
 </li>
 <li>
-<p><a href="07-optimizer/">פרק 7: האופטימייזר (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>
+<p><a href="07-optimizer/">פרק 7: האופטימייזר (<abbr title="הבא את המודל שלך — מערכת Cat-Scan לחיבור מודל דירוג חיצוני משלך להפקת הצעות אופטימיזציה.">BYOM</abbr>)</a>
   Bring Your Own Model: רישום נקודת קצה חיצונית לדירוג, אימות שלה, הפעלתה.
   מחזור החיים דירוג-הצעה-אישור-החלה. הגדרות תהליך עבודה: זהיר, מאוזן,
-  אגרסיבי. כלכלה: <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> אפקטיבי, קו בסיס עלויות אירוח, סיכום יעילות. כיצד
+  אגרסיבי. כלכלה: <abbr title="עלות לאלף חשיפות — המחיר המשולם עבור 1,000 חשיפות פרסום.">CPM</abbr> אפקטיבי, קו בסיס עלויות אירוח, סיכום יעילות. כיצד
   נראית הצעה וכיצד להעריך אחת.</p>
 </li>
 <li>
 <p><a href="08-conversions/">פרק 8: המרות וייחוס</a>
-  חיבור מקור המרות. שילוב פיקסל. הגדרת Webhook: חתימות <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, סודות משותפים,
+  חיבור מקור המרות. שילוב פיקסל. הגדרת Webhook: חתימות <abbr title="קוד אימות הודעות מבוסס גיבוב — חתימה קריפטוגרפית המשמשת לאימות מטעני webhook.">HMAC</abbr>, סודות משותפים,
   הגבלת קצב. בדיקות מוכנות. סטטיסטיקות קליטה. מה "בריאות המרות" אומר וכיצד
   לקרוא את דף סטטוס האבטחה.</p>
 </li>
 <li>
 <p><a href="09-data-import/">פרק 9: ייבוא נתונים</a>
-  כיצד נתונים מגיעים ל-Cat-Scan, ולמה זה חשוב. העלאת <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> ידנית (<code>/import</code>):
+  כיצד נתונים מגיעים ל-Cat-Scan, ולמה זה חשוב. העלאת <abbr title="ערכים מופרדים בפסיקים — תבנית הקובץ שבה Google Authorized Buyers משתמשת לייצוא דוחות.">CSV</abbr> ידנית (<code>/import</code>):
   גרור ושחרר, מיפוי עמודות, תיקוף, העלאה בנתחים לקבצים גדולים. ייבוא
   אוטומטי מ-Gmail: כיצד זה עובד, כיצד לבדוק סטטוס, מה קורה כשזה נכשל. רשת
   רעננות הנתונים: מה "יובא" מול "חסר" אומר לכל תאריך וסוג דוח. הבטחות
@@ -1701,7 +1701,7 @@
 </li>
 </ul>
 <h3 id="ii-devops">חלק II: מסלול DevOps<a class="headerlink" href="#ii-devops" title="Permanent link">&para;</a></h3>
-<p>למהנדסי פלטפורמה, <abbr title="Site Reliability Engineering — the discipline of operating reliable production systems.">SRE</abbr>-ים ומנהלי מערכת.</p>
+<p>למהנדסי פלטפורמה, <abbr title="הנדסת אמינות אתרים — התחום של הפעלת מערכות ייצור אמינות.">SRE</abbr>-ים ומנהלי מערכת.</p>
 <ul>
 <li>
 <p><a href="11-architecture/">פרק 11: סקירת ארכיטקטורה</a>
@@ -1770,10 +1770,10 @@ generate_series + EXISTS.</li>
 <li>
 <p><a href="17-integrations/">פרק 17: אינטגרציות</a>
   חשבונות שירות GCP וחיבור פרויקט. Google Authorized Buyers API: גילוי מושבים,
-  סנכרון תצורת פרה-טרגוט, סנכרון נקודות קצה <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>. אינטגרציית Gmail: OAuth2
+  סנכרון תצורת פרה-טרגוט, סנכרון נקודות קצה <abbr title="הצעות בזמן אמת — פרוטוקול המכרז שבו חשיפות פרסום נקנות ונמכרות באלפיות שנייה.">RTB</abbr>. אינטגרציית Gmail: OAuth2
   לקליטת דוחות אוטומטית. ספקי בינה מלאכותית לשפה: Gemini, Claude, Grok (לזיהוי
   שפת קריאייטיב והתראות על אי-התאמה). Webhooks של המרות: רישום נקודות קצה,
-  אימות <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, הגבלת קצב, ניטור רעננות.</p>
+  אימות <abbr title="קוד אימות הודעות מבוסס גיבוב — חתימה קריפטוגרפית המשמשת לאימות מטעני webhook.">HMAC</abbr>, הגבלת קצב, ניטור רעננות.</p>
 </li>
 </ul>
 <h3 id="iii">חלק III: מקור עיון<a class="headerlink" href="#iii" title="Permanent link">&para;</a></h3>
@@ -1783,7 +1783,7 @@ generate_series + EXISTS.</li>
 <p><a href="glossary/">מילון מונחים</a>
   כל מונח בשתי שפות. עמודת קוני מדיה: "פרה-טרגוט" הוא "הכללים ששולטים אילו
   בקשות הצעת מחיר מגיעות למכרז שלך." עמודת DevOps: "פרה-טרגוט" הוא "ישות
-  ניתנת לשינוי שמסונכרנת מ-<abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API, מאוחסנת ב-<code>pretargeting_configs</code>, חשופה
+  ניתנת לשינוי שמסונכרנת מ-<abbr title="Authorized Buyers — פלטפורמת הפרסום הפרוגרמטית של Google (לשעבר AdX / DoubleClick Ad Exchange).">AB</abbr> API, מאוחסנת ב-<code>pretargeting_configs</code>, חשופה
   דרך <code>/settings/pretargeting</code>." שניהם צריכים את אותה מילה; אף אחד לא משתמש
   בהגדרה של השני.</p>
 </li>

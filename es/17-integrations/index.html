@@ -1479,7 +1479,7 @@
 <p><strong>Qué habilita:</strong>
 - Descubrimiento de asientos (<code>discoverSeats</code>)
 - Sincronización de configuración de pretargeting (<code>syncPretargetingConfigs</code>)
-- Sincronización de endpoints <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (<code>syncRTBEndpoints</code>)
+- Sincronización de endpoints <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr> (<code>syncRTBEndpoints</code>)
 - Recopilación de creativos (<code>collectCreatives</code>)</p>
 <p><strong>Estado del proyecto:</strong>
 Verifique la salud del proyecto de GCP en <code>/settings/accounts</code> o a través de
@@ -1503,10 +1503,10 @@ Verifique la salud del proyecto de GCP en <code>/settings/accounts</code> o a tr
 <tr>
 <td><strong>Sincronización de pretargeting</strong></td>
 <td>Estado actual de configuración de pretargeting desde Google</td>
-<td>Después de cambios externos en la interfaz de <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>Después de cambios externos en la interfaz de <abbr title="Authorized Buyers — la plataforma de publicidad programática de Google (anteriormente AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>Sincronización de endpoints <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>Sincronización de endpoints <abbr title="Puja en tiempo real — el protocolo de subasta donde las impresiones publicitarias se compran y venden en milisegundos.">RTB</abbr></strong></td>
 <td>URLs de endpoints del bidder y estado</td>
 <td>Configuración inicial, después de cambios en endpoints</td>
 </tr>
@@ -1518,11 +1518,11 @@ Verifique la salud del proyecto de GCP en <code>/settings/accounts</code> o a tr
 </tbody>
 </table>
 <h2 id="integracion-con-gmail">Integración con Gmail<a class="headerlink" href="#integracion-con-gmail" title="Permanent link">&para;</a></h2>
-<p>Google Authorized Buyers envía informes <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> diarios por correo electrónico. Cat-Scan puede ingerirlos automáticamente.</p>
+<p>Google Authorized Buyers envía informes <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> diarios por correo electrónico. Cat-Scan puede ingerirlos automáticamente.</p>
 <p><strong>Configuración:</strong>
 1. Ir a <code>/settings/accounts</code> &gt; pestaña Gmail Reports.
-2. Autorizar a Cat-Scan para acceder a la cuenta de Gmail que recibe los informes de <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
-3. Cat-Scan consultará periódicamente los nuevos emails de informes e importará los <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> adjuntos.</p>
+2. Autorizar a Cat-Scan para acceder a la cuenta de Gmail que recibe los informes de <abbr title="Authorized Buyers — la plataforma de publicidad programática de Google (anteriormente AdX / DoubleClick Ad Exchange).">AB</abbr>.
+3. Cat-Scan consultará periódicamente los nuevos emails de informes e importará los <abbr title="Valores separados por comas — el formato de archivo que Google Authorized Buyers usa para exportar informes.">CSV</abbr> adjuntos.</p>
 <p><strong>Monitoreo:</strong>
 - <code>GET /gmail/status</code>: estado actual, conteo de no leídos, último motivo
 - <code>POST /gmail/import/start</code>: activar manualmente un ciclo de importación
@@ -1571,7 +1571,7 @@ Verifique la salud del proyecto de GCP en <code>/settings/accounts</code> o a tr
 </thead>
 <tbody>
 <tr>
-<td><strong>Verificación <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>Verificación <abbr title="Código de autenticación de mensajes basado en hash — una firma criptográfica utilizada para verificar las cargas de webhook.">HMAC</abbr></strong></td>
 <td>Garantiza que las solicitudes sean auténticas (firmadas con secreto compartido)</td>
 <td>Secreto compartido configurado en los ajustes del webhook</td>
 </tr>
@@ -1588,7 +1588,7 @@ Verifique la salud del proyecto de GCP en <code>/settings/accounts</code> o a tr
 </tbody>
 </table>
 <p><strong>Monitoreo:</strong>
-- <code>GET /conversions/security/status</code>: estado de <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>, estado de limitación de tasa, estado de frescura
+- <code>GET /conversions/security/status</code>: estado de <abbr title="Código de autenticación de mensajes basado en hash — una firma criptográfica utilizada para verificar las cargas de webhook.">HMAC</abbr>, estado de limitación de tasa, estado de frescura
 - <code>GET /conversions/health</code>: salud general de ingestión y agregación
 - <code>GET /conversions/readiness</code>: si los datos de conversión son lo suficientemente frescos como para ser confiables</p>
 <h2 id="relacionado">Relacionado<a class="headerlink" href="#relacionado" title="Permanent link">&para;</a></h2>

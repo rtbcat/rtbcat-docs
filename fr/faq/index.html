@@ -1641,14 +1641,14 @@ données par rapport au nombre attendu. Raisons courantes des écarts :</p>
 quelles cellules sont manquantes. Voir <a href="../09-data-import/">Import de données</a>.</p>
 <h3 id="acheteur-quelle-est-la-difference-entre-gaspillage-et-faible-taux-de-victoire">[Acheteur] Quelle est la différence entre « gaspillage » et « faible taux de victoire » ?<a class="headerlink" href="#acheteur-quelle-est-la-difference-entre-gaspillage-et-faible-taux-de-victoire" title="Permanent link">&para;</a></h3>
 <p><strong>Gaspillage</strong> = requêtes d'enchères que votre bidder a <em>rejetées</em> sans
-enchérir. C'est du <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> que vous avez payé mais que vous n'avez pas pu utiliser
+enchérir. C'est du <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> que vous avez payé mais que vous n'avez pas pu utiliser
 du tout. Corrigez-le avec le prétargeting.</p>
 <p><strong>Faible taux de victoire</strong> = requêtes d'enchères sur lesquelles votre bidder a
 <em>enchéri</em> mais a perdu l'enchère. Cela signifie que vos enchères ne sont pas
 assez compétitives. Corrigez-le avec la stratégie d'enchères, pas le
 prétargeting.</p>
 <p>Les deux apparaissent dans l'entonnoir mais nécessitent des actions différentes.
-Voir <a href="../03-qps-funnel/">Comprendre votre entonnoir <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>.</p>
+Voir <a href="../03-qps-funnel/">Comprendre votre entonnoir <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr></a>.</p>
 <h3 id="acheteur-puis-je-annuler-une-modification-de-pretargeting">[Acheteur] Puis-je annuler une modification de prétargeting ?<a class="headerlink" href="#acheteur-puis-je-annuler-une-modification-de-pretargeting" title="Permanent link">&para;</a></h3>
 <p>Oui. Allez sur <code>/history</code>, trouvez la modification, cliquez sur « Aperçu du
 retour en arrière » pour voir ce qui sera restauré, puis confirmez. Le retour en
@@ -1703,10 +1703,10 @@ redémarrez-le, attendez 10 secondes, puis redémarrez le conteneur API. Voir
 <a href="../15-troubleshooting/">Dépannage</a> pour la procédure complète.</p>
 <hr />
 <h3 id="les-deux-dou-proviennent-les-donnees-de-cat-scan">[Les deux] D'où proviennent les données de Cat-Scan ?<a class="headerlink" href="#les-deux-dou-proviennent-les-donnees-de-cat-scan" title="Permanent link">&para;</a></h3>
-<p>Des exports <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> de Google Authorized Buyers. Il n'y a pas d'API de reporting.
-Les données arrivent soit par import <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> manuel, soit par ingestion automatique
+<p>Des exports <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> de Google Authorized Buyers. Il n'y a pas d'API de reporting.
+Les données arrivent soit par import <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> manuel, soit par ingestion automatique
 via Gmail. Voir <a href="../09-data-import/">Import de données</a>.</p>
-<h3 id="les-deux-est-il-sur-de-reimporter-le-meme-csv">[Les deux] Est-il sûr de réimporter le même <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> ?<a class="headerlink" href="#les-deux-est-il-sur-de-reimporter-le-meme-csv" title="Permanent link">&para;</a></h3>
+<h3 id="les-deux-est-il-sur-de-reimporter-le-meme-csv">[Les deux] Est-il sûr de réimporter le même <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> ?<a class="headerlink" href="#les-deux-est-il-sur-de-reimporter-le-meme-csv" title="Permanent link">&para;</a></h3>
 <p>Oui. Chaque ligne est hachée et dédoublonnée. La réimportation ne compte jamais
 en double.</p>
 <h3 id="les-deux-quelles-langues-linterface-supporte-t-elle">[Les deux] Quelles langues l'interface supporte-t-elle ?<a class="headerlink" href="#les-deux-quelles-langues-linterface-supporte-t-elle" title="Permanent link">&para;</a></h3>

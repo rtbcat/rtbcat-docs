@@ -1307,29 +1307,29 @@ DevOps dans le système.</p>
 <td><code>buyer_account_id</code> dans Postgres. Stocké dans la table <code>seats</code>. Synchronisé via <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr></strong></td>
 <td>Queries Per Second : le débit maximal de requêtes d'enchères que vous demandez à Google d'envoyer. Google régule le volume réel en fonction du niveau de votre compte.</td>
-<td>Plafond configuré par configuration de prétargeting. Débit entrant réel surveillé via les métriques de l'entonnoir <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> dans <code>rtb_daily</code>.</td>
+<td>Plafond configuré par configuration de prétargeting. Débit entrant réel surveillé via les métriques de l'entonnoir <abbr title="Enchères en temps réel — le protocole d'enchères où les impressions publicitaires sont achetées et vendues en millisecondes.">RTB</abbr> dans <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Gaspillage (Waste)</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> consommé par des requêtes d'enchères que votre bidder rejette (mauvaises zones géographiques, mauvais formats, pas de créative correspondante). De l'argent dépensé pour rien.</td>
+<td><abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> consommé par des requêtes d'enchères que votre bidder rejette (mauvaises zones géographiques, mauvais formats, pas de créative correspondante). De l'argent dépensé pour rien.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Calculé à partir des agrégats <code>rtb_daily</code>. Visible dans l'API de l'entonnoir.</td>
 </tr>
 <tr>
 <td><strong>Configuration de prétargeting</strong></td>
 <td>Les règles qui contrôlent quelles requêtes d'enchères atteignent votre bidder. Vous en avez 10 par siège. Contrôle les zones géographiques, formats, types, plateformes et éditeurs.</td>
-<td>Entité mutable synchronisée depuis l'API Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>. Stockée dans <code>pretargeting_configs</code>. Gérée via <code>/settings/pretargeting</code>. Les instantanés permettent le retour en arrière.</td>
+<td>Entité mutable synchronisée depuis l'API Google <abbr title="Authorized Buyers — la plateforme publicitaire programmatique de Google (anciennement AdX / DoubleClick Ad Exchange).">AB</abbr>. Stockée dans <code>pretargeting_configs</code>. Gérée via <code>/settings/pretargeting</code>. Les instantanés permettent le retour en arrière.</td>
 </tr>
 <tr>
 <td><strong>Entonnoir (Funnel)</strong></td>
-<td>La progression de la requête d'enchère à la dépense : <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Enchères -&gt; Victoires -&gt; Impressions -&gt; Clics -&gt; Dépenses. Chaque étape comporte une déperdition.</td>
+<td>La progression de la requête d'enchère à la dépense : <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> -&gt; Enchères -&gt; Victoires -&gt; Impressions -&gt; Clics -&gt; Dépenses. Chaque étape comporte une déperdition.</td>
 <td>Calculé à partir des métriques <code>rtb_daily</code>. Servi par <code>GET /analytics/rtb-funnel</code>. Cache frontend de 30 minutes.</td>
 </tr>
 <tr>
 <td><strong>Créative</strong></td>
 <td>Un élément publicitaire : image, vidéo, HTML ou native. Possède un format, une taille, une URL de destination et un historique de performance.</td>
-<td>Ligne dans la table <code>creatives</code>. Miniatures dans le stockage blob. Synchronisé depuis l'API Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>. Performance issue des jointures <code>rtb_daily</code>.</td>
+<td>Ligne dans la table <code>creatives</code>. Miniatures dans le stockage blob. Synchronisé depuis l'API Google <abbr title="Authorized Buyers — la plateforme publicitaire programmatique de Google (anciennement AdX / DoubleClick Ad Exchange).">AB</abbr>. Performance issue des jointures <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Campagne</strong></td>
@@ -1338,7 +1338,7 @@ DevOps dans le système.</p>
 </tr>
 <tr>
 <td><strong>Carte de configuration</strong></td>
-<td>Le panneau d'interface affichant l'état d'une configuration de prétargeting, le <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> max, les zones géographiques, les formats, les types et les plateformes.</td>
+<td>Le panneau d'interface affichant l'état d'une configuration de prétargeting, le <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> max, les zones géographiques, les formats, les types et les plateformes.</td>
 <td>Composant React <code>PretargetingConfigCard</code>. Données issues de <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1348,16 +1348,16 @@ DevOps dans le système.</p>
 </tr>
 <tr>
 <td><strong>Import</strong></td>
-<td>Intégrer les données de performance <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> dans Cat-Scan, soit par import manuel soit par auto-import Gmail.</td>
-<td><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> analysé, validé, dédoublonné (via contrainte unique <code>row_hash</code>), inséré dans les tables cibles. Import par morceaux pour les fichiers &gt; 5 Mo.</td>
+<td>Intégrer les données de performance <abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> dans Cat-Scan, soit par import manuel soit par auto-import Gmail.</td>
+<td><abbr title="Valeurs séparées par des virgules — le format de fichier utilisé par Google Authorized Buyers pour l'exportation des rapports.">CSV</abbr> analysé, validé, dédoublonné (via contrainte unique <code>row_hash</code>), inséré dans les tables cibles. Import par morceaux pour les fichiers &gt; 5 Mo.</td>
 </tr>
 <tr>
 <td><strong>Retour en arrière (Rollback)</strong></td>
 <td>Restaurer une configuration de prétargeting à son état précédent. Aperçu en simulation, puis confirmation.</td>
-<td>Restauration d'instantané : lit <code>pretargeting_snapshots</code>, applique le delta à l'API Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>, enregistre un nouvel instantané. <code>POST /snapshots/rollback</code>.</td>
+<td>Restauration d'instantané : lit <code>pretargeting_snapshots</code>, applique le delta à l'API Google <abbr title="Authorized Buyers — la plateforme publicitaire programmatique de Google (anciennement AdX / DoubleClick Ad Exchange).">AB</abbr>, enregistre un nouvel instantané. <code>POST /snapshots/rollback</code>.</td>
 </tr>
 <tr>
-<td><strong>Optimiseur / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>Optimiseur / <abbr title="Apportez votre propre modèle — le système de Cat-Scan pour connecter votre propre modèle de notation externe afin de générer des propositions d'optimisation.">BYOM</abbr></strong></td>
 <td>Système automatisé qui note les segments et propose des modifications de configuration. Utilise votre propre modèle externe.</td>
 <td>Endpoint de scoring appelé via HTTP POST. Propositions stockées dans <code>optimizer_proposals</code>. Cycle de vie : score -&gt; proposition -&gt; approbation -&gt; application.</td>
 </tr>
@@ -1367,14 +1367,14 @@ DevOps dans le système.</p>
 <td>Paramètre <code>canary_profile</code> de l'API score-and-propose. Affecte les seuils de confiance et les limites d'amplitude des modifications.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> effectif</strong></td>
+<td><strong><abbr title="Coût pour mille — le prix payé pour 1 000 impressions publicitaires.">CPM</abbr> effectif</strong></td>
 <td>Ce que vous payez réellement pour mille impressions, en tenant compte du gaspillage et du coût d'infrastructure.</td>
 <td>Calculé dans <code>OptimizerEconomicsService</code>. Combine les données de dépenses de <code>rtb_daily</code> avec le coût d'hébergement configuré.</td>
 </tr>
 <tr>
 <td><strong>Conversion</strong></td>
 <td>Une action utilisateur de valeur (achat, inscription) suivie après une impression. Réinjectée pour optimiser le ciblage.</td>
-<td>Événement ingéré via pixel (<code>GET /conversions/pixel</code>) ou webhook (<code>POST /conversions/webhook</code>). Stocké dans les tables de conversion. Vérifié par <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> pour les webhooks.</td>
+<td>Événement ingéré via pixel (<code>GET /conversions/pixel</code>) ou webhook (<code>POST /conversions/webhook</code>). Stocké dans les tables de conversion. Vérifié par <abbr title="Code d'authentification de message basé sur le hachage — une signature cryptographique utilisée pour vérifier les charges utiles des webhooks.">HMAC</abbr> pour les webhooks.</td>
 </tr>
 <tr>
 <td><strong>Taux de victoire (Win rate)</strong></td>
@@ -1382,14 +1382,14 @@ DevOps dans le système.</p>
 <td><code>auction_wins / bids_placed</code> issu de <code>rtb_daily</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="Taux de clics — clics divisés par les impressions, exprimé en pourcentage.">CTR</abbr></strong></td>
 <td>Clics / Impressions. Mesure l'attractivité de vos créatives.</td>
 <td><code>clicks / impressions</code> issu de <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Gate de santé runtime</strong></td>
 <td>(Pas un terme acheteur)</td>
-<td>Workflow CI <code>v1-runtime-health-strict.yml</code>. Exécute des vérifications de bout en bout : santé API, santé des données, conversions, optimiseur, SLO <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Retourne PASS/FAIL/BLOCKED par vérification.</td>
+<td>Workflow CI <code>v1-runtime-health-strict.yml</code>. Exécute des vérifications de bout en bout : santé API, santé des données, conversions, optimiseur, SLO <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr>. Retourne PASS/FAIL/BLOCKED par vérification.</td>
 </tr>
 <tr>
 <td><strong>Vérification de contrat</strong></td>

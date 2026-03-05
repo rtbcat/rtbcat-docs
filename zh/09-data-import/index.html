@@ -1548,14 +1548,14 @@
 <h1 id="9">第 9 章：数据导入<a class="headerlink" href="#9" title="Permanent link">&para;</a></h1>
 <p><em>适用读者：媒体买手、投放经理</em></p>
 <p>Cat-Scan 的分析完全依赖于 Google Authorized Buyers 的效果数据。由于
-Google 不提供报告 API，所有数据来自 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导出文件。本章说明如何将数据导入
+Google 不提供报告 API，所有数据来自 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 导出文件。本章说明如何将数据导入
 Cat-Scan 以及如何验证数据到达。</p>
 <h2 id="_1">为什么这很重要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>没有导入的数据，Cat-Scan 就没有分析对象。漏斗、浪费视图、素材表现和
-优化器都依赖于新鲜的 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 数据。如果数据过时，你的决策就基于旧信息。</p>
+优化器都依赖于新鲜的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 数据。如果数据过时，你的决策就基于旧信息。</p>
 <h2 id="_2">数据到达的两种方式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1-csv-import">1. 手动 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 上传（<code>/import</code>）<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
-<p>拖放从 Google Authorized Buyers 导出的 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 文件。</p>
+<h3 id="1-csv-import">1. 手动 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 上传（<code>/import</code>）<a class="headerlink" href="#1-csv-import" title="Permanent link">&para;</a></h3>
+<p>拖放从 Google Authorized Buyers 导出的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 文件。</p>
 <p><img alt="数据导入页面，含上传区域和新鲜度网格" src="../../images/screenshot-import.png" /></p>
 <p><strong>工作流程：</strong></p>
 <ol>
@@ -1576,7 +1576,7 @@ Cat-Scan 以及如何验证数据到达。</p>
 <thead>
 <tr>
 <th>类型</th>
-<th><abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 命名模式</th>
+<th><abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 命名模式</th>
 <th>包含内容</th>
 </tr>
 </thead>
@@ -1584,7 +1584,7 @@ Cat-Scan 以及如何验证数据到达。</p>
 <tr>
 <td>bidsinauction</td>
 <td><code>catscan-report-*</code></td>
-<td>每日 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 效果：展示、出价、胜出、花费</td>
+<td>每日 <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr> 效果：展示、出价、胜出、花费</td>
 </tr>
 <tr>
 <td>quality</td>
@@ -1612,7 +1612,7 @@ Cat-Scan 以及如何验证数据到达。</p>
 <p>Cat-Scan 可以从已连接的 Gmail 账户自动导入报告。</p>
 <ul>
 <li>Google Authorized Buyers 每天通过邮件发送报告。</li>
-<li>Cat-Scan 的 Gmail 集成自动读取这些邮件并导入 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 附件。</li>
+<li>Cat-Scan 的 Gmail 集成自动读取这些邮件并导入 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 附件。</li>
 <li>在 <code>/settings/accounts</code> &gt; Gmail 报告标签页查看状态，或通过 API 的
   <code>/gmail/status</code> 查看。</li>
 </ul>
@@ -1636,7 +1636,7 @@ Cat-Scan 以及如何验证数据到达。</p>
 <p><strong>覆盖率百分比</strong>汇总了在回顾窗口内数据的完整程度。运行时健康检查使用
 此指标判断系统是否正常运行。</p>
 <h2 id="_4">去重<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>重新导入同一 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>（或 Gmail 重复处理同一邮件）<strong>不会</strong>造成重复计数。每行
+<p>重新导入同一 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr>（或 Gmail 重复处理同一邮件）<strong>不会</strong>造成重复计数。每行
 数据被哈希处理，重复项在插入时被跳过。这意味着重新导入始终是安全的。</p>
 <h2 id="_5">导入历史<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p><code>/import</code> 上的导入历史表显示最近 20 次导入：</p>
@@ -1662,7 +1662,7 @@ Cat-Scan 以及如何验证数据到达。</p>
 </tr>
 <tr>
 <td>导入失败并显示验证错误</td>
-<td>列不匹配。对照必需列表检查你的 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>。</td>
+<td>列不匹配。对照必需列表检查你的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr>。</td>
 </tr>
 <tr>
 <td>Gmail 导入显示"已停止"</td>
@@ -1670,13 +1670,13 @@ Cat-Scan 以及如何验证数据到达。</p>
 </tr>
 <tr>
 <td>覆盖率百分比下降</td>
-<td>报告正在到达但涵盖的日期少于预期。检查 Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> 中的导出计划。</td>
+<td>报告正在到达但涵盖的日期少于预期。检查 Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> 中的导出计划。</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_7">相关内容<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗</a>：依赖导入数据</li>
+<li><a href="../03-qps-funnel/">理解你的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 漏斗</a>：依赖导入数据</li>
 <li><a href="../10-reading-reports/">解读报告</a>：导入数据后可以做什么</li>
 <li>运维相关：数据新鲜度查询内部机制和故障排除，参见<a href="../14-database/">数据库操作</a>
   和<a href="../15-troubleshooting/">故障排除</a>。</li>

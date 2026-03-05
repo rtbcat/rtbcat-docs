@@ -1650,7 +1650,7 @@
 <h2 id="_2">سكربتات الصحة أثناء التشغيل<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>هذه السكربتات هي العمود الفقري التشغيلي للتحقق من أن النظام يعمل بشكل سليم من البداية إلى النهاية.</p>
 <h3 id="diagnose_v1_buyer_report_coveragesh"><code>diagnose_v1_buyer_report_coverage.sh</code><a class="headerlink" href="#diagnose_v1_buyer_report_coveragesh" title="Permanent link">&para;</a></h3>
-<p>يشخّص سبب وجود تغطية <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> مفقودة لمشترٍ محدد.</p>
+<p>يشخّص سبب وجود تغطية <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> مفقودة لمشترٍ محدد.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CATSCAN_CANARY_EMAIL</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_EMAIL&gt;&quot;</span>
 scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--buyer-id<span class="w"> </span>&lt;BUYER_ID&gt;<span class="w"> </span><span class="se">\</span>
@@ -1659,7 +1659,7 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 </code></pre></div>
 <p>الفحوصات (بالترتيب):
 1. ربط المقاعد: buyer_id -&gt; bidder_id
-2. مصفوفة الاستيراد: نجاح/فشل/لم يُستورد حسب نوع <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>
+2. مصفوفة الاستيراد: نجاح/فشل/لم يُستورد حسب نوع <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr>
 3. حداثة البيانات: تغطية الخلايا المستوردة/المفقودة
 4. سجل الاستيراد: صفوف الاستيراد الأخيرة
 5. حالة Gmail: عدد الرسائل غير المقروءة، آخر سبب، أحدث تاريخ قياس</p>
@@ -1670,8 +1670,8 @@ scripts/diagnose_v1_buyer_report_coverage.sh<span class="w"> </span><span class=
 <li>صحة API</li>
 <li>صحة البيانات (الحداثة وتغطية الأبعاد)</li>
 <li>صحة التحويلات والجاهزية</li>
-<li>زمن بدء تشغيل <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
-<li>ملخص اتفاقية مستوى الخدمة لصفحة <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></li>
+<li>زمن بدء تشغيل <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr></li>
+<li>ملخص اتفاقية مستوى الخدمة لصفحة <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr></li>
 <li>اقتصاديات المحسّن والنماذج</li>
 <li>التحقق من نقاط نهاية النماذج</li>
 <li>سير عمل التسجيل والاقتراح</li>

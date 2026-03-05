@@ -1306,29 +1306,29 @@
 <td><code>buyer_account_id</code> في Postgres. مخزّن في جدول <code>seats</code>. يتم المزامنة عبر <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr></strong></td>
 <td>الاستعلامات في الثانية: الحد الأقصى لمعدل طلبات المزايدة التي تطلب من Google إرسالها. يتحكم Google في الحجم الفعلي بناءً على مستوى حسابك.</td>
-<td>حد مُعَدّ لكل إعداد استهداف مسبق. المعدل الفعلي الوارد يُراقَب عبر مقاييس قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> في <code>rtb_daily</code>.</td>
+<td>حد مُعَدّ لكل إعداد استهداف مسبق. المعدل الفعلي الوارد يُراقَب عبر مقاييس قمع <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr> في <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>الهدر (Waste)</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> المُستهلَك بواسطة طلبات مزايدة يرفضها مزايدك (مناطق جغرافية خاطئة، أحجام خاطئة، لا يوجد تصميم إبداعي مطابق). أموال أُنفقت بلا مقابل.</td>
+<td><abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> المُستهلَك بواسطة طلبات مزايدة يرفضها مزايدك (مناطق جغرافية خاطئة، أحجام خاطئة، لا يوجد تصميم إبداعي مطابق). أموال أُنفقت بلا مقابل.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. يُحسب من تجميعات <code>rtb_daily</code>. مرئي في API القمع.</td>
 </tr>
 <tr>
 <td><strong>إعداد الاستهداف المسبق (Pretargeting config)</strong></td>
 <td>القواعد التي تتحكم في أي طلبات مزايدة تصل إلى مزايدك. تحصل على 10 لكل مقعد. يتحكم في المناطق الجغرافية والأحجام والتنسيقات والمنصات والناشرين.</td>
-<td>كيان قابل للتعديل يتم مزامنته من Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. مخزّن في <code>pretargeting_configs</code>. يُدار عبر <code>/settings/pretargeting</code>. اللقطات تمكّن التراجع.</td>
+<td>كيان قابل للتعديل يتم مزامنته من Google <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr> API. مخزّن في <code>pretargeting_configs</code>. يُدار عبر <code>/settings/pretargeting</code>. اللقطات تمكّن التراجع.</td>
 </tr>
 <tr>
 <td><strong>القمع (Funnel)</strong></td>
-<td>التدرج من طلب المزايدة إلى الإنفاق: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; مزايدات -&gt; فوز -&gt; مرات ظهور -&gt; نقرات -&gt; إنفاق. كل خطوة فيها تسرّب.</td>
+<td>التدرج من طلب المزايدة إلى الإنفاق: <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> -&gt; مزايدات -&gt; فوز -&gt; مرات ظهور -&gt; نقرات -&gt; إنفاق. كل خطوة فيها تسرّب.</td>
 <td>يُحسب من مقاييس <code>rtb_daily</code>. يُقدَّم عبر <code>GET /analytics/rtb-funnel</code>. الواجهة الأمامية تخزّنه مؤقتاً لمدة 30 دقيقة.</td>
 </tr>
 <tr>
 <td><strong>التصميم الإبداعي (Creative)</strong></td>
 <td>أصل إعلاني: صورة، فيديو، HTML، أو أصلي. له تنسيق وحجم وعنوان URL للوجهة وسجل أداء.</td>
-<td>صف في جدول <code>creatives</code>. الصور المصغرة في تخزين الكائنات الثنائية. يتم المزامنة من Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API. الأداء من ربط <code>rtb_daily</code>.</td>
+<td>صف في جدول <code>creatives</code>. الصور المصغرة في تخزين الكائنات الثنائية. يتم المزامنة من Google <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr> API. الأداء من ربط <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>الحملة (Campaign)</strong></td>
@@ -1337,7 +1337,7 @@
 </tr>
 <tr>
 <td><strong>بطاقة الإعداد (Config card)</strong></td>
-<td>لوحة واجهة المستخدم التي تعرض حالة إعداد الاستهداف المسبق، الحد الأقصى لـ <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>، المناطق الجغرافية، الأحجام، التنسيقات، والمنصات.</td>
+<td>لوحة واجهة المستخدم التي تعرض حالة إعداد الاستهداف المسبق، الحد الأقصى لـ <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>، المناطق الجغرافية، الأحجام، التنسيقات، والمنصات.</td>
 <td>مكوّن React <code>PretargetingConfigCard</code>. البيانات من <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1347,16 +1347,16 @@
 </tr>
 <tr>
 <td><strong>الاستيراد (Import)</strong></td>
-<td>إدخال بيانات أداء <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> إلى Cat-Scan، إما عبر الرفع اليدوي أو الاستيراد التلقائي من Gmail.</td>
-<td>يتم تحليل <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> والتحقق منه وإزالة التكرارات (عبر قيد فريد <code>row_hash</code>)، ثم الإدراج في الجداول المستهدفة. رفع مجزّأ للملفات أكبر من 5 ميغابايت.</td>
+<td>إدخال بيانات أداء <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> إلى Cat-Scan، إما عبر الرفع اليدوي أو الاستيراد التلقائي من Gmail.</td>
+<td>يتم تحليل <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> والتحقق منه وإزالة التكرارات (عبر قيد فريد <code>row_hash</code>)، ثم الإدراج في الجداول المستهدفة. رفع مجزّأ للملفات أكبر من 5 ميغابايت.</td>
 </tr>
 <tr>
 <td><strong>التراجع (Rollback)</strong></td>
 <td>إرجاع تغيير إعداد الاستهداف المسبق إلى حالته السابقة. المعاينة بتشغيل تجريبي، ثم التأكيد.</td>
-<td>استعادة اللقطة: يقرأ <code>pretargeting_snapshots</code>، يطبّق الفرق على Google <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr> API، يسجّل لقطة جديدة. <code>POST /snapshots/rollback</code>.</td>
+<td>استعادة اللقطة: يقرأ <code>pretargeting_snapshots</code>، يطبّق الفرق على Google <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr> API، يسجّل لقطة جديدة. <code>POST /snapshots/rollback</code>.</td>
 </tr>
 <tr>
-<td><strong>المحسّن / <abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr></strong></td>
+<td><strong>المحسّن / <abbr title="أحضر نموذجك الخاص — نظام Cat-Scan لتوصيل نموذج تسجيل خارجي خاص بك لتقديم مقترحات التحسين.">BYOM</abbr></strong></td>
 <td>نظام آلي يقيّم الشرائح ويقترح تغييرات على الإعدادات. يستخدم نموذجك الخارجي الخاص.</td>
 <td>يتم استدعاء نقطة التقييم عبر HTTP POST. المقترحات مخزّنة في <code>optimizer_proposals</code>. دورة الحياة: تقييم -&gt; اقتراح -&gt; موافقة -&gt; تطبيق.</td>
 </tr>
@@ -1366,14 +1366,14 @@
 <td>معامل <code>canary_profile</code> لـ API التقييم والاقتراح. يؤثر على عتبات الثقة وحدود حجم التغيير.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr> الفعلي (Effective <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>)</strong></td>
+<td><strong><abbr title="التكلفة لكل ألف ظهور — السعر المدفوع لكل 1,000 ظهور إعلان.">CPM</abbr> الفعلي (Effective <abbr title="التكلفة لكل ألف ظهور — السعر المدفوع لكل 1,000 ظهور إعلان.">CPM</abbr>)</strong></td>
 <td>ما تدفعه فعلياً لكل ألف ظهور، مع مراعاة الهدر وتكلفة البنية التحتية.</td>
 <td>يُحسب في <code>OptimizerEconomicsService</code>. يجمع بيانات الإنفاق من <code>rtb_daily</code> مع تكلفة الاستضافة المُعَدّة.</td>
 </tr>
 <tr>
 <td><strong>التحويل (Conversion)</strong></td>
 <td>إجراء قيّم من المستخدم (شراء، تسجيل) يُتتبَّع بعد الظهور. يُغذّى لتحسين الاستهداف.</td>
-<td>حدث يُستوعب عبر البكسل (<code>GET /conversions/pixel</code>) أو webhook (<code>POST /conversions/webhook</code>). مخزّن في جداول التحويلات. مُتحقَّق منه بـ <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr> لخطافات الويب.</td>
+<td>حدث يُستوعب عبر البكسل (<code>GET /conversions/pixel</code>) أو webhook (<code>POST /conversions/webhook</code>). مخزّن في جداول التحويلات. مُتحقَّق منه بـ <abbr title="رمز مصادقة الرسائل المبني على التجزئة — توقيع تشفيري يُستخدم للتحقق من حمولات webhook.">HMAC</abbr> لخطافات الويب.</td>
 </tr>
 <tr>
 <td><strong>معدل الفوز (Win rate)</strong></td>
@@ -1381,14 +1381,14 @@
 <td><code>auction_wins / bids_placed</code> من <code>rtb_daily</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong></td>
+<td><strong><abbr title="معدل النقر — النقرات مقسومة على مرات الظهور، معبراً عنها كنسبة مئوية.">CTR</abbr></strong></td>
 <td>النقرات / مرات الظهور. مدى جاذبية تصاميمك الإبداعية.</td>
 <td><code>clicks / impressions</code> من <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>بوابة فحص الصحة أثناء التشغيل (Runtime health gate)</strong></td>
 <td>(ليس مصطلحاً لمشتري الوسائط)</td>
-<td>سير عمل CI <code>v1-runtime-health-strict.yml</code>. يشغّل فحوصات شاملة: صحة API، صحة البيانات، التحويلات، المحسّن، SLO لـ <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. يعيد PASS/FAIL/BLOCKED لكل فحص.</td>
+<td>سير عمل CI <code>v1-runtime-health-strict.yml</code>. يشغّل فحوصات شاملة: صحة API، صحة البيانات، التحويلات، المحسّن، SLO لـ <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>. يعيد PASS/FAIL/BLOCKED لكل فحص.</td>
 </tr>
 <tr>
 <td><strong>فحص العقد (Contract check)</strong></td>

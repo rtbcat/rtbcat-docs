@@ -1640,13 +1640,13 @@ z oczekiwaną liczbą. Typowe przyczyny braków:</p>
 komórki brakują. Patrz <a href="../09-data-import/">Import danych</a>.</p>
 <h3 id="buyer-jaka-jest-roznica-miedzy-marnotrawstwem-a-niskim-wspoczynnikiem-wygranych">[Buyer] Jaka jest różnica między „marnotrawstwem" a „niskim współczynnikiem wygranych"?<a class="headerlink" href="#buyer-jaka-jest-roznica-miedzy-marnotrawstwem-a-niskim-wspoczynnikiem-wygranych" title="Permanent link">&para;</a></h3>
 <p><strong>Marnotrawstwo</strong> = zapytania o licytację, które Twój bidder <em>odrzucił</em> bez
-licytowania. To <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, za które zapłaciłeś, ale nie mogłeś w ogóle wykorzystać.
+licytowania. To <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>, za które zapłaciłeś, ale nie mogłeś w ogóle wykorzystać.
 Napraw to pretargetingiem.</p>
 <p><strong>Niski współczynnik wygranych</strong> = zapytania o licytację, na które Twój bidder
 <em>licytował</em>, ale przegrał aukcję. Oznacza to, że Twoje oferty nie są
 wystarczająco konkurencyjne. Napraw to strategią licytacji, nie pretargetingiem.</p>
 <p>Oba pojawiają się w lejku, ale wymagają różnych działań. Patrz
-<a href="../03-qps-funnel/">Zrozumienie lejka <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>.</p>
+<a href="../03-qps-funnel/">Zrozumienie lejka <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr></a>.</p>
 <h3 id="buyer-czy-moge-cofnac-zmiane-pretargetingu">[Buyer] Czy mogę cofnąć zmianę pretargetingu?<a class="headerlink" href="#buyer-czy-moge-cofnac-zmiane-pretargetingu" title="Permanent link">&para;</a></h3>
 <p>Tak. Przejdź do <code>/history</code>, znajdź zmianę, kliknij „Podgląd cofnięcia",
 aby zobaczyć, co zostanie przywrócone, a następnie potwierdź. Samo cofnięcie
@@ -1698,10 +1698,10 @@ zrestartuj go, poczekaj 10 sekund, a następnie zrestartuj kontener API. Patrz
 <a href="../15-troubleshooting/">Rozwiązywanie problemów</a> — pełna procedura.</p>
 <hr />
 <h3 id="oba-skad-pochodza-dane-cat-scan">[Oba] Skąd pochodzą dane Cat-Scan?<a class="headerlink" href="#oba-skad-pochodza-dane-cat-scan" title="Permanent link">&para;</a></h3>
-<p>Z eksportów <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> Google Authorized Buyers. Nie istnieje Reporting API. Dane
-docierają albo przez ręczny upload <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>, albo automatyczny import z Gmaila.
+<p>Z eksportów <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr> Google Authorized Buyers. Nie istnieje Reporting API. Dane
+docierają albo przez ręczny upload <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr>, albo automatyczny import z Gmaila.
 Patrz <a href="../09-data-import/">Import danych</a>.</p>
-<h3 id="oba-czy-ponowny-import-tego-samego-csv-jest-bezpieczny">[Oba] Czy ponowny import tego samego <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> jest bezpieczny?<a class="headerlink" href="#oba-czy-ponowny-import-tego-samego-csv-jest-bezpieczny" title="Permanent link">&para;</a></h3>
+<h3 id="oba-czy-ponowny-import-tego-samego-csv-jest-bezpieczny">[Oba] Czy ponowny import tego samego <abbr title="Wartości rozdzielane przecinkami — format pliku używany przez Google Authorized Buyers do eksportu raportów.">CSV</abbr> jest bezpieczny?<a class="headerlink" href="#oba-czy-ponowny-import-tego-samego-csv-jest-bezpieczny" title="Permanent link">&para;</a></h3>
 <p>Tak. Każdy wiersz jest haszowany i deduplikowany. Ponowny import nigdy nie
 powoduje podwójnego zliczania.</p>
 <h3 id="oba-jakie-jezyki-obsuguje-interfejs">[Oba] Jakie języki obsługuje interfejs?<a class="headerlink" href="#oba-jakie-jezyki-obsuguje-interfejs" title="Permanent link">&para;</a></h3>

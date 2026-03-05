@@ -1479,7 +1479,7 @@
 <p><strong>ما يُتيحه:</strong>
 - اكتشاف المقاعد (<code>discoverSeats</code>)
 - مزامنة تكوين الاستهداف المسبق (<code>syncPretargetingConfigs</code>)
-- مزامنة نقاط نهاية <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (<code>syncRTBEndpoints</code>)
+- مزامنة نقاط نهاية <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr> (<code>syncRTBEndpoints</code>)
 - جمع الإبداعات (<code>collectCreatives</code>)</p>
 <p><strong>حالة المشروع:</strong>
 تحقق من صحة مشروع GCP في <code>/settings/accounts</code> أو عبر
@@ -1503,10 +1503,10 @@
 <tr>
 <td><strong>مزامنة الاستهداف المسبق</strong></td>
 <td>حالة تكوين الاستهداف المسبق الحالية من Google</td>
-<td>بعد التغييرات الخارجية في واجهة <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr></td>
+<td>بعد التغييرات الخارجية في واجهة <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr></td>
 </tr>
 <tr>
-<td><strong>مزامنة نقاط نهاية <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>مزامنة نقاط نهاية <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr></strong></td>
 <td>عناوين وحالة نقاط نهاية المزايد</td>
 <td>الإعداد الأولي، بعد تغييرات نقاط النهاية</td>
 </tr>
@@ -1518,11 +1518,11 @@
 </tbody>
 </table>
 <h2 id="gmail">تكامل Gmail<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
-<p>يُرسل Google Authorized Buyers تقارير <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> يومية بالبريد الإلكتروني. يمكن لـ Cat-Scan استيعابها تلقائيًا.</p>
+<p>يُرسل Google Authorized Buyers تقارير <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> يومية بالبريد الإلكتروني. يمكن لـ Cat-Scan استيعابها تلقائيًا.</p>
 <p><strong>الإعداد:</strong>
 1. انتقل إلى <code>/settings/accounts</code> &gt; تبويب تقارير Gmail.
-2. فوّض Cat-Scan للوصول إلى حساب Gmail الذي يستقبل تقارير <abbr title="Authorized Buyers — Google's programmatic ad exchange (formerly AdX / DoubleClick Ad Exchange).">AB</abbr>.
-3. سيقوم Cat-Scan بالاستقصاء عن رسائل التقارير الجديدة واستيراد ملفات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> المرفقة.</p>
+2. فوّض Cat-Scan للوصول إلى حساب Gmail الذي يستقبل تقارير <abbr title="Authorized Buyers — منصة Google للإعلانات البرمجية (المعروفة سابقاً بـ AdX / DoubleClick Ad Exchange).">AB</abbr>.
+3. سيقوم Cat-Scan بالاستقصاء عن رسائل التقارير الجديدة واستيراد ملفات <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> المرفقة.</p>
 <p><strong>المراقبة:</strong>
 - <code>GET /gmail/status</code>: الحالة الحالية، عدد الرسائل غير المقروءة، آخر سبب
 - <code>POST /gmail/import/start</code>: تشغيل دورة استيراد يدويًا
@@ -1571,7 +1571,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>التحقق بـ <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr></strong></td>
+<td><strong>التحقق بـ <abbr title="رمز مصادقة الرسائل المبني على التجزئة — توقيع تشفيري يُستخدم للتحقق من حمولات webhook.">HMAC</abbr></strong></td>
 <td>يضمن أصالة الطلبات (موقّعة بسر مشترك)</td>
 <td>سر مشترك يُكوَّن في إعدادات خطافات الويب</td>
 </tr>
@@ -1588,7 +1588,7 @@
 </tbody>
 </table>
 <p><strong>المراقبة:</strong>
-- <code>GET /conversions/security/status</code>: حالة <abbr title="Hash-based Message Authentication Code — a cryptographic signature used to verify webhook payloads.">HMAC</abbr>، وحالة تحديد المعدل، وحالة الحداثة
+- <code>GET /conversions/security/status</code>: حالة <abbr title="رمز مصادقة الرسائل المبني على التجزئة — توقيع تشفيري يُستخدم للتحقق من حمولات webhook.">HMAC</abbr>، وحالة تحديد المعدل، وحالة الحداثة
 - <code>GET /conversions/health</code>: صحة الاستيعاب والتجميع الإجمالية
 - <code>GET /conversions/readiness</code>: ما إذا كانت بيانات التحويل حديثة بما يكفي للوثوق بها</p>
 <h2 id="_2">مواضيع ذات صلة<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>

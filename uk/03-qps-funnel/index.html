@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="3-qps">Розділ 3: Розуміння вашої воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr><a class="headerlink" href="#3-qps" title="Permanent link">&para;</a></h1>
+<h1 id="3-qps">Розділ 3: Розуміння вашої воронки <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr><a class="headerlink" href="#3-qps" title="Permanent link">&para;</a></h1>
 <p><em>Аудиторія: медіа-баєри, менеджери кампаній</em></p>
 <p>Це головна сторінка Cat-Scan (<code>/</code>). Все починається тут.</p>
 <h2 id="_1">Що ви бачите<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Сторінка <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Waste Optimizer показує вашу воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (шлях від запиту на
+<p>Сторінка <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr> Waste Optimizer показує вашу воронку <abbr title="Торги в реальному часі — аукціонний протокол, де рекламні покази купуються та продаються за мілісекунди.">RTB</abbr> (шлях від запиту на
 ставку до витрат) і виділяє місця, де обсяг падає.</p>
 <p><img alt="Головна сторінка QPS Waste Optimizer" src="../../images/screenshot-qps-home.png" /></p>
 <h3 id="_2">Воронка<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1518,7 +1518,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr></strong></td>
 <td>Максимальна кількість запитів на ставку за секунду, яку ви просите Google надсилати. Google регулює фактичний обсяг залежно від рівня вашого облікового запису, тому зазвичай ви отримуєте менше, ніж ваш ліміт.</td>
 </tr>
 <tr>
@@ -1544,21 +1544,21 @@
 </tbody>
 </table>
 <p>Різниця між кожним етапом — це місце, де живе можливість оптимізації. Велике
-падіння від <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> до Bids означає, що ваш бідер відхиляє більшість того, що
+падіння від <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr> до Bids означає, що ваш бідер відхиляє більшість того, що
 надсилає Google — класичне марнування, яке можна виправити претаргетингом.</p>
 <h3 id="_3">Ключові метрики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Win rate</strong>: Wins / Bids. Наскільки конкурентоспроможні ваші ставки.</li>
-<li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong>: Clicks / Impressions. Наскільки привабливі ваші креативи.</li>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: Вартість за тисячу показів. Скільки ви платите за видимість.</li>
-<li><strong>Waste ratio</strong>: (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Частка трафіку, який ви не можете використати.</li>
+<li><strong><abbr title="Показник клікабельності — кліки, поділені на покази, виражені у відсотках.">CTR</abbr></strong>: Clicks / Impressions. Наскільки привабливі ваші креативи.</li>
+<li><strong><abbr title="Вартість за тисячу — ціна за 1 000 рекламних показів.">CPM</abbr></strong>: Вартість за тисячу показів. Скільки ви платите за видимість.</li>
+<li><strong>Waste ratio</strong>: (<abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr> - Bids) / <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr>. Частка трафіку, який ви не можете використати.</li>
 </ul>
 <h3 id="_4">Картки конфігурацій претаргетингу<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Під воронкою ви побачите картки для кожної з ваших конфігурацій претаргетингу
 (до 10 на seat). Кожна картка показує:</p>
 <ul>
 <li><strong>State (Стан)</strong>: Active або Suspended</li>
-<li><strong>Max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong>: Ліміт запитів на ставку, які ця конфігурація приймає</li>
+<li><strong>Max <abbr title="Запити на секунду — частота запитів на ставки, які Google надсилає вашому бідеру. Кожен запит коштує обчислювальних ресурсів та пропускної здатності, тому марний QPS — це марні гроші.">QPS</abbr></strong>: Ліміт запитів на ставку, які ця конфігурація приймає</li>
 <li><strong>Formats (Формати)</strong>: VIDEO, DISPLAY_IMAGE, DISPLAY_HTML, NATIVE</li>
 <li><strong>Platforms (Платформи)</strong>: DESKTOP, MOBILE_APP, MOBILE_WEB, CONNECTED_TV</li>
 <li><strong>Geos (Географії)</strong>: Включені та виключені географічні цілі</li>

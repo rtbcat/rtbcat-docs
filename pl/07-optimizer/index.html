@@ -1545,9 +1545,9 @@
   
 
 
-<h1 id="rozdzia-7-optymalizator-byom">Rozdział 7: Optymalizator (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)<a class="headerlink" href="#rozdzia-7-optymalizator-byom" title="Permanent link">&para;</a></h1>
+<h1 id="rozdzia-7-optymalizator-byom">Rozdział 7: Optymalizator (<abbr title="Przynieś swój własny model — system Cat-Scan do podłączenia własnego zewnętrznego modelu oceny w celu generowania propozycji optymalizacji.">BYOM</abbr>)<a class="headerlink" href="#rozdzia-7-optymalizator-byom" title="Permanent link">&para;</a></h1>
 <p><em>Odbiorcy: media buyerzy, inżynierowie optymalizacji</em></p>
-<p>Optymalizator to automatyczny silnik optymalizacji Cat-Scan. „<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>" oznacza
+<p>Optymalizator to automatyczny silnik optymalizacji Cat-Scan. „<abbr title="Przynieś swój własny model — system Cat-Scan do podłączenia własnego zewnętrznego modelu oceny w celu generowania propozycji optymalizacji.">BYOM</abbr>" oznacza
 Bring Your Own Model: rejestrujesz zewnętrzny endpoint scoringowy, a Cat-Scan
 wykorzystuje go do generowania propozycji zmian konfiguracji.</p>
 <h2 id="jak-to-dziaa">Jak to działa<a class="headerlink" href="#jak-to-dziaa" title="Permanent link">&para;</a></h2>
@@ -1625,20 +1625,20 @@ segments       config         reject         updated
 <h2 id="ekonomia">Ekonomia<a class="headerlink" href="#ekonomia" title="Permanent link">&para;</a></h2>
 <p>Optymalizator śledzi również ekonomię optymalizacji:</p>
 <ul>
-<li><strong>Efektywny <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: ile faktycznie płacisz za tysiąc wyświetleń, z
+<li><strong>Efektywny <abbr title="Koszt za tysiąc — cena płacona za 1000 wyświetleń reklam.">CPM</abbr></strong>: ile faktycznie płacisz za tysiąc wyświetleń, z
   uwzględnieniem strat.</li>
 <li><strong>Bazowy koszt hostingu</strong>: koszt infrastruktury Twojego biddera,
   konfigurowany w ustawieniach optymalizatora. Służy do obliczania, czy
-  oszczędności z redukcji <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> przewyższają koszty hostingu.</li>
-<li><strong>Podsumowanie wydajności</strong>: ogólny stosunek użytecznego <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> do
-  całkowitego <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>.</li>
+  oszczędności z redukcji <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> przewyższają koszty hostingu.</li>
+<li><strong>Podsumowanie wydajności</strong>: ogólny stosunek użytecznego <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr> do
+  całkowitego <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>.</li>
 </ul>
 <p>Skonfiguruj koszt hostingu w <code>/settings/system</code> &gt; Ustawienia optymalizatora.</p>
 <h2 id="przegladanie-propozycji">Przeglądanie propozycji<a class="headerlink" href="#przegladanie-propozycji" title="Permanent link">&para;</a></h2>
 <p>Każda propozycja zawiera:
 - <strong>Wyniki segmentów</strong>, które napędzały rekomendację
 - <strong>Konkretne zmiany</strong> pól pretargetingu (dodania, usunięcia, aktualizacje)
-- <strong>Prognozowany wpływ</strong> na <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, współczynnik strat i wydatki</p>
+- <strong>Prognozowany wpływ</strong> na <abbr title="Zapytania na sekundę — częstotliwość żądań ofertowych wysyłanych przez Google do Twojego licytatora. Każde żądanie kosztuje moc obliczeniową i przepustowość, więc zmarnowane QPS to zmarnowane pieniądze.">QPS</abbr>, współczynnik strat i wydatki</p>
 <p>Możesz:
 - <strong>Zaakceptować</strong>: oznacza propozycję jako przyjętą
 - <strong>Zastosować</strong>: wysyła zaakceptowane zmiany do Google

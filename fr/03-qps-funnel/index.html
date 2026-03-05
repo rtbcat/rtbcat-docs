@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="chapitre-3-comprendre-votre-entonnoir-qps">Chapitre 3 : Comprendre votre entonnoir <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr><a class="headerlink" href="#chapitre-3-comprendre-votre-entonnoir-qps" title="Permanent link">&para;</a></h1>
+<h1 id="chapitre-3-comprendre-votre-entonnoir-qps">Chapitre 3 : Comprendre votre entonnoir <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr><a class="headerlink" href="#chapitre-3-comprendre-votre-entonnoir-qps" title="Permanent link">&para;</a></h1>
 <p><em>Public visé : acheteurs média, gestionnaires de campagnes</em></p>
 <p>Il s'agit de la page d'accueil de Cat-Scan (<code>/</code>). Tout commence ici.</p>
 <h2 id="ce-que-vous-voyez">Ce que vous voyez<a class="headerlink" href="#ce-que-vous-voyez" title="Permanent link">&para;</a></h2>
-<p>La page <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Waste Optimizer affiche votre entonnoir <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (le parcours de la
+<p>La page <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> Waste Optimizer affiche votre entonnoir <abbr title="Enchères en temps réel — le protocole d'enchères où les impressions publicitaires sont achetées et vendues en millisecondes.">RTB</abbr> (le parcours de la
 demande d'enchère à la dépense) et met en évidence les points de déperdition
 du volume.</p>
 <p><img alt="Page d'accueil du QPS Waste Optimizer" src="../../images/screenshot-qps-home.png" /></p>
@@ -1519,7 +1519,7 @@ du volume.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr></strong></td>
 <td>Le nombre maximal de demandes d'enchères par seconde que vous demandez à Google d'envoyer. Google régule le volume réel en fonction du niveau de votre compte, vous recevez donc généralement moins que votre plafond.</td>
 </tr>
 <tr>
@@ -1545,22 +1545,22 @@ du volume.</p>
 </tbody>
 </table>
 <p>L'écart entre chaque étape représente une opportunité d'optimisation. Une chute
-importante entre <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> et Bids signifie que votre enchérisseur rejette la majeure
+importante entre <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> et Bids signifie que votre enchérisseur rejette la majeure
 partie de ce que Google envoie — un gaspillage classique que le préciblage peut
 corriger.</p>
 <h3 id="indicateurs-cles">Indicateurs clés<a class="headerlink" href="#indicateurs-cles" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Taux de victoire (Win rate)</strong> : Wins / Bids. Mesure la compétitivité de vos enchères.</li>
-<li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong> : Clicks / Impressions. Mesure l'attractivité de vos créations.</li>
-<li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong> : Coût pour mille impressions. Ce que vous payez pour la visibilité.</li>
-<li><strong>Ratio de gaspillage (Waste ratio)</strong> : (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. La part du trafic que vous ne pouvez pas exploiter.</li>
+<li><strong><abbr title="Taux de clics — clics divisés par les impressions, exprimé en pourcentage.">CTR</abbr></strong> : Clicks / Impressions. Mesure l'attractivité de vos créations.</li>
+<li><strong><abbr title="Coût pour mille — le prix payé pour 1 000 impressions publicitaires.">CPM</abbr></strong> : Coût pour mille impressions. Ce que vous payez pour la visibilité.</li>
+<li><strong>Ratio de gaspillage (Waste ratio)</strong> : (<abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr> - Bids) / <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr>. La part du trafic que vous ne pouvez pas exploiter.</li>
 </ul>
 <h3 id="cartes-de-configuration-de-preciblage">Cartes de configuration de préciblage<a class="headerlink" href="#cartes-de-configuration-de-preciblage" title="Permanent link">&para;</a></h3>
 <p>Sous l'entonnoir, vous verrez des cartes pour chacune de vos configurations
 de préciblage (jusqu'à 10 par siège). Chaque carte affiche :</p>
 <ul>
 <li><strong>État</strong> : Active ou Suspendue</li>
-<li><strong>Max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong> : Le plafond de demandes d'enchères acceptées par cette configuration</li>
+<li><strong>Max <abbr title="Requêtes par seconde — le débit de demandes d'enchères que Google envoie à votre enchérisseur. Chaque requête coûte en calcul et en bande passante, donc du QPS gaspillé est de l'argent gaspillé.">QPS</abbr></strong> : Le plafond de demandes d'enchères acceptées par cette configuration</li>
 <li><strong>Formats</strong> : VIDEO, DISPLAY_IMAGE, DISPLAY_HTML, NATIVE</li>
 <li><strong>Plateformes</strong> : DESKTOP, MOBILE_APP, MOBILE_WEB, CONNECTED_TV</li>
 <li><strong>Zones géographiques</strong> : Cibles géographiques incluses et exclues</li>

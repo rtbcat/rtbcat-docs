@@ -1503,31 +1503,31 @@
 
 <h1 id="0-cat-scan">Глава 0: Что такое Cat-Scan?<a class="headerlink" href="#0-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>Аудитория: все пользователи</em></p>
-<p>Cat-Scan — это платформа оптимизации <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> для Google Authorized Buyers. Она
+<p>Cat-Scan — это платформа оптимизации <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> для Google Authorized Buyers. Она
 обеспечивает прозрачность использования (и потерь) выделенного вашему биддеру
 объёма запросов в секунду и предоставляет инструменты для его улучшения.</p>
 <p><img alt="Воронка QPS" src="../../assets/qps-funnel.svg" /></p>
 <h2 id="_1">Основная проблема<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Когда вы работаете с местом (seat) на бирже Google Authorized Buyers, Google
 отправляет на ваш биддер-эндпоинт поток запросов на ставку (bid requests). Этот
-поток обходится вам дорого: он потребляет выделенный <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, вычислительные ресурсы
+поток обходится вам дорого: он потребляет выделенный <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, вычислительные ресурсы
 биддера и пропускную способность сети.</p>
 <p>Но далеко не каждый запрос полезен. Многие приходят по инвентарю, который вам
 никогда не понадобится: страны, на которые вы не таргетируетесь, издатели, о
 которых вы не слышали, размеры объявлений, под которые нет креативов. Ваш биддер
 всё равно вынужден принять и отклонить каждый такой запрос.</p>
-<p>В типичной конфигурации <strong>более половины <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> уходит впустую.</strong></p>
+<p>В типичной конфигурации <strong>более половины <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> уходит впустую.</strong></p>
 <h2 id="cat-scan">Что делает Cat-Scan<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan работает параллельно с вашим биддером и обеспечивает три ключевые функции:</p>
 <h3 id="1">1. Прозрачность<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>Платформа восстанавливает отчётность о производительности из <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-экспортов Google
-(поскольку Reporting API отсутствует) и показывает полную воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>: от
-исходного <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> через ставки, победы, показы, клики до расходов. Данные
+<p>Платформа восстанавливает отчётность о производительности из <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-экспортов Google
+(поскольку Reporting API отсутствует) и показывает полную воронку <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>: от
+исходного <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> через ставки, победы, показы, клики до расходов. Данные
 детализируются по географии, издателям, размерам объявлений, креативам и
 конфигурациям претаргетинга.</p>
 <p>Это позволяет отвечать на вопросы:
-- Какие страны потребляют <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, но не приносят побед?
-- У каких издателей высокий <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, но нулевой расход?
+- Какие страны потребляют <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, но не приносят побед?
+- У каких издателей высокий <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, но нулевой расход?
 - Какие размеры объявлений получают трафик, но не имеют соответствующих креативов?
 - Какие конфигурации претаргетинга работают хорошо, а какие — плохо?</p>
 <h3 id="2">2. Управление<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
@@ -1559,7 +1559,7 @@
 <td>Аккаунт покупателя в Google Authorized Buyers, идентифицируемый по <code>buyer_account_id</code>. Одна организация может иметь несколько мест.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
+<td><strong><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></strong></td>
 <td>Queries Per Second (запросы в секунду): максимальная частота запросов на ставку, которую вы запрашиваете у Google. Google регулирует фактический объём в зависимости от уровня вашего аккаунта, поэтому важно использовать каждый запрос эффективно.</td>
 </tr>
 <tr>
@@ -1567,16 +1567,16 @@
 <td>Серверные фильтры, определяющие, какие запросы Google будет вам отправлять. Контролируют: географию, размеры объявлений, форматы, платформы, типы креативов. Доступно 10 конфигураций на место.</td>
 </tr>
 <tr>
-<td><strong>Воронка <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong></td>
+<td><strong>Воронка <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr></strong></td>
 <td>Последовательность от получения запроса на ставку через размещение ставки, победу в аукционе, показ объявления, клик до конверсии. На каждом этапе происходят потери; Cat-Scan показывает, где именно.</td>
 </tr>
 <tr>
 <td><strong>Потери (waste)</strong></td>
-<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, потребляемый запросами, которые ваш биддер не может или не будет использовать. Цель — сократить потери, не теряя ценный трафик.</td>
+<td><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, потребляемый запросами, которые ваш биддер не может или не будет использовать. Цель — сократить потери, не теряя ценный трафик.</td>
 </tr>
 <tr>
 <td><strong>Конфигурация (config)</strong></td>
-<td>Сокращение от «конфигурация претаргетинга». Каждая имеет состояние (активна/приостановлена), максимальный <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> и правила включения/исключения для географий, размеров, форматов и платформ.</td>
+<td>Сокращение от «конфигурация претаргетинга». Каждая имеет состояние (активна/приостановлена), максимальный <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> и правила включения/исключения для географий, размеров, форматов и платформ.</td>
 </tr>
 </tbody>
 </table>
