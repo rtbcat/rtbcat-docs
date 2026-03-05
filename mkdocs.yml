@@ -83,9 +83,8 @@ nav:
   - Home: index.md
   - "Part 0: Getting Started":
       - What is Cat-Scan?: 00-what-is-cat-scan.md
-      - Logging In: 01-logging-in.md
+      - Login Errors: 01-logging-in.md
       - Setting Up CSV Reports: 02-setting-up-csv-reports.md
-      - Navigating the Dashboard: 02-navigating-the-dashboard.md
   - "Part I: Media Buyer Track":
       - QPS Funnel: 03-qps-funnel.md
       - Analyzing Waste: 04-analyzing-waste.md
@@ -96,6 +95,7 @@ nav:
       - Data Import: 09-data-import.md
       - Reports: 10-reading-reports.md
   - "Part II: DevOps Track":
+      - Admin Navigation: 02-navigating-the-dashboard.md
       - Architecture: 11-architecture.md
       - Deployment: 12-deployment.md
       - Health Monitoring: 13-health-monitoring.md
@@ -109,11 +109,15 @@ nav:
       - Glossary: glossary.md
 
 markdown_extensions:
+  - abbr
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/abbreviations.md
   - tables
   - toc:
       permalink: true

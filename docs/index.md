@@ -92,13 +92,13 @@ Everyone reads this.
   What the platform does, who it is for, and the core concepts you need before
   anything else: seats, QPS, pretargeting, the RTB funnel.
 
-- [Chapter 1: Logging In](01-logging-in.md)
-  Authentication methods (Google OAuth, local accounts), the login page, what
-  to do when login fails, and how the seat selector works.
+- [Chapter 1: Login Errors](01-logging-in.md)
+  Diagnosing authentication failures: redirect loops, 502/503 errors, session
+  expiry, permission issues. The redirect-loop problem in detail.
 
-- [Chapter 2: Navigating the Dashboard](02-navigating-the-dashboard.md)
-  The sidebar, seat switching, language selector, the setup checklist for new
-  accounts, and how pages are organized.
+- [Setting Up CSV Reports](02-setting-up-csv-reports.md)
+  Create the five reports Cat-Scan needs. Complete metrics reference with
+  every dimension and measure explained.
 
 ### Part I: Media Buyer Track
 
@@ -158,6 +158,9 @@ For media buyers, campaign managers, and optimization engineers.
 ### Part II: DevOps Track
 
 For platform engineers, SREs, and system administrators.
+
+- [Admin Navigation](02-navigating-the-dashboard.md)
+  Sidebar layout, restricted users, setup checklist, language support.
 
 - [Chapter 11: Architecture Overview](11-architecture.md)
   System topology: FastAPI backend, Next.js 14 frontend, Postgres (Cloud SQL),

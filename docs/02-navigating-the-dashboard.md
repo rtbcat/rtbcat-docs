@@ -1,6 +1,6 @@
-# Chapter 2: Navigating the Dashboard
+# Admin Navigation
 
-*Audience: everyone*
+*Audience: DevOps, administrators*
 
 ## Sidebar layout
 
@@ -9,28 +9,28 @@ or expanded. Your preference is remembered across sessions.
 
 ```
 Seat Selector
- ├── QPS Waste Optimizer         /              (home)
- ├── Creatives                   /creatives
- ├── Campaigns                   /campaigns
- ├── Change History              /history
- ├── Import                      /import
- │
- ├── QPS (expandable)
- │   ├── Publisher                /qps/publisher
- │   ├── Geo                     /qps/geo
- │   └── Size                    /qps/size
- │
- ├── Settings (expandable)
- │   ├── Connected Accounts      /settings/accounts
- │   ├── Data Retention          /settings/retention
- │   └── System Status           /settings/system
- │
- ├── Admin (sudo users only)
- │   ├── Users                   /admin/users
- │   ├── Configuration           /admin/configuration
- │   └── Audit Log               /admin/audit-log
- │
- └── Footer: user email, version, docs link
+ +-- QPS Waste Optimizer         /              (home)
+ +-- Creatives                   /creatives
+ +-- Campaigns                   /campaigns
+ +-- Change History              /history
+ +-- Import                      /import
+ |
+ +-- QPS (expandable)
+ |   +-- Publisher                /qps/publisher
+ |   +-- Geo                     /qps/geo
+ |   +-- Size                    /qps/size
+ |
+ +-- Settings (expandable)
+ |   +-- Connected Accounts      /settings/accounts
+ |   +-- Data Retention          /settings/retention
+ |   +-- System Status           /settings/system
+ |
+ +-- Admin (sudo users only)
+ |   +-- Users                   /admin/users
+ |   +-- Configuration           /admin/configuration
+ |   +-- Audit Log               /admin/audit-log
+ |
+ +-- Footer: user email, version, docs link
 ```
 
 Sections auto-expand when you navigate into them.
@@ -62,5 +62,6 @@ selector is in the sidebar. Your preference is saved per-user.
 
 ## Next steps
 
-- Media buyers: start with [Understanding Your QPS Funnel](03-qps-funnel.md)
-- DevOps: start with [Architecture Overview](11-architecture.md)
+- [Architecture Overview](11-architecture.md): system topology and containers
+- [Health Monitoring](13-health-monitoring.md): health endpoints and diagnostics
+- [User Administration](16-user-admin.md): managing users, roles, and permissions

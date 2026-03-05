@@ -69,5 +69,5 @@ Before you continue, make sure these terms are clear:
 
 ## Next steps
 
-- [Logging In](01-logging-in.md): access the dashboard
-- [Navigating the Dashboard](02-navigating-the-dashboard.md): find your way around
+- [Login Errors](01-logging-in.md): troubleshooting authentication failures
+- [Setting Up CSV Reports](02-setting-up-csv-reports.md): create the five reports Cat-Scan needs
