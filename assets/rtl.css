@@ -1,0 +1,125 @@
+/*
+ * RTL fixes for Hebrew (he) and Arabic (ar) locales.
+ *
+ * Material for MkDocs sets dir="rtl" on <body> when the theme language is
+ * an RTL language.  The rules below patch the remaining bidi edge-cases:
+ *   1. Inline code inside RTL paragraphs must be bidi-isolated so the
+ *      Unicode Bidi Algorithm doesn't re-order brackets / punctuation.
+ *   2. Code blocks and their containers must stay LTR.
+ *   3. Admonition / details border accent must flip to the right side.
+ *   4. Tables keep a start-aligned first column.
+ *   5. Navigation "back to top" and header buttons need correct margins.
+ *
+ * All selectors are scoped to [dir="rtl"] so LTR locales are unaffected.
+ */
+
+/* ── 1. Inline code: bidi-isolate ────────────────────────────────── */
+
+[dir="rtl"] code {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+/* ── 2. Code blocks: force LTR + left-align ──────────────────────── */
+
+[dir="rtl"] pre,
+[dir="rtl"] .highlight pre,
+[dir="rtl"] .highlighttable {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="rtl"] .highlight code {
+  unicode-bidi: isolate;
+  direction: ltr;
+  text-align: left;
+}
+
+/* Line numbers column stays LTR too */
+[dir="rtl"] .highlighttable .linenodiv {
+  direction: ltr;
+  text-align: right;
+}
+
+/* ── 3. Admonitions / details: flip accent border ────────────────── */
+
+[dir="rtl"] .admonition,
+[dir="rtl"] details {
+  border-left: none;
+  border-right: 0.2rem solid var(--md-accent-fg-color, #448aff);
+}
+
+[dir="rtl"] .admonition-title,
+[dir="rtl"] summary {
+  padding-left: 0.6rem;
+  padding-right: 2.4rem;
+}
+
+[dir="rtl"] .admonition-title::before,
+[dir="rtl"] summary::before {
+  left: auto;
+  right: 0.6rem;
+}
+
+/* ── 4. Tables ────────────────────────────────────────────────────── */
+
+[dir="rtl"] .md-typeset table:not([class]) th,
+[dir="rtl"] .md-typeset table:not([class]) td {
+  text-align: start;
+}
+
+/* ── 5. Header / nav button spacing ──────────────────────────────── */
+
+[dir="rtl"] .md-header__button.md-logo {
+  margin-left: 0.4rem;
+  margin-right: 0;
+}
+
+/* Search input placeholder alignment */
+[dir="rtl"] .md-search__input {
+  padding-left: 2.2rem;
+  padding-right: 4.4rem;
+}
+
+/* ── 6. Sidebar TOC active indicator ─────────────────────────────── */
+
+[dir="rtl"] .md-nav__link--active {
+  border-left: none;
+  border-right: 0.15rem solid var(--md-accent-fg-color, #448aff);
+  padding-right: 0.6rem;
+}
+
+/* ── 7. Content lists ────────────────────────────────────────────── */
+
+[dir="rtl"] .md-typeset ul,
+[dir="rtl"] .md-typeset ol {
+  margin-left: 0;
+  margin-right: 0.625em;
+}
+
+/* ── 8. Permalink anchors ────────────────────────────────────────── */
+
+[dir="rtl"] .md-typeset .headerlink {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* ── 9. Footer navigation (prev / next) ─────────────────────────── */
+
+[dir="rtl"] .md-footer__link--prev .md-footer__direction {
+  text-align: right;
+}
+
+[dir="rtl"] .md-footer__link--next .md-footer__direction {
+  text-align: left;
+}
+
+/* ── 10. Tab labels ──────────────────────────────────────────────── */
+
+[dir="rtl"] .md-typeset .tabbed-labels {
+  direction: rtl;
+}
+
+[dir="rtl"] .md-typeset .tabbed-labels > label {
+  direction: rtl;
+}

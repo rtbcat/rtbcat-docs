@@ -1,0 +1,1900 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize your queries-per-second allocation.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.rtb.cat/ru/">
+      
+      
+      
+        <link rel="next" href="00-what-is-cat-scan/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="en">
+        
+          <link rel="alternate" href="/ar/" hreflang="ar">
+        
+          <link rel="alternate" href="/da/" hreflang="da">
+        
+          <link rel="alternate" href="/es/" hreflang="es">
+        
+          <link rel="alternate" href="/fr/" hreflang="fr">
+        
+          <link rel="alternate" href="/he/" hreflang="he">
+        
+          <link rel="alternate" href="/nl/" hreflang="nl">
+        
+          <link rel="alternate" href="/pl/" hreflang="pl">
+        
+          <link rel="alternate" href="/ru/" hreflang="ru">
+        
+          <link rel="alternate" href="/uk/" hreflang="uk">
+        
+          <link rel="alternate" href="/zh/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Home - Cat-Scan Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/rtl.css">
+    
+      <link rel="stylesheet" href="../assets/tooltips.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cat-scan" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="./" title="Cat-Scan Documentation" class="md-header__button md-logo" aria-label="Cat-Scan Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cat-Scan Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/ar/" hreflang="ar" class="md-select__link">
+              العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/da/" hreflang="da" class="md-select__link">
+              Dansk
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/es/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/he/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/nl/" hreflang="nl" class="md-select__link">
+              Nederlands
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/pl/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/ru/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/uk/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/zh/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rtbcat/rtbcat-docs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rtbcat/rtbcat-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./" title="Cat-Scan Documentation" class="md-nav__button md-logo" aria-label="Cat-Scan Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cat-Scan Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rtbcat/rtbcat-docs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rtbcat/rtbcat-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проблема в одной картинке
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Проблема в одной картинке">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему это сложнее, чем кажется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Для кого это руководство
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как читать это руководство
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Оглавление
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Оглавление">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть 0: Начало работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть I: Направление для медиабайера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть II: Направление для DevOps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть III: Справочник
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 0: Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 0: Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00-what-is-cat-scan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is Cat-Scan?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-logging-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-setting-up-csv-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up CSV Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Media Buyer Track
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I: Media Buyer Track
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03-qps-funnel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QPS Funnel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-analyzing-waste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analyzing Waste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-managing-creatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Creatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06-pretargeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretargeting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07-optimizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimizer (BYOM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08-conversions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09-data-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Import
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10-reading-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: DevOps Track
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II: DevOps Track
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-navigating-the-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13-health-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="16-user-admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="17-integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III: Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III: Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проблема в одной картинке
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Проблема в одной картинке">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему это сложнее, чем кажется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Для кого это руководство
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как читать это руководство
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Оглавление
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Оглавление">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть 0: Начало работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть I: Направление для медиабайера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть II: Направление для DevOps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть III: Справочник
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="cat-scan">Руководство пользователя Cat-Scan<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h1>
+<h2 id="_1">Проблема в одной картинке<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><img alt="QPS-воронка" src="../assets/qps-funnel.svg" /></p>
+<p>Google отправляет вашему биддеру поток запросов ставок. Каждую секунду десятки
+тысяч запросов поступают от биржи Authorized Buyers к вашему эндпоинту. Ваш
+биддер оценивает каждый из них, решает, делать ли ставку, и отвечает -- и все это
+в течение нескольких миллисекунд.</p>
+<p>Вот что упускают большинство людей: <strong>подавляющая часть этого сигнала -- шум.</strong>
+Типичное место, получающее 50 000 <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, может обнаружить, что 30 000 из этих
+запросов приходят на инвентарь, который медиабайер никогда не собирался покупать:
+неподходящие географии, нерелевантные домены издателей, размеры объявлений без
+подходящего креатива. Ваш биддер все равно должен принять, разобрать и отклонить
+каждый запрос. Это стоит пропускной способности, вычислительных ресурсов и денег.</p>
+<p>Диаграмма выше показывает это как дождь. <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> от Google -- это распылитель наверху;
+капли разлетаются по широкой площади. Ваш биддер -- маленькое ведро внизу. Все,
+что не попадает в ведро (капли, падающие левее и правее), -- это потери. Вы за
+них заплатили. Вы ничего не получили взамен.</p>
+<p><strong>Cat-Scan существует, чтобы сделать ведро шире, а дождь -- уже.</strong></p>
+<p>Он делает это, давая вам видимость того, где возникают потери (какие регионы,
+какие издатели, какие размеры объявлений, какие креативы) и инструменты для их
+устранения у источника -- через конфигурации претаргетинга, предоставляемые Google.</p>
+<h3 id="_2">Почему это сложнее, чем кажется<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Google Authorized Buyers дает вам всего <strong>10 конфигураций претаргетинга на место</strong>,
+а также грубые географические группы (Восток США, Запад США, Европа, Азия).
+Reporting API отсутствует. Все данные об эффективности поступают из <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-экспортов,
+которые приходят по электронной почте. Сам интерфейс претаргетинга <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr> функционален,
+но затрудняет обзор полной картины по конфигам или отмену неудачного изменения.</p>
+<p>Cat-Scan закрывает эти пробелы:</p>
+<ul>
+<li>Он <strong>восстанавливает отчетность из <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-экспортов</strong> (ручная загрузка или
+  автоматический импорт из Gmail), дедуплицируя при импорте, чтобы повторная
+  обработка не приводила к двойному подсчету.</li>
+<li>Он показывает <strong>полную <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>-воронку</strong> -- от сырого <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> через ставки, победы,
+  показы, клики и расход -- с разбивкой по любому измерению: география, издатель,
+  размер объявления, креатив, конфиг.</li>
+<li>Он обеспечивает <strong>безопасное управление претаргетингом</strong> с историей, поэтапными
+  изменениями, предварительным просмотром с пробным прогоном и откатом в один клик.</li>
+<li>Он запускает <strong>оптимизатор</strong>, который оценивает сегменты и предлагает изменения
+  конфигов с защитными механизмами воркфлоу (безопасный / сбалансированный /
+  агрессивный), чтобы ни одно изменение не вступило в силу без проверки.</li>
+</ul>
+<h3 id="_3">Для кого это руководство<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>У этого руководства два направления, потому что Cat-Scan обслуживает две совершенно
+разные роли:</p>
+<p><strong>Медиабайеры и менеджеры кампаний</strong> используют Cat-Scan для понимания того, куда
+уходит бюджет, поиска потерь, управления креативами, настройки претаргетинга и
+одобрения предложений по оптимизации. Они мыслят категориями <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr>, процента побед
+и <abbr title="Рентабельность рекламных расходов — доход на каждый доллар, потраченный на рекламу.">ROAS</abbr>. Их главы сосредоточены на том, что показывает интерфейс, что означают
+цифры и какие действия предпринять.</p>
+<p><strong>DevOps и платформенные инженеры</strong> используют Cat-Scan для развертывания,
+мониторинга и устранения неполадок системы. Они мыслят категориями контейнеров,
+health-эндпоинтов и планов запросов. Их главы сосредоточены на архитектуре,
+пайплайнах развертывания, операциях с базой данных и руководствах по инцидентам.</p>
+<p>Оба направления опираются на общую основу (начало работы, глоссарий), и главы
+содержат перекрестные ссылки там, где рабочие процессы пересекаются. Медиабайер,
+сообщающий, что «актуальность данных не работает», и DevOps-инженер, отлаживающий
+стоящий за этим запрос, должны иметь возможность указать на одну и ту же запись
+в глоссарии и понять друг друга.</p>
+<hr />
+<h2 id="_4">Как читать это руководство<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Часть 0</strong> для всех. Начните здесь.</li>
+<li><strong>Часть I</strong> -- направление для медиабайера. Если вы работаете с кампаниями,
+  оптимизацией или закупкой, это ваш путь.</li>
+<li><strong>Часть II</strong> -- направление для DevOps. Если вы развертываете, мониторите или
+  администрируете Cat-Scan, это ваш путь.</li>
+<li><strong>Часть III</strong> -- общий справочник: глоссарий, FAQ и указатель API.</li>
+</ul>
+<p>Последовательное чтение не требуется. Каждая глава самодостаточна. Следуйте
+ссылкам, соответствующим вашей роли.</p>
+<hr />
+<h2 id="_5">Оглавление<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="0">Часть 0: Начало работы<a class="headerlink" href="#0" title="Permanent link">&para;</a></h3>
+<p>Эту часть читают все.</p>
+<ul>
+<li>
+<p><a href="00-what-is-cat-scan/">Глава 0: Что такое Cat-Scan?</a>
+  Что делает платформа, для кого она предназначена и основные концепции, которые
+  нужно знать в первую очередь: места, <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, претаргетинг, <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>-воронка.</p>
+</li>
+<li>
+<p><a href="01-logging-in/">Глава 1: Вход в систему</a>
+  Способы аутентификации (Google OAuth, локальные аккаунты), страница входа, что
+  делать при неудачном входе и как работает выбор места.</p>
+</li>
+<li>
+<p><a href="02-navigating-the-dashboard/">Глава 2: Навигация по панели управления</a>
+  Боковая панель, переключение между местами, выбор языка, чек-лист настройки
+  для новых аккаунтов и организация страниц.</p>
+</li>
+</ul>
+<h3 id="i">Часть I: Направление для медиабайера<a class="headerlink" href="#i" title="Permanent link">&para;</a></h3>
+<p>Для медиабайеров, менеджеров кампаний и инженеров по оптимизации.</p>
+<ul>
+<li>
+<p><a href="03-qps-funnel/">Глава 3: Как читать <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>-воронку</a>
+  Главная страница. Как читать разбивку воронки: показы, ставки, победы, расход,
+  процент побед, <abbr title="Показатель кликабельности — клики, разделённые на показы, выраженные в процентах.">CTR</abbr>, <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr>. Что такое «потери» в конкретных терминах. Карточки
+  конфигов и что контролируют их поля.</p>
+</li>
+<li>
+<p><a href="04-analyzing-waste/">Глава 4: Анализ потерь по измерениям</a>
+  Три представления анализа потерь и когда использовать каждое:</p>
+</li>
+<li><strong>Географическое</strong> (<code>/qps/geo</code>): какие страны и города расходуют <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> без
+    конверсий.</li>
+<li><strong>По издателям</strong> (<code>/qps/publisher</code>): какие домены и приложения показывают
+    низкую эффективность.</li>
+<li>
+<p><strong>По размерам</strong> (<code>/qps/size</code>): какие размеры объявлений получают трафик, но не
+    имеют подходящих креативов. Google отправляет ~400 различных размеров;
+    большинство нерелевантны для медийной рекламы фиксированного размера.</p>
+</li>
+<li>
+<p><a href="05-managing-creatives/">Глава 5: Управление креативами</a>
+  Галерея креативов (<code>/creatives</code>): просмотр по формату, фильтрация по уровню
+  эффективности, поиск по ID. Миниатюры, значки форматов, диагностика целевых
+  URL. Кластеризация по кампаниям (<code>/campaigns</code>): перетаскивание, AI-автокластеризация,
+  пул неназначенных.</p>
+</li>
+<li>
+<p><a href="06-pretargeting/">Глава 6: Настройка претаргетинга</a>
+  Что контролирует конфиг претаргетинга (географии, размеры, форматы, платформы,
+  максимальный <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>). Как читать карточку конфига. Применение изменений с пробным
+  прогоном. Хронология истории изменений (<code>/history</code>). Откат: как работает, зачем
+  нужен и когда использовать.</p>
+</li>
+<li>
+<p><a href="07-optimizer/">Глава 7: Оптимизатор (<abbr title="Принеси свою модель — система Cat-Scan для подключения собственной внешней модели оценки для формирования предложений по оптимизации.">BYOM</abbr>)</a>
+  Bring Your Own Model: регистрация внешнего эндпоинта оценки, его валидация,
+  активация. Жизненный цикл «оценка -- предложение -- одобрение -- применение».
+  Пресеты воркфлоу: безопасный, сбалансированный, агрессивный. Экономика:
+  эффективный <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr>, базовая стоимость хостинга, сводка эффективности. Как выглядит
+  предложение и как его оценить.</p>
+</li>
+<li>
+<p><a href="08-conversions/">Глава 8: Конверсии и атрибуция</a>
+  Подключение источника конверсий. Интеграция пикселя. Настройка вебхука: <abbr title="Код аутентификации сообщений на основе хеша — криптографическая подпись для проверки полезных данных вебхуков.">HMAC</abbr>-
+  подписи, общие секреты, ограничение частоты. Проверки готовности. Статистика
+  приема. Что означает «здоровье конверсий» и как читать страницу статуса
+  безопасности.</p>
+</li>
+<li>
+<p><a href="09-data-import/">Глава 9: Импорт данных</a>
+  Как данные попадают в Cat-Scan и почему это важно. Ручная загрузка <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>
+  (<code>/import</code>): перетаскивание, маппинг столбцов, валидация, поблочная загрузка для
+  больших файлов. Автоимпорт через Gmail: как работает, как проверить статус, что
+  происходит при сбое. Таблица актуальности данных: что означает «импортировано» и
+  «отсутствует» для каждой даты и типа отчета. Гарантии дедупликации.</p>
+</li>
+<li>
+<p><a href="10-reading-reports/">Глава 10: Как читать отчеты</a>
+  Статистика расходов, панели эффективности конфигов, метрики эффективности
+  эндпоинтов. Как интерпретировать тренды. Что показывает ежедневная разбивка.
+  Сравнение снимков: до и после изменения претаргетинга.</p>
+</li>
+</ul>
+<h3 id="ii-devops">Часть II: Направление для DevOps<a class="headerlink" href="#ii-devops" title="Permanent link">&para;</a></h3>
+<p>Для платформенных инженеров, <abbr title="Инженерия надёжности сайтов — дисциплина эксплуатации надёжных производственных систем.">SRE</abbr> и системных администраторов.</p>
+<ul>
+<li>
+<p><a href="11-architecture/">Глава 11: Обзор архитектуры</a>
+  Топология системы: бэкенд на FastAPI, фронтенд на Next.js 14, Postgres
+  (Cloud SQL), BigQuery. Почему используются обе базы данных (стоимость, латентность,
+  преагрегация, управление соединениями). Компоновка контейнеров: api, dashboard,
+  oauth2-proxy, cloudsql-proxy, nginx. Цепочка доверия аутентификации: OAuth2 Proxy
+  устанавливает <code>&lt;AUTH_HEADER&gt;</code>, nginx передает его, API доверяет ему.</p>
+</li>
+<li>
+<p><a href="12-deployment/">Глава 12: Развертывание</a>
+  CI/CD-пайплайн: GitHub Actions <code>build-and-push.yml</code> собирает образы при пуше;
+  <code>deploy.yml</code> запускается только вручную (с подтверждением <code>DEPLOY</code>). Теги образов
+  в Artifact Registry (<code>sha-XXXXXXX</code>). Последовательность развертывания: git pull
+  на ВМ, docker compose pull, пересоздание, очистка. Верификация после
+  развертывания: проверка здоровья, проверка контрактов. Почему автоматическое
+  развертывание отключено (инцидент в январе 2026). Как проверить развертывание:
+  <code>curl /api/health | jq .git_sha</code>.</p>
+</li>
+<li>
+<p><a href="13-health-monitoring/">Глава 13: Мониторинг здоровья и диагностика</a>
+  Health-эндпоинты: <code>/api/health</code> (проверка жизнеспособности), <code>/system/data-health</code>
+  (полнота данных). Страница состояния системы (<code>/settings/system</code>): Python, Node,
+  FFmpeg, база данных, диск, миниатюры. Скрипты проверки среды выполнения:
+  <code>diagnose_v1_buyer_report_coverage.sh</code>,
+  <code>run_v1_runtime_health_strict_dispatch.sh</code>. Канареечная аутентификация:
+  <code>CATSCAN_CANARY_EMAIL</code>, <code>CATSCAN_BEARER_TOKEN</code>. CI-воркфлоу:
+  <code>v1-runtime-health-strict.yml</code> и значения PASS/FAIL/BLOCKED.</p>
+</li>
+<li>
+<p><a href="14-database/">Глава 14: Операции с базой данных</a>
+  Только Postgres в продакшене. Cloud SQL через прокси-контейнер. Ключевые таблицы
+  и их масштаб: <code>rtb_daily</code> (~84M строк), <code>rtb_bidstream</code> (~21M строк),
+  <code>rtb_quality</code>, <code>rtb_bid_filtering</code>. Критические индексы:
+  <code>(buyer_account_id, metric_date DESC)</code>. Модель соединений: по запросу (без пула),
+  <code>run_in_executor</code> для асинхронности. Таймауты запросов
+  (<code>SET LOCAL statement_timeout</code>). Настройки хранения данных. Роль BigQuery:
+  пакетное хранилище сырых данных; Postgres предоставляет приложению преагрегированные
+  данные.</p>
+</li>
+<li>
+<p><a href="15-troubleshooting/">Глава 15: Руководство по устранению неполадок</a>
+  Известные паттерны сбоев и способы их устранения:</p>
+</li>
+<li><strong>Цикл авторизации</strong>: Cloud SQL Proxy не работает,
+    <code>_get_or_create_oauth2_user</code> молча падает, <code>/auth/check</code> возвращает
+    <code>{authenticated:false}</code>, фронтенд зацикливается на редиректах. Трехуровневое
+    исправление. Как обнаружить: счетчик редиректов в браузере, 503 от
+    <code>/auth/check</code>.</li>
+<li><strong>Таймаут data-freshness</strong>: Большие таблицы выполняют последовательное
+    сканирование вместо использования индексов. Симптомы: <code>/uploads/data-freshness</code>
+    завершается по таймауту или возвращает 500. Диагностика: <code>pg_stat_activity</code>,
+    <code>EXPLAIN ANALYZE</code>. Паттерн исправления: generate_series + EXISTS.</li>
+<li><strong>Сбой импорта из Gmail</strong>: <code>/gmail/status</code> показывает ошибку. Проверьте
+    контейнер Cloud SQL Proxy. Проверьте количество непрочитанных.</li>
+<li>
+<p><strong>Порядок перезапуска контейнеров</strong>: <code>cloudsql-proxy</code> должен быть работоспособен
+    до запуска <code>api</code>. Признаки неправильного порядка: connection refused в логах API.</p>
+</li>
+<li>
+<p><a href="16-user-admin/">Глава 16: Управление пользователями и правами</a>
+  Панель администратора (<code>/admin</code>): создание пользователей (локальных и
+  предварительное создание OAuth), управление ролями, права по местам. Сервисные
+  аккаунты: загрузка JSON учетных данных GCP, что это открывает (обнаружение мест,
+  синхронизация претаргетинга). Пользователи с ограниченным доступом: что они видят
+  и что скрыто. Журнал аудита: какие действия отслеживаются, как фильтровать,
+  период хранения.</p>
+</li>
+<li>
+<p><a href="17-integrations/">Глава 17: Интеграции</a>
+  Сервисные аккаунты GCP и подключение проекта. Google Authorized Buyers API:
+  обнаружение мест, синхронизация конфигов претаргетинга, синхронизация <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>-
+  эндпоинтов. Интеграция с Gmail: OAuth2 для автоматического приема отчетов.
+  Провайдеры языкового AI: Gemini, Claude, Grok (для определения языка креативов и
+  оповещений о несоответствиях). Вебхуки конверсий: регистрация эндпоинтов,
+  <abbr title="Код аутентификации сообщений на основе хеша — криптографическая подпись для проверки полезных данных вебхуков.">HMAC</abbr>-верификация, ограничение частоты, мониторинг актуальности.</p>
+</li>
+</ul>
+<h3 id="iii">Часть III: Справочник<a class="headerlink" href="#iii" title="Permanent link">&para;</a></h3>
+<p>Общий для обоих направлений.</p>
+<ul>
+<li>
+<p><a href="glossary/">Глоссарий</a>
+  Каждый термин на двух языках. Колонка медиабайера: «претаргетинг» -- это «правила,
+  определяющие, какие запросы ставок достигают вашего биддера». Колонка DevOps:
+  «претаргетинг» -- это «изменяемая сущность, синхронизируемая из <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr> API, хранящаяся
+  в <code>pretargeting_configs</code>, доступная через <code>/settings/pretargeting</code>». Обоим нужно
+  одно и то же слово; никто не использует определение другого.</p>
+</li>
+<li>
+<p><a href="faq/">Часто задаваемые вопросы</a>
+  С тегами по ролям. Вопросы медиабайера («Почему мое покрытие 74%?») рядом
+  с вопросами DevOps-инженера («Почему проверка runtime health strict gate не
+  прошла?»). Ответы содержат ссылки на соответствующие главы.</p>
+</li>
+<li>
+<p><a href="api-reference/">Краткий справочник по API</a>
+  Все 118+ эндпоинтов, сгруппированных по доменам: ядро, места, креативы, кампании,
+  аналитика, настройки, администрирование, оптимизатор, конверсии, интеграции,
+  загрузки, снимки, авторизация. Метод, путь, ключевые параметры и что возвращает.
+  Не замена спецификации OpenAPI по адресу <code>/api/docs</code>, но навигационный указатель.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/rtbcat/rtbcat-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/tooltips.js"></script>
+      
+    
+  </body>
+</html>
