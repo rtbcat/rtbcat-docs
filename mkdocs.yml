@@ -126,6 +126,10 @@ markdown_extensions:
 
 extra_css:
   - assets/rtl.css
+  - assets/tooltips.css
+
+extra_javascript:
+  - assets/tooltips.js
 
 extra:
   social:
