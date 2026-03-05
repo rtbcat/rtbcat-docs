@@ -1,4 +1,4 @@
-*[QPS]: Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.
+*[QPS]: Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.
 *[RTB]: Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.
 *[CPM]: Cost Per Mille — the price paid per 1,000 ad impressions.
 *[CTR]: Click-Through Rate — clicks divided by impressions, expressed as a percentage.
