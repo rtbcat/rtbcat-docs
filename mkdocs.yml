@@ -1,0 +1,129 @@
+site_name: Cat-Scan Documentation
+site_url: https://docs.rtb.cat
+site_description: >-
+  Cat-Scan is a QPS optimization platform for Google Authorized Buyers.
+  Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize
+  your queries-per-second allocation.
+
+repo_url: https://github.com/rtbcat/rtbcat-docs
+repo_name: rtbcat/rtbcat-docs
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ar
+          name: العربية
+          build: true
+        - locale: da
+          name: Dansk
+          build: true
+        - locale: es
+          name: Español
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+        - locale: he
+          name: עברית
+          build: true
+        - locale: nl
+          name: Nederlands
+          build: true
+        - locale: pl
+          name: Polski
+          build: true
+        - locale: ru
+          name: Русский
+          build: true
+        - locale: uk
+          name: Українська
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+
+nav:
+  - Home: index.md
+  - "Part 0: Getting Started":
+      - What is Cat-Scan?: 00-what-is-cat-scan.md
+      - Logging In: 01-logging-in.md
+      - Setting Up CSV Reports: 02-setting-up-csv-reports.md
+      - Navigating the Dashboard: 02-navigating-the-dashboard.md
+  - "Part I: Media Buyer Track":
+      - QPS Funnel: 03-qps-funnel.md
+      - Analyzing Waste: 04-analyzing-waste.md
+      - Managing Creatives: 05-managing-creatives.md
+      - Pretargeting: 06-pretargeting.md
+      - Optimizer (BYOM): 07-optimizer.md
+      - Conversions: 08-conversions.md
+      - Data Import: 09-data-import.md
+      - Reports: 10-reading-reports.md
+  - "Part II: DevOps Track":
+      - Architecture: 11-architecture.md
+      - Deployment: 12-deployment.md
+      - Health Monitoring: 13-health-monitoring.md
+      - Database: 14-database.md
+      - Troubleshooting: 15-troubleshooting.md
+      - User Admin: 16-user-admin.md
+      - Integrations: 17-integrations.md
+  - "Part III: Reference":
+      - API Reference: api-reference.md
+      - FAQ: faq.md
+      - Glossary: glossary.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rtbcat/rtbcat-docs
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
