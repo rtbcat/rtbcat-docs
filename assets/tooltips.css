@@ -1,12 +1,14 @@
 /*
  * Custom styled tooltips for <abbr> elements.
  *
- * Native browser tooltips cannot be styled, so we suppress them and
- * render our own via a CSS pseudo-element powered by attr(title).
+ * The companion tooltips.js moves title → data-title on page load to
+ * suppress native browser tooltips.  CSS selectors target both attributes
+ * so the tooltip works even before JS runs.
  */
 
 /* Base: dotted underline + help cursor */
-abbr[title] {
+abbr[title],
+abbr[data-title] {
   text-decoration: underline dotted;
   text-decoration-color: var(--md-accent-fg-color, #ffa726);
   text-underline-offset: 0.15em;
@@ -14,15 +16,15 @@ abbr[title] {
   position: relative;
 }
 
-/* Suppress native tooltip */
-abbr[title]:hover {
-  text-decoration: underline dotted;
-  text-decoration-color: var(--md-accent-fg-color, #ffa726);
+/* Tooltip box — targets both pre-JS (title) and post-JS (data-title) */
+abbr[data-title]::after {
+  content: attr(data-title);
 }
-
-/* Tooltip box */
 abbr[title]::after {
   content: attr(title);
+}
+abbr[title]::after,
+abbr[data-title]::after {
   position: absolute;
   bottom: calc(100% + 0.5rem);
   left: 50%;
@@ -46,13 +48,15 @@ abbr[title]::after {
 }
 
 /* Show on hover */
-abbr[title]:hover::after {
+abbr[title]:hover::after,
+abbr[data-title]:hover::after {
   opacity: 1;
   visibility: visible;
 }
 
-/* Flip tooltip below if near top of viewport — handled by a small arrow */
-abbr[title]::before {
+/* Arrow */
+abbr[title]::before,
+abbr[data-title]::before {
   content: "";
   position: absolute;
   bottom: calc(100% + 0.15rem);
@@ -67,13 +71,15 @@ abbr[title]::before {
   transition: opacity 0.15s ease, visibility 0.15s ease;
 }
 
-abbr[title]:hover::before {
+abbr[title]:hover::before,
+abbr[data-title]:hover::before {
   opacity: 1;
   visibility: visible;
 }
 
 /* RTL: keep tooltip text LTR for English definitions */
-[dir="rtl"] abbr[title]::after {
+[dir="rtl"] abbr[title]::after,
+[dir="rtl"] abbr[data-title]::after {
   direction: ltr;
   text-align: left;
 }
