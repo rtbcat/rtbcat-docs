@@ -1561,12 +1561,12 @@ tienduizenden queries vanuit de Authorized Buyers-exchange richting uw endpoint.
 Uw bidder beoordeelt elk verzoek, beslist of hij biedt en antwoordt, allemaal
 binnen enkele milliseconden.</p>
 <p>Dit is wat de meeste mensen missen: <strong>het overgrote deel van dat signaal is
-ruis.</strong> Een typische seat die 50.000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> ontvangt, kan ontdekken dat 30.000 van
+ruis.</strong> Een typische seat die 50.000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> ontvangt, kan ontdekken dat 30.000 van
 die queries betrekking hebben op inventaris die de mediakoper nooit zou kopen:
 verkeerde regio's, irrelevante uitgeverdomeinen, advertentieformaten zonder
 passende creative. Uw bidder moet ze allemaal nog steeds ontvangen, parsen en
 afwijzen. Dat kost bandbreedte, rekenkracht en geld.</p>
-<p>Het diagram hierboven laat het zien als regenval. De <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> van Google is de
+<p>Het diagram hierboven laat het zien als regenval. De <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> van Google is de
 sproeikop bovenaan; de druppels waaieren uit over een groot oppervlak. Uw bidder
 is de kleine emmer onderaan. Alles wat de emmer mist (de druppels die links en
 rechts terechtkomen) is verspilling. U hebt ervoor betaald. U hebt er niets
@@ -1588,7 +1588,7 @@ wijziging ongedaan te maken.</p>
 <li>Het <strong>herbouwt rapportages vanuit <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-exports</strong> (handmatige upload of
   automatische Gmail-ingestie), met ontdubbeling bij import zodat herverwerking
   nooit dubbel telt.</li>
-<li>Het toont de <strong>volledige <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnel</strong>, van ruwe <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> via biedingen, gewonnen
+<li>Het toont de <strong>volledige <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnel</strong>, van ruwe <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> via biedingen, gewonnen
   veilingen, impressies, klikken en bestedingen, uitgesplitst naar elke
   dimensie: geografie, uitgever, advertentieformaat, creative, configuratie.</li>
 <li>Het biedt <strong>veilig pretargetingbeheer</strong> met geschiedenis, gefaseerde
@@ -1635,7 +1635,7 @@ die bij uw rol passen.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Hoofdstuk 0: Wat is Cat-Scan?</a>
   Wat het platform doet, voor wie het is en de kernconcepten die u nodig hebt
-  voordat u verder gaat: seats, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, pretargeting, de <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnel.</p>
+  voordat u verder gaat: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, de <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnel.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Hoofdstuk 1: Inloggen</a>
@@ -1652,7 +1652,7 @@ die bij uw rol passen.</p>
 <p>Voor mediakopers, campagnemanagers en optimalisatie-engineers.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Hoofdstuk 3: Inzicht in uw <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>-funnel</a>
+<p><a href="03-qps-funnel/">Hoofdstuk 3: Inzicht in uw <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-funnel</a>
   De startpagina. Hoe u de funneluitsplitsing leest: impressies, biedingen,
   gewonnen veilingen, besteding, winstpercentage, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Wat "verspilling"
   in concrete termen betekent. Configuratiekaarten en wat hun velden regelen.</p>
@@ -1661,7 +1661,7 @@ die bij uw rol passen.</p>
 <p><a href="04-analyzing-waste/">Hoofdstuk 4: Verspilling analyseren per dimensie</a>
   De drie verspillingsanalyseweergaven en wanneer u welke gebruikt:</p>
 </li>
-<li><strong>Geografisch</strong> (<code>/qps/geo</code>): welke landen en steden <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> opslokken zonder
+<li><strong>Geografisch</strong> (<code>/qps/geo</code>): welke landen en steden <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> opslokken zonder
     te converteren.</li>
 <li><strong>Uitgever</strong> (<code>/qps/publisher</code>): welke domeinen en apps
     ondermaats presteren.</li>
@@ -1680,7 +1680,7 @@ die bij uw rol passen.</p>
 <li>
 <p><a href="06-pretargeting/">Hoofdstuk 6: Pretargeting-configuratie</a>
   Wat een pretargeting-configuratie regelt (geo's, formaten, advertentietypen,
-  platformen, max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>). Hoe u een configuratiekaart leest. Wijzigingen toepassen
+  platformen, max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Hoe u een configuratiekaart leest. Wijzigingen toepassen
   met dry-run voorvertoning. De wijzigingsgeschiedenistijdlijn (<code>/history</code>).
   Terugdraaien: hoe het werkt, waarom het bestaat en wanneer u het gebruikt.</p>
 </li>

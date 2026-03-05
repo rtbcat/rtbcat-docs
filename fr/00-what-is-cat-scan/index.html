@@ -1503,7 +1503,7 @@
 
 <h1 id="chapitre-0-quest-ce-que-cat-scan">Chapitre 0 : Qu'est-ce que Cat-Scan ?<a class="headerlink" href="#chapitre-0-quest-ce-que-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>Public visé : tout le monde</em></p>
-<p>Cat-Scan est une plateforme d'optimisation du <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> pour Google Authorized Buyers.
+<p>Cat-Scan est une plateforme d'optimisation du <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> pour Google Authorized Buyers.
 Elle vous offre une visibilité sur la manière dont l'allocation en
 requêtes par seconde de votre enchérisseur est utilisée (et gaspillée), et
 fournit les outils nécessaires pour l'améliorer.</p>
@@ -1511,25 +1511,25 @@ fournit les outils nécessaires pour l'améliorer.</p>
 <h2 id="le-probleme-central">Le problème central<a class="headerlink" href="#le-probleme-central" title="Permanent link">&para;</a></h2>
 <p>Lorsque vous exploitez un siège sur l'exchange Google Authorized Buyers, Google
 envoie un flux de demandes d'enchères à votre point d'accès enchérisseur. Ce
-flux a un coût : il consomme votre <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> alloué, la capacité de calcul de votre
+flux a un coût : il consomme votre <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> alloué, la capacité de calcul de votre
 enchérisseur et votre bande passante réseau.</p>
 <p>Mais toutes les demandes d'enchères ne sont pas utiles. Beaucoup arrivent pour
 de l'inventaire que vous n'achèteriez jamais : des pays que vous ne ciblez pas,
 des éditeurs dont vous n'avez jamais entendu parler, des formats publicitaires
 pour lesquels vous n'avez aucune création. Votre enchérisseur doit tout de même
 recevoir et rejeter chacune d'entre elles.</p>
-<p>Dans une configuration type, <strong>plus de la moitié de votre <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> est du gaspillage.</strong></p>
+<p>Dans une configuration type, <strong>plus de la moitié de votre <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> est du gaspillage.</strong></p>
 <h2 id="ce-que-cat-scan-fait-pour-y-remedier">Ce que Cat-Scan fait pour y remédier<a class="headerlink" href="#ce-que-cat-scan-fait-pour-y-remedier" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan fonctionne en parallèle de votre enchérisseur et fournit trois choses :</p>
 <h3 id="1-visibilite">1. Visibilité<a class="headerlink" href="#1-visibilite" title="Permanent link">&para;</a></h3>
 <p>Il reconstruit les rapports de performance à partir des exports <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> de Google
 (puisqu'il n'existe pas d'API de reporting) et vous présente l'entonnoir <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>
-complet : du <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> brut jusqu'aux enchères, victoires, impressions, clics et
+complet : du <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> brut jusqu'aux enchères, victoires, impressions, clics et
 dépenses. Il ventile ces données par zone géographique, éditeur, format
 publicitaire, création et configuration de préciblage.</p>
 <p>Cela vous permet de répondre à des questions telles que :
-- Quels pays consomment du <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> sans générer de victoires ?
-- Quels éditeurs ont un <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> élevé mais aucune dépense ?
+- Quels pays consomment du <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> sans générer de victoires ?
+- Quels éditeurs ont un <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> élevé mais aucune dépense ?
 - Quels formats publicitaires reçoivent du trafic mais n'ont pas de création correspondante ?
 - Quelles configurations de préciblage sont performantes et lesquelles ne le sont pas ?</p>
 <h3 id="2-controle">2. Contrôle<a class="headerlink" href="#2-controle" title="Permanent link">&para;</a></h3>
@@ -1561,7 +1561,7 @@ automatisée ne soit mise en production sans validation humaine.</p>
 <td>Un compte acheteur sur Google Authorized Buyers, identifié par un <code>buyer_account_id</code>. Une organisation peut disposer de plusieurs sièges.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second (requêtes par seconde) : le débit maximal de demandes d'enchères que vous demandez à Google d'envoyer à votre enchérisseur. Google régule le volume réel en fonction du niveau de votre compte, il est donc essentiel d'utiliser chaque requête efficacement.</td>
 </tr>
 <tr>
@@ -1574,11 +1574,11 @@ automatisée ne soit mise en production sans validation humaine.</p>
 </tr>
 <tr>
 <td><strong>Gaspillage (Waste)</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> consommé par des demandes d'enchères que votre enchérisseur ne peut ou ne veut pas exploiter. L'objectif est de réduire le gaspillage sans perdre de trafic à valeur ajoutée.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> consommé par des demandes d'enchères que votre enchérisseur ne peut ou ne veut pas exploiter. L'objectif est de réduire le gaspillage sans perdre de trafic à valeur ajoutée.</td>
 </tr>
 <tr>
 <td><strong>Config</strong></td>
-<td>Abréviation de configuration de préciblage. Chacune possède un état (active/suspendue), un <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> maximal et des règles d'inclusion/exclusion pour les zones géographiques, les formats, les types de formats et les plateformes.</td>
+<td>Abréviation de configuration de préciblage. Chacune possède un état (active/suspendue), un <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> maximal et des règles d'inclusion/exclusion pour les zones géographiques, les formats, les types de formats et les plateformes.</td>
 </tr>
 </tbody>
 </table>

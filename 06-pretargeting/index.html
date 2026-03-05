@@ -1543,7 +1543,7 @@ that match these criteria." You get <strong>10 configs per seat</strong>.</p>
 <td>Active (receiving traffic) or Suspended (paused).</td>
 </tr>
 <tr>
-<td><strong>Max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong>Max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Upper limit on queries per second this config accepts.</td>
 </tr>
 <tr>
@@ -1578,7 +1578,7 @@ its current state.</p>
 <p><img alt="Pretargeting config cards showing active and paused states" src="../images/screenshot-pretargeting-configs.png" /></p>
 <p>Key things to look at:</p>
 <ul>
-<li><strong>Active + high max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> + broad geos</strong> = this config is catching a lot of
+<li><strong>Active + high max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> + broad geos</strong> = this config is catching a lot of
   traffic. If it's also high-waste, it's your biggest optimization target.</li>
 <li><strong>Suspended</strong> = not receiving traffic. Useful for staging changes before
   going live.</li>

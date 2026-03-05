@@ -1503,28 +1503,28 @@
 
 <h1 id="chapter-0-what-is-cat-scan">Chapter 0: What is Cat-Scan?<a class="headerlink" href="#chapter-0-what-is-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>Audience: everyone</em></p>
-<p>Cat-Scan is a <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> optimization platform for Google Authorized Buyers. It gives
+<p>Cat-Scan is a <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> optimization platform for Google Authorized Buyers. It gives
 you visibility into how your bidder's query-per-second allocation is being
 used (and wasted) and provides the tools to improve it.</p>
 <p><img alt="QPS Funnel" src="../assets/qps-funnel.svg" /></p>
 <h2 id="the-core-problem">The core problem<a class="headerlink" href="#the-core-problem" title="Permanent link">&para;</a></h2>
 <p>When you operate a seat on Google's Authorized Buyers exchange, Google sends
 your bidder endpoint a stream of bid requests. You pay for this stream: it
-consumes your allocated <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, your bidder's compute, and your network bandwidth.</p>
+consumes your allocated <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, your bidder's compute, and your network bandwidth.</p>
 <p>But not every bid request is useful. Many arrive for inventory you'd never buy:
 countries you don't target, publishers you've never heard of, ad sizes you have
 no creatives for. Your bidder still has to receive and reject each one.</p>
-<p>In a typical setup, <strong>more than half of your <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> is waste.</strong></p>
+<p>In a typical setup, <strong>more than half of your <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> is waste.</strong></p>
 <h2 id="what-cat-scan-does-about-it">What Cat-Scan does about it<a class="headerlink" href="#what-cat-scan-does-about-it" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan sits alongside your bidder and provides three things:</p>
 <h3 id="1-visibility">1. Visibility<a class="headerlink" href="#1-visibility" title="Permanent link">&para;</a></h3>
 <p>It rebuilds performance reporting from Google's <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> exports (since there is no
-Reporting API) and shows you the full <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel: from raw <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> through bids,
+Reporting API) and shows you the full <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel: from raw <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> through bids,
 wins, impressions, clicks, and spend. It breaks this down by geography,
 publisher, ad size, creative, and pretargeting configuration.</p>
 <p>This lets you answer questions like:
-- Which countries are consuming <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> but generating no wins?
-- Which publishers have high <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> but zero spend?
+- Which countries are consuming <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> but generating no wins?
+- Which publishers have high <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> but zero spend?
 - Which ad sizes receive traffic but have no matching creative?
 - Which pretargeting configs are performing well vs. poorly?</p>
 <h3 id="2-control">2. Control<a class="headerlink" href="#2-control" title="Permanent link">&para;</a></h3>
@@ -1555,7 +1555,7 @@ change goes live without human review.</p>
 <td>A buyer account on Google Authorized Buyers, identified by a <code>buyer_account_id</code>. One organization can have multiple seats.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second: the maximum rate of bid requests you ask Google to send your bidder. Google throttles the actual volume based on your account tier, so you want to use every request efficiently.</td>
 </tr>
 <tr>
@@ -1568,11 +1568,11 @@ change goes live without human review.</p>
 </tr>
 <tr>
 <td><strong>Waste</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> consumed by bid requests your bidder can't or won't use. The goal is to reduce waste without losing valuable traffic.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> consumed by bid requests your bidder can't or won't use. The goal is to reduce waste without losing valuable traffic.</td>
 </tr>
 <tr>
 <td><strong>Config</strong></td>
-<td>Short for pretargeting configuration. Each has a state (active/suspended), a max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, and inclusion/exclusion rules for geos, sizes, formats, and platforms.</td>
+<td>Short for pretargeting configuration. Each has a state (active/suspended), a max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, and inclusion/exclusion rules for geos, sizes, formats, and platforms.</td>
 </tr>
 </tbody>
 </table>

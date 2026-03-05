@@ -1561,12 +1561,12 @@ titusindvis af forespørgsler ud fra Authorized Buyers-børsen mod dit endpoint.
 Din bidder evaluerer hver enkelt, beslutter om der skal bydes, og svarer —
 det hele inden for få millisekunder.</p>
 <p>Her er det, de fleste overser: <strong>langt størstedelen af det signal er støj.</strong>
-Et typisk seat, der modtager 50.000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, kan opleve, at 30.000 af de
+Et typisk seat, der modtager 50.000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, kan opleve, at 30.000 af de
 forespørgsler vedrører inventory, som mediakøberen aldrig ville have købt:
 forkerte geografier, irrelevante publisher-domæner, annonceformater uden
 matchende kreativ. Din bidder skal stadig modtage, parse og afvise hver enkelt.
 Det koster båndbredde, compute og penge.</p>
-<p>Diagrammet ovenfor viser det som regn. Googles <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> er dysen i toppen;
+<p>Diagrammet ovenfor viser det som regn. Googles <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> er dysen i toppen;
 dråberne spredes over et bredt område. Din bidder er den lille spand i bunden.
 Alt, der rammer ved siden af spanden (dråberne til venstre og højre), er spild.
 Du betalte for det. Du fik intet tilbage.</p>
@@ -1587,7 +1587,7 @@ konfigurationer eller at fortryde en ændring, der gik galt.</p>
 <li>Den <strong>genopbygger rapportering fra <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-eksporter</strong> (manuel upload eller
   automatisk Gmail-indlæsning), med deduplikering ved import, så
   genbehandling aldrig dobbelttæller.</li>
-<li>Den viser den <strong>fulde <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragt</strong>, fra rå <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> gennem bud, vindere,
+<li>Den viser den <strong>fulde <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragt</strong>, fra rå <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> gennem bud, vindere,
   visninger, klik og forbrug, opdelt efter enhver dimension: geografi,
   publisher, annonceformat, kreativ, konfiguration.</li>
 <li>Den tilbyder <strong>sikker pretargeting-styring</strong> med historik, trinvise
@@ -1632,7 +1632,7 @@ der matcher din rolle.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Kapitel 0: Hvad er Cat-Scan?</a>
   Hvad platformen gør, hvem den er til, og de kernebegreber, du skal kende,
-  før noget andet: seats, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, pretargeting, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragten.</p>
+  før noget andet: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-tragten.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Kapitel 1: Log ind</a>
@@ -1649,7 +1649,7 @@ der matcher din rolle.</p>
 <p>For mediakøbere, kampagneansvarlige og optimeringsingeniører.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Kapitel 3: Forstå din <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>-tragt</a>
+<p><a href="03-qps-funnel/">Kapitel 3: Forstå din <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-tragt</a>
   Forsiden. Sådan læser du tragtopdelingen: visninger, bud, vindere,
   forbrug, vindrate, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Hvad "spild" betyder i konkrete termer.
   Konfigurationskort og hvad deres felter styrer.</p>
@@ -1658,7 +1658,7 @@ der matcher din rolle.</p>
 <p><a href="04-analyzing-waste/">Kapitel 4: Analyse af spild efter dimension</a>
   De tre spildanalysevisninger, og hvornår du bruger dem:</p>
 </li>
-<li><strong>Geografisk</strong> (<code>/qps/geo</code>): hvilke lande og byer bruger <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> uden at
+<li><strong>Geografisk</strong> (<code>/qps/geo</code>): hvilke lande og byer bruger <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> uden at
     konvertere.</li>
 <li><strong>Publisher</strong> (<code>/qps/publisher</code>): hvilke domæner og apps underpræsterer.</li>
 <li>
@@ -1676,7 +1676,7 @@ der matcher din rolle.</p>
 <li>
 <p><a href="06-pretargeting/">Kapitel 6: Pretargeting-konfiguration</a>
   Hvad en pretargeting-konfiguration styrer (geografier, formater, platforme,
-  maks. <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>). Sådan læser du et konfigurationskort. Anvend ændringer med
+  maks. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Sådan læser du et konfigurationskort. Anvend ændringer med
   dry-run-forhåndsvisning. Ændringshistorik-tidslinjen (<code>/history</code>). Rollback:
   hvordan det virker, hvorfor det findes, og hvornår du bruger det.</p>
 </li>

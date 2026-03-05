@@ -1450,12 +1450,12 @@
 <p>当你从<a href="../03-qps-funnel/">漏斗</a>了解了浪费的<em>规模</em>之后，这三个视图告诉你
 浪费来自<em>哪里</em>。</p>
 <h2 id="qpsgeo">地理浪费（<code>/qps/geo</code>）<a class="headerlink" href="#qpsgeo" title="Permanent link">&para;</a></h2>
-<p>展示各国家和城市的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 消耗和表现。</p>
+<p>展示各国家和城市的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 消耗和表现。</p>
 <p><img alt="各国家 QPS 地理分布" src="../../images/screenshot-geo-qps.png" /></p>
 <p><strong>关注什么：</strong>
-- <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 高但胜出为零或接近零的国家，说明 Google 向你发送了你的买手不定向的
+- <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 高但胜出为零或接近零的国家，说明 Google 向你发送了你的买手不定向的
   地区流量。
-- <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 占比不成比例但花费很低的城市，长尾地区增加了流量但没有价值。</p>
+- <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 占比不成比例但花费很低的城市，长尾地区增加了流量但没有价值。</p>
 <p><strong>如何处理：</strong>
 - 将表现不佳的地区添加到预定向排除列表。参见<a href="../06-pretargeting/">预定向配置</a>。</p>
 <p><strong>控制项：</strong> 时间段选择器（7/14/30 天）、席位筛选器。</p>
@@ -1474,7 +1474,7 @@
 <p>展示哪些广告尺寸收到流量，以及你是否有对应素材。</p>
 <p><img alt="尺寸 QPS 分布" src="../../images/screenshot-size-qps.png" /></p>
 <p><strong>关注什么：</strong>
-- <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 高但<strong>没有匹配素材</strong>的尺寸。Google 发送约 400 种不同的广告尺寸。
+- <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 高但<strong>没有匹配素材</strong>的尺寸。Google 发送约 400 种不同的广告尺寸。
   如果你投放的是固定尺寸展示广告（非 HTML），大多数尺寸与你无关。每一个
   不匹配尺寸的请求都是纯浪费。
 - 有素材但表现不佳的尺寸，考虑素材资产是否适合该格式。</p>
@@ -1493,7 +1493,7 @@
 </ol>
 <h2 id="_2">相关内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">理解你的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 漏斗</a>：起点</li>
+<li><a href="../03-qps-funnel/">理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗</a>：起点</li>
 <li><a href="../06-pretargeting/">预定向配置</a>：对浪费发现采取行动</li>
 <li><a href="../10-reading-reports/">解读报告</a>：跟踪影响</li>
 </ul>

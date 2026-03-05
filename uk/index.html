@@ -1557,8 +1557,8 @@
 <h2 id="_1">Проблема в одному зображенні<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><img alt="Воронка QPS" src="../assets/qps-funnel.svg" /></p>
 <p>Google надсилає вашому біддеру потік запитів на ставки. Щосекунди десятки тисяч запитів надходять з біржі Authorized Buyers на ваш ендпоінт. Ваш біддер оцінює кожен із них, вирішує, чи робити ставку, і відповідає — усе за кілька мілісекунд.</p>
-<p>Ось що більшість людей не помічає: <strong>переважна більшість цього сигналу — шум.</strong> Типовий сіт, який отримує 50 000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, може виявити, що 30 000 із цих запитів стосуються інвентарю, який медіабаєр ніколи б не купив: неправильні географії, нерелевантні домени паблішерів, розміри оголошень без відповідних креативів. Ваш біддер все одно повинен отримати, розібрати та відхилити кожен із них. Це коштує пропускної здатності, обчислювальних ресурсів і грошей.</p>
-<p>Діаграма вище показує це як дощ. <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> від Google — це форсунка зверху; краплі розлітаються по широкій площі. Ваш біддер — маленьке відро знизу. Усе, що не потрапляє у відро (краплі, що падають ліворуч і праворуч) — це втрати. Ви за це заплатили. Ви нічого не отримали натомість.</p>
+<p>Ось що більшість людей не помічає: <strong>переважна більшість цього сигналу — шум.</strong> Типовий сіт, який отримує 50 000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, може виявити, що 30 000 із цих запитів стосуються інвентарю, який медіабаєр ніколи б не купив: неправильні географії, нерелевантні домени паблішерів, розміри оголошень без відповідних креативів. Ваш біддер все одно повинен отримати, розібрати та відхилити кожен із них. Це коштує пропускної здатності, обчислювальних ресурсів і грошей.</p>
+<p>Діаграма вище показує це як дощ. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> від Google — це форсунка зверху; краплі розлітаються по широкій площі. Ваш біддер — маленьке відро знизу. Усе, що не потрапляє у відро (краплі, що падають ліворуч і праворуч) — це втрати. Ви за це заплатили. Ви нічого не отримали натомість.</p>
 <p><strong>Cat-Scan існує, щоб зробити відро ширшим, а дощ — вужчим.</strong></p>
 <p>Він робить це, надаючи вам видимість того, де виникають втрати (які географії, які паблішери, які розміри оголошень, які креативи), і інструменти для їх усунення на джерелі, використовуючи конфігурації претаргетингу, які надає Google.</p>
 <h3 id="_2">Чому це складніше, ніж здається<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1566,7 +1566,7 @@
 <p>Cat-Scan усуває ці прогалини:</p>
 <ul>
 <li>Він <strong>відновлює звітність із <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-експортів</strong> (ручне завантаження або автоматичне отримання через Gmail), дедуплікуючи при імпорті, щоб повторна обробка ніколи не подвоювала дані.</li>
-<li>Він показує <strong>повну воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong> — від сирого <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> через ставки, виграші, покази, кліки та витрати — з розбивкою за будь-яким виміром: географія, паблішер, розмір оголошення, креатив, конфігурація.</li>
+<li>Він показує <strong>повну воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr></strong> — від сирого <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> через ставки, виграші, покази, кліки та витрати — з розбивкою за будь-яким виміром: географія, паблішер, розмір оголошення, креатив, конфігурація.</li>
 <li>Він забезпечує <strong>безпечне управління претаргетингом</strong> з історією, поетапними змінами, попереднім переглядом у режимі dry-run та відкатом в один клік.</li>
 <li>Він запускає <strong>оптимізатор</strong>, який оцінює сегменти та пропонує зміни конфігурацій з робочими запобіжниками (безпечний / збалансований / агресивний), щоб жодна зміна не набирала чинності без перевірки.</li>
 </ul>
@@ -1591,7 +1591,7 @@
 <ul>
 <li>
 <p><a href="00-what-is-cat-scan/">Розділ 0: Що таке Cat-Scan?</a>
-  Що робить платформа, для кого вона призначена та основні концепції, які потрібно знати перш за все: сіти, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, претаргетинг, воронка <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  Що робить платформа, для кого вона призначена та основні концепції, які потрібно знати перш за все: сіти, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, претаргетинг, воронка <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Розділ 1: Вхід у систему</a>
@@ -1606,14 +1606,14 @@
 <p>Для медіабаєрів, менеджерів кампаній та інженерів з оптимізації.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Розділ 3: Розуміння вашої воронки <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a>
+<p><a href="03-qps-funnel/">Розділ 3: Розуміння вашої воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>
   Головна сторінка. Як читати розбивку воронки: покази, ставки, виграші, витрати, win rate, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Що означає «втрати» в конкретних термінах. Картки конфігурацій та що контролюють їхні поля.</p>
 </li>
 <li>
 <p><a href="04-analyzing-waste/">Розділ 4: Аналіз втрат за вимірами</a>
   Три перегляди аналізу втрат та коли використовувати кожен:</p>
 </li>
-<li><strong>Географічний</strong> (<code>/qps/geo</code>): які країни та міста споживають <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> без конверсій.</li>
+<li><strong>Географічний</strong> (<code>/qps/geo</code>): які країни та міста споживають <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> без конверсій.</li>
 <li><strong>Паблішери</strong> (<code>/qps/publisher</code>): які домени та додатки показують низьку ефективність.</li>
 <li>
 <p><strong>Розмір</strong> (<code>/qps/size</code>): які розміри оголошень отримують трафік, але не мають відповідних креативів. Google надсилає ~400 різних розмірів; більшість не стосуються фіксованих дисплейних оголошень.</p>
@@ -1624,7 +1624,7 @@
 </li>
 <li>
 <p><a href="06-pretargeting/">Розділ 6: Конфігурація претаргетингу</a>
-  Що контролює конфігурація претаргетингу (географії, розміри, формати, платформи, максимальний <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>). Як читати картку конфігурації. Застосування змін із попереднім переглядом у режимі dry-run. Хронологія історії змін (<code>/history</code>). Відкат: як він працює, навіщо він існує та коли його використовувати.</p>
+  Що контролює конфігурація претаргетингу (географії, розміри, формати, платформи, максимальний <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Як читати картку конфігурації. Застосування змін із попереднім переглядом у режимі dry-run. Хронологія історії змін (<code>/history</code>). Відкат: як він працює, навіщо він існує та коли його використовувати.</p>
 </li>
 <li>
 <p><a href="07-optimizer/">Розділ 7: Оптимізатор (<abbr title="Bring Your Own Model — Cat-Scan's system for plugging in your own external scoring model to drive optimization proposals.">BYOM</abbr>)</a>

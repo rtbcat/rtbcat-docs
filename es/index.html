@@ -1560,12 +1560,12 @@
 miles de consultas salen del exchange de Authorized Buyers hacia su endpoint. Su bidder
 evalúa cada una, decide si pujar y responde, todo en cuestión de milisegundos.</p>
 <p>Esto es lo que la mayoría pasa por alto: <strong>la gran mayoría de esa señal es
-ruido.</strong> Un seat típico que ingiere 50,000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> podría encontrar que 30,000 de esas
+ruido.</strong> Un seat típico que ingiere 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> podría encontrar que 30,000 de esas
 consultas son para inventario que el comprador de medios nunca iba a adquirir: geografías
 incorrectas, dominios de editores irrelevantes, tamaños de anuncios sin creatividad
 compatible. Su bidder aún tiene que recibir, analizar y rechazar cada una. Eso cuesta
 ancho de banda, cómputo y dinero.</p>
-<p>El diagrama de arriba lo muestra como lluvia. El <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> de Google es la boquilla en la
+<p>El diagrama de arriba lo muestra como lluvia. El <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> de Google es la boquilla en la
 parte superior; las gotas se dispersan por un área amplia. Su bidder es el pequeño balde
 en la parte inferior. Todo lo que no cae en el balde (las gotas que caen a izquierda y
 derecha) es desperdicio. Usted pagó por ello. No obtuvo nada a cambio.</p>
@@ -1585,7 +1585,7 @@ mal.</p>
 <li><strong>Reconstruye los informes a partir de exportaciones <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></strong> (carga manual o ingesta
   automática de Gmail), deduplicando en la importación para que el reprocesamiento nunca
   cuente dos veces.</li>
-<li>Muestra el <strong>embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> completo</strong>, desde el <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> sin procesar pasando por pujas,
+<li>Muestra el <strong>embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> completo</strong>, desde el <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> sin procesar pasando por pujas,
   victorias, impresiones, clics y gasto, desglosado por cualquier dimensión: geografía,
   editor, tamaño de anuncio, creatividad, configuración.</li>
 <li>Proporciona <strong>gestión segura de pretargeting</strong> con historial, cambios por etapas,
@@ -1630,7 +1630,7 @@ correspondan a su rol.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Capítulo 0: ¿Qué es Cat-Scan?</a>
   Qué hace la plataforma, para quién es y los conceptos clave que necesita antes de
-  cualquier otra cosa: seats, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, pretargeting, el embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  cualquier otra cosa: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, el embudo <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Capítulo 1: Inicio de Sesión</a>
@@ -1647,7 +1647,7 @@ correspondan a su rol.</p>
 <p>Para compradores de medios, gestores de campañas e ingenieros de optimización.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Capítulo 3: Comprendiendo Su Embudo de <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a>
+<p><a href="03-qps-funnel/">Capítulo 3: Comprendiendo Su Embudo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>
   La página principal. Cómo leer el desglose del embudo: impresiones, pujas, victorias,
   gasto, tasa de ganancia, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Qué significa "desperdicio" en términos concretos.
   Tarjetas de configuración y qué controlan sus campos.</p>
@@ -1656,7 +1656,7 @@ correspondan a su rol.</p>
 <p><a href="04-analyzing-waste/">Capítulo 4: Análisis del Desperdicio por Dimensión</a>
   Las tres vistas de análisis de desperdicio y cuándo usar cada una:</p>
 </li>
-<li><strong>Geográfico</strong> (<code>/qps/geo</code>): qué países y ciudades consumen <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> sin
+<li><strong>Geográfico</strong> (<code>/qps/geo</code>): qué países y ciudades consumen <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> sin
     convertir.</li>
 <li><strong>Editor</strong> (<code>/qps/publisher</code>): qué dominios y aplicaciones tienen bajo
     rendimiento.</li>
@@ -1675,7 +1675,7 @@ correspondan a su rol.</p>
 <li>
 <p><a href="06-pretargeting/">Capítulo 6: Configuración de Pretargeting</a>
   Qué controla una configuración de pretargeting (geografías, tamaños, formatos,
-  plataformas, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> máximo). Cómo leer una tarjeta de configuración. Aplicar cambios con
+  plataformas, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> máximo). Cómo leer una tarjeta de configuración. Aplicar cambios con
   vista previa de simulación. La línea de tiempo del historial de cambios (<code>/history</code>).
   Reversión: cómo funciona, por qué existe y cuándo usarla.</p>
 </li>

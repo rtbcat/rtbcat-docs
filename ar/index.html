@@ -1561,12 +1561,12 @@
 يقيّم مزايدك كل طلب، ويقرر ما إذا كان سيزايد عليه، ثم يستجيب — كل ذلك في
 غضون بضعة أجزاء من الألف من الثانية.</p>
 <p>هنا ما يغفل عنه معظم الناس: <strong>الغالبية العظمى من هذه الإشارات هي مجرد
-ضوضاء.</strong> مقعد نموذجي يستقبل 50,000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> قد يجد أن 30,000 من تلك الاستعلامات
+ضوضاء.</strong> مقعد نموذجي يستقبل 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> قد يجد أن 30,000 من تلك الاستعلامات
 تخص مخزوناً لم يكن المشتري الإعلامي لينفق عليه أبداً: مواقع جغرافية خاطئة،
 نطاقات ناشرين غير ذات صلة، أحجام إعلانية لا تتطابق مع أي تصميم إبداعي.
 ومع ذلك، يتعين على مزايدك استقبال كل طلب وتحليله ورفضه. وهذا يكلف نطاقاً
 ترددياً وحوسبة وأموالاً.</p>
-<p>يُظهر الرسم البياني أعلاه ذلك كهطول المطر. <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> من Google هو الفوهة في
+<p>يُظهر الرسم البياني أعلاه ذلك كهطول المطر. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> من Google هو الفوهة في
 الأعلى؛ والقطرات تنتشر على مساحة واسعة. مزايدك هو الدلو الصغير في الأسفل.
 كل ما يخطئ الدلو (القطرات التي تسقط يميناً ويساراً) هو هدر. لقد دفعت ثمنه
 ولم تحصل على شيء في المقابل.</p>
@@ -1586,7 +1586,7 @@
 <li>يقوم <strong>بإعادة بناء التقارير من تصديرات <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr></strong> (رفع يدوي أو استيراد تلقائي
   من Gmail)، مع إزالة التكرارات عند الاستيراد بحيث لا تحدث عملية إعادة
   المعالجة عدّاً مزدوجاً أبداً.</li>
-<li>يعرض <strong>قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> الكامل</strong>، من <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> الخام مروراً بالمزايدات والفوز ومرات الظهور
+<li>يعرض <strong>قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> الكامل</strong>، من <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخام مروراً بالمزايدات والفوز ومرات الظهور
   والنقرات والإنفاق، مقسّماً حسب أي بُعد: المنطقة الجغرافية، الناشر، حجم
   الإعلان، التصميم الإبداعي، الإعداد.</li>
 <li>يوفر <strong>إدارة آمنة للاستهداف المسبق</strong> مع سجل التغييرات والتعديلات المرحلية
@@ -1629,7 +1629,7 @@
 <li>
 <p><a href="00-what-is-cat-scan/">الفصل 0: ما هو Cat-Scan؟</a>
   ماذا تفعل المنصة، ولمن هي، والمفاهيم الأساسية التي تحتاجها قبل أي شيء
-  آخر: المقاعد، <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>، الاستهداف المسبق، قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
+  آخر: المقاعد، <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>، الاستهداف المسبق، قمع <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">الفصل 1: تسجيل الدخول</a>
@@ -1646,7 +1646,7 @@
 <p>لمشتري الوسائط ومديري الحملات ومهندسي التحسين.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">الفصل 3: فهم قمع <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> الخاص بك</a>
+<p><a href="03-qps-funnel/">الفصل 3: فهم قمع <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> الخاص بك</a>
   الصفحة الرئيسية. كيف تقرأ تحليل القمع: مرات الظهور، المزايدات، الفوز،
   الإنفاق، معدل الفوز، <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>، <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. ماذا يعني "الهدر" بمصطلحات ملموسة.
   بطاقات الإعداد وما تتحكم به حقولها.</p>
@@ -1655,7 +1655,7 @@
 <p><a href="04-analyzing-waste/">الفصل 4: تحليل الهدر حسب البُعد</a>
   عروض تحليل الهدر الثلاثة ومتى تستخدم كلاً منها:</p>
 </li>
-<li><strong>الجغرافي</strong> (<code>/qps/geo</code>): أي البلدان والمدن تستهلك <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> دون تحويل.</li>
+<li><strong>الجغرافي</strong> (<code>/qps/geo</code>): أي البلدان والمدن تستهلك <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> دون تحويل.</li>
 <li><strong>الناشر</strong> (<code>/qps/publisher</code>): أي النطاقات والتطبيقات ذات الأداء الضعيف.</li>
 <li>
 <p><strong>الحجم</strong> (<code>/qps/size</code>): أي أحجام الإعلانات تستقبل حركة مرور لكن ليس
@@ -1672,7 +1672,7 @@
 <li>
 <p><a href="06-pretargeting/">الفصل 6: إعداد الاستهداف المسبق</a>
   ما يتحكم به إعداد الاستهداف المسبق (المناطق الجغرافية، الأحجام، التنسيقات،
-  المنصات، الحد الأقصى لـ <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>). كيف تقرأ بطاقة الإعداد. تطبيق التغييرات مع
+  المنصات، الحد الأقصى لـ <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). كيف تقرأ بطاقة الإعداد. تطبيق التغييرات مع
   معاينة التشغيل التجريبي. الجدول الزمني لسجل التغييرات (<code>/history</code>).
   التراجع: كيف يعمل، لماذا موجود، ومتى تستخدمه.</p>
 </li>

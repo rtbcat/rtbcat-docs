@@ -1450,12 +1450,12 @@
 <p>Gdy już wiesz, <em>ile</em> marnotrawstwa masz (z <a href="../03-qps-funnel/">lejka</a>), te
 trzy widoki powiedzą Ci, <em>skąd</em> ono pochodzi.</p>
 <h2 id="marnotrawstwo-geograficzne-qpsgeo">Marnotrawstwo geograficzne (<code>/qps/geo</code>)<a class="headerlink" href="#marnotrawstwo-geograficzne-qpsgeo" title="Permanent link">&para;</a></h2>
-<p>Pokazuje zużycie <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> i wydajność według kraju i miasta.</p>
+<p>Pokazuje zużycie <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> i wydajność według kraju i miasta.</p>
 <p><img alt="Geograficzny podział QPS według kraju" src="../../images/screenshot-geo-qps.png" /></p>
 <p><strong>Na co zwrócić uwagę:</strong>
-- Kraje z wysokim <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, ale zerowymi lub bliskimi zeru wygranymi. Google
+- Kraje z wysokim <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, ale zerowymi lub bliskimi zeru wygranymi. Google
   wysyła Ci ruch z regionów, na które Twoi kupujący nie targetują.
-- Miasta z nieproporcjonalnie dużym udziałem <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, ale niskimi wydatkami —
+- Miasta z nieproporcjonalnie dużym udziałem <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, ale niskimi wydatkami —
   czyli „długi ogon" regionów geograficznych, które dodają wolumen, ale nie
   wartość.</p>
 <p><strong>Co z tym zrobić:</strong>
@@ -1480,7 +1480,7 @@ trzy widoki powiedzą Ci, <em>skąd</em> ono pochodzi.</p>
 <p>Pokazuje, które rozmiary reklam otrzymują ruch i czy masz dla nich kreacje.</p>
 <p><img alt="Podział QPS według rozmiaru" src="../../images/screenshot-size-qps.png" /></p>
 <p><strong>Na co zwrócić uwagę:</strong>
-- Rozmiary z wysokim <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, ale <strong>bez pasującej kreacji</strong>. Google wysyła ok. 400
+- Rozmiary z wysokim <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, ale <strong>bez pasującej kreacji</strong>. Google wysyła ok. 400
   różnych rozmiarów reklam. Jeśli prowadzisz reklamy displayowe o stałym
   rozmiarze (nie HTML), większość tych rozmiarów jest nieistotna. Każde
   zapytanie o niedopasowany rozmiar to czyste marnotrawstwo.
@@ -1502,7 +1502,7 @@ trzy widoki powiedzą Ci, <em>skąd</em> ono pochodzi.</p>
 </ol>
 <h2 id="powiazane">Powiązane<a class="headerlink" href="#powiazane" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Zrozumienie lejka <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a>: punkt wyjścia</li>
+<li><a href="../03-qps-funnel/">Zrozumienie lejka <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>: punkt wyjścia</li>
 <li><a href="../06-pretargeting/">Konfiguracja pretargetingu</a>: działanie na podstawie
   znalezionych problemów</li>
 <li><a href="../10-reading-reports/">Czytanie raportów</a>: śledzenie wpływu zmian</li>

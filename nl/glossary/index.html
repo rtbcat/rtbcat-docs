@@ -1307,13 +1307,13 @@ systeem terugvindt.</p>
 <td><code>buyer_account_id</code> in Postgres. Opgeslagen in de <code>seats</code>-tabel. Gesynchroniseerd via <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second: het maximale tempo van biedverzoeken dat u Google vraagt te verzenden. Google beperkt het werkelijke volume op basis van uw accountniveau.</td>
 <td>Geconfigureerde limiet per pretargeting-configuratie. Werkelijk inkomend tempo gemonitord via <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-funnelmetingen in <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Verspilling</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> verbruikt door biedverzoeken die uw bidder afwijst (verkeerde geo's, verkeerde formaten, geen passende creative). Geld uitgegeven aan niets.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> verbruikt door biedverzoeken die uw bidder afwijst (verkeerde geo's, verkeerde formaten, geen passende creative). Geld uitgegeven aan niets.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Berekend uit <code>rtb_daily</code>-aggregaten. Zichtbaar in de funnel-API.</td>
 </tr>
 <tr>
@@ -1323,7 +1323,7 @@ systeem terugvindt.</p>
 </tr>
 <tr>
 <td><strong>Funnel</strong></td>
-<td>De voortgang van biedverzoek naar besteding: <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> -&gt; Biedingen -&gt; Gewonnen -&gt; Impressies -&gt; Klikken -&gt; Besteding. Elke stap heeft uitval.</td>
+<td>De voortgang van biedverzoek naar besteding: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Biedingen -&gt; Gewonnen -&gt; Impressies -&gt; Klikken -&gt; Besteding. Elke stap heeft uitval.</td>
 <td>Berekend uit <code>rtb_daily</code>-metingen. Geserveerd door <code>GET /analytics/rtb-funnel</code>. Frontend cachet gedurende 30 minuten.</td>
 </tr>
 <tr>
@@ -1338,7 +1338,7 @@ systeem terugvindt.</p>
 </tr>
 <tr>
 <td><strong>Configuratiekaart</strong></td>
-<td>Het UI-paneel dat de status van een pretargeting-configuratie toont, met max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, geo's, formaten, advertentietypen en platformen.</td>
+<td>Het UI-paneel dat de status van een pretargeting-configuratie toont, met max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, geo's, formaten, advertentietypen en platformen.</td>
 <td><code>PretargetingConfigCard</code> React-component. Data van <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1389,7 +1389,7 @@ systeem terugvindt.</p>
 <tr>
 <td><strong>Runtime health gate</strong></td>
 <td>(Geen koperterm)</td>
-<td><code>v1-runtime-health-strict.yml</code> CI-workflow. Voert end-to-end checks uit: API-gezondheid, datagezondheid, conversies, optimizer, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> SLO. Retourneert PASS/FAIL/BLOCKED per check.</td>
+<td><code>v1-runtime-health-strict.yml</code> CI-workflow. Voert end-to-end checks uit: API-gezondheid, datagezondheid, conversies, optimizer, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> SLO. Retourneert PASS/FAIL/BLOCKED per check.</td>
 </tr>
 <tr>
 <td><strong>Contractcheck</strong></td>

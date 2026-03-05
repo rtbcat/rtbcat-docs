@@ -1450,12 +1450,12 @@
 <p>Una vez que sabes <em>cuánto</em> desperdicio tienes (desde el <a href="../03-qps-funnel/">embudo</a>),
 estas tres vistas te dicen <em>de dónde</em> proviene.</p>
 <h2 id="desperdicio-geografico-qpsgeo">Desperdicio geográfico (<code>/qps/geo</code>)<a class="headerlink" href="#desperdicio-geografico-qpsgeo" title="Permanent link">&para;</a></h2>
-<p>Muestra el consumo de <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> y el rendimiento por país y ciudad.</p>
+<p>Muestra el consumo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> y el rendimiento por país y ciudad.</p>
 <p><img alt="Desglose geográfico de QPS por país" src="../../images/screenshot-geo-qps.png" /></p>
 <p><strong>Qué buscar:</strong>
-- Países con alto <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> pero cero o casi cero victorias. Google te está enviando
+- Países con alto <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> pero cero o casi cero victorias. Google te está enviando
   tráfico de regiones que tus compradores no segmentan.
-- Ciudades con una participación desproporcionada de <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> pero bajo gasto, lo que
+- Ciudades con una participación desproporcionada de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> pero bajo gasto, lo que
   indica geos de cola larga que añaden volumen pero no valor.</p>
 <p><strong>Qué hacer al respecto:</strong>
 - Añade los geos con bajo rendimiento a tu lista de exclusión de pretargeting.
@@ -1480,7 +1480,7 @@ estas tres vistas te dicen <em>de dónde</em> proviene.</p>
 <p>Muestra qué tamaños de anuncio reciben tráfico y si tienes creatividades para ellos.</p>
 <p><img alt="Desglose de QPS por tamaño" src="../../images/screenshot-size-qps.png" /></p>
 <p><strong>Qué buscar:</strong>
-- Tamaños con alto <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> pero <strong>sin creatividad compatible</strong>. Google envía
+- Tamaños con alto <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> pero <strong>sin creatividad compatible</strong>. Google envía
   aproximadamente 400 tamaños de anuncio diferentes. Si utilizas anuncios de
   display de tamaño fijo (no HTML), la mayoría de esos tamaños son irrelevantes.
   Cada solicitud para un tamaño sin coincidencia es puro desperdicio.
@@ -1503,7 +1503,7 @@ estas tres vistas te dicen <em>de dónde</em> proviene.</p>
 </ol>
 <h2 id="relacionado">Relacionado<a class="headerlink" href="#relacionado" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Entender tu embudo de <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a>: el punto de partida</li>
+<li><a href="../03-qps-funnel/">Entender tu embudo de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>: el punto de partida</li>
 <li><a href="../06-pretargeting/">Configuración de pretargeting</a>: actuar según los hallazgos de desperdicio</li>
 <li><a href="../10-reading-reports/">Leer tus informes</a>: seguir el impacto</li>
 </ul>

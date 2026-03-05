@@ -1451,12 +1451,12 @@
 l'<a href="../03-qps-funnel/">entonnoir</a>), ces trois vues vous indiquent <em>d'où</em> il
 provient.</p>
 <h2 id="gaspillage-geographique-qpsgeo">Gaspillage géographique (<code>/qps/geo</code>)<a class="headerlink" href="#gaspillage-geographique-qpsgeo" title="Permanent link">&para;</a></h2>
-<p>Affiche la consommation de <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> et les performances par pays et ville.</p>
+<p>Affiche la consommation de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> et les performances par pays et ville.</p>
 <p><img alt="Répartition géographique du QPS par pays" src="../../images/screenshot-geo-qps.png" /></p>
 <p><strong>Ce qu'il faut rechercher :</strong>
-- Des pays avec un <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> élevé mais zéro victoire ou presque. Google vous envoie
+- Des pays avec un <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> élevé mais zéro victoire ou presque. Google vous envoie
   du trafic provenant de régions que vos acheteurs ne ciblent pas.
-- Des villes avec une part de <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> disproportionnée mais de faibles dépenses,
+- Des villes avec une part de <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> disproportionnée mais de faibles dépenses,
   indiquant des zones géographiques de longue traîne qui ajoutent du volume
   mais aucune valeur.</p>
 <p><strong>Que faire :</strong>
@@ -1484,7 +1484,7 @@ provient.</p>
 créations correspondantes.</p>
 <p><img alt="Répartition du QPS par format" src="../../images/screenshot-size-qps.png" /></p>
 <p><strong>Ce qu'il faut rechercher :</strong>
-- Des formats avec un <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> élevé mais <strong>aucune création correspondante</strong>. Google
+- Des formats avec un <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> élevé mais <strong>aucune création correspondante</strong>. Google
   envoie environ 400 formats publicitaires différents. Si vous diffusez des
   publicités display de taille fixe (pas HTML), la plupart de ces formats sont
   non pertinents. Chaque requête pour un format sans correspondance est du pur
@@ -1508,7 +1508,7 @@ de la couverture.</p>
 </ol>
 <h2 id="en-lien">En lien<a class="headerlink" href="#en-lien" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Comprendre votre entonnoir <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a> : le point de départ</li>
+<li><a href="../03-qps-funnel/">Comprendre votre entonnoir <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a> : le point de départ</li>
 <li><a href="../06-pretargeting/">Configuration de préciblage</a> : agir sur les constats de gaspillage</li>
 <li><a href="../10-reading-reports/">Lire vos rapports</a> : suivre l'impact des modifications</li>
 </ul>

@@ -1560,7 +1560,7 @@
 thousands of queries pour out of the Authorized Buyers exchange toward your
 endpoint. Your bidder evaluates each one, decides whether to bid, and responds,
 all within a few milliseconds.</p>
-<p>Most of that traffic is noise. A typical seat ingesting 50,000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> might find
+<p>Most of that traffic is noise. A typical seat ingesting 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> might find
 that only 10,000 of those queries are actually usable. There are a few
 reasons: the media buyer only wants inventory up to a certain price, or only
 has creatives for a specific set of ad sizes. Your bidder still has to
@@ -1583,7 +1583,7 @@ went wrong.</p>
 <ul>
 <li>It <strong>rebuilds reporting from <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> exports</strong> (manual upload or automatic Gmail
   ingestion), deduplicating on import so re-processing never double-counts.</li>
-<li>It shows the <strong>full <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel</strong>, from raw <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> through bids, wins,
+<li>It shows the <strong>full <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel</strong>, from raw <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> through bids, wins,
   impressions, clicks, and spend, broken down by any dimension: geography,
   publisher, ad size, creative, config.</li>
 <li>It provides <strong>safe pretargeting management</strong> with history, staged changes,
@@ -1627,7 +1627,7 @@ links that match your role.</p>
 <li>
 <p><a href="00-what-is-cat-scan/">Chapter 0: What is Cat-Scan?</a>
   What the platform does, who it is for, and the core concepts you need before
-  anything else: seats, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, pretargeting, the <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel.</p>
+  anything else: seats, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, pretargeting, the <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Chapter 1: Login Errors</a>
@@ -1644,7 +1644,7 @@ links that match your role.</p>
 <p>For media buyers, campaign managers, and optimization engineers.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Chapter 3: Understanding Your <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> Funnel</a>
+<p><a href="03-qps-funnel/">Chapter 3: Understanding Your <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Funnel</a>
   The home page. How to read the funnel breakdown: impressions, bids, wins,
   spend, win rate, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. What "waste" means in concrete terms. Config
   cards and what their fields control.</p>
@@ -1653,7 +1653,7 @@ links that match your role.</p>
 <p><a href="04-analyzing-waste/">Chapter 4: Analyzing Waste by Dimension</a>
   The three waste analysis views and when to use each:</p>
 </li>
-<li><strong>Geographic</strong> (<code>/qps/geo</code>): which countries and cities eat <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> without
+<li><strong>Geographic</strong> (<code>/qps/geo</code>): which countries and cities eat <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> without
     converting.</li>
 <li><strong>Publisher</strong> (<code>/qps/publisher</code>): which domains and apps are
     underperforming.</li>
@@ -1672,7 +1672,7 @@ links that match your role.</p>
 <li>
 <p><a href="06-pretargeting/">Chapter 6: Pretargeting Configuration</a>
   What a pretargeting config controls (geos, sizes, formats, platforms, max
-  <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>). How to read a config card. Applying changes with dry-run preview. The
+  <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). How to read a config card. Applying changes with dry-run preview. The
   change history timeline (<code>/history</code>). Rollback: how it works, why it exists,
   and when to use it.</p>
 </li>

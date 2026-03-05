@@ -1637,11 +1637,11 @@
 <a href="../09-data-import/">数据导入</a>。</p>
 <h3 id="_2">[买方] "浪费"和"低胜出率"有什么区别？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><strong>浪费</strong> = 你的竞价器<em>拒绝</em>且未出价的出价请求。这是你付费但完全无法使用
-的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>。通过预定向修复。</p>
+的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>。通过预定向修复。</p>
 <p><strong>低胜出率</strong> = 你的竞价器<em>出了价</em>但在拍卖中失败的请求。说明你的出价不够
 有竞争力。通过出价策略修复，而非预定向。</p>
 <p>两者都在漏斗中显示，但需要不同的应对措施。参见
-<a href="../03-qps-funnel/">理解你的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 漏斗</a>。</p>
+<a href="../03-qps-funnel/">理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗</a>。</p>
 <h3 id="_3">[买方] 我可以撤销预定向变更吗？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>可以。前往 <code>/history</code>，找到变更，点击"预览回滚"查看将恢复的内容，然后
 确认。回滚操作本身也会被记录。参见

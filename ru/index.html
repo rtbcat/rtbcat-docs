@@ -1561,12 +1561,12 @@
 биддер оценивает каждый из них, решает, делать ли ставку, и отвечает -- и все это
 в течение нескольких миллисекунд.</p>
 <p>Вот что упускают большинство людей: <strong>подавляющая часть этого сигнала -- шум.</strong>
-Типичное место, получающее 50 000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, может обнаружить, что 30 000 из этих
+Типичное место, получающее 50 000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, может обнаружить, что 30 000 из этих
 запросов приходят на инвентарь, который медиабайер никогда не собирался покупать:
 неподходящие географии, нерелевантные домены издателей, размеры объявлений без
 подходящего креатива. Ваш биддер все равно должен принять, разобрать и отклонить
 каждый запрос. Это стоит пропускной способности, вычислительных ресурсов и денег.</p>
-<p>Диаграмма выше показывает это как дождь. <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> от Google -- это распылитель наверху;
+<p>Диаграмма выше показывает это как дождь. <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> от Google -- это распылитель наверху;
 капли разлетаются по широкой площади. Ваш биддер -- маленькое ведро внизу. Все,
 что не попадает в ведро (капли, падающие левее и правее), -- это потери. Вы за
 них заплатили. Вы ничего не получили взамен.</p>
@@ -1585,7 +1585,7 @@ Reporting API отсутствует. Все данные об эффектив�
 <li>Он <strong>восстанавливает отчетность из <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-экспортов</strong> (ручная загрузка или
   автоматический импорт из Gmail), дедуплицируя при импорте, чтобы повторная
   обработка не приводила к двойному подсчету.</li>
-<li>Он показывает <strong>полную <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-воронку</strong> -- от сырого <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> через ставки, победы,
+<li>Он показывает <strong>полную <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-воронку</strong> -- от сырого <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> через ставки, победы,
   показы, клики и расход -- с разбивкой по любому измерению: география, издатель,
   размер объявления, креатив, конфиг.</li>
 <li>Он обеспечивает <strong>безопасное управление претаргетингом</strong> с историей, поэтапными
@@ -1631,7 +1631,7 @@ health-эндпоинтов и планов запросов. Их главы с
 <li>
 <p><a href="00-what-is-cat-scan/">Глава 0: Что такое Cat-Scan?</a>
   Что делает платформа, для кого она предназначена и основные концепции, которые
-  нужно знать в первую очередь: места, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, претаргетинг, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-воронка.</p>
+  нужно знать в первую очередь: места, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, претаргетинг, <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>-воронка.</p>
 </li>
 <li>
 <p><a href="01-logging-in/">Глава 1: Вход в систему</a>
@@ -1648,7 +1648,7 @@ health-эндпоинтов и планов запросов. Их главы с
 <p>Для медиабайеров, менеджеров кампаний и инженеров по оптимизации.</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">Глава 3: Как читать <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>-воронку</a>
+<p><a href="03-qps-funnel/">Глава 3: Как читать <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-воронку</a>
   Главная страница. Как читать разбивку воронки: показы, ставки, победы, расход,
   процент побед, <abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>, <abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>. Что такое «потери» в конкретных терминах. Карточки
   конфигов и что контролируют их поля.</p>
@@ -1657,7 +1657,7 @@ health-эндпоинтов и планов запросов. Их главы с
 <p><a href="04-analyzing-waste/">Глава 4: Анализ потерь по измерениям</a>
   Три представления анализа потерь и когда использовать каждое:</p>
 </li>
-<li><strong>Географическое</strong> (<code>/qps/geo</code>): какие страны и города расходуют <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> без
+<li><strong>Географическое</strong> (<code>/qps/geo</code>): какие страны и города расходуют <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> без
     конверсий.</li>
 <li><strong>По издателям</strong> (<code>/qps/publisher</code>): какие домены и приложения показывают
     низкую эффективность.</li>
@@ -1676,7 +1676,7 @@ health-эндпоинтов и планов запросов. Их главы с
 <li>
 <p><a href="06-pretargeting/">Глава 6: Настройка претаргетинга</a>
   Что контролирует конфиг претаргетинга (географии, размеры, форматы, платформы,
-  максимальный <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>). Как читать карточку конфига. Применение изменений с пробным
+  максимальный <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>). Как читать карточку конфига. Применение изменений с пробным
   прогоном. Хронология истории изменений (<code>/history</code>). Откат: как работает, зачем
   нужен и когда использовать.</p>
 </li>

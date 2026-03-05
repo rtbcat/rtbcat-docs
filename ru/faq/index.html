@@ -1638,13 +1638,13 @@
 именно ячейки отсутствуют. См. <a href="../09-data-import/">Импорт данных</a>.</p>
 <h3 id="_2">[Покупатель] В чем разница между «потерями» и «низким процентом побед»?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><strong>Потери</strong> = запросы ставок, которые ваш биддер <em>отклонил</em>, не сделав ставку. Это
-<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, за который вы заплатили, но не смогли использовать вовсе. Исправляется
+<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, за который вы заплатили, но не смогли использовать вовсе. Исправляется
 с помощью претаргетинга.</p>
 <p><strong>Низкий процент побед</strong> = запросы ставок, на которые ваш биддер <em>сделал ставку</em>,
 но проиграл аукцион. Это означает, что ваши ставки недостаточно конкурентоспособны.
 Исправляется стратегией ставок, а не претаргетингом.</p>
 <p>Оба показателя отображаются в воронке, но требуют разных действий. См.
-<a href="../03-qps-funnel/">Как читать <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>-воронку</a>.</p>
+<a href="../03-qps-funnel/">Как читать <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>-воронку</a>.</p>
 <h3 id="_3">[Покупатель] Можно ли отменить изменение претаргетинга?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Да. Перейдите на страницу <code>/history</code>, найдите нужное изменение, нажмите
 «Предварительный просмотр отката», чтобы увидеть, что будет отменено, а затем

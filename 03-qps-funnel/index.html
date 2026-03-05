@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="chapter-3-understanding-your-qps-funnel">Chapter 3: Understanding Your <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> Funnel<a class="headerlink" href="#chapter-3-understanding-your-qps-funnel" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-3-understanding-your-qps-funnel">Chapter 3: Understanding Your <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Funnel<a class="headerlink" href="#chapter-3-understanding-your-qps-funnel" title="Permanent link">&para;</a></h1>
 <p><em>Audience: media buyers, campaign managers</em></p>
 <p>This is the home page of Cat-Scan (<code>/</code>). Everything starts here.</p>
 <h2 id="what-you-see">What you see<a class="headerlink" href="#what-you-see" title="Permanent link">&para;</a></h2>
-<p>The <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> Waste Optimizer page shows your <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel (the journey from bid
+<p>The <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Waste Optimizer page shows your <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel (the journey from bid
 request to spend) and highlights where volume drops off.</p>
 <p><img alt="QPS Waste Optimizer home page" src="../images/screenshot-qps-home.png" /></p>
 <h3 id="the-funnel">The funnel<a class="headerlink" href="#the-funnel" title="Permanent link">&para;</a></h3>
@@ -1518,7 +1518,7 @@ request to spend) and highlights where volume drops off.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>The maximum bid requests per second you ask Google to send. Google throttles the actual volume based on your account tier, so you typically receive less than your cap.</td>
 </tr>
 <tr>
@@ -1544,21 +1544,21 @@ request to spend) and highlights where volume drops off.</p>
 </tbody>
 </table>
 <p>The gap between each stage is where optimization opportunity lives. A large
-drop from <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> to Bids means your bidder is rejecting most of what Google sends,
+drop from <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> to Bids means your bidder is rejecting most of what Google sends,
 classic waste that pretargeting can fix.</p>
 <h3 id="key-metrics">Key metrics<a class="headerlink" href="#key-metrics" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Win rate</strong>: Wins / Bids. How competitive your bids are.</li>
 <li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong>: Clicks / Impressions. How engaging your creatives are.</li>
 <li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: Cost per thousand impressions. What you're paying for visibility.</li>
-<li><strong>Waste ratio</strong>: (<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>. The fraction of traffic you can't use.</li>
+<li><strong>Waste ratio</strong>: (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. The fraction of traffic you can't use.</li>
 </ul>
 <h3 id="pretargeting-config-cards">Pretargeting config cards<a class="headerlink" href="#pretargeting-config-cards" title="Permanent link">&para;</a></h3>
 <p>Below the funnel, you'll see cards for each of your pretargeting
 configurations (up to 10 per seat). Each card shows:</p>
 <ul>
 <li><strong>State</strong>: Active or Suspended</li>
-<li><strong>Max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong>: The cap on bid requests this config accepts</li>
+<li><strong>Max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong>: The cap on bid requests this config accepts</li>
 <li><strong>Formats</strong>: VIDEO, DISPLAY_IMAGE, DISPLAY_HTML, NATIVE</li>
 <li><strong>Platforms</strong>: DESKTOP, MOBILE_APP, MOBILE_WEB, CONNECTED_TV</li>
 <li><strong>Geos</strong>: Included and excluded geographic targets</li>

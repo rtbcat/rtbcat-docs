@@ -1307,13 +1307,13 @@ DevOps dans le système.</p>
 <td><code>buyer_account_id</code> dans Postgres. Stocké dans la table <code>seats</code>. Synchronisé via <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second : le débit maximal de requêtes d'enchères que vous demandez à Google d'envoyer. Google régule le volume réel en fonction du niveau de votre compte.</td>
 <td>Plafond configuré par configuration de prétargeting. Débit entrant réel surveillé via les métriques de l'entonnoir <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> dans <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Gaspillage (Waste)</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> consommé par des requêtes d'enchères que votre bidder rejette (mauvaises zones géographiques, mauvais formats, pas de créative correspondante). De l'argent dépensé pour rien.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> consommé par des requêtes d'enchères que votre bidder rejette (mauvaises zones géographiques, mauvais formats, pas de créative correspondante). De l'argent dépensé pour rien.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Calculé à partir des agrégats <code>rtb_daily</code>. Visible dans l'API de l'entonnoir.</td>
 </tr>
 <tr>
@@ -1323,7 +1323,7 @@ DevOps dans le système.</p>
 </tr>
 <tr>
 <td><strong>Entonnoir (Funnel)</strong></td>
-<td>La progression de la requête d'enchère à la dépense : <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> -&gt; Enchères -&gt; Victoires -&gt; Impressions -&gt; Clics -&gt; Dépenses. Chaque étape comporte une déperdition.</td>
+<td>La progression de la requête d'enchère à la dépense : <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Enchères -&gt; Victoires -&gt; Impressions -&gt; Clics -&gt; Dépenses. Chaque étape comporte une déperdition.</td>
 <td>Calculé à partir des métriques <code>rtb_daily</code>. Servi par <code>GET /analytics/rtb-funnel</code>. Cache frontend de 30 minutes.</td>
 </tr>
 <tr>
@@ -1338,7 +1338,7 @@ DevOps dans le système.</p>
 </tr>
 <tr>
 <td><strong>Carte de configuration</strong></td>
-<td>Le panneau d'interface affichant l'état d'une configuration de prétargeting, le <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> max, les zones géographiques, les formats, les types et les plateformes.</td>
+<td>Le panneau d'interface affichant l'état d'une configuration de prétargeting, le <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> max, les zones géographiques, les formats, les types et les plateformes.</td>
 <td>Composant React <code>PretargetingConfigCard</code>. Données issues de <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1389,7 +1389,7 @@ DevOps dans le système.</p>
 <tr>
 <td><strong>Gate de santé runtime</strong></td>
 <td>(Pas un terme acheteur)</td>
-<td>Workflow CI <code>v1-runtime-health-strict.yml</code>. Exécute des vérifications de bout en bout : santé API, santé des données, conversions, optimiseur, SLO <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>. Retourne PASS/FAIL/BLOCKED par vérification.</td>
+<td>Workflow CI <code>v1-runtime-health-strict.yml</code>. Exécute des vérifications de bout en bout : santé API, santé des données, conversions, optimiseur, SLO <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Retourne PASS/FAIL/BLOCKED par vérification.</td>
 </tr>
 <tr>
 <td><strong>Vérification de contrat</strong></td>

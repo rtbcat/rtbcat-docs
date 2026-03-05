@@ -1306,13 +1306,13 @@ about it. The right column is how a DevOps engineer finds it in the system.</p>
 <td><code>buyer_account_id</code> in Postgres. Stored in <code>seats</code> table. Synced via <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second: the maximum rate of bid requests you ask Google to send. Google throttles the actual volume based on your account tier.</td>
 <td>Configured cap per pretargeting config. Actual inbound rate monitored via <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> funnel metrics in <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Waste</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> consumed by bid requests your bidder rejects (wrong geos, wrong sizes, no matching creative). Money spent on nothing.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> consumed by bid requests your bidder rejects (wrong geos, wrong sizes, no matching creative). Money spent on nothing.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Computed from <code>rtb_daily</code> aggregates. Visible in funnel API.</td>
 </tr>
 <tr>
@@ -1322,7 +1322,7 @@ about it. The right column is how a DevOps engineer finds it in the system.</p>
 </tr>
 <tr>
 <td><strong>Funnel</strong></td>
-<td>The progression from bid request to spend: <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> -&gt; Bids -&gt; Wins -&gt; Impressions -&gt; Clicks -&gt; Spend. Each step has drop-off.</td>
+<td>The progression from bid request to spend: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Bids -&gt; Wins -&gt; Impressions -&gt; Clicks -&gt; Spend. Each step has drop-off.</td>
 <td>Computed from <code>rtb_daily</code> metrics. Served by <code>GET /analytics/rtb-funnel</code>. Frontend caches for 30 minutes.</td>
 </tr>
 <tr>
@@ -1337,7 +1337,7 @@ about it. The right column is how a DevOps engineer finds it in the system.</p>
 </tr>
 <tr>
 <td><strong>Config card</strong></td>
-<td>The UI panel showing a pretargeting config's state, max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, geos, sizes, formats, and platforms.</td>
+<td>The UI panel showing a pretargeting config's state, max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, geos, sizes, formats, and platforms.</td>
 <td><code>PretargetingConfigCard</code> React component. Data from <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1388,7 +1388,7 @@ about it. The right column is how a DevOps engineer finds it in the system.</p>
 <tr>
 <td><strong>Runtime health gate</strong></td>
 <td>(Not a buyer term)</td>
-<td><code>v1-runtime-health-strict.yml</code> CI workflow. Runs end-to-end checks: API health, data health, conversions, optimizer, <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> SLO. Returns PASS/FAIL/BLOCKED per check.</td>
+<td><code>v1-runtime-health-strict.yml</code> CI workflow. Runs end-to-end checks: API health, data health, conversions, optimizer, <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> SLO. Returns PASS/FAIL/BLOCKED per check.</td>
 </tr>
 <tr>
 <td><strong>Contract check</strong></td>

@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="rozdzia-3-zrozumienie-lejka-qps">Rozdział 3: Zrozumienie lejka <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr><a class="headerlink" href="#rozdzia-3-zrozumienie-lejka-qps" title="Permanent link">&para;</a></h1>
+<h1 id="rozdzia-3-zrozumienie-lejka-qps">Rozdział 3: Zrozumienie lejka <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr><a class="headerlink" href="#rozdzia-3-zrozumienie-lejka-qps" title="Permanent link">&para;</a></h1>
 <p><em>Odbiorcy: kupcy mediowi, menedżerowie kampanii</em></p>
 <p>To jest strona główna Cat-Scan (<code>/</code>). Wszystko zaczyna się tutaj.</p>
 <h2 id="co-widzisz">Co widzisz<a class="headerlink" href="#co-widzisz" title="Permanent link">&para;</a></h2>
-<p>Strona <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> Waste Optimizer pokazuje Twój lejek <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (drogę od zapytania
+<p>Strona <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Waste Optimizer pokazuje Twój lejek <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> (drogę od zapytania
 ofertowego do wydatków) i wskazuje, gdzie następują spadki wolumenu.</p>
 <p><img alt="Strona główna QPS Waste Optimizer" src="../../images/screenshot-qps-home.png" /></p>
 <h3 id="lejek">Lejek<a class="headerlink" href="#lejek" title="Permanent link">&para;</a></h3>
@@ -1518,7 +1518,7 @@ ofertowego do wydatków) i wskazuje, gdzie następują spadki wolumenu.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Maksymalna liczba zapytań ofertowych na sekundę, o które prosisz Google. Google ogranicza rzeczywisty wolumen w zależności od poziomu Twojego konta, więc zazwyczaj otrzymujesz mniej niż Twój limit.</td>
 </tr>
 <tr>
@@ -1544,7 +1544,7 @@ ofertowego do wydatków) i wskazuje, gdzie następują spadki wolumenu.</p>
 </tbody>
 </table>
 <p>Luka między każdym etapem to miejsce, w którym kryje się potencjał
-optymalizacji. Duży spadek z <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> na Bids oznacza, że Twój bidder odrzuca
+optymalizacji. Duży spadek z <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> na Bids oznacza, że Twój bidder odrzuca
 większość tego, co wysyła Google — to klasyczne marnotrawstwo, które
 pretargeting może naprawić.</p>
 <h3 id="kluczowe-metryki">Kluczowe metryki<a class="headerlink" href="#kluczowe-metryki" title="Permanent link">&para;</a></h3>
@@ -1552,14 +1552,14 @@ pretargeting może naprawić.</p>
 <li><strong>Win rate</strong>: Wins / Bids. Jak konkurencyjne są Twoje oferty.</li>
 <li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong>: Clicks / Impressions. Jak angażujące są Twoje kreacje.</li>
 <li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>: Koszt za tysiąc wyświetleń. Ile płacisz za widoczność.</li>
-<li><strong>Współczynnik marnotrawstwa</strong>: (<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>. Udział ruchu, którego nie możesz wykorzystać.</li>
+<li><strong>Współczynnik marnotrawstwa</strong>: (<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - Bids) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Udział ruchu, którego nie możesz wykorzystać.</li>
 </ul>
 <h3 id="karty-konfiguracji-pretargetingu">Karty konfiguracji pretargetingu<a class="headerlink" href="#karty-konfiguracji-pretargetingu" title="Permanent link">&para;</a></h3>
 <p>Pod lejkiem zobaczysz karty dla każdej z Twoich konfiguracji pretargetingu
 (do 10 na jeden seat). Każda karta pokazuje:</p>
 <ul>
 <li><strong>State</strong>: Active lub Suspended</li>
-<li><strong>Max <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong>: Limit zapytań ofertowych, które ta konfiguracja akceptuje</li>
+<li><strong>Max <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong>: Limit zapytań ofertowych, które ta konfiguracja akceptuje</li>
 <li><strong>Formats</strong>: VIDEO, DISPLAY_IMAGE, DISPLAY_HTML, NATIVE</li>
 <li><strong>Platforms</strong>: DESKTOP, MOBILE_APP, MOBILE_WEB, CONNECTED_TV</li>
 <li><strong>Geos</strong>: Uwzględnione i wykluczone cele geograficzne</li>

@@ -1637,13 +1637,13 @@ are expected. Common reasons for gaps:</p>
 <p>Check the data freshness grid on <code>/import</code> to see exactly which cells are
 missing. See <a href="../09-data-import/">Data Import</a>.</p>
 <h3 id="buyer-whats-the-difference-between-waste-and-low-win-rate">[Buyer] What's the difference between "waste" and "low win rate"?<a class="headerlink" href="#buyer-whats-the-difference-between-waste-and-low-win-rate" title="Permanent link">&para;</a></h3>
-<p><strong>Waste</strong> = bid requests your bidder <em>rejected</em> without bidding. This is <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>
+<p><strong>Waste</strong> = bid requests your bidder <em>rejected</em> without bidding. This is <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
 you paid for but couldn't use at all. Fix it with pretargeting.</p>
 <p><strong>Low win rate</strong> = bid requests your bidder <em>bid on</em> but lost the auction.
 This means your bids are not competitive enough. Fix it with bid strategy,
 not pretargeting.</p>
 <p>Both show up in the funnel but require different actions. See
-<a href="../03-qps-funnel/">Understanding Your <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> Funnel</a>.</p>
+<a href="../03-qps-funnel/">Understanding Your <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Funnel</a>.</p>
 <h3 id="buyer-can-i-undo-a-pretargeting-change">[Buyer] Can I undo a pretargeting change?<a class="headerlink" href="#buyer-can-i-undo-a-pretargeting-change" title="Permanent link">&para;</a></h3>
 <p>Yes. Go to <code>/history</code>, find the change, click "Preview rollback" to see what
 will revert, then confirm. The rollback itself is recorded. See

@@ -1503,31 +1503,31 @@
 
 <h1 id="0-cat-scan">Розділ 0: Що таке Cat-Scan?<a class="headerlink" href="#0-cat-scan" title="Permanent link">&para;</a></h1>
 <p><em>Аудиторія: всі</em></p>
-<p>Cat-Scan — це платформа оптимізації <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> для Google Authorized Buyers. Вона
+<p>Cat-Scan — це платформа оптимізації <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> для Google Authorized Buyers. Вона
 дає змогу бачити, як використовується (і витрачається даремно) розподіл
 запитів на секунду вашого бідера, та надає інструменти для його покращення.</p>
 <p><img alt="Воронка QPS" src="../../assets/qps-funnel.svg" /></p>
 <h2 id="_1">Основна проблема<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Коли ви оперуєте місцем (seat) на біржі Google Authorized Buyers, Google
 надсилає на ваш endpoint бідера потік запитів на ставку (bid requests). Цей
-потік має свою ціну: він споживає ваш виділений <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, обчислювальні ресурси
+потік має свою ціну: він споживає ваш виділений <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, обчислювальні ресурси
 вашого бідера та пропускну здатність мережі.</p>
 <p>Але не кожен запит на ставку є корисним. Багато запитів надходять для
 інвентарю, який ви ніколи б не купили: країни, на які ви не таргетуєтесь,
 паблішери, про яких ви ніколи не чули, розміри оголошень, для яких у вас
 немає креативів. Ваш бідер все одно має отримати й відхилити кожен із них.</p>
-<p>У типовій конфігурації <strong>понад половина вашого <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> витрачається даремно.</strong></p>
+<p>У типовій конфігурації <strong>понад половина вашого <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> витрачається даремно.</strong></p>
 <h2 id="cat-scan">Що з цим робить Cat-Scan<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
 <p>Cat-Scan працює поряд із вашим бідером і забезпечує три речі:</p>
 <h3 id="1">1. Видимість<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>Він відтворює звітність про продуктивність із <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr>-експортів Google (оскільки
-Reporting API не існує) і показує вам повну воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>: від необроблених <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>
+Reporting API не існує) і показує вам повну воронку <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr>: від необроблених <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>
 через ставки, перемоги, покази, кліки та витрати. Це розбивається за
 географією, паблішером, розміром оголошення, креативом та конфігурацією
 претаргетингу.</p>
 <p>Це дає змогу відповісти на такі питання:
-- Які країни споживають <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, але не генерують перемог?
-- Які паблішери мають високий <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, але нульові витрати?
+- Які країни споживають <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, але не генерують перемог?
+- Які паблішери мають високий <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, але нульові витрати?
 - Які розміри оголошень отримують трафік, але не мають відповідного креативу?
 - Які конфігурації претаргетингу працюють добре, а які — погано?</p>
 <h3 id="2">2. Контроль<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
@@ -1559,7 +1559,7 @@ balanced, aggressive), тому жодна автоматизована змін
 <td>Обліковий запис покупця на Google Authorized Buyers, ідентифікований за <code>buyer_account_id</code>. Одна організація може мати кілька seat-ів.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second (запити на секунду): максимальна швидкість запитів на ставку, яку ви просите Google надсилати вашому бідеру. Google регулює фактичний обсяг залежно від рівня вашого облікового запису, тому важливо використовувати кожен запит ефективно.</td>
 </tr>
 <tr>
@@ -1572,11 +1572,11 @@ balanced, aggressive), тому жодна автоматизована змін
 </tr>
 <tr>
 <td><strong>Марнування</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, спожитий запитами на ставку, які ваш бідер не може або не буде використовувати. Мета — зменшити марнування, не втрачаючи цінний трафік.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, спожитий запитами на ставку, які ваш бідер не може або не буде використовувати. Мета — зменшити марнування, не втрачаючи цінний трафік.</td>
 </tr>
 <tr>
 <td><strong>Config</strong></td>
-<td>Скорочення від pretargeting configuration (конфігурація претаргетингу). Кожна має стан (active/suspended), максимальний <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> та правила включення/виключення для географій, розмірів, форматів і платформ.</td>
+<td>Скорочення від pretargeting configuration (конфігурація претаргетингу). Кожна має стан (active/suspended), максимальний <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> та правила включення/виключення для географій, розмірів, форматів і платформ.</td>
 </tr>
 </tbody>
 </table>

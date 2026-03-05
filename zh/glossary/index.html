@@ -1306,13 +1306,13 @@
 <td>Postgres 中的 <code>buyer_account_id</code>。存储在 <code>seats</code> 表。通过 <code>GET /seats</code> 同步。</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>每秒查询数，即你要求 Google 发送的最大竞价请求速率。Google 会根据账户等级节流实际量。</td>
 <td>每个预定向配置的上限设置。实际入站速率通过 <code>rtb_daily</code> 中的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗指标监控。</td>
 </tr>
 <tr>
 <td><strong>浪费</strong></td>
-<td>被你的竞价器拒绝的出价请求所消耗的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>，包括错误的地区、错误的尺寸、没有匹配的素材。花了钱却什么都没得到。</td>
+<td>被你的竞价器拒绝的出价请求所消耗的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>，包括错误的地区、错误的尺寸、没有匹配的素材。花了钱却什么都没得到。</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>。从 <code>rtb_daily</code> 聚合计算。在漏斗 API 中可见。</td>
 </tr>
 <tr>
@@ -1322,7 +1322,7 @@
 </tr>
 <tr>
 <td><strong>漏斗</strong></td>
-<td>从出价请求到花费的递进：<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> -&gt; 出价 -&gt; 胜出 -&gt; 展示 -&gt; 点击 -&gt; 花费。每一步都有衰减。</td>
+<td>从出价请求到花费的递进：<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; 出价 -&gt; 胜出 -&gt; 展示 -&gt; 点击 -&gt; 花费。每一步都有衰减。</td>
 <td>从 <code>rtb_daily</code> 指标计算。由 <code>GET /analytics/rtb-funnel</code> 提供。前端缓存 30 分钟。</td>
 </tr>
 <tr>
@@ -1337,7 +1337,7 @@
 </tr>
 <tr>
 <td><strong>配置卡</strong></td>
-<td>显示预定向配置状态、最大 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>、地区、尺寸、格式和平台的界面面板。</td>
+<td>显示预定向配置状态、最大 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>、地区、尺寸、格式和平台的界面面板。</td>
 <td><code>PretargetingConfigCard</code> React 组件。数据来自 <code>GET /settings/pretargeting-configs</code>。</td>
 </tr>
 <tr>
@@ -1388,7 +1388,7 @@
 <tr>
 <td><strong>运行时健康门控</strong></td>
 <td>（非买方术语）</td>
-<td><code>v1-runtime-health-strict.yml</code> CI 工作流。运行端到端检查：API 健康、数据健康、转化、优化器、<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> SLO。每项检查返回 PASS/FAIL/BLOCKED。</td>
+<td><code>v1-runtime-health-strict.yml</code> CI 工作流。运行端到端检查：API 健康、数据健康、转化、优化器、<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> SLO。每项检查返回 PASS/FAIL/BLOCKED。</td>
 </tr>
 <tr>
 <td><strong>合约检查</strong></td>

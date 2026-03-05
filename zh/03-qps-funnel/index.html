@@ -1501,11 +1501,11 @@
   
 
 
-<h1 id="3-qps">第 3 章：理解你的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 漏斗<a class="headerlink" href="#3-qps" title="Permanent link">&para;</a></h1>
+<h1 id="3-qps">第 3 章：理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗<a class="headerlink" href="#3-qps" title="Permanent link">&para;</a></h1>
 <p><em>适用读者：媒体买手、投放经理</em></p>
 <p>这是 Cat-Scan 的首页（<code>/</code>）。一切从这里开始。</p>
 <h2 id="_1">你看到什么<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 浪费优化器页面展示你的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗（从竞价请求到花费的过程），并高亮
+<p><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 浪费优化器页面展示你的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗（从竞价请求到花费的过程），并高亮
 流量流失的位置。</p>
 <p><img alt="QPS 浪费优化器首页" src="../../images/screenshot-qps-home.png" /></p>
 <h3 id="_2">漏斗<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1518,7 +1518,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>你要求 Google 每秒发送的最大竞价请求数。Google 会根据账户等级节流，因此实际收到的量通常低于上限。</td>
 </tr>
 <tr>
@@ -1543,20 +1543,20 @@
 </tr>
 </tbody>
 </table>
-<p>每个阶段之间的落差就是优化机会所在。<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 到出价的大幅下降意味着你的竞价器
+<p>每个阶段之间的落差就是优化机会所在。<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 到出价的大幅下降意味着你的竞价器
 拒绝了 Google 发送的大部分内容，这是预定向可以解决的典型浪费。</p>
 <h3 id="_3">关键指标<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>胜出率</strong>：胜出 / 出价。衡量你的出价竞争力。</li>
 <li><strong><abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr></strong>：点击 / 展示。衡量你的素材吸引力。</li>
 <li><strong><abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr></strong>：每千次展示成本。你为可见度支付的费用。</li>
-<li><strong>浪费比率</strong>：(<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> - 出价) / <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>。无法使用的流量占比。</li>
+<li><strong>浪费比率</strong>：(<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> - 出价) / <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>。无法使用的流量占比。</li>
 </ul>
 <h3 id="_4">预定向配置卡片<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>漏斗下方是每个预定向配置的卡片（每个席位最多 10 个）。每张卡片显示：</p>
 <ul>
 <li><strong>状态</strong>：激活或暂停</li>
-<li><strong>最大 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong>：此配置接受的竞价请求上限</li>
+<li><strong>最大 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong>：此配置接受的竞价请求上限</li>
 <li><strong>格式</strong>：VIDEO、DISPLAY_IMAGE、DISPLAY_HTML、NATIVE</li>
 <li><strong>平台</strong>：DESKTOP、MOBILE_APP、MOBILE_WEB、CONNECTED_TV</li>
 <li><strong>地区</strong>：包含和排除的地理目标</li>

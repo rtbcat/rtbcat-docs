@@ -1450,12 +1450,12 @@
 <p>Коли ви знаєте, <em>скільки</em> марнування у вас є (з <a href="../03-qps-funnel/">воронки</a>),
 ці три перегляди покажуть вам, <em>звідки</em> воно походить.</p>
 <h2 id="qpsgeo">Географічне марнування (<code>/qps/geo</code>)<a class="headerlink" href="#qpsgeo" title="Permanent link">&para;</a></h2>
-<p>Показує споживання <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> та продуктивність за країною та містом.</p>
+<p>Показує споживання <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> та продуктивність за країною та містом.</p>
 <p><img alt="Географічна розбивка QPS за країною" src="../../images/screenshot-geo-qps.png" /></p>
 <p><strong>На що звертати увагу:</strong>
-- Країни з високим <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, але нульовими або майже нульовими перемогами. Google
+- Країни з високим <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, але нульовими або майже нульовими перемогами. Google
   надсилає вам трафік із регіонів, на які ваші покупці не таргетуються.
-- Міста з непропорційно високою часткою <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, але низькими витратами — це
+- Міста з непропорційно високою часткою <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, але низькими витратами — це
   довгий хвіст географій, які додають обсяг, але не цінність.</p>
 <p><strong>Що з цим робити:</strong>
 - Додайте неефективні географії до списку виключень претаргетингу. Див.
@@ -1479,7 +1479,7 @@
 <p>Показує, які розміри оголошень отримують трафік і чи є у вас для них креативи.</p>
 <p><img alt="Розбивка QPS за розмірами" src="../../images/screenshot-size-qps.png" /></p>
 <p><strong>На що звертати увагу:</strong>
-- Розміри з високим <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, але <strong>без відповідного креативу</strong>. Google надсилає
+- Розміри з високим <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, але <strong>без відповідного креативу</strong>. Google надсилає
   близько 400 різних розмірів оголошень. Якщо ви розміщуєте display-оголошення
   фіксованого розміру (не HTML), більшість із цих розмірів для вас нерелевантні.
   Кожен запит для невідповідного розміру — це чисте марнування.
@@ -1501,7 +1501,7 @@
 </ol>
 <h2 id="_2">Пов'язане<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Розуміння вашої воронки <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a>: відправна точка</li>
+<li><a href="../03-qps-funnel/">Розуміння вашої воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>: відправна точка</li>
 <li><a href="../06-pretargeting/">Конфігурація претаргетингу</a>: дії на основі виявленого марнування</li>
 <li><a href="../10-reading-reports/">Читання ваших звітів</a>: відстеження впливу</li>
 </ul>

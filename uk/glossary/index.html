@@ -1305,13 +1305,13 @@
 <td><code>buyer_account_id</code> в Postgres. Зберігається в таблиці <code>seats</code>. Синхронізується через <code>GET /seats</code>.</td>
 </tr>
 <tr>
-<td><strong><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></strong></td>
+<td><strong><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></strong></td>
 <td>Queries Per Second: максимальна частота запитів на ставки, яку ви просите Google надсилати. Google обмежує фактичний обсяг залежно від рівня вашого облікового запису.</td>
 <td>Налаштований ліміт на конфігурацію претаргетингу. Фактична вхідна частота відстежується через метрики воронки <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> у <code>rtb_daily</code>.</td>
 </tr>
 <tr>
 <td><strong>Втрати</strong></td>
-<td><abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, витрачений на запити на ставки, які ваш біддер відхиляє (неправильні географії, неправильні розміри, немає відповідного креативу). Гроші, витрачені даремно.</td>
+<td><abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, витрачений на запити на ставки, які ваш біддер відхиляє (неправильні географії, неправильні розміри, немає відповідного креативу). Гроші, витрачені даремно.</td>
 <td><code>(total_qps - bids_placed) / total_qps</code>. Обчислюється з агрегатів <code>rtb_daily</code>. Видно в API воронки.</td>
 </tr>
 <tr>
@@ -1321,7 +1321,7 @@
 </tr>
 <tr>
 <td><strong>Воронка</strong></td>
-<td>Прогресія від запиту на ставку до витрат: <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> -&gt; Ставки -&gt; Виграші -&gt; Покази -&gt; Кліки -&gt; Витрати. Кожен крок має відсів.</td>
+<td>Прогресія від запиту на ставку до витрат: <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> -&gt; Ставки -&gt; Виграші -&gt; Покази -&gt; Кліки -&gt; Витрати. Кожен крок має відсів.</td>
 <td>Обчислюється з метрик <code>rtb_daily</code>. Обслуговується через <code>GET /analytics/rtb-funnel</code>. Фронтенд кешує на 30 хвилин.</td>
 </tr>
 <tr>
@@ -1336,7 +1336,7 @@
 </tr>
 <tr>
 <td><strong>Картка конфігурації</strong></td>
-<td>Панель інтерфейсу, що показує стан конфігурації претаргетингу, максимальний <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, географії, розміри, формати та платформи.</td>
+<td>Панель інтерфейсу, що показує стан конфігурації претаргетингу, максимальний <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, географії, розміри, формати та платформи.</td>
 <td>React-компонент <code>PretargetingConfigCard</code>. Дані з <code>GET /settings/pretargeting-configs</code>.</td>
 </tr>
 <tr>
@@ -1387,7 +1387,7 @@
 <tr>
 <td><strong>Тест стану під час виконання</strong></td>
 <td>(Не термін баєра)</td>
-<td>Робочий процес CI <code>v1-runtime-health-strict.yml</code>. Виконує наскрізні перевірки: стан API, стан даних, конверсії, оптимізатор, SLO <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>. Повертає PASS/FAIL/BLOCKED для кожної перевірки.</td>
+<td>Робочий процес CI <code>v1-runtime-health-strict.yml</code>. Виконує наскрізні перевірки: стан API, стан даних, конверсії, оптимізатор, SLO <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>. Повертає PASS/FAIL/BLOCKED для кожної перевірки.</td>
 </tr>
 <tr>
 <td><strong>Перевірка контрактів</strong></td>

@@ -1450,12 +1450,12 @@
 <p>Когда вы знаете <em>сколько</em> потерь у вас есть (из <a href="../03-qps-funnel/">воронки</a>),
 эти три представления покажут, <em>откуда</em> они берутся.</p>
 <h2 id="qpsgeo">Географические потери (<code>/qps/geo</code>)<a class="headerlink" href="#qpsgeo" title="Permanent link">&para;</a></h2>
-<p>Показывает потребление <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> и эффективность по странам и городам.</p>
+<p>Показывает потребление <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> и эффективность по странам и городам.</p>
 <p><img alt="Географическая разбивка QPS по странам" src="../../images/screenshot-geo-qps.png" /></p>
 <p><strong>На что обращать внимание:</strong>
-- Страны с высоким <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, но нулевыми или близкими к нулю победами. Google
+- Страны с высоким <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, но нулевыми или близкими к нулю победами. Google
   отправляет вам трафик из регионов, на которые ваши покупатели не таргетируются.
-- Города с непропорционально высокой долей <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, но низким расходом — это
+- Города с непропорционально высокой долей <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, но низким расходом — это
   «длинный хвост» географий, которые добавляют объём, но не ценность.</p>
 <p><strong>Что с этим делать:</strong>
 - Добавьте неэффективные географии в список исключений претаргетинга. См.
@@ -1479,7 +1479,7 @@
 <p>Показывает, какие размеры объявлений получают трафик и есть ли для них креативы.</p>
 <p><img alt="Разбивка QPS по размерам" src="../../images/screenshot-size-qps.png" /></p>
 <p><strong>На что обращать внимание:</strong>
-- Размеры с высоким <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>, но <strong>без соответствующего креатива</strong>. Google отправляет
+- Размеры с высоким <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>, но <strong>без соответствующего креатива</strong>. Google отправляет
   около 400 различных размеров объявлений. Если вы используете дисплейную рекламу
   фиксированного размера (не HTML), большинство этих размеров нерелевантны.
   Каждый запрос для неподходящего размера — это чистые потери.
@@ -1501,7 +1501,7 @@
 </ol>
 <h2 id="_2">Связанные разделы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Понимание воронки <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr></a>: отправная точка</li>
+<li><a href="../03-qps-funnel/">Понимание воронки <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr></a>: отправная точка</li>
 <li><a href="../06-pretargeting/">Конфигурация претаргетинга</a>: применение результатов анализа потерь</li>
 <li><a href="../10-reading-reports/">Чтение отчётов</a>: отслеживание влияния изменений</li>
 </ul>

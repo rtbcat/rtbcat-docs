@@ -1560,10 +1560,10 @@
 Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条请求进行评估、
 决定是否出价、然后在几毫秒内做出响应。</p>
 <p>大多数人忽略了一个关键事实：<strong>这些信号中的绝大部分都是噪音。</strong> 一个典型的
-席位在接收 50,000 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 时，其中可能有 30,000 条请求对应的是媒体买手永远不会
+席位在接收 50,000 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 时，其中可能有 30,000 条请求对应的是媒体买手永远不会
 购买的库存：错误的地理位置、不相关的发布商域名、没有匹配素材的广告尺寸。
 你的竞价器仍然需要接收、解析并拒绝每一条请求。这消耗了带宽、算力和费用。</p>
-<p>上面的图示将其比作降雨。Google 的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 是顶部的喷嘴，水滴向大面积扩散。
+<p>上面的图示将其比作降雨。Google 的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 是顶部的喷嘴，水滴向大面积扩散。
 你的竞价器是底部的小桶。所有落在桶外面的水滴（左侧和右侧的部分）就是
 浪费。你为此付了费，却没有任何回报。</p>
 <p><strong>Cat-Scan 的存在就是为了让桶变宽、让雨变窄。</strong></p>
@@ -1578,7 +1578,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <ul>
 <li>它<strong>从 <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> 导出文件重建报告</strong>（手动上传或 Gmail 自动导入），导入时
   自动去重，重复处理不会造成重复计数。</li>
-<li>它展示<strong>完整的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗</strong>，从原始 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 到出价、胜出、展示、点击和
+<li>它展示<strong>完整的 <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗</strong>，从原始 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 到出价、胜出、展示、点击和
   花费，可按任意维度拆分：地理、发布商、广告尺寸、素材、配置。</li>
 <li>它提供<strong>安全的预定向管理</strong>，包括历史记录、分阶段变更、试运行预览和
   一键回滚。</li>
@@ -1611,7 +1611,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <ul>
 <li>
 <p><a href="00-what-is-cat-scan/">第 0 章：什么是 Cat-Scan？</a>
-  平台做什么、面向谁，以及你需要先了解的核心概念：席位、<abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>、预定向、
+  平台做什么、面向谁，以及你需要先了解的核心概念：席位、<abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>、预定向、
   <abbr title="Real-Time Bidding — the auction protocol where ad impressions are bought and sold in milliseconds.">RTB</abbr> 漏斗。</p>
 </li>
 <li>
@@ -1628,7 +1628,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <p>面向媒体买手、投放经理和优化工程师。</p>
 <ul>
 <li>
-<p><a href="03-qps-funnel/">第 3 章：理解你的 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 漏斗</a>
+<p><a href="03-qps-funnel/">第 3 章：理解你的 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 漏斗</a>
   首页内容。如何解读漏斗：展示、出价、胜出、花费、胜出率、<abbr title="Click-Through Rate — clicks divided by impressions, expressed as a percentage.">CTR</abbr>、<abbr title="Cost Per Mille — the price paid per 1,000 ad impressions.">CPM</abbr>。
   "浪费"的具体含义。配置卡片及其字段控制的内容。</p>
 </li>
@@ -1636,7 +1636,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 <p><a href="04-analyzing-waste/">第 4 章：按维度分析浪费</a>
   三个浪费分析视图及其使用场景：</p>
 </li>
-<li><strong>地理</strong>（<code>/qps/geo</code>）：哪些国家和城市消耗 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> 却没有转化。</li>
+<li><strong>地理</strong>（<code>/qps/geo</code>）：哪些国家和城市消耗 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> 却没有转化。</li>
 <li><strong>发布商</strong>（<code>/qps/publisher</code>）：哪些域名和应用表现不佳。</li>
 <li>
 <p><strong>尺寸</strong>（<code>/qps/size</code>）：哪些广告尺寸有流量但没有匹配素材。
@@ -1650,7 +1650,7 @@ Authorized Buyers 交易平台涌向你的端点。你的竞价器对每一条�
 </li>
 <li>
 <p><a href="06-pretargeting/">第 6 章：预定向配置</a>
-  预定向配置控制什么（地区、尺寸、格式、平台、最大 <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr>）。如何解读配置
+  预定向配置控制什么（地区、尺寸、格式、平台、最大 <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr>）。如何解读配置
   卡片。通过试运行预览应用变更。变更历史时间线（<code>/history</code>）。回滚：
   工作原理、存在意义和使用时机。</p>
 </li>

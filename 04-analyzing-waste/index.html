@@ -1450,12 +1450,12 @@
 <p>Once you know <em>how much</em> waste you have (from the <a href="../03-qps-funnel/">funnel</a>),
 these three views tell you <em>where</em> it comes from.</p>
 <h2 id="geographic-waste-qpsgeo">Geographic waste (<code>/qps/geo</code>)<a class="headerlink" href="#geographic-waste-qpsgeo" title="Permanent link">&para;</a></h2>
-<p>Shows <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> consumption and performance by country and city.</p>
+<p>Shows <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> consumption and performance by country and city.</p>
 <p><img alt="Geographic QPS breakdown by country" src="../images/screenshot-geo-qps.png" /></p>
 <p><strong>What to look for:</strong>
-- Countries with high <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> but zero or near-zero wins. Google is sending you
+- Countries with high <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> but zero or near-zero wins. Google is sending you
   traffic from regions your buyers don't target.
-- Cities with disproportionate <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> share but low spend, meaning long-tail geos
+- Cities with disproportionate <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> share but low spend, meaning long-tail geos
   that add volume but no value.</p>
 <p><strong>What to do about it:</strong>
 - Add underperforming geos to your pretargeting exclusion list. See
@@ -1478,7 +1478,7 @@ these three views tell you <em>where</em> it comes from.</p>
 <p>Shows which ad sizes receive traffic and whether you have creatives for them.</p>
 <p><img alt="Size QPS breakdown" src="../images/screenshot-size-qps.png" /></p>
 <p><strong>What to look for:</strong>
-- Sizes with high <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> but <strong>no matching creative</strong>. Google sends ~400 different
+- Sizes with high <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> but <strong>no matching creative</strong>. Google sends ~400 different
   ad sizes. If you run fixed-size display ads (not HTML), most of those sizes
   are irrelevant. Every request for an unmatched size is pure waste.
 - Sizes with creatives that underperform. Consider whether the creative
@@ -1499,7 +1499,7 @@ these three views tell you <em>where</em> it comes from.</p>
 </ol>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../03-qps-funnel/">Understanding Your <abbr title="Queries Per Second — the maximum rate of bid requests Google sends your bidder. You pay for this capacity whether you use it or not.">QPS</abbr> Funnel</a>: the starting point</li>
+<li><a href="../03-qps-funnel/">Understanding Your <abbr title="Queries Per Second — the rate of bid requests Google sends your bidder. Every request costs compute and bandwidth, so wasted QPS is wasted money.">QPS</abbr> Funnel</a>: the starting point</li>
 <li><a href="../06-pretargeting/">Pretargeting Configuration</a>: acting on waste findings</li>
 <li><a href="../10-reading-reports/">Reading Your Reports</a>: tracking the impact</li>
 </ul>
