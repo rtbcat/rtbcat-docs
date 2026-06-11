@@ -85,6 +85,18 @@ nav:
       - What is Cat-Scan?: 00-what-is-cat-scan.md
       - Login Errors: 01-logging-in.md
       - Setting Up CSV Reports: 02-setting-up-csv-reports.md
+  - Explainers:
+      - Explainers index: explainers/index.md
+      - Five CSV reports (2026): explainers/five-csv-reports.md
+      - The QPS funnel for AB seats: explainers/qps-funnel.md
+      - Pretargeting configs (the 10-config reality): explainers/pretargeting-configs.md
+      - Safe pretargeting changes + rollback: explainers/safe-pretargeting-changes.md
+      - QPS waste by publisher/geo/size: explainers/qps-waste-analysis.md
+      - Creative clustering & click macros: explainers/creative-clustering-click-macros.md
+      - How smaller agencies obtain & run AB seats: explainers/agencies-obtain-ab-seats.md
+      - What Cat-Scan does *not* do: explainers/what-cat-scan-does-not-do.md
+      - Bid filtering (the fifth report): explainers/bid-filtering-report.md
+      - BYOM optimizer: explainers/byom-optimizer.md
   - "Part I: Media Buyer Track":
       - QPS Funnel: 03-qps-funnel.md
       - Analyzing Waste: 04-analyzing-waste.md
