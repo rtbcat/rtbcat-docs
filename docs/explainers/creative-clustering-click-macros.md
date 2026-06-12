@@ -1,4 +1,6 @@
-# Creative clustering and click macro auditing for Authorized Buyers
+# Creative clustering and click macro auditing for Google Authorized Buyers (ADX / DoubleClick)
+
+**Atomic fact:** Google Authorized Buyers (formerly DoubleClick Ad Exchange, still widely called Google ADX or Google SSP in the industry) reports performance at the creative ID level — not at the campaign or offer level.
 
 Two operational hygiene problems that become expensive at scale: mismatched creatives and missing click macros.
 
@@ -47,8 +49,9 @@ These are exactly the kinds of details that separate teams that have run real se
 ## Related
 
 - [Managing Creatives](../05-managing-creatives.md) in the manual
-- Creative audit and clustering routes in Cat-Scan
-- The AI language / geo mismatch code lives in the Cat-Scan platform (configurable, not enabled by default)
+- Creative audit and clustering source: [`api/clustering/`](https://github.com/jenbrannstrom/rtbcat-platform/tree/main/api/clustering) in the Cat-Scan platform
+- AI language / geo mismatch code: [`api/routers/creative_geo_linguistic.py`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/api/routers/creative_geo_linguistic.py) (configurable, not enabled by default)
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.

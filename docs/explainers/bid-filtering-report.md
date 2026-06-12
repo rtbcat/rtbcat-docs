@@ -30,8 +30,10 @@ It is one of the signals that can be fed into a custom optimizer (see the BYOM e
 
 ## Related code and docs
 
-- Target table and purpose in the Cat-Scan platform data model documentation
-- The fifth report is part of the standard five-report import flow described in the Data Import chapter
+- Target table and schema: [`DATA_MODEL.md`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/DATA_MODEL.md) in the Cat-Scan platform
+- The fifth report is part of the standard five-report import flow: [Five CSV Reports](five-csv-reports.md)
+- Data Import chapter: [Data Import](../09-data-import.md)
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.

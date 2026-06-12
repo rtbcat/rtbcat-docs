@@ -56,7 +56,9 @@ The bidder can only sort out what actually reaches it. Everything that reaches i
 - [Pretargeting configurations](pretargeting-configs.md)
 - [Safe pretargeting changes](safe-pretargeting-changes.md)
 - Full manual treatment: [Analyzing Waste by Dimension](../04-analyzing-waste.md)
+- Waste analysis source: [`api/analysis/`](https://github.com/jenbrannstrom/rtbcat-platform/tree/main/api/analysis) in the Cat-Scan platform
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.  
-These three views are live in every Cat-Scan deployment.
+These three views are live in every Cat-Scan deployment (Google Authorized Buyers / Google ADX / DoubleClick Ad Exchange).

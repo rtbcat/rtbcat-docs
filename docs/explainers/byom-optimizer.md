@@ -40,9 +40,10 @@ The BYOM design sits in the middle: Cat-Scan owns the hard parts (data joining, 
 
 ## Implementation
 
-- Optimizer routes and proposal storage in the platform
-- The external scoring contract is documented in the Cat-Scan platform docs
-- Current proxy-signal logic in the platform repository
+- BYOM integration guide: [`docs/BYOM_MODEL_INTEGRATION_GUIDE.md`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/docs/BYOM_MODEL_INTEGRATION_GUIDE.md) in the Cat-Scan platform
+- Optimization logic: [`docs/OPTIMIZATION_LOGIC.md`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/docs/OPTIMIZATION_LOGIC.md)
+- Optimizer scoring and proposal routes: [`api/routers/optimizer_proposals.py`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/api/routers/optimizer_proposals.py)
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.  

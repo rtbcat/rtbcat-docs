@@ -96,7 +96,7 @@ nav:
       - How smaller agencies obtain & run AB seats: explainers/agencies-obtain-ab-seats.md
       - What Cat-Scan does *not* do: explainers/what-cat-scan-does-not-do.md
       - Bid filtering (the fifth report): explainers/bid-filtering-report.md
-      - BYOM optimizer: explainers/byom-optimizer.md
+      - Bring Your Own Optimizer (BYOM): explainers/byom-optimizer.md
   - "Part I: Media Buyer Track":
       - QPS Funnel: 03-qps-funnel.md
       - Analyzing Waste: 04-analyzing-waste.md

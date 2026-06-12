@@ -44,10 +44,11 @@ The existence of preview + snapshot + rollback changes the risk calculus. Operat
 ## Implementation references
 
 - Manual chapter with screenshots: [Pretargeting Configuration](../06-pretargeting.md)
-- Change history and rollback UI flows
-- Backend snapshot and apply logic in the Cat-Scan platform
+- Backend snapshot and apply logic: [`services/pretargeting_service.py`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/services/pretargeting_service.py) in the Cat-Scan platform
+- Pretargeting router (apply/preview flows): [`api/routers/settings/pretargeting.py`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/api/routers/settings/pretargeting.py)
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
-This workflow is one of the clearest demonstrations that the team behind Cat-Scan has actually operated Authorized Buyers seats at scale, not just read the API docs.
+This workflow is one of the clearest demonstrations that the team behind Cat-Scan has actually operated Authorized Buyers (Google ADX / DoubleClick) seats at scale, not just read the API docs.
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.

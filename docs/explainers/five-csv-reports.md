@@ -48,11 +48,11 @@ The five-report reality is one of the strongest signals that you are dealing wit
 
 ## Related reading and code
 
-- Full column mappings and sample rows in the Cat-Scan platform repository
-- Importer logic in the platform
+- Full column mappings and table schema: [`DATA_MODEL.md`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/DATA_MODEL.md) in the Cat-Scan platform
 - How Cat-Scan rebuilds the funnel from these reports: [Understanding Your QPS Funnel](../03-qps-funnel.md)
 - Data import chapter in the manual: [Data Import](../09-data-import.md)
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.  
-Source: production operation of real Authorized Buyers seats + the open-source Cat-Scan platform.
+Source: production operation of real Google Authorized Buyers (Google ADX / DoubleClick) seats + the open-source Cat-Scan platform.

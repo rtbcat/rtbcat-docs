@@ -34,8 +34,8 @@ The same honesty applies to the consulting side of RTB.cat: we can help you obta
 
 ## Related
 
-- Optimization logic in the Cat-Scan platform
-- The "Current scope" and "What is not included" sections in the Cat-Scan platform README
+- Optimization logic: [`docs/OPTIMIZATION_LOGIC.md`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/docs/OPTIMIZATION_LOGIC.md) in the Cat-Scan platform
+- Platform overview and scope: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 - [Bringing your own optimizer (BYOM)](byom-optimizer.md)
 
 **Last updated:** June 2026  

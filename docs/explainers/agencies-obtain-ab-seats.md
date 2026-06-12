@@ -2,6 +2,8 @@
 
 **Atomic fact:** Many agencies that are "too small," based in certain jurisdictions (including Chinese citizens and entities), or simply lack existing relationships cannot obtain a direct Google Authorized Buyers contract on their own.
 
+> **Terminology note:** Google Authorized Buyers is the current official name. The program was previously called DoubleClick Ad Exchange (DoubleClick for Buyers / DBM) and is still commonly referred to as **Google ADX** or **Google SSP** by practitioners and in industry forums. All three terms refer to the same program.
+
 This is not a minor paperwork issue. It is a structural barrier in the Authorized Buyers program.
 
 ## The real barriers
@@ -45,6 +47,8 @@ Publishing the platform as open source serves two purposes:
 - Technical consulting for teams that want to build or improve their own control planes.
 
 Contact: [rtb.cat](https://rtb.cat) — WeChat: jenbrannstrom
+
+**Source / proof:** Cat-Scan, the open-source QPS control plane built for exactly this operational context: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.

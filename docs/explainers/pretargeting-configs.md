@@ -55,7 +55,9 @@ Anything that is not actively producing bids or spend is consuming one of your t
 
 - Full field reference and UI screenshots: [Pretargeting Configuration](../06-pretargeting.md)
 - How to act on waste signals: [Analyzing QPS waste by dimension](qps-waste-analysis.md)
-- The safe change implementation in the Cat-Scan platform
+- Safe change implementation: [`services/pretargeting_service.py`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/services/pretargeting_service.py) in the Cat-Scan platform
+- Pretargeting router: [`api/routers/settings/pretargeting.py`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/api/routers/settings/pretargeting.py)
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.  

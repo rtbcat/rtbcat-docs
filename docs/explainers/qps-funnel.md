@@ -58,8 +58,9 @@ When you connect post-click data (AppsFlyer or other MMP), the funnel gains a fi
 - [Understanding Your QPS Funnel](../03-qps-funnel.md) (full manual chapter with screenshots)
 - [Analyzing Waste by Dimension](qps-waste-analysis.md) in these explainers
 - [Pretargeting configurations](pretargeting-configs.md)
-- Optimization logic used in production in the Cat-Scan platform repository
+- Optimization logic: [`docs/OPTIMIZATION_LOGIC.md`](https://github.com/jenbrannstrom/rtbcat-platform/blob/main/docs/OPTIMIZATION_LOGIC.md) in the Cat-Scan platform
+- Platform overview: [github.com/jenbrannstrom/rtbcat-platform](https://github.com/jenbrannstrom/rtbcat-platform)
 
 **Last updated:** June 2026  
 Part of the RTB.cat / Cat-Scan technical explainers.  
-This funnel model is implemented and battle-tested in the open-source Cat-Scan platform.
+This funnel model is implemented and battle-tested in the open-source Cat-Scan platform (Google Authorized Buyers / Google ADX / DoubleClick Ad Exchange).
