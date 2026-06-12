@@ -1,3 +1,8 @@
+---
+title: "BYOM Optimizer for Authorized Buyers Pretargeting"
+description: "Cat-Scan's optimizer is Bring Your Own Model: a score-propose-approve-apply loop where you own the scoring logic. Safe, Balanced, and Aggressive presets included."
+---
+
 # Bringing your own optimizer to Authorized Buyers pretargeting (BYOM)
 
 **Atomic fact:** Cat-Scan's optimizer is deliberately "Bring Your Own Model." It scores segments and proposes pretargeting changes; you decide the scoring logic and the risk tolerance.

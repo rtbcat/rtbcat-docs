@@ -1,3 +1,8 @@
+---
+title: "What is Cat-Scan? Google Authorized Buyers QPS Tool"
+description: "Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Over half of seat QPS is waste; it adds funnel visibility, pretargeting control, rollback."
+---
+
 # Chapter 0: What is Cat-Scan?
 
 *Audience: everyone*

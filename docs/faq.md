@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers RTB FAQ | Cat-Scan"
+description: "Cat-Scan data comes from Google Authorized Buyers CSV exports, not a Reporting API. Answers on waste vs win rate, pretargeting rollback, and login loop fixes."
+---
+
 # Frequently Asked Questions
 
 Questions are tagged by audience: **[Buyer]** for media buyers and campaign

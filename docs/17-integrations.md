@@ -1,3 +1,8 @@
+---
+title: "RTB Integrations: Authorized Buyers API | Cat-Scan"
+description: "Connect Cat-Scan to Google Authorized Buyers via GCP service accounts, Gmail CSV ingestion, language AI providers, and HMAC-verified conversion webhooks."
+---
+
 # Chapter 17: Integrations
 
 *Audience: DevOps, platform engineers*

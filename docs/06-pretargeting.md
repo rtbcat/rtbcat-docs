@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers Pretargeting: 10 Configs | Cat-Scan"
+description: "Google Authorized Buyers gives 10 pretargeting configs per seat. Manage QPS, geos, sizes, and publisher allow/deny with dry-run and rollback in Cat-Scan."
+---
+
 # Chapter 6: Pretargeting Configuration
 
 *Audience: media buyers, campaign managers*

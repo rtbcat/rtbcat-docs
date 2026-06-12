@@ -1,3 +1,8 @@
+---
+title: "QPS Waste Analysis by Geo, Publisher, Size | Cat-Scan"
+description: "Google sends 300+ ad sizes and thousands of publishers; most have zero matching creatives or bids. Three Cat-Scan views turn QPS waste into exclusion lists."
+---
+
 # Analyzing QPS waste by publisher, geo, and size in Authorized Buyers
 
 **Atomic fact:** Google sends you hundreds of ad sizes and thousands of publishers. Most of them have zero matching creatives or zero bids from your bidder.

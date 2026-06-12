@@ -1,3 +1,8 @@
+---
+title: "BYOM Optimizer for Authorized Buyers | Cat-Scan"
+description: "Bring Your Own Model: register a scoring endpoint and Cat-Scan generates score-propose-review-apply pretargeting changes with Safe, Balanced, Aggressive presets."
+---
+
 # Chapter 7: The Optimizer (BYOM)
 
 *Audience: media buyers, optimization engineers*

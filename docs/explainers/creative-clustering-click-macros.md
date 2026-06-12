@@ -1,3 +1,8 @@
+---
+title: "Creative Clustering & Click Macros: Authorized Buyers"
+description: "Google requires a click macro on every creative; Cat-Scan audits missing macros and clusters creatives by destination URL to catch geo and language mismatches."
+---
+
 # Creative clustering and click macro auditing for Google Authorized Buyers (ADX / DoubleClick)
 
 **Atomic fact:** Google Authorized Buyers (formerly DoubleClick Ad Exchange, still widely called Google ADX or Google SSP in the industry) reports performance at the creative ID level — not at the campaign or offer level.

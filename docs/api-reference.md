@@ -1,3 +1,8 @@
+---
+title: "Cat-Scan API Reference: 118+ RTB Endpoints"
+description: "A navigable index of 118+ Cat-Scan API endpoints for Google Authorized Buyers: seats, creatives, analytics, pretargeting, optimizer, conversions, and admin."
+---
+
 # API Quick Reference
 
 This is a navigable index of Cat-Scan's 118+ API endpoints, grouped by

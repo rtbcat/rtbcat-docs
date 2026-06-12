@@ -1,3 +1,8 @@
+---
+title: "Safe Pretargeting Changes for Authorized Buyers"
+description: "The native Google Authorized Buyers pretargeting UI has no change history and no rollback. Cat-Scan adds preview, staging, audit, and one-click rollback for each edit."
+---
+
 # Safe pretargeting changes on Google Authorized Buyers: staging, preview, history, and rollback
 
 **Atomic fact:** The native Google Authorized Buyers pretargeting UI has no change history and no rollback.

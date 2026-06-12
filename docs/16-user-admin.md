@@ -1,3 +1,8 @@
+---
+title: "Cat-Scan User and Permission Administration Guide"
+description: "Manage Cat-Scan users with is_sudo admin flags, per-seat buyer_account_id permissions, and a full audit log. Local and OAuth pre-create accounts for RTB ops."
+---
+
 # Chapter 16: User and Permission Administration
 
 *Audience: DevOps, system administrators*

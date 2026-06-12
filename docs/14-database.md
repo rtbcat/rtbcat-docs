@@ -1,3 +1,8 @@
+---
+title: "RTB Database Operations: Postgres + BigQuery | Cat-Scan"
+description: "Cat-Scan runs Postgres 15 on Cloud SQL with rtb_daily at ~84M rows. Index patterns, statement timeouts, and generate_series freshness queries for RTB ops."
+---
+
 # Chapter 14: Database Operations
 
 *Audience: DevOps, platform engineers*

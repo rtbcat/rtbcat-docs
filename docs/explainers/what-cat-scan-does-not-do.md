@@ -1,3 +1,8 @@
+---
+title: "What Cat-Scan Does Not Do | Authorized Buyers"
+description: "Cat-Scan is not a bidder and has no post-click data until you connect an MMP. It cannot exceed Google's 10 pretargeting configs. Clear limits of the QPS control plane."
+---
+
 # What Cat-Scan does not do (and why that matters)
 
 Clear boundaries are part of operational credibility.

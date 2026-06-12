@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers RTB Glossary | Cat-Scan"
+description: "Every RTB term in two views: how a media buyer sees it and how DevOps finds it in the system. Seat, QPS, waste, funnel, pretargeting, BYOM, and more."
+---
+
 # Glossary
 
 Every term, two perspectives. The left column is how a media buyer thinks

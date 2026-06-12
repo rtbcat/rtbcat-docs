@@ -1,3 +1,8 @@
+---
+title: "RTB Conversions and Attribution | Cat-Scan"
+description: "Track RTB conversions via pixel or HMAC-signed webhook, feeding the BYOM optimizer. Rate limiting and freshness monitoring keep attribution data reliable in Cat-Scan."
+---
+
 # Chapter 8: Conversions and Attribution
 
 *Audience: media buyers, campaign managers*

@@ -1,3 +1,8 @@
+---
+title: "Cat-Scan Login Errors: Fixing the OAuth Redirect Loop"
+description: "Cat-Scan login redirect loops trace to an unreachable database failing the auth check. Diagnose 502/503 errors, session expiry, and seat permission issues fast."
+---
+
 # Chapter 1: Login Errors
 
 *Audience: everyone*

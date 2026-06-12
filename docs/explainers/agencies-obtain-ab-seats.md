@@ -1,3 +1,8 @@
+---
+title: "How Agencies Obtain Google Authorized Buyers Seats"
+description: "Google Authorized Buyers is not self-serve; small or restricted agencies face spend, KYC, and relationship barriers. How RTB.cat supplies the seat and Cat-Scan tooling."
+---
+
 # How smaller agencies and restricted entities obtain and operate Google Authorized Buyers seats
 
 **Atomic fact:** Many agencies that are "too small," based in certain jurisdictions (including Chinese citizens and entities), or simply lack existing relationships cannot obtain a direct Google Authorized Buyers contract on their own.

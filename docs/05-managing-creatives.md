@@ -1,3 +1,8 @@
+---
+title: "Managing Authorized Buyers Creatives | Cat-Scan"
+description: "Browse Authorized Buyers creatives by format and performance tier, flag language-vs-geo mismatches, and cluster campaigns with drag-and-drop or AI in Cat-Scan."
+---
+
 # Chapter 5: Managing Creatives
 
 *Audience: media buyers, campaign managers*

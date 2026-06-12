@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 
+    IDEAL SITEMAP FOR docs.rtb.cat
+    Generated for AEO + SEO (AI model ingestion + search).
+
+    Trimmings included:
+    - Accurate <lastmod> from git commits (via freshness hook on build)
+    - <priority> tuned for AEO (Explainers boosted because this is the high-signal content for models)
+    - <changefreq> (weekly for fresh explainers, monthly for stable chapters)
+    - Image sitemap extension for pages with screenshots (helps rich results + context for models)
+    - xhtml:link for language alternates (multi-lang support)
+    - All English + Explainers + representative language variants
+
+    How it's used:
+    - The freshness.py hook (in hooks/) automatically enriches the MkDocs-generated sitemap.xml
+      at build time with real git lastmod + the priorities/images above.
+    - Place this file as reference. The hook produces the live version in site/sitemap.xml.
+    - Submit to Google Search Console + Bing Webmaster Tools.
+    - AI crawlers (ClaudeBot, GPTBot, etc.) and the models' web_search tools love clean, dated, first-party sitemaps.
+  -->
+
+  <!-- HOME -->
+  <url>
+    <loc>https://docs.rtb.cat/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Part 0 -->
+  <url>
+    <loc>https://docs.rtb.cat/00-what-is-cat-scan/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/01-logging-in/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/02-setting-up-csv-reports/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- EXPLAINERS (boosted for AEO - these are the atomic, quotable technical deep-dives the models should cite) -->
+  <url>
+    <loc>https://docs.rtb.cat/explainers/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/five-csv-reports/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/qps-funnel/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/pretargeting-configs/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/safe-pretargeting-changes/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/qps-waste-analysis/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/creative-clustering-click-macros/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/agencies-obtain-ab-seats/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/what-cat-scan-does-not-do/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/bid-filtering-report/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/explainers/byom-optimizer/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Part I: Media Buyer Track -->
+  <url>
+    <loc>https://docs.rtb.cat/03-qps-funnel/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://docs.rtb.cat/images/screenshot-qps-home.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/04-analyzing-waste/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://docs.rtb.cat/images/screenshot-geo-qps.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://docs.rtb.cat/images/screenshot-pub-qps.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://docs.rtb.cat/images/screenshot-size-qps.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/05-managing-creatives/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/06-pretargeting/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://docs.rtb.cat/images/screenshot-pretargeting-configs.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/07-optimizer/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/08-conversions/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/09-data-import/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/10-reading-reports/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Part II + III (lower priority, more internal) -->
+  <url>
+    <loc>https://docs.rtb.cat/11-architecture/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/12-deployment/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/13-health-monitoring/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/14-database/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/15-troubleshooting/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/16-user-admin/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/17-integrations/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/api-reference/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/faq/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/glossary/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- Language variants (example for zh - the i18n plugin + hook will expand all) -->
+  <url>
+    <loc>https://docs.rtb.cat/zh/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/"/>
+  </url>
+  <url>
+    <loc>https://docs.rtb.cat/zh/explainers/</loc>
+    <lastmod>2026-06-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Repeat pattern for other languages (ar, da, es, fr, he, nl, pl, ru, uk) and their explainers/main chapters as needed -->
+
+</urlset>

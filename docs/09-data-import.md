@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers CSV Data Import | Cat-Scan"
+description: "Google offers no Reporting API, so Cat-Scan ingests Authorized Buyers CSVs via manual upload or Gmail auto-import, with auto-dedup and a date x report-type freshness grid."
+---
+
 # Chapter 9: Data Import
 
 *Audience: media buyers, campaign managers*

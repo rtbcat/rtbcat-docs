@@ -1,3 +1,8 @@
+---
+title: "QPS Waste Analysis by Geo, Publisher, Size | Cat-Scan"
+description: "Google sends ~400 ad sizes, most irrelevant to display buyers. Cat-Scan pinpoints QPS waste by geo, publisher, and size so you exclude it via pretargeting."
+---
+
 # Chapter 4: Analyzing Waste by Dimension
 
 *Audience: media buyers, campaign managers*

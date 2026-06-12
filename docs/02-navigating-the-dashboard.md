@@ -1,3 +1,8 @@
+---
+title: "Cat-Scan Admin Navigation: Sidebar, Setup, Restricted Users"
+description: "Navigate the Cat-Scan dashboard: sidebar layout, the six-step setup checklist, restricted-user visibility, and language support for English, Dutch, and Chinese."
+---
+
 # Admin Navigation
 
 *Audience: DevOps, administrators*

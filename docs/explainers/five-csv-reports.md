@@ -1,3 +1,8 @@
+---
+title: "Five CSV Reports for Google Authorized Buyers (2026)"
+description: "Google Authorized Buyers still requires five separate CSV reports in 2026; field incompatibilities block a single export. Cat-Scan joins them into three core tables."
+---
+
 # Google Authorized Buyers still requires five separate CSV reports in 2026
 
 **Atomic fact:** Google Authorized Buyers does not allow you to get bid requests and creative-level detail in a single export.

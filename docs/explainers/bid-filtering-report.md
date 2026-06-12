@@ -1,3 +1,8 @@
+---
+title: "Bid Filtering Report: Authorized Buyers Fifth CSV"
+description: "The fifth report, catscan-bid-filtering, is the only place Google shows why it rejected a bid before your bidder saw it. Read the exchange-side filtering reasons."
+---
+
 # Bid filtering reasons and the fifth Authorized Buyers report
 
 **Atomic fact:** The fifth report (`catscan-bid-filtering`) is the only place Google tells you why it rejected a bid before it even reached your bidder.

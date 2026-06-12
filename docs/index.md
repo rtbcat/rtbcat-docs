@@ -1,3 +1,8 @@
+---
+title: "Cat-Scan: Google Authorized Buyers QPS Optimizer Manual"
+description: "A typical Authorized Buyers seat wastes over half its QPS. Cat-Scan rebuilds CSV reporting, maps the full RTB funnel, and tunes pretargeting to cut waste."
+---
+
 # Cat-Scan User Manual
 
 ## The problem in one picture

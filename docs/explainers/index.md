@@ -1,3 +1,8 @@
+---
+title: "Google Authorized Buyers Explainers | Cat-Scan RTB"
+description: "First-party technical notes on Google Authorized Buyers: 10 pretargeting configs, the QPS funnel, five CSV reports, and waste. See the open-source Cat-Scan platform."
+---
+
 # Explainers
 
 **Technical notes on Google Authorized Buyers operations, QPS control, and running real seats.**

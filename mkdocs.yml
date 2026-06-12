@@ -10,6 +10,7 @@ repo_name: rtbcat/rtbcat-docs
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -78,6 +79,10 @@ plugins:
         - locale: zh
           name: 中文
           build: true
+  # Per-page freshness from git commits (for "Last updated" badges + accurate sitemap lastmod)
+  - git-revision-date-localized:
+      type: datetime
+      fallback_to_build_date: true
 
 nav:
   - Home: index.md
@@ -136,6 +141,11 @@ markdown_extensions:
 
 hooks:
   - hooks/abbreviations.py
+  # Injects current commit SHA for build traceability + enriches sitemap.xml
+  # (per-file git lastmod, priorities, changefreq, image entries — AEO-tuned)
+  - hooks/freshness.py
+  # Translates sidebar nav labels (Part 0, Explainers, etc.) for non-English languages
+  - hooks/nav_translations.py
 
 extra_css:
   - assets/rtl.css
@@ -148,6 +158,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/rtbcat/rtbcat-docs
+  # Populated automatically by hooks/freshness.py on every build (local or GitHub commit)
+  # Use in pages or custom templates: "Built from {{ config.extra.commit_sha_short }}"
+  commit_sha: ""
+  commit_sha_short: ""
   # analytics:
   #   provider: google
   #   property: G-XXXXXXXXXX

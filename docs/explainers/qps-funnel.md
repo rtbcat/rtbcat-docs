@@ -1,3 +1,8 @@
+---
+title: "QPS Funnel for Google Authorized Buyers | Cat-Scan"
+description: "A seat requesting 50,000 QPS often receives far less, then the bidder rejects most of it. Map the Authorized Buyers QPS funnel and waste ratio with Cat-Scan."
+---
+
 # The QPS funnel for Google Authorized Buyers seats
 
 **Atomic fact:** A typical seat requesting 50,000 QPS often receives far less, and the bidder then rejects the majority of what actually arrives.

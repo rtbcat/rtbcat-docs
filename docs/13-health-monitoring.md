@@ -1,3 +1,8 @@
+---
+title: "RTB QPS Health Monitoring and Diagnostics | Cat-Scan"
+description: "Cat-Scan health endpoints and runtime gate scripts verify API liveness, CSV data freshness, conversion readiness, QPS SLOs, and optimizer economics with PASS/FAIL/BLOCKED."
+---
+
 # Chapter 13: Health Monitoring and Diagnostics
 
 *Audience: DevOps, platform engineers*

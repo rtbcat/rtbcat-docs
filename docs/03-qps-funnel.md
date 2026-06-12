@@ -1,3 +1,8 @@
+---
+title: "QPS Funnel Explained: Bids, Wins, Spend | Cat-Scan"
+description: "Read your RTB QPS funnel from bid request to spend. A waste ratio above 50% signals pretargeting fixes. Win rate, CTR, CPM, and config cards explained here."
+---
+
 # Chapter 3: Understanding Your QPS Funnel
 
 *Audience: media buyers, campaign managers*

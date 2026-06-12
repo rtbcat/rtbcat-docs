@@ -1,3 +1,8 @@
+---
+title: "Cat-Scan Deployment: CI/CD to GCP VM | RTB"
+description: "Deploy Cat-Scan via GitHub Actions to a GCP VM over an IAP tunnel, with manual DEPLOY confirmation, SHA-tagged images, health checks, and post-deploy contract validation."
+---
+
 # Chapter 12: Deployment
 
 *Audience: DevOps, platform engineers*

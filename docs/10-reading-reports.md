@@ -1,3 +1,8 @@
+---
+title: "Reading Authorized Buyers RTB Reports | Cat-Scan"
+description: "Interpret spend stats, per-config performance, and endpoint efficiency (useful QPS / total QPS) across Cat-Scan panels, plus snapshot before-after deltas for RTB optimization."
+---
+
 # Chapter 10: Reading Your Reports
 
 *Audience: media buyers, campaign managers*

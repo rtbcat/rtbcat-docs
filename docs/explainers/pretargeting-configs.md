@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers Pretargeting: 10 Configs Per Seat"
+description: "You get exactly 10 pretargeting configurations per Google Authorized Buyers seat, the only exchange-side volume control. See each field and the Cat-Scan platform."
+---
+
 # Pretargeting configurations are the main control surface for most Authorized Buyers buyers
 
 **Atomic fact:** You get exactly 10 pretargeting configurations per Google Authorized Buyers seat.

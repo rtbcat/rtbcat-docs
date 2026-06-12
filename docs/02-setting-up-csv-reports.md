@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers CSV Reports: 5 Cat-Scan Needs"
+description: "Google Authorized Buyers has no Reporting API, so Cat-Scan rebuilds the funnel from five scheduled CSV reports. Full metrics and dimension reference plus setup."
+---
+
 # Setting Up Your CSV Reports
 
 *Audience: media buyers, account managers*

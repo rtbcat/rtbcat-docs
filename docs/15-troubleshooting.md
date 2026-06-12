@@ -1,3 +1,8 @@
+---
+title: "Authorized Buyers Troubleshooting Runbook | Cat-Scan"
+description: "Fix RTB login loops, data-freshness timeouts, and Gmail import failures. A DevOps runbook with detection commands and proven fixes for Cat-Scan on Cloud SQL."
+---
+
 # Chapter 15: Troubleshooting Runbook
 
 *Audience: DevOps, platform engineers*

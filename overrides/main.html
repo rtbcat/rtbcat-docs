@@ -1,0 +1,40 @@
+{#
+  Override the <title> so pages with an explicit `title:` in front-matter render
+  it VERBATIM (no " - {site_name}" suffix). This keeps our AEO-tuned, length-budgeted
+  titles intact (e.g. "QPS Funnel for Google Authorized Buyers | Cat-Scan") instead of
+  the doubled "... | Cat-Scan - Cat-Scan Documentation".
+
+  Pages WITHOUT a front-matter title fall back to MkDocs Material's default behaviour.
+#}
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  {% if page and page.meta and page.meta.title %}
+    <title>{{ page.meta.title }}</title>
+  {% elif page and page.title and not page.is_homepage %}
+    <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+  {% else %}
+    <title>{{ config.site_name }}</title>
+  {% endif %}
+{% endblock %}
+
+{#
+  Visible build-freshness line, rendered at the bottom of every page's content.
+  Variables are injected by hooks/freshness.py (on_config) on every build:
+    - config.extra.commit_sha_short          : this docs repo's short SHA
+    - config.extra.platform_commit_sha_short : platform repo short SHA (when the
+                                               build was triggered by a platform commit
+                                               via repository_dispatch; "N/A" otherwise)
+  page.meta.git_revision_date_localized comes from the git-revision-date-localized plugin.
+  This makes recency explicit to readers and to AI crawlers that fetch the full page.
+#}
+{% block content %}
+  {{ super() }}
+  {% if config.extra and config.extra.commit_sha_short %}
+    <hr>
+    <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
+      Built from docs <code>{{ config.extra.commit_sha_short }}</code>
+      (platform <code>{{ config.extra.platform_commit_sha_short | default('N/A') }}</code>){% if page and page.meta and page.meta.git_revision_date_localized %} — last updated {{ page.meta.git_revision_date_localized }}{% endif %}.
+    </p>
+  {% endif %}
+{% endblock %}

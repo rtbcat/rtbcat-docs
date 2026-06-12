@@ -1,3 +1,8 @@
+---
+title: "RTB Architecture: FastAPI, Postgres, BigQuery | Cat-Scan"
+description: "Cat-Scan runs on one GCP VM: nginx, OAuth2 Proxy, Next.js, and a 118-route FastAPI API over Cloud SQL Postgres 15 plus BigQuery for batch RTB analytics."
+---
+
 # Chapter 11: Architecture Overview
 
 *Audience: DevOps, platform engineers*
