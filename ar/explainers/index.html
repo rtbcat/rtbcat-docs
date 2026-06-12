@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="ar" class="no-js">
   <head>
@@ -6,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize your queries-per-second allocation.">
+        <meta name="description" content="ملاحظات فنية من المصدر الأول حول Google Authorized Buyers: 10 تكوينات استهداف مسبق، قمع QPS، خمسة تقارير CSV، وتحليل الهدر. اطلع على منصة Cat-Scan مفتوحة المصدر.">
       
       
       
@@ -48,10 +49,10 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
-      
-        <title>Explainers index - Cat-Scan Documentation</title>
-      
-    
+  
+    <title>التوضيحات الفنية لـ Google Authorized Buyers | Cat-Scan RTB</title>
+  
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
@@ -104,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#explainers" class="md-skip">
+        <a href="#_1" class="md-skip">
           انتقل إلى المحتوى
         </a>
       
@@ -140,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Explainers index
+              التوضيحات الفنية لـ Google Authorized Buyers | Cat-Scan RTB
             
           </span>
         </div>
@@ -652,10 +653,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-explainers" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The explainers
+        التوضيحات الفنية
       
     </span>
   </a>
@@ -663,10 +664,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-these" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to use these
+        كيفية استخدام هذه التوضيحات
       
     </span>
   </a>
@@ -1705,10 +1706,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-explainers" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The explainers
+        التوضيحات الفنية
       
     </span>
   </a>
@@ -1716,10 +1717,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-these" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to use these
+        كيفية استخدام هذه التوضيحات
       
     </span>
   </a>
@@ -1739,6 +1740,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -1746,59 +1748,59 @@
   
 
 
-<h1 id="explainers">Explainers<a class="headerlink" href="#explainers" title="Permanent link">&para;</a></h1>
-<p><strong>Technical notes on Google Authorized Buyers operations, <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> control, and running real seats.</strong></p>
-<p>These short, focused explainers extract the hard-won operational details that are rarely documented publicly. They are written for media buyers, platform engineers, and agencies that need to understand the actual levers in Authorized Buyers — not marketing copy.</p>
-<p>Each piece is designed to be directly quotable by AI models and search tools: atomic facts with specific numbers and constraints, first-party source material, and clear links to the code and data models that implement them.</p>
-<p>All of this knowledge comes from operating real Google Authorized Buyers seats and from the open-source Cat-Scan platform (the <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> control plane built for exactly these problems).</p>
-<p><strong>Last updated:</strong> June 2026</p>
-<h2 id="the-explainers">The explainers<a class="headerlink" href="#the-explainers" title="Permanent link">&para;</a></h2>
+<h1 id="_1">التوضيحات الفنية<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><strong>ملاحظات فنية حول عمليات Google Authorized Buyers والتحكم في <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> وتشغيل مقاعد حقيقية.</strong></p>
+<p>تستخلص هذه التوضيحات القصيرة والمركّزة التفاصيل التشغيلية المكتسبة بصعوبة والتي نادراً ما تُوثَّق علناً. كُتبت لمشتري الوسائط ومهندسي المنصات والوكالات التي تحتاج إلى فهم الروافع الفعلية في Authorized Buyers — لا النسخ التسويقية.</p>
+<p>صُمِّم كل مقال ليكون قابلاً للاستشهاد به مباشرة من نماذج الذكاء الاصطناعي وأدوات البحث: حقائق ذرية بأرقام ومحددات محددة، مواد من المصدر الأول، وروابط واضحة للكود ونماذج البيانات التي تُنفّذها.</p>
+<p>جميع هذه المعرفة مستمدة من تشغيل مقاعد Google Authorized Buyers الحقيقية ومن منصة Cat-Scan مفتوحة المصدر (مستوى التحكم في <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> المبني لهذه المشاكل تحديداً).</p>
+<p><strong>آخر تحديث:</strong> يونيو 2026</p>
+<h2 id="_2">التوضيحات الفنية<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><a href="five-csv-reports/">Google Authorized Buyers still requires five separate <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> reports in 2026</a><br />
-  Why field incompatibilities force five distinct report types and exactly what each one contains.</p>
+<p><a href="five-csv-reports/">لا تزال Google Authorized Buyers تتطلب خمسة تقارير <abbr title="قيم مفصولة بفواصل — تنسيق الملفات الذي يستخدمه Google Authorized Buyers لتصدير التقارير.">CSV</abbr> منفصلة في 2026</a><br />
+  لماذا تفرض تعارضات الحقول خمسة أنواع تقارير مستقلة وما يحتوي كل منها بالضبط.</p>
 </li>
 <li>
-<p><a href="qps-funnel/">The <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> funnel for Google Authorized Buyers seats</a><br />
-  Allocated vs realized <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr>, where the waste actually hides, and the metrics that matter.</p>
+<p><a href="qps-funnel/">قمع <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> لمقاعد Google Authorized Buyers</a><br />
+  <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> المُخصَّص مقابل المُحقَّق، وأين يختبئ الهدر فعلاً، والمقاييس المهمة.</p>
 </li>
 <li>
-<p><a href="pretargeting-configs/">Pretargeting configurations are the main control surface for most Authorized Buyers buyers</a><br />
-  The hard limit of 10 configs per seat and what each field actually controls.</p>
+<p><a href="pretargeting-configs/">تكوينات الاستهداف المسبق هي سطح التحكم الرئيسي لمعظم مشتري Authorized Buyers</a><br />
+  الحد الصارم البالغ 10 تكوينات لكل مقعد وما يتحكم فيه كل حقل فعلاً.</p>
 </li>
 <li>
-<p><a href="safe-pretargeting-changes/">Safe pretargeting changes on Google Authorized Buyers</a><br />
-  Staging, dry-run preview, change history, and one-click rollback — because the native UI provides none of this.</p>
+<p><a href="safe-pretargeting-changes/">تغييرات الاستهداف المسبق الآمنة على Google Authorized Buyers</a><br />
+  التدريج والمعاينة الجافة وسجل التغييرات والتراجع بنقرة واحدة — لأن واجهة المستخدم الأصلية لا توفر شيئاً من هذا.</p>
 </li>
 <li>
-<p><a href="qps-waste-analysis/">Analyzing <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> waste by publisher, geo, and size</a><br />
-  The three dimension views that reveal the traffic your bidder is forced to reject.</p>
+<p><a href="qps-waste-analysis/">تحليل هدر <abbr title="استعلامات في الثانية — معدل طلبات المزايدة التي ترسلها Google إلى مزايدك. كل طلب يكلف موارد حوسبة وعرض نطاق، لذا فإن QPS المهدر هو أموال مهدرة.">QPS</abbr> حسب الناشر والجغرافيا والحجم</a><br />
+  عروض الأبعاد الثلاثة التي تكشف الحركة التي يُجبر مقدم العرض على رفضها.</p>
 </li>
 <li>
-<p><a href="creative-clustering-click-macros/">Creative clustering and click macro auditing for Authorized Buyers</a><br />
-  Why destination-based grouping and Google's click macro requirement are operational necessities.</p>
+<p><a href="creative-clustering-click-macros/">تجميع الإبداعيات وتدقيق ماكرو النقر لـ Authorized Buyers</a><br />
+  لماذا يُعدّ التجميع القائم على الوجهة ومتطلبات ماكرو النقر من Google ضروريات تشغيلية.</p>
 </li>
 <li>
-<p><a href="agencies-obtain-ab-seats/">How smaller agencies and restricted entities obtain and operate Google Authorized Buyers seats</a><br />
-  The real barriers (size, citizenship, connections) and what it takes to run the seat profitably once you have it.</p>
+<p><a href="agencies-obtain-ab-seats/">كيف تحصل الوكالات الصغيرة والكيانات المقيدة وتدير مقاعد Google Authorized Buyers</a><br />
+  العقبات الحقيقية (الحجم والجنسية والعلاقات) وما يلزم لتشغيل المقعد بشكل مربح بعد الحصول عليه.</p>
 </li>
 <li>
-<p><a href="what-cat-scan-does-not-do/">What Cat-Scan does not do (and why that matters)</a><br />
-  Clear boundaries: it does not replace your bidder, it does not have post-click data until you connect it, and why those limits exist.</p>
+<p><a href="what-cat-scan-does-not-do/">ما لا يفعله Cat-Scan (ولماذا يهم ذلك)</a><br />
+  حدود واضحة: لا يحل محل مقدم العروض لديك، ولا يمتلك بيانات ما بعد النقر حتى تربطه، ولماذا توجد هذه الحدود.</p>
 </li>
 <li>
-<p><a href="bid-filtering-report/">Bid filtering reasons and the fifth Authorized Buyers report</a><br />
-  The <code>catscan-bid-filtering</code> report and what "why the bidder said no" signals actually look like on the exchange side.</p>
+<p><a href="bid-filtering-report/">أسباب تصفية العروض والتقرير الخامس لـ Authorized Buyers</a><br />
+  تقرير <code>catscan-bid-filtering</code> وكيف تبدو إشارات "لماذا قال مقدم العرض لا" على جانب التبادل.</p>
 </li>
 <li>
-<p><a href="byom-optimizer/">Bringing your own optimizer to Authorized Buyers pretargeting (<abbr title="أحضر نموذجك الخاص — نظام Cat-Scan لتوصيل نموذج تسجيل خارجي خاص بك لتقديم مقترحات التحسين.">BYOM</abbr>)</a><br />
-  Score-propose-approve-apply workflow, workflow presets, and the economics of optimization before you have conversion data.</p>
+<p><a href="byom-optimizer/">إحضار محسّنك الخاص لاستهداف Authorized Buyers المسبق (<abbr title="أحضر نموذجك الخاص — نظام Cat-Scan لتوصيل نموذج تسجيل خارجي خاص بك لتقديم مقترحات التحسين.">BYOM</abbr>)</a><br />
+  دورة عمل التقييم-الاقتراح-الموافقة-التطبيق والإعدادات المسبقة لسير العمل واقتصاديات التحسين قبل امتلاك بيانات التحويل.</p>
 </li>
 </ul>
-<h2 id="how-to-use-these">How to use these<a class="headerlink" href="#how-to-use-these" title="Permanent link">&para;</a></h2>
-<p>Read them in any order. Each explainer stands alone but cross-references the full Cat-Scan User Manual chapters and the source code in the Cat-Scan platform.</p>
-<p>For production use of these concepts, see the open-source Cat-Scan platform and the services offered at <a href="https://rtb.cat">rtb.cat</a>.</p>
-<p>These notes are maintained as part of the <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr>.cat / Cat-Scan technical documentation. Feedback and corrections welcome via the repository issues.</p>
+<h2 id="_3">كيفية استخدام هذه التوضيحات<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>اقرأها بأي ترتيب. كل توضيح قائم بذاته لكنه يُضمّن إشارات متبادلة لفصول دليل مستخدم Cat-Scan الكامل والكود المصدري في منصة Cat-Scan.</p>
+<p>للاستخدام الإنتاجي لهذه المفاهيم، انظر منصة Cat-Scan مفتوحة المصدر والخدمات المقدمة عبر <a href="https://rtb.cat">rtb.cat</a>.</p>
+<p>تُدار هذه الملاحظات كجزء من الوثائق الفنية لـ <abbr title="المزايدة في الوقت الفعلي — بروتوكول المزاد حيث يتم شراء وبيع مرات ظهور الإعلانات في أجزاء من الثانية.">RTB</abbr>.cat / Cat-Scan. نرحب بالتغذية الراجعة والتصحيحات عبر مشكلات المستودع.</p>
 
 
 
@@ -1806,12 +1808,41 @@
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="اخر تحديث">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="12 يونيو 2026 20:59:27 UTC">12 يونيو 2026 20:59:27</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
 
 
                 
+  
+    <hr>
+    <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
+      Built from docs <code>830edf8</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="12 يونيو 2026 20:59:27 UTC">12 يونيو 2026 20:59:27</span>.
+    </p>
+  
+
               </article>
             </div>
           

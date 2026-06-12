@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="zh" class="no-js">
   <head>
@@ -6,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize your queries-per-second allocation.">
+        <meta name="description" content="Google Authorized Buyers 没有报告 API，因此 Cat-Scan 从五份计划的 CSV 报告重建漏斗。完整指标和维度参考以及设置指南。">
       
       
       
@@ -48,10 +49,10 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
-      
-        <title>Setting Up CSV Reports - Cat-Scan Documentation</title>
-      
-    
+  
+    <title>设置你的 CSV 报告</title>
+  
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
@@ -104,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-your-csv-reports" class="md-skip">
+        <a href="#csv" class="md-skip">
           跳转至
         </a>
       
@@ -140,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setting Up CSV Reports
+              设置你的 CSV 报告
             
           </span>
         </div>
@@ -375,7 +376,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    الرئيسية
   
 
     
@@ -420,7 +421,7 @@
   <span class="md-ellipsis">
     
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
     
@@ -436,7 +437,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
           </label>
@@ -456,7 +457,7 @@
   <span class="md-ellipsis">
     
   
-    What is Cat-Scan?
+    ما هو Cat-Scan؟
   
 
     
@@ -484,7 +485,7 @@
   <span class="md-ellipsis">
     
   
-    Login Errors
+    أخطاء تسجيل الدخول
   
 
     
@@ -521,7 +522,7 @@
   <span class="md-ellipsis">
     
   
-    Setting Up CSV Reports
+    إعداد تقارير CSV
   
 
     
@@ -539,7 +540,7 @@
   <span class="md-ellipsis">
     
   
-    Setting Up CSV Reports
+    إعداد تقارير CSV
   
 
     
@@ -565,10 +566,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-five-reports-at-a-glance" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The five reports at a glance
+        五份报告一览
       
     </span>
   </a>
@@ -576,22 +577,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#complete-metrics-reference" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complete metrics reference
+        完整指标参考
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Complete metrics reference">
+    <nav class="md-nav" aria-label="完整指标参考">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#funnel-metrics-bidstream-pipeline" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funnel metrics (bidstream pipeline)
+        漏斗指标（竞价流管道）
       
     </span>
   </a>
@@ -599,10 +600,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#spend-and-cost-metrics" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spend and cost metrics
+        花费和成本指标
       
     </span>
   </a>
@@ -610,10 +611,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#quality-and-viewability-metrics" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quality and viewability metrics
+        质量和可见性指标
       
     </span>
   </a>
@@ -621,10 +622,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bid-filtering-metrics" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bid filtering metrics
+        出价过滤指标
       
     </span>
   </a>
@@ -632,10 +633,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimensions-grouping-columns" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dimensions (grouping columns)
+        维度（分组列）
       
     </span>
   </a>
@@ -648,22 +649,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-by-step-creating-each-report" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step-by-step: creating each report
+        分步：创建每份报告
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-step: creating each report">
+    <nav class="md-nav" aria-label="分步：创建每份报告">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-quality-report" class="md-nav__link">
+  <a href="#1-quality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Quality report
+        1. Quality 报告
       
     </span>
   </a>
@@ -671,10 +672,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-bids-in-auction-report" class="md-nav__link">
+  <a href="#2-bids-in-auction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Bids in Auction report
+        2. Bids in Auction 报告
       
     </span>
   </a>
@@ -682,10 +683,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-pipeline-geo-report" class="md-nav__link">
+  <a href="#3-pipeline-geo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Pipeline -- Geo report
+        3. Pipeline -- Geo 报告
       
     </span>
   </a>
@@ -693,10 +694,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-pipeline-publisher-report" class="md-nav__link">
+  <a href="#4-pipeline-publisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Pipeline -- Publisher report
+        4. Pipeline -- Publisher 报告
       
     </span>
   </a>
@@ -704,10 +705,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-bid-filtering-report" class="md-nav__link">
+  <a href="#5-bid-filtering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Bid Filtering report
+        5. Bid Filtering 报告
       
     </span>
   </a>
@@ -715,10 +716,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-filtering-reasons" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common filtering reasons
+        常见过滤原因
       
     </span>
   </a>
@@ -731,10 +732,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scheduling-delivery" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scheduling delivery
+        安排交付
       
     </span>
   </a>
@@ -742,10 +743,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-your-setup" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying your setup
+        验证你的设置
       
     </span>
   </a>
@@ -753,10 +754,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auto-detection" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Auto-detection
+        自动检测
       
     </span>
   </a>
@@ -764,10 +765,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-cat-scan-uses-each-metric" class="md-nav__link">
+  <a href="#cat-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How Cat-Scan uses each metric
+        Cat-Scan 如何使用每个指标
       
     </span>
   </a>
@@ -775,10 +776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-mistakes" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common mistakes
+        常见错误
       
     </span>
   </a>
@@ -786,10 +787,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next steps
+        下一步
       
     </span>
   </a>
@@ -842,7 +843,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers
+    التوضيحات الفنية
   
 
     
@@ -858,7 +859,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Explainers
+    التوضيحات الفنية
   
 
           </label>
@@ -878,7 +879,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers index
+    فهرس التوضيحات
   
 
     
@@ -906,7 +907,7 @@
   <span class="md-ellipsis">
     
   
-    Five CSV reports (2026)
+    تقارير CSV الخمسة (2026)
   
 
     
@@ -934,7 +935,7 @@
   <span class="md-ellipsis">
     
   
-    The QPS funnel for AB seats
+    قمع QPS لمقاعد AB
   
 
     
@@ -962,7 +963,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting configs (the 10-config reality)
+    تكوينات الاستهداف المسبق (واقع الـ10 تكوينات)
   
 
     
@@ -990,7 +991,7 @@
   <span class="md-ellipsis">
     
   
-    Safe pretargeting changes + rollback
+    تغييرات الاستهداف المسبق الآمنة + التراجع
   
 
     
@@ -1018,7 +1019,7 @@
   <span class="md-ellipsis">
     
   
-    QPS waste by publisher/geo/size
+    هدر QPS حسب الناشر/الجغرافيا/الحجم
   
 
     
@@ -1046,7 +1047,7 @@
   <span class="md-ellipsis">
     
   
-    Creative clustering & click macros
+    تجميع الإبداعات وتدقيق ماكرو النقر
   
 
     
@@ -1074,7 +1075,7 @@
   <span class="md-ellipsis">
     
   
-    How smaller agencies obtain & run AB seats
+    كيف تحصل الوكالات الصغيرة وتدير مقاعد AB
   
 
     
@@ -1102,7 +1103,7 @@
   <span class="md-ellipsis">
     
   
-    What Cat-Scan does *not* do
+    ما لا يفعله Cat-Scan
   
 
     
@@ -1130,7 +1131,7 @@
   <span class="md-ellipsis">
     
   
-    Bid filtering (the fifth report)
+    تصفية العروض (التقرير الخامس)
   
 
     
@@ -1209,7 +1210,7 @@
   <span class="md-ellipsis">
     
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
     
@@ -1225,7 +1226,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
           </label>
@@ -1245,7 +1246,7 @@
   <span class="md-ellipsis">
     
   
-    QPS Funnel
+    قمع QPS
   
 
     
@@ -1273,7 +1274,7 @@
   <span class="md-ellipsis">
     
   
-    Analyzing Waste
+    تحليل الهدر
   
 
     
@@ -1301,7 +1302,7 @@
   <span class="md-ellipsis">
     
   
-    Managing Creatives
+    إدارة الإبداعات
   
 
     
@@ -1329,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting
+    الاستهداف المسبق
   
 
     
@@ -1357,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Optimizer (BYOM)
+    المحسن (BYOM)
   
 
     
@@ -1385,7 +1386,7 @@
   <span class="md-ellipsis">
     
   
-    Conversions
+    التحويلات
   
 
     
@@ -1413,7 +1414,7 @@
   <span class="md-ellipsis">
     
   
-    Data Import
+    استيراد البيانات
   
 
     
@@ -1441,7 +1442,7 @@
   <span class="md-ellipsis">
     
   
-    Reports
+    التقارير
   
 
     
@@ -1492,7 +1493,7 @@
   <span class="md-ellipsis">
     
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
     
@@ -1508,7 +1509,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
           </label>
@@ -1528,7 +1529,7 @@
   <span class="md-ellipsis">
     
   
-    Admin Navigation
+    التنقل الإداري
   
 
     
@@ -1556,7 +1557,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture
+    الهندسة المعمارية
   
 
     
@@ -1584,7 +1585,7 @@
   <span class="md-ellipsis">
     
   
-    Deployment
+    النشر
   
 
     
@@ -1612,7 +1613,7 @@
   <span class="md-ellipsis">
     
   
-    Health Monitoring
+    مراقبة الصحة
   
 
     
@@ -1640,7 +1641,7 @@
   <span class="md-ellipsis">
     
   
-    Database
+    قاعدة البيانات
   
 
     
@@ -1668,7 +1669,7 @@
   <span class="md-ellipsis">
     
   
-    Troubleshooting
+    استكشاف الأخطاء وإصلاحها
   
 
     
@@ -1696,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    User Admin
+    إدارة المستخدمين
   
 
     
@@ -1724,7 +1725,7 @@
   <span class="md-ellipsis">
     
   
-    Integrations
+    التكاملات
   
 
     
@@ -1775,7 +1776,7 @@
   <span class="md-ellipsis">
     
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
     
@@ -1791,7 +1792,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
           </label>
@@ -1811,7 +1812,7 @@
   <span class="md-ellipsis">
     
   
-    API Reference
+    مرجع API
   
 
     
@@ -1839,7 +1840,7 @@
   <span class="md-ellipsis">
     
   
-    FAQ
+    الأسئلة الشائعة
   
 
     
@@ -1867,7 +1868,7 @@
   <span class="md-ellipsis">
     
   
-    Glossary
+    المسرد
   
 
     
@@ -1915,10 +1916,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-five-reports-at-a-glance" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The five reports at a glance
+        五份报告一览
       
     </span>
   </a>
@@ -1926,22 +1927,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#complete-metrics-reference" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complete metrics reference
+        完整指标参考
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Complete metrics reference">
+    <nav class="md-nav" aria-label="完整指标参考">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#funnel-metrics-bidstream-pipeline" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funnel metrics (bidstream pipeline)
+        漏斗指标（竞价流管道）
       
     </span>
   </a>
@@ -1949,10 +1950,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#spend-and-cost-metrics" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spend and cost metrics
+        花费和成本指标
       
     </span>
   </a>
@@ -1960,10 +1961,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#quality-and-viewability-metrics" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quality and viewability metrics
+        质量和可见性指标
       
     </span>
   </a>
@@ -1971,10 +1972,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bid-filtering-metrics" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bid filtering metrics
+        出价过滤指标
       
     </span>
   </a>
@@ -1982,10 +1983,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimensions-grouping-columns" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dimensions (grouping columns)
+        维度（分组列）
       
     </span>
   </a>
@@ -1998,22 +1999,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-by-step-creating-each-report" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step-by-step: creating each report
+        分步：创建每份报告
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-step: creating each report">
+    <nav class="md-nav" aria-label="分步：创建每份报告">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-quality-report" class="md-nav__link">
+  <a href="#1-quality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Quality report
+        1. Quality 报告
       
     </span>
   </a>
@@ -2021,10 +2022,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-bids-in-auction-report" class="md-nav__link">
+  <a href="#2-bids-in-auction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Bids in Auction report
+        2. Bids in Auction 报告
       
     </span>
   </a>
@@ -2032,10 +2033,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-pipeline-geo-report" class="md-nav__link">
+  <a href="#3-pipeline-geo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Pipeline -- Geo report
+        3. Pipeline -- Geo 报告
       
     </span>
   </a>
@@ -2043,10 +2044,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-pipeline-publisher-report" class="md-nav__link">
+  <a href="#4-pipeline-publisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Pipeline -- Publisher report
+        4. Pipeline -- Publisher 报告
       
     </span>
   </a>
@@ -2054,10 +2055,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-bid-filtering-report" class="md-nav__link">
+  <a href="#5-bid-filtering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Bid Filtering report
+        5. Bid Filtering 报告
       
     </span>
   </a>
@@ -2065,10 +2066,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-filtering-reasons" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common filtering reasons
+        常见过滤原因
       
     </span>
   </a>
@@ -2081,10 +2082,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scheduling-delivery" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scheduling delivery
+        安排交付
       
     </span>
   </a>
@@ -2092,10 +2093,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-your-setup" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying your setup
+        验证你的设置
       
     </span>
   </a>
@@ -2103,10 +2104,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auto-detection" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Auto-detection
+        自动检测
       
     </span>
   </a>
@@ -2114,10 +2115,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-cat-scan-uses-each-metric" class="md-nav__link">
+  <a href="#cat-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How Cat-Scan uses each metric
+        Cat-Scan 如何使用每个指标
       
     </span>
   </a>
@@ -2125,10 +2126,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-mistakes" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common mistakes
+        常见错误
       
     </span>
   </a>
@@ -2136,10 +2137,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next steps
+        下一步
       
     </span>
   </a>
@@ -2159,6 +2160,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -2166,644 +2168,615 @@
   
 
 
-<h1 id="setting-up-your-csv-reports">Setting Up Your <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> Reports<a class="headerlink" href="#setting-up-your-csv-reports" title="Permanent link">&para;</a></h1>
-<p><em>Audience: media buyers, account managers</em></p>
-<p>Before Cat-Scan can analyze anything, it needs data. Google Authorized Buyers
-has no Reporting API, so all data flows through <strong>five scheduled <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> reports</strong>
-that you create once in your Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> account.</p>
+<h1 id="csv">设置你的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 报告<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h1>
+<p><em>适用读者：媒体买家、账户经理</em></p>
+<p>在 Cat-Scan 能够分析任何内容之前，它需要数据。Google Authorized Buyers 没有报告 API，因此所有数据都通过<strong>五份计划的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 报告</strong>流动，这些报告你只需在 Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> 账户中创建一次。</p>
 <div class="admonition warning">
-<p class="admonition-title">Why five separate reports?</p>
-<p>Google's reporting columns are not all compatible with each other. For
-example, "Bid requests" cannot appear in the same report as "Mobile app ID"
-or "Creative ID + Billing ID". To get full funnel visibility, you need five
-reports that Cat-Scan joins together automatically.</p>
+<p class="admonition-title">为什么需要五份单独的报告？</p>
+<p>Google 的报告列并非全部相互兼容。例如，“竞价请求”不能与“移动应用 ID”或“创意 ID + 账单 ID”出现在同一报告中。要获得完整的漏斗可见性，你需要五份 Cat-Scan 会自动合并的报告。</p>
 </div>
-<h2 id="the-five-reports-at-a-glance">The five reports at a glance<a class="headerlink" href="#the-five-reports-at-a-glance" title="Permanent link">&para;</a></h2>
+<h2 id="_1">五份报告一览<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>#</th>
-<th>Report name</th>
-<th>What it tells Cat-Scan</th>
-<th>Key columns</th>
+<th>报告名称</th>
+<th>它告诉 Cat-Scan 什么</th>
+<th>关键列</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
 <td><strong>Quality</strong></td>
-<td>Creative-level performance with viewability</td>
-<td>Billing ID, Creative ID, Impressions, Spend, Active View</td>
+<td>带可见性的创意级性能</td>
+<td>Billing ID、Creative ID、Impressions、Spend、Active View</td>
 </tr>
 <tr>
 <td>2</td>
 <td><strong>Bids in Auction</strong></td>
-<td>Creative-level bid pipeline (bids -&gt; wins)</td>
-<td>Creative ID, Bids, Bids in auction, Auctions won</td>
+<td>创意级出价管道（出价 -&gt; 胜出）</td>
+<td>Creative ID、Bids、Bids in auction、Auctions won</td>
 </tr>
 <tr>
 <td>3</td>
 <td><strong>Pipeline -- Geo</strong></td>
-<td>Full bidstream funnel by country</td>
-<td>Bid requests, Country, Reached queries, Impressions</td>
+<td>按国家划分的完整竞价流漏斗</td>
+<td>Bid requests、Country、Reached queries、Impressions</td>
 </tr>
 <tr>
 <td>4</td>
 <td><strong>Pipeline -- Publisher</strong></td>
-<td>Full bidstream funnel by publisher</td>
-<td>Bid requests, Publisher ID, Publisher name</td>
+<td>按发布商划分的完整竞价流漏斗</td>
+<td>Bid requests、Publisher ID、Publisher name</td>
 </tr>
 <tr>
 <td>5</td>
 <td><strong>Bid Filtering</strong></td>
-<td>Why Google is rejecting your bids</td>
-<td>Filtering reason, Bids, Opportunity cost</td>
+<td>Google 为什么拒绝你的出价</td>
+<td>Filtering reason、Bids、Opportunity cost</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="complete-metrics-reference">Complete metrics reference<a class="headerlink" href="#complete-metrics-reference" title="Permanent link">&para;</a></h2>
-<p>Every metric that Cat-Scan ingests, what it means, and which report carries it.</p>
-<h3 id="funnel-metrics-bidstream-pipeline">Funnel metrics (bidstream pipeline)<a class="headerlink" href="#funnel-metrics-bidstream-pipeline" title="Permanent link">&para;</a></h3>
-<p>These track the progression of a bid request through Google's auction system.
-Present in the <strong>Pipeline -- Geo</strong> and <strong>Pipeline -- Publisher</strong> reports.</p>
+<h2 id="_2">完整指标参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Cat-Scan 摄取的每个指标、它的含义，以及哪个报告携带它。</p>
+<h3 id="_3">漏斗指标（竞价流管道）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>这些跟踪竞价请求通过 Google 拍卖系统的过程。
+存在于 <strong>Pipeline -- Geo</strong> 和 <strong>Pipeline -- Publisher</strong> 报告中。</p>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>指标</th>
+<th>定义</th>
+<th>单位</th>
+<th>报告</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Bid requests</strong></td>
-<td>Total bid requests Google sent to your bidder endpoint. This is the raw inbound volume -- the top of the funnel. Includes requests your bidder may not have responded to in time.</td>
-<td>count</td>
+<td>Google 发送到你竞价器端点的总竞价请求。这是原始入站量——漏斗的顶部。包括你的竞价器可能未及时响应的请求。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Reached queries</strong></td>
-<td>Bid requests that actually reached your bidder and got a response (successful or not). Lower than "Bid requests" if your bidder has latency issues or timeouts.</td>
-<td>count</td>
+<td>实际到达你的竞价器并获得响应（成功或不成功）的竞价请求。如果你的竞价器有延迟问题或超时，则低于“Bid requests”。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Inventory matches</strong></td>
-<td>Requests where your bidder found matching inventory (a creative that fits the request). This is the first filter: if you have no creative for the requested size/format, it stops here.</td>
-<td>count</td>
+<td>你的竞价器找到匹配库存（适合请求的素材）的请求。这是第一个过滤器：如果你没有适合请求尺寸/格式的素材，它就会在这里停止。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Successful responses</strong></td>
-<td>Requests where your bidder returned a valid, parseable bid response (HTTP 200 with a well-formed bid). Excludes timeouts, errors, and no-bids.</td>
-<td>count</td>
+<td>你的竞价器返回有效、可解析出价响应的请求（HTTP 200 且格式良好的出价）。不包括超时、错误和无出价。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Bids</strong></td>
-<td>Actual bid responses your bidder placed. A subset of successful responses -- your bidder may respond successfully but choose not to bid (no-bid response).</td>
-<td>count</td>
+<td>你的竞价器实际放置的出价响应。成功响应的子集——你的竞价器可能成功响应但选择不出价（无出价响应）。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Bids in Auction, Bid Filtering</td>
 </tr>
 <tr>
 <td><strong>Bids in auction</strong></td>
-<td>Bids that Google accepted into the auction. Bids can be rejected before auction entry due to filtering rules (creative disapproval, policy violations, floor price, pretargeting exclusions). The gap between "Bids" and "Bids in auction" is shown in the Bid Filtering report.</td>
-<td>count</td>
+<td>被 Google 接受进入拍卖的出价。由于过滤规则（创意未批准、政策违规、底价、预定向排除），出价可能在进入拍卖前被拒绝。“Bids”与“Bids in auction”之间的差距显示在 Bid Filtering 报告中。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Bids in Auction</td>
 </tr>
 <tr>
 <td><strong>Auctions won</strong></td>
-<td>Bids that won the auction. You pay for these. The gap between "Bids in auction" and "Auctions won" is competition -- other buyers outbid you.</td>
-<td>count</td>
+<td>赢得拍卖的出价。你为这些付费。“Bids in auction”与“Auctions won”之间的差距是竞争——其他买家出价高于你。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Bids in Auction</td>
 </tr>
 <tr>
 <td><strong>Impressions</strong></td>
-<td>Ads actually rendered in a user's browser or app after winning the auction. Slightly less than "Auctions won" due to ad rendering failures, page navigations before render, and ad blocker interference.</td>
-<td>count</td>
-<td>All five reports</td>
+<td>赢得拍卖后实际在用户浏览器或应用中渲染的广告。由于广告渲染失败、渲染前页面导航和广告拦截器干扰，略少于“Auctions won”。</td>
+<td>计数</td>
+<td>所有五份报告</td>
 </tr>
 <tr>
 <td><strong>Clicks</strong></td>
-<td>User interactions (taps/clicks) on your served ads.</td>
-<td>count</td>
+<td>用户对你展示的广告的交互（点击/轻触）。</td>
+<td>计数</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Quality</td>
 </tr>
 </tbody>
 </table>
-<h3 id="spend-and-cost-metrics">Spend and cost metrics<a class="headerlink" href="#spend-and-cost-metrics" title="Permanent link">&para;</a></h3>
+<h3 id="_4">花费和成本指标<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>指标</th>
+<th>定义</th>
+<th>单位</th>
+<th>报告</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Spend</strong></td>
-<td>Total money spent on won impressions for the period. This is your actual media cost. Denominated in your account's currency (usually USD).</td>
-<td>currency (micros in raw data, dollars in UI)</td>
+<td>期间赢得展示的总花费。这是你实际的媒体成本。以你账户的货币计价（通常是 USD）。</td>
+<td>货币（原始数据为 micros，UI 中为美元）</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Opportunity cost</strong></td>
-<td>Estimated revenue you lost because Google filtered your bids before they entered the auction. Calculated by Google based on historical win rates and CPMs for similar inventory. Useful for prioritizing which filtering reasons to fix first.</td>
-<td>currency</td>
+<td>因为 Google 在出价进入拍卖前过滤了你的出价而导致你损失的估计收入。由 Google 根据类似库存的历史胜出率和 <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr> 计算。用于优先考虑首先修复哪些过滤原因。</td>
+<td>货币</td>
 <td>Bid Filtering</td>
 </tr>
 </tbody>
 </table>
-<h3 id="quality-and-viewability-metrics">Quality and viewability metrics<a class="headerlink" href="#quality-and-viewability-metrics" title="Permanent link">&para;</a></h3>
-<p>These are creative-level metrics from the <strong>Quality</strong> report. They measure
-what happens <em>after</em> the impression is served.</p>
+<h3 id="_5">质量和可见性指标<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>这些是来自 <strong>Quality</strong> 报告的创意级指标。它们衡量展示被投放<em>之后</em>发生的事情。</p>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>指标</th>
+<th>定义</th>
+<th>单位</th>
+<th>报告</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Active View viewable</strong></td>
-<td>Impressions that met the MRC viewability standard: at least 50% of the ad's pixels were in the viewable area of the browser for at least 1 continuous second (2 seconds for video). This is the industry standard for "was this ad actually seen."</td>
-<td>count</td>
+<td>符合 MRC 可见性标准的展示：至少 50% 的广告像素在浏览器可视区域内至少连续 1 秒（视频为 2 秒）。这是“广告是否真正被看到”的行业标准。</td>
+<td>计数</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Active View measurable</strong></td>
-<td>Impressions where viewability <em>could</em> be measured. Some environments (certain apps, cross-domain iframes, older browsers) block measurement. Viewability rate = Active View viewable / Active View measurable.</td>
-<td>count</td>
+<td>可见性<em>可以</em>被测量的展示。某些环境（某些应用、跨域 iframe、旧浏览器）会阻止测量。可见性率 = Active View viewable / Active View measurable。</td>
+<td>计数</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Video starts</strong></td>
-<td>Number of times a video creative began playing. Only populated for video format creatives.</td>
-<td>count</td>
+<td>视频创意开始播放的次数。仅对视频格式的素材填充。</td>
+<td>计数</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Video completions</strong></td>
-<td>Number of times a video creative played to 100% completion (or to the skip point if skippable). Video completion rate = completions / starts.</td>
-<td>count</td>
+<td>视频创意播放到 100% 完成（或可跳过时的跳过点）的次数。视频完成率 = completions / starts。</td>
+<td>计数</td>
 <td>Quality</td>
 </tr>
 </tbody>
 </table>
-<h3 id="bid-filtering-metrics">Bid filtering metrics<a class="headerlink" href="#bid-filtering-metrics" title="Permanent link">&para;</a></h3>
-<p>From the <strong>Bid Filtering</strong> report. These tell you <em>why</em> bids are being
-rejected before they enter the auction.</p>
+<h3 id="_6">出价过滤指标<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>来自 <strong>Bid Filtering</strong> 报告。这些告诉你 <em>为什么</em> 出价在进入拍卖前被 Google 拒绝。</p>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>指标</th>
+<th>定义</th>
+<th>单位</th>
+<th>报告</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Bids</strong></td>
-<td>Total bids your bidder placed (same definition as above). In this report, used as the denominator to calculate filtering rates.</td>
-<td>count</td>
+<td>你的竞价器放置的总出价（与上面的定义相同）。在此报告中，用作计算过滤率的 分母。</td>
+<td>计数</td>
 <td>Bid Filtering</td>
 </tr>
 <tr>
 <td><strong>Bids in auction</strong></td>
-<td>Bids that survived filtering and entered the auction. <code>Bids - Bids in auction</code> = total filtered bids.</td>
-<td>count</td>
+<td>存活过滤并进入拍卖的出价。<code>Bids - Bids in auction</code> = 总过滤出价。</td>
+<td>计数</td>
 <td>Bid Filtering</td>
 </tr>
 <tr>
 <td><strong>Opportunity cost</strong></td>
-<td>See spend metrics above. In this report, broken down per filtering reason so you can see which reason costs you the most.</td>
-<td>currency</td>
+<td>见上面的花费指标。在此报告中，按每个过滤原因细分，以便你可以看到哪个原因 costing 你最多。</td>
+<td>货币</td>
 <td>Bid Filtering</td>
 </tr>
 </tbody>
 </table>
-<h3 id="dimensions-grouping-columns">Dimensions (grouping columns)<a class="headerlink" href="#dimensions-grouping-columns" title="Permanent link">&para;</a></h3>
-<p>Dimensions are not metrics -- they are the axes along which metrics are broken
-down. Cat-Scan uses these to slice your data.</p>
+<h3 id="_7">维度（分组列）<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>维度不是指标——它们是指标沿其拆分的轴。Cat-Scan 使用这些来切片你的数据。</p>
 <table>
 <thead>
 <tr>
-<th>Dimension</th>
-<th>What it is</th>
-<th>Which reports</th>
+<th>维度</th>
+<th>它是什么</th>
+<th>哪些报告</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Day</strong></td>
-<td>Calendar date (UTC). Required in all reports. Cat-Scan uses this for deduplication and time-series display.</td>
-<td>All five</td>
+<td>日历日期（UTC）。所有报告中必需。Cat-Scan 使用此进行去重和时间序列显示。</td>
+<td>所有五份</td>
 </tr>
 <tr>
 <td><strong>Hour</strong></td>
-<td>Hour of day (0--23, UTC). Enables hourly granularity in pipeline analysis.</td>
+<td>一天中的小时（0--23，UTC）。在管道分析中启用小时粒度。</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Country</strong></td>
-<td>Two-letter ISO country code (e.g., US, DE, IL). The geographic origin of the bid request.</td>
-<td>Quality, Bids in Auction, Pipeline -- Geo, Bid Filtering (optional)</td>
+<td>两位 ISO 国家代码（例如 US、DE、IL）。竞价请求的地理来源。</td>
+<td>Quality, Bids in Auction, Pipeline -- Geo, Bid Filtering（可选）</td>
 </tr>
 <tr>
 <td><strong>Billing ID (Pretargeting config)</strong></td>
-<td>Numeric ID of the pretargeting config that accepted this traffic. Maps 1:1 to a config card in Cat-Scan.</td>
+<td>接受此流量的预定向配置的数字 ID。在 Cat-Scan 中 1:1 映射到配置卡。</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Creative ID</strong></td>
-<td>Google's numeric ID for the creative asset. Links to the Creatives gallery in Cat-Scan.</td>
-<td>Quality, Bids in Auction, Bid Filtering (optional)</td>
+<td>Google 为素材资产分配的数字 ID。链接到 Cat-Scan 中的素材库。</td>
+<td>Quality, Bids in Auction, Bid Filtering（可选）</td>
 </tr>
 <tr>
 <td><strong>Creative size</strong></td>
-<td>Pixel dimensions of the creative (e.g., <code>300x250</code>, <code>728x90</code>). Used for size-based waste analysis.</td>
+<td>素材的像素尺寸（例如 <code>300x250</code>、<code>728x90</code>）。用于基于尺寸的浪费分析。</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Creative format</strong></td>
-<td>The ad format: <code>DISPLAY_IMAGE</code>, <code>DISPLAY_HTML</code>, <code>VIDEO</code>, <code>NATIVE</code>.</td>
-<td>Quality (optional)</td>
+<td>广告格式：<code>DISPLAY_IMAGE</code>、<code>DISPLAY_HTML</code>、<code>VIDEO</code>、<code>NATIVE</code>。</td>
+<td>Quality（可选）</td>
 </tr>
 <tr>
 <td><strong>Platform</strong></td>
-<td>Device platform: <code>DESKTOP</code>, <code>MOBILE_APP</code>, <code>MOBILE_WEB</code>, <code>CONNECTED_TV</code>.</td>
-<td>Quality (optional)</td>
+<td>设备平台：<code>DESKTOP</code>、<code>MOBILE_APP</code>、<code>MOBILE_WEB</code>、<code>CONNECTED_TV</code>。</td>
+<td>Quality（可选）</td>
 </tr>
 <tr>
 <td><strong>Environment</strong></td>
-<td>Where the ad was served: <code>WEB</code>, <code>APP</code>.</td>
-<td>Quality (optional)</td>
+<td>广告投放位置：<code>WEB</code>、<code>APP</code>。</td>
+<td>Quality（可选）</td>
 </tr>
 <tr>
 <td><strong>App ID</strong></td>
-<td>Mobile app bundle ID (e.g., <code>com.example.app</code>). Only populated for in-app inventory.</td>
-<td>Quality (optional)</td>
+<td>移动应用包 ID（例如 <code>com.example.app</code>）。仅针对应用内库存填充。</td>
+<td>Quality（可选）</td>
 </tr>
 <tr>
 <td><strong>App name</strong></td>
-<td>Human-readable app name.</td>
-<td>Quality (optional)</td>
+<td>人类可读的应用名称。</td>
+<td>Quality（可选）</td>
 </tr>
 <tr>
 <td><strong>Publisher ID</strong></td>
-<td>Numeric ID of the publisher (website or app).</td>
-<td>Quality (optional), Pipeline -- Publisher</td>
+<td>发布商（网站或应用）的数字 ID。</td>
+<td>Quality（可选）、Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Publisher name</strong></td>
-<td>Human-readable publisher name.</td>
-<td>Quality (optional), Pipeline -- Publisher</td>
+<td>人类可读的发布商名称。</td>
+<td>Quality（可选）、Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Publisher domain</strong></td>
-<td>The domain of the publisher's website (e.g., <code>news.example.com</code>).</td>
-<td>Quality (optional)</td>
+<td>发布商网站的域名（例如 <code>news.example.com</code>）。</td>
+<td>Quality（可选）</td>
 </tr>
 <tr>
 <td><strong>Buyer account ID</strong></td>
-<td>Your buyer account / seat ID. Needed when you run multiple seats.</td>
-<td>Bids in Auction, Bid Filtering (optional)</td>
+<td>你的买方账户 / 席位 ID。在你运行多个席位时需要。</td>
+<td>Bids in Auction, Bid Filtering（可选）</td>
 </tr>
 <tr>
 <td><strong>Filtering reason</strong></td>
-<td>Google's reason code for why a bid was filtered out before entering the auction (e.g., <code>CREATIVE_NOT_APPROVED</code>, <code>BID_BELOW_AUCTION_FLOOR</code>, <code>DISAPPROVED_BY_EXCHANGE</code>).</td>
+<td>Google 在出价进入拍卖前被过滤的原因代码（例如 <code>CREATIVE_NOT_APPROVED</code>、<code>BID_BELOW_AUCTION_FLOOR</code>、<code>DISAPPROVED_BY_EXCHANGE</code>）。</td>
 <td>Bid Filtering</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="step-by-step-creating-each-report">Step-by-step: creating each report<a class="headerlink" href="#step-by-step-creating-each-report" title="Permanent link">&para;</a></h2>
-<h3 id="1-quality-report">1. Quality report<a class="headerlink" href="#1-quality-report" title="Permanent link">&para;</a></h3>
-<p>This is your creative-level performance report with viewability and spend data.</p>
-<p><strong>In Google Authorized Buyers -&gt; Reporting -&gt; New Report:</strong></p>
+<h2 id="_8">分步：创建每份报告<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="1-quality">1. Quality 报告<a class="headerlink" href="#1-quality" title="Permanent link">&para;</a></h3>
+<p>这是你的带可见性和花费数据的创意级性能报告。</p>
+<p><strong>在 Google Authorized Buyers -&gt; Reporting -&gt; New Report 中：</strong></p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>设置</th>
+<th>值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Report type</td>
+<td>报告类型</td>
 <td><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr></td>
 </tr>
 <tr>
-<td>Time range</td>
-<td>Yesterday (scheduled daily)</td>
+<td>时间范围</td>
+<td>昨天（每日计划）</td>
 </tr>
 <tr>
-<td>Dimensions</td>
+<td>维度</td>
 <td>Day, Billing ID (Pretargeting config), Creative ID, Creative size, Country</td>
 </tr>
 <tr>
-<td>Optional dimensions</td>
+<td>可选维度</td>
 <td>Hour, Creative format, Platform, Environment, App ID, App name, Publisher ID, Publisher name, Publisher domain</td>
 </tr>
 <tr>
-<td>Metrics</td>
+<td>指标</td>
 <td>Reached queries, Impressions, Clicks, Spend</td>
 </tr>
 <tr>
-<td>Optional metrics</td>
+<td>可选指标</td>
 <td>Video starts, Video completions, Active View viewable, Active View measurable</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-quality</code></p>
+<p><strong>建议文件名：</strong> <code>catscan-quality</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This report must <strong>not</strong> include "Bid requests", "Bids", or "Bids in
-auction" -- those columns are incompatible with "Billing ID" in Google's
-reporting.</p>
+<p>此报告<strong>不得</strong>包含“Bid requests”、“Bids”或“Bids in auction”——这些列与 Google 报告中的“Billing ID”不兼容。</p>
 </div>
 <hr />
-<h3 id="2-bids-in-auction-report">2. Bids in Auction report<a class="headerlink" href="#2-bids-in-auction-report" title="Permanent link">&para;</a></h3>
-<p>This report captures the bid pipeline at the creative level, filling in the
-metrics that the Quality report cannot include.</p>
+<h3 id="2-bids-in-auction">2. Bids in Auction 报告<a class="headerlink" href="#2-bids-in-auction" title="Permanent link">&para;</a></h3>
+<p>此报告在创意级别捕获出价管道，填补 Quality 报告无法包含的指标。</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>设置</th>
+<th>值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Report type</td>
+<td>报告类型</td>
 <td><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr></td>
 </tr>
 <tr>
-<td>Time range</td>
-<td>Yesterday (scheduled daily)</td>
+<td>时间范围</td>
+<td>昨天（每日计划）</td>
 </tr>
 <tr>
-<td>Dimensions</td>
+<td>维度</td>
 <td>Day, Country, Creative ID, Buyer account ID</td>
 </tr>
 <tr>
-<td>Metrics</td>
+<td>指标</td>
 <td>Bids in auction, Auctions won, Bids, Impressions</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-bidsinauction</code></p>
+<p><strong>建议文件名：</strong> <code>catscan-bidsinauction</code></p>
 <div class="admonition info">
-<p class="admonition-title">How Cat-Scan joins these</p>
-<p>Quality + Bids in Auction are joined on <code>(Day, Creative ID)</code> to give you
-the full picture: from bids placed through impressions served and spend
-incurred.</p>
+<p class="admonition-title">Cat-Scan 如何合并这些</p>
+<p>Quality + Bids in Auction 在 <code>(Day, Creative ID)</code> 上合并，为你提供完整画面：从放置出价到展示投放和产生的花费。</p>
 </div>
 <hr />
-<h3 id="3-pipeline-geo-report">3. Pipeline -- Geo report<a class="headerlink" href="#3-pipeline-geo-report" title="Permanent link">&para;</a></h3>
-<p>This is your top-of-funnel report: how many bid requests Google is sending you
-per country, and how many survive each stage of the funnel.</p>
+<h3 id="3-pipeline-geo">3. Pipeline -- Geo 报告<a class="headerlink" href="#3-pipeline-geo" title="Permanent link">&para;</a></h3>
+<p>这是你的漏斗顶部报告：Google 按国家向你发送多少竞价请求，以及每个漏斗阶段有多少存活。</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>设置</th>
+<th>值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Report type</td>
+<td>报告类型</td>
 <td><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr></td>
 </tr>
 <tr>
-<td>Time range</td>
-<td>Yesterday (scheduled daily)</td>
+<td>时间范围</td>
+<td>昨天（每日计划）</td>
 </tr>
 <tr>
-<td>Dimensions</td>
+<td>维度</td>
 <td>Day, Country, Hour</td>
 </tr>
 <tr>
-<td>Metrics</td>
+<td>指标</td>
 <td>Bid requests, Reached queries, Inventory matches, Successful responses, Bids, Bids in auction, Auctions won, Impressions, Clicks</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-pipeline-geo-{account_id}-yesterday-UTC</code></p>
+<p><strong>建议文件名：</strong> <code>catscan-pipeline-geo-{account_id}-yesterday-UTC</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do <strong>not</strong> add Creative ID, Billing ID, or App ID to this report. These
-columns are incompatible with "Bid requests".</p>
+<p><strong>不要</strong>向此报告添加 Creative ID、Billing ID 或 App ID。这些列与“Bid requests”不兼容。</p>
 </div>
 <hr />
-<h3 id="4-pipeline-publisher-report">4. Pipeline -- Publisher report<a class="headerlink" href="#4-pipeline-publisher-report" title="Permanent link">&para;</a></h3>
-<p>Same as Pipeline -- Geo, but broken down by publisher instead of (or in
-addition to) geography.</p>
+<h3 id="4-pipeline-publisher">4. Pipeline -- Publisher 报告<a class="headerlink" href="#4-pipeline-publisher" title="Permanent link">&para;</a></h3>
+<p>与 Pipeline -- Geo 相同，但按发布商（而非或除了地理）细分。</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>设置</th>
+<th>值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Report type</td>
+<td>报告类型</td>
 <td><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr></td>
 </tr>
 <tr>
-<td>Time range</td>
-<td>Yesterday (scheduled daily)</td>
+<td>时间范围</td>
+<td>昨天（每日计划）</td>
 </tr>
 <tr>
-<td>Dimensions</td>
+<td>维度</td>
 <td>Day, Country, Hour, Publisher ID, Publisher name</td>
 </tr>
 <tr>
-<td>Metrics</td>
+<td>指标</td>
 <td>Bid requests, Reached queries, Inventory matches, Successful responses, Bids, Bids in auction, Auctions won, Impressions, Clicks</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-pipeline-{account_id}-yesterday-UTC</code></p>
+<p><strong>建议文件名：</strong> <code>catscan-pipeline-{account_id}-yesterday-UTC</code></p>
 <hr />
-<h3 id="5-bid-filtering-report">5. Bid Filtering report<a class="headerlink" href="#5-bid-filtering-report" title="Permanent link">&para;</a></h3>
-<p>This report shows you <em>why</em> Google is filtering your bids before they enter the
-auction -- critical for diagnosing pretargeting issues.</p>
+<h3 id="5-bid-filtering">5. Bid Filtering 报告<a class="headerlink" href="#5-bid-filtering" title="Permanent link">&para;</a></h3>
+<p>此报告向你展示 <em>为什么</em> Google 在出价进入拍卖前过滤你的出价——对诊断预定向问题至关重要。</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>设置</th>
+<th>值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Report type</td>
+<td>报告类型</td>
 <td><abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr></td>
 </tr>
 <tr>
-<td>Time range</td>
-<td>Yesterday (scheduled daily)</td>
+<td>时间范围</td>
+<td>昨天（每日计划）</td>
 </tr>
 <tr>
-<td>Dimensions</td>
+<td>维度</td>
 <td>Day, Filtering reason</td>
 </tr>
 <tr>
-<td>Optional dimensions</td>
+<td>可选维度</td>
 <td>Country, Buyer account ID, Creative ID</td>
 </tr>
 <tr>
-<td>Metrics</td>
+<td>指标</td>
 <td>Bids, Bids in auction, Opportunity cost</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-bid-filtering</code></p>
-<h3 id="common-filtering-reasons">Common filtering reasons<a class="headerlink" href="#common-filtering-reasons" title="Permanent link">&para;</a></h3>
-<p>These are the values you'll see in the <strong>Filtering reason</strong> dimension. Each
-one tells you a specific reason Google rejected your bid before auction entry.</p>
+<p><strong>建议文件名：</strong> <code>catscan-bid-filtering</code></p>
+<h3 id="_9">常见过滤原因<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>这些是你将在 <strong>Filtering reason</strong> 维度中看到的值。每一个都告诉你 Google 在进入拍卖前拒绝出价的具体原因。</p>
 <table>
 <thead>
 <tr>
-<th>Filtering reason</th>
-<th>What it means</th>
-<th>What to do</th>
+<th>过滤原因</th>
+<th>含义</th>
+<th>该怎么做</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>CREATIVE_NOT_APPROVED</code></td>
-<td>The creative hasn't passed Google's review, or was disapproved</td>
-<td>Check creative status in Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr>. Fix policy violations.</td>
+<td>素材未通过 Google 审核，或已被否决</td>
+<td>在 Google <abbr title="Authorized Buyers — Google 的程序化广告交易平台（前身为 AdX / DoubleClick Ad Exchange）。">AB</abbr> 中检查素材状态。修复政策违规。</td>
 </tr>
 <tr>
 <td><code>BID_BELOW_AUCTION_FLOOR</code></td>
-<td>Your bid price was below the publisher's minimum <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr></td>
-<td>Raise bid or exclude low-value inventory via pretargeting</td>
+<td>你的出价价格低于发布商的最低 <abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr></td>
+<td>提高出价或通过预定向排除低价值库存</td>
 </tr>
 <tr>
 <td><code>DISAPPROVED_BY_EXCHANGE</code></td>
-<td>Google's exchange-level policy blocked the bid</td>
-<td>Review Google's ad policies for the specific creative</td>
+<td>Google 的交易所级政策阻止了出价</td>
+<td>查看 Google 针对特定素材的广告政策</td>
 </tr>
 <tr>
 <td><code>FILTERED_BY_PRETARGETING</code></td>
-<td>Your own pretargeting rules excluded this traffic</td>
-<td>Intentional if your rules are correct; review if unexpected</td>
+<td>你自己的预定向规则排除了此流量</td>
+<td>如果你的规则正确则是有意的；如果意外则审查</td>
 </tr>
 <tr>
 <td><code>NO_MATCHING_CREATIVE</code></td>
-<td>The bid request asked for a size/format you don't have</td>
-<td>Upload creatives for the missing sizes, or exclude those sizes in pretargeting</td>
+<td>竞价请求要求的尺寸/格式你没有</td>
+<td>为缺失的尺寸上传素材，或在预定向中排除这些尺寸</td>
 </tr>
 <tr>
 <td><code>CREATIVE_SIZE_MISMATCH</code></td>
-<td>Creative dimensions don't match the ad slot</td>
-<td>Check creative size vs. what the publisher requests</td>
+<td>素材尺寸与广告位不匹配</td>
+<td>检查素材尺寸与发布商请求的内容</td>
 </tr>
 <tr>
 <td><code>LANDING_PAGE_DISAPPROVED</code></td>
-<td>The destination URL failed Google's review</td>
-<td>Fix the landing page or use a different URL</td>
+<td>目标 URL 未通过 Google 审核</td>
+<td>修复落地页或使用不同的 URL</td>
 </tr>
 <tr>
 <td><code>SSL_REQUIRED</code></td>
-<td>Publisher requires HTTPS but your creative or landing page uses HTTP</td>
-<td>Switch all assets and URLs to HTTPS</td>
+<td>发布商要求 HTTPS，但你的素材或落地页使用 HTTP</td>
+<td>将所有资产和 URL 切换到 HTTPS</td>
 </tr>
 <tr>
 <td><code>FREQUENCY_CAPPED</code></td>
-<td>User has already seen this creative too many times</td>
-<td>Expected behavior; adjust frequency caps if too aggressive</td>
+<td>用户已经看到此素材太多次</td>
+<td>预期行为；如果过于激进则调整频次上限</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="scheduling-delivery">Scheduling delivery<a class="headerlink" href="#scheduling-delivery" title="Permanent link">&para;</a></h2>
-<p>For each of the five reports:</p>
+<h2 id="_10">安排交付<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>对于五份报告中的每一份：</p>
 <ol>
-<li>Click <strong>Schedule</strong> in Google Authorized Buyers.</li>
-<li>Set frequency to <strong>Daily</strong>.</li>
-<li>Set delivery method:<ul>
-<li><strong>Email</strong> -- send to the Gmail account connected to Cat-Scan (enables
-    auto-import). See <a href="../09-data-import/">Data Import</a> for Gmail
-    auto-import setup.</li>
-<li><strong>Manual</strong> -- if you prefer to download and upload CSVs yourself via
-    <code>/import</code>.</li>
-</ul>
-</li>
+<li>在 Google Authorized Buyers 中点击 <strong>Schedule</strong>。</li>
+<li>将频率设置为 <strong>Daily</strong>。</li>
+<li>设置交付方式：</li>
+<li><strong>Email</strong> —— 发送到连接到 Cat-Scan 的 Gmail 账户（启用自动导入）。有关 Gmail 自动导入设置，请参阅 <a href="../09-data-import/">数据导入</a>。</li>
+<li><strong>Manual</strong> —— 如果你更喜欢自己通过 <code>/import</code> 下载和上传 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr>。</li>
 </ol>
 <div class="admonition tip">
-<p class="admonition-title">Use Gmail auto-import</p>
-<p>Scheduling all five reports to email a connected Gmail account means
-Cat-Scan imports them automatically every day. No manual uploads needed
-after the initial setup.</p>
+<p class="admonition-title">使用 Gmail 自动导入</p>
+<p>将所有五份报告安排为发送到连接的 Gmail 账户意味着 Cat-Scan 每天自动导入它们。初始设置后无需手动上传。</p>
 </div>
-<h2 id="verifying-your-setup">Verifying your setup<a class="headerlink" href="#verifying-your-setup" title="Permanent link">&para;</a></h2>
-<p>After importing your first set of CSVs (manually or via Gmail):</p>
+<h2 id="_11">验证你的设置<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>在导入第一组 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 后（手动或通过 Gmail）：</p>
 <ol>
-<li>Go to <code>/import</code> in Cat-Scan.</li>
-<li>Check the <strong>Data Freshness Grid</strong> -- you should see "imported" for all five
-   report types for yesterday's date.</li>
-<li>If any cells show "missing", the corresponding report hasn't been received
-   yet.</li>
+<li>在 Cat-Scan 中转到 <code>/import</code>。</li>
+<li>检查 <strong>数据新鲜度网格</strong>——你应该看到昨天日期的所有五种报告类型都显示“imported”。</li>
+<li>如果任何单元格显示“missing”，则相应的报告尚未收到。</li>
 </ol>
 <div class="highlight"><pre><span></span><code>              bidsinauction   quality   pipeline-geo   pipeline-publisher   bid-filtering
 2026-03-03    imported        imported  imported       imported             imported
 2026-03-02    imported        imported  imported       imported             imported
 </code></pre></div>
-<p>Once all five columns show green for yesterday, Cat-Scan has full data and
-every feature (funnel, waste analysis, recommendations, optimizer) will work.</p>
-<h2 id="auto-detection">Auto-detection<a class="headerlink" href="#auto-detection" title="Permanent link">&para;</a></h2>
-<p>You don't need to tell Cat-Scan which report you're uploading. The import
-system detects the report type automatically from the column headers:</p>
+<p>一旦所有五列昨天都显示绿色，Cat-Scan 就拥有完整数据，每个功能（漏斗、浪费分析、推荐、优化器）都将工作。</p>
+<h2 id="_12">自动检测<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>你不需要告诉 Cat-Scan 你正在上传哪个报告。导入系统会根据列标题自动检测报告类型：</p>
 <ul>
-<li>Has <strong>Bid filtering reason</strong>? -&gt; Bid Filtering</li>
-<li>Has <strong>Bid requests</strong> + <strong>Publisher ID</strong>? -&gt; Pipeline -- Publisher</li>
-<li>Has <strong>Bid requests</strong> (no Publisher ID)? -&gt; Pipeline -- Geo</li>
-<li>Has <strong>Creative ID</strong> + <strong>Billing ID</strong>? -&gt; Quality</li>
-<li>Has <strong>Creative ID</strong> + <strong>Bids in auction</strong>? -&gt; Bids in Auction</li>
+<li>有 <strong>Bid filtering reason</strong>？ -&gt; Bid Filtering</li>
+<li>有 <strong>Bid requests</strong> + <strong>Publisher ID</strong>？ -&gt; Pipeline -- Publisher</li>
+<li>有 <strong>Bid requests</strong>（无 Publisher ID）？ -&gt; Pipeline -- Geo</li>
+<li>有 <strong>Creative ID</strong> + <strong>Billing ID</strong>？ -&gt; Quality</li>
+<li>有 <strong>Creative ID</strong> + <strong>Bids in auction</strong>？ -&gt; Bids in Auction</li>
 </ul>
-<h2 id="how-cat-scan-uses-each-metric">How Cat-Scan uses each metric<a class="headerlink" href="#how-cat-scan-uses-each-metric" title="Permanent link">&para;</a></h2>
-<p>This maps raw <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> metrics to what you see in the Cat-Scan UI.</p>
+<h2 id="cat-scan">Cat-Scan 如何使用每个指标<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
+<p>这将原始 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 指标映射到你在 Cat-Scan UI 中看到的内容。</p>
 <table>
 <thead>
 <tr>
-<th>UI feature</th>
-<th>Metrics used</th>
-<th>Source report(s)</th>
+<th>UI 功能</th>
+<th>使用的指标</th>
+<th>来源报告</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> funnel</strong> (home page)</td>
+<td><strong><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 漏斗</strong>（首页）</td>
 <td>Bid requests, Reached queries, Bids, Bids in auction, Auctions won, Impressions, Clicks, Spend</td>
-<td>Pipeline (both) + Quality</td>
+<td>Pipeline（两者）+ Quality</td>
 </tr>
 <tr>
-<td><strong>Waste % calculation</strong></td>
+<td><strong>浪费 % 计算</strong></td>
 <td><code>(Bid requests - Bids) / Bid requests</code></td>
 <td>Pipeline</td>
 </tr>
 <tr>
-<td><strong>Win rate</strong></td>
+<td><strong>胜出率</strong></td>
 <td><code>Auctions won / Bids</code></td>
 <td>Pipeline + Bids in Auction</td>
 </tr>
 <tr>
 <td><strong><abbr title="点击率 — 点击次数除以展示次数，以百分比表示。">CTR</abbr></strong></td>
 <td><code>Clicks / Impressions</code></td>
-<td>Any report with both</td>
+<td>同时包含两者的任何报告</td>
 </tr>
 <tr>
 <td><strong><abbr title="每千次展示费用 — 每 1,000 次广告展示支付的价格。">CPM</abbr></strong></td>
@@ -2811,102 +2784,102 @@ system detects the report type automatically from the column headers:</p>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Viewability rate</strong></td>
+<td><strong>可见性率</strong></td>
 <td><code>Active View viewable / Active View measurable</code></td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Video completion rate</strong></td>
+<td><strong>视频完成率</strong></td>
 <td><code>Video completions / Video starts</code></td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Geo waste analysis</strong> (<code>/qps/geo</code>)</td>
-<td>Bid requests, Impressions, Spend by Country</td>
+<td><strong>地理浪费分析</strong>（<code>/qps/geo</code>）</td>
+<td>按 Country 的 Bid requests、Impressions、Spend</td>
 <td>Pipeline -- Geo + Quality</td>
 </tr>
 <tr>
-<td><strong>Publisher waste</strong> (<code>/qps/publisher</code>)</td>
-<td>Bid requests, Impressions, Spend by Publisher</td>
+<td><strong>发布商浪费</strong>（<code>/qps/publisher</code>）</td>
+<td>按 Publisher 的 Bid requests、Impressions、Spend</td>
 <td>Pipeline -- Publisher + Quality</td>
 </tr>
 <tr>
-<td><strong>Size waste</strong> (<code>/qps/size</code>)</td>
-<td>Impressions, Spend by Creative size</td>
+<td><strong>尺寸浪费</strong>（<code>/qps/size</code>）</td>
+<td>按 Creative size 的 Impressions、Spend</td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Filtering reasons</strong> (<code>/qps/filtering</code>)</td>
-<td>Bids, Bids in auction, Opportunity cost by Filtering reason</td>
+<td><strong>过滤原因</strong>（<code>/qps/filtering</code>）</td>
+<td>按 Filtering reason 的 Bids、Bids in auction、Opportunity cost</td>
 <td>Bid Filtering</td>
 </tr>
 <tr>
-<td><strong>Config card metrics</strong></td>
-<td>Reached queries, Impressions, Spend by Billing ID</td>
+<td><strong>配置卡指标</strong></td>
+<td>按 Billing ID 的 Reached queries、Impressions、Spend</td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Creative performance</strong></td>
-<td>Impressions, Clicks, Spend, Active View viewable per Creative ID</td>
+<td><strong>素材性能</strong></td>
+<td>每个 Creative ID 的 Impressions、Clicks、Spend、Active View viewable</td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Optimizer scoring</strong></td>
-<td>All pipeline + quality metrics, aggregated by segment</td>
-<td>All five</td>
+<td><strong>优化器评分</strong></td>
+<td>所有管道 + 质量指标，按细分市场聚合</td>
+<td>所有五份</td>
 </tr>
 </tbody>
 </table>
-<h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<h2 id="_13">常见错误<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Mistake</th>
-<th>What happens</th>
-<th>Fix</th>
+<th>错误</th>
+<th>会发生什么</th>
+<th>修复</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Adding "Bid requests" to the Quality report</td>
-<td>Google errors or returns incomplete data</td>
-<td>Remove "Bid requests" -- it's incompatible with "Billing ID"</td>
+<td>向 Quality 报告添加“Bid requests”</td>
+<td>Google 报错或返回不完整数据</td>
+<td>移除“Bid requests”——它与“Billing ID”不兼容</td>
 </tr>
 <tr>
-<td>Forgetting the Bid Filtering report</td>
-<td>Cat-Scan can't show you <em>why</em> bids are rejected</td>
-<td>Create the 5th report with "Filtering reason" dimension</td>
+<td>忘记 Bid Filtering 报告</td>
+<td>Cat-Scan 无法向你展示 <em>为什么</em> 出价被拒绝</td>
+<td>使用“Filtering reason”维度创建第 5 份报告</td>
 </tr>
 <tr>
-<td>Using "Last 7 days" instead of "Yesterday"</td>
-<td>Overlapping data, larger files, slower imports</td>
-<td>Set to "Yesterday" and schedule daily</td>
+<td>使用“Last 7 days”而不是“Yesterday”</td>
+<td>数据重叠、文件更大、导入更慢</td>
+<td>设置为“Yesterday”并每日计划</td>
 </tr>
 <tr>
-<td>Not scheduling -- only manual exports</td>
-<td>Data goes stale, health checks fail</td>
-<td>Schedule daily delivery via email</td>
+<td>不安排——仅手动导出</td>
+<td>数据过时，健康检查失败</td>
+<td>通过邮件安排每日交付</td>
 </tr>
 <tr>
-<td>Missing "Hour" dimension on Pipeline reports</td>
-<td>No hourly granularity in <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> analysis</td>
-<td>Add Hour to Pipeline -- Geo and Pipeline -- Publisher</td>
+<td>Pipeline 报告上缺少“Hour”维度</td>
+<td><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 分析中没有小时粒度</td>
+<td>向 Pipeline -- Geo 和 Pipeline -- Publisher 添加 Hour</td>
 </tr>
 <tr>
-<td>Missing optional metrics on Quality report</td>
-<td>No viewability or video data in Cat-Scan</td>
-<td>Add Active View viewable, Active View measurable, Video starts, Video completions</td>
+<td>Quality 报告上缺少可选指标</td>
+<td>Cat-Scan 中没有可见性或视频数据</td>
+<td>添加 Active View viewable、Active View measurable、Video starts、Video completions</td>
 </tr>
 </tbody>
 </table>
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h2 id="_14">下一步<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../02-navigating-the-dashboard/">Admin Navigation</a>: sidebar layout and
-  setup checklist</li>
-<li><a href="../09-data-import/">Data Import</a>: detailed import mechanics, chunked
-  uploads, and troubleshooting</li>
-<li><a href="../03-qps-funnel/"><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> Funnel</a>: once data is flowing, start analyzing</li>
+<li><a href="../02-navigating-the-dashboard/">管理导航</a>：侧边栏布局和设置清单</li>
+<li><a href="../09-data-import/">数据导入</a>：详细的导入机制、分块上传和故障排除</li>
+<li><a href="../03-qps-funnel/"><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 漏斗</a>：一旦数据流动，开始分析</li>
 </ul>
+<p><strong>最后更新：</strong> 2026 年 6 月<br />
+<abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr>.cat / Cat-Scan 技术说明的一部分。</p>
 
 
 
@@ -2914,12 +2887,41 @@ system detects the report type automatically from the column headers:</p>
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年6月12日 20:59:27 UTC">2026年6月12日 20:59:27</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
 
 
                 
+  
+    <hr>
+    <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
+      Built from docs <code>830edf8</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年6月12日 20:59:27 UTC">2026年6月12日 20:59:27</span>.
+    </p>
+  
+
               </article>
             </div>
           

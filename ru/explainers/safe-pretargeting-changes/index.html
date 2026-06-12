@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="ru" class="no-js">
   <head>
@@ -6,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize your queries-per-second allocation.">
+        <meta name="description" content="Нативный интерфейс pretargeting Google Authorized Buyers не имеет истории изменений и отката. Cat-Scan добавляет предпросмотр, промежуточную среду, аудит и откат в один клик для каждого редактирования.">
       
       
       
@@ -48,10 +49,10 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
-      
-        <title>Safe pretargeting changes + rollback - Cat-Scan Documentation</title>
-      
-    
+  
+    <title>Безопасные изменения Pretargeting для Authorized Buyers</title>
+  
+
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
@@ -104,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#safe-pretargeting-changes-on-google-authorized-buyers-staging-preview-history-and-rollback" class="md-skip">
+        <a href="#pretargeting-google-authorized-buyers" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -140,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Safe pretargeting changes + rollback
+              Безопасные изменения Pretargeting для Authorized Buyers
             
           </span>
         </div>
@@ -375,7 +376,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    الرئيسية
   
 
     
@@ -418,7 +419,7 @@
   <span class="md-ellipsis">
     
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
     
@@ -434,7 +435,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
           </label>
@@ -454,7 +455,7 @@
   <span class="md-ellipsis">
     
   
-    What is Cat-Scan?
+    ما هو Cat-Scan؟
   
 
     
@@ -482,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    Login Errors
+    أخطاء تسجيل الدخول
   
 
     
@@ -510,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    Setting Up CSV Reports
+    إعداد تقارير CSV
   
 
     
@@ -563,7 +564,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers
+    التوضيحات الفنية
   
 
     
@@ -579,7 +580,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Explainers
+    التوضيحات الفنية
   
 
           </label>
@@ -599,7 +600,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers index
+    فهرس التوضيحات
   
 
     
@@ -627,7 +628,7 @@
   <span class="md-ellipsis">
     
   
-    Five CSV reports (2026)
+    تقارير CSV الخمسة (2026)
   
 
     
@@ -655,7 +656,7 @@
   <span class="md-ellipsis">
     
   
-    The QPS funnel for AB seats
+    قمع QPS لمقاعد AB
   
 
     
@@ -683,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting configs (the 10-config reality)
+    تكوينات الاستهداف المسبق (واقع الـ10 تكوينات)
   
 
     
@@ -720,7 +721,7 @@
   <span class="md-ellipsis">
     
   
-    Safe pretargeting changes + rollback
+    تغييرات الاستهداف المسبق الآمنة + التراجع
   
 
     
@@ -738,7 +739,7 @@
   <span class="md-ellipsis">
     
   
-    Safe pretargeting changes + rollback
+    تغييرات الاستهداف المسبق الآمنة + التراجع
   
 
     
@@ -764,10 +765,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-minimum-viable-safe-workflow" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The minimum viable safe workflow
+        Минимально жизнеспособный безопасный рабочий процесс
       
     </span>
   </a>
@@ -775,10 +776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-the-workflow-works-in-cat-scan" class="md-nav__link">
+  <a href="#cat-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How the workflow works in Cat-Scan
+        Как рабочий процесс работает в Cat-Scan
       
     </span>
   </a>
@@ -786,10 +787,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#publisher-allowdeny-lists" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Publisher allow/deny lists
+        Списки разрешённых/заблокированных издателей
       
     </span>
   </a>
@@ -797,10 +798,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-matters-beyond-convenience" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why this matters beyond convenience
+        Почему это важно помимо удобства
       
     </span>
   </a>
@@ -808,10 +809,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-references" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation references
+        Ссылки на реализацию
       
     </span>
   </a>
@@ -841,7 +842,7 @@
   <span class="md-ellipsis">
     
   
-    QPS waste by publisher/geo/size
+    هدر QPS حسب الناشر/الجغرافيا/الحجم
   
 
     
@@ -869,7 +870,7 @@
   <span class="md-ellipsis">
     
   
-    Creative clustering & click macros
+    تجميع الإبداعات وتدقيق ماكرو النقر
   
 
     
@@ -897,7 +898,7 @@
   <span class="md-ellipsis">
     
   
-    How smaller agencies obtain & run AB seats
+    كيف تحصل الوكالات الصغيرة وتدير مقاعد AB
   
 
     
@@ -925,7 +926,7 @@
   <span class="md-ellipsis">
     
   
-    What Cat-Scan does *not* do
+    ما لا يفعله Cat-Scan
   
 
     
@@ -953,7 +954,7 @@
   <span class="md-ellipsis">
     
   
-    Bid filtering (the fifth report)
+    تصفية العروض (التقرير الخامس)
   
 
     
@@ -1032,7 +1033,7 @@
   <span class="md-ellipsis">
     
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
     
@@ -1048,7 +1049,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
           </label>
@@ -1068,7 +1069,7 @@
   <span class="md-ellipsis">
     
   
-    QPS Funnel
+    قمع QPS
   
 
     
@@ -1096,7 +1097,7 @@
   <span class="md-ellipsis">
     
   
-    Analyzing Waste
+    تحليل الهدر
   
 
     
@@ -1124,7 +1125,7 @@
   <span class="md-ellipsis">
     
   
-    Managing Creatives
+    إدارة الإبداعات
   
 
     
@@ -1152,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting
+    الاستهداف المسبق
   
 
     
@@ -1180,7 +1181,7 @@
   <span class="md-ellipsis">
     
   
-    Optimizer (BYOM)
+    المحسن (BYOM)
   
 
     
@@ -1208,7 +1209,7 @@
   <span class="md-ellipsis">
     
   
-    Conversions
+    التحويلات
   
 
     
@@ -1236,7 +1237,7 @@
   <span class="md-ellipsis">
     
   
-    Data Import
+    استيراد البيانات
   
 
     
@@ -1264,7 +1265,7 @@
   <span class="md-ellipsis">
     
   
-    Reports
+    التقارير
   
 
     
@@ -1315,7 +1316,7 @@
   <span class="md-ellipsis">
     
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
     
@@ -1331,7 +1332,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
           </label>
@@ -1351,7 +1352,7 @@
   <span class="md-ellipsis">
     
   
-    Admin Navigation
+    التنقل الإداري
   
 
     
@@ -1379,7 +1380,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture
+    الهندسة المعمارية
   
 
     
@@ -1407,7 +1408,7 @@
   <span class="md-ellipsis">
     
   
-    Deployment
+    النشر
   
 
     
@@ -1435,7 +1436,7 @@
   <span class="md-ellipsis">
     
   
-    Health Monitoring
+    مراقبة الصحة
   
 
     
@@ -1463,7 +1464,7 @@
   <span class="md-ellipsis">
     
   
-    Database
+    قاعدة البيانات
   
 
     
@@ -1491,7 +1492,7 @@
   <span class="md-ellipsis">
     
   
-    Troubleshooting
+    استكشاف الأخطاء وإصلاحها
   
 
     
@@ -1519,7 +1520,7 @@
   <span class="md-ellipsis">
     
   
-    User Admin
+    إدارة المستخدمين
   
 
     
@@ -1547,7 +1548,7 @@
   <span class="md-ellipsis">
     
   
-    Integrations
+    التكاملات
   
 
     
@@ -1598,7 +1599,7 @@
   <span class="md-ellipsis">
     
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
     
@@ -1614,7 +1615,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
           </label>
@@ -1634,7 +1635,7 @@
   <span class="md-ellipsis">
     
   
-    API Reference
+    مرجع API
   
 
     
@@ -1662,7 +1663,7 @@
   <span class="md-ellipsis">
     
   
-    FAQ
+    الأسئلة الشائعة
   
 
     
@@ -1690,7 +1691,7 @@
   <span class="md-ellipsis">
     
   
-    Glossary
+    المسرد
   
 
     
@@ -1738,10 +1739,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-minimum-viable-safe-workflow" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The minimum viable safe workflow
+        Минимально жизнеспособный безопасный рабочий процесс
       
     </span>
   </a>
@@ -1749,10 +1750,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-the-workflow-works-in-cat-scan" class="md-nav__link">
+  <a href="#cat-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How the workflow works in Cat-Scan
+        Как рабочий процесс работает в Cat-Scan
       
     </span>
   </a>
@@ -1760,10 +1761,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#publisher-allowdeny-lists" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Publisher allow/deny lists
+        Списки разрешённых/заблокированных издателей
       
     </span>
   </a>
@@ -1771,10 +1772,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-matters-beyond-convenience" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why this matters beyond convenience
+        Почему это важно помимо удобства
       
     </span>
   </a>
@@ -1782,10 +1783,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-references" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation references
+        Ссылки на реализацию
       
     </span>
   </a>
@@ -1805,6 +1806,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -1812,46 +1814,45 @@
   
 
 
-<h1 id="safe-pretargeting-changes-on-google-authorized-buyers-staging-preview-history-and-rollback">Safe pretargeting changes on Google Authorized Buyers: staging, preview, history, and rollback<a class="headerlink" href="#safe-pretargeting-changes-on-google-authorized-buyers-staging-preview-history-and-rollback" title="Permanent link">&para;</a></h1>
-<p><strong>Atomic fact:</strong> The native Google Authorized Buyers pretargeting UI has no change history and no rollback.</p>
-<p>Every production operator eventually makes a change that tanks win rate or spikes waste. Without tooling, the only recovery is manual reconstruction of the previous state from memory or old CSVs.</p>
-<h2 id="the-minimum-viable-safe-workflow">The minimum viable safe workflow<a class="headerlink" href="#the-minimum-viable-safe-workflow" title="Permanent link">&para;</a></h2>
-<p>Any system that lets you edit pretargeting in production must provide:</p>
+<h1 id="pretargeting-google-authorized-buyers">Безопасные изменения pretargeting в Google Authorized Buyers: промежуточная среда, предпросмотр, история и откат<a class="headerlink" href="#pretargeting-google-authorized-buyers" title="Permanent link">&para;</a></h1>
+<p><strong>Атомарный факт:</strong> Нативный интерфейс pretargeting Google Authorized Buyers не имеет истории изменений и возможности отката.</p>
+<p>Каждый производственный оператор рано или поздно вносит изменение, которое обрушивает win rate или резко увеличивает потери. Без инструментария единственное восстановление — это ручное воссоздание предыдущего состояния по памяти или старым <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>.</p>
+<h2 id="_1">Минимально жизнеспособный безопасный рабочий процесс<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Любая система, позволяющая редактировать pretargeting в production, должна обеспечивать:</p>
 <ul>
-<li><strong>Preview / dry-run</strong> — Show the exact diff that will be sent to Google before it is sent.</li>
-<li><strong>Staging</strong> — The change is not live until you explicitly confirm "push to Google".</li>
-<li><strong>Audit</strong> — Who changed what, when, and what the before/after values were.</li>
-<li><strong>Snapshot + rollback</strong> — The previous state is stored and can be restored with one action.</li>
+<li><strong>Предпросмотр / dry-run</strong> — Показывает точную дельту, которая будет отправлена в Google, до отправки.</li>
+<li><strong>Промежуточная среда</strong> — Изменение не активно до тех пор, пока вы явно не подтвердите «применить к Google».</li>
+<li><strong>Аудит</strong> — Кто что изменил, когда и каковы были значения до и после.</li>
+<li><strong>Снимок + откат</strong> — Предыдущее состояние сохраняется и может быть восстановлено одним действием.</li>
 </ul>
-<p>Cat-Scan was built around exactly this contract.</p>
-<h2 id="how-the-workflow-works-in-cat-scan">How the workflow works in Cat-Scan<a class="headerlink" href="#how-the-workflow-works-in-cat-scan" title="Permanent link">&para;</a></h2>
+<p>Cat-Scan был создан именно вокруг этого контракта.</p>
+<h2 id="cat-scan">Как рабочий процесс работает в Cat-Scan<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Operator opens a pretargeting config (on the home page or in settings).</li>
-<li>Edits one or more fields (excluded geos, sizes, max <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, publisher blocks, etc.).</li>
-<li>Clicks <strong>Preview</strong>. Cat-Scan shows the precise changes that will be made.</li>
-<li>If satisfied, clicks <strong>Apply</strong> (or "Yes, push to Google").</li>
-<li>The change is sent to the Authorized Buyers API.</li>
-<li>A snapshot of the config state is stored.</li>
-<li>The action appears in the global history timeline.</li>
+<li>Оператор открывает конфигурацию pretargeting (на главной странице или в настройках).</li>
+<li>Редактирует одно или несколько полей (исключённые гео, размеры, max <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr>, блокировки издателей и т.д.).</li>
+<li>Нажимает <strong>Preview</strong>. Cat-Scan показывает точные изменения, которые будут внесены.</li>
+<li>Если удовлетворён, нажимает <strong>Apply</strong> (или «Да, применить к Google»).</li>
+<li>Изменение отправляется в Authorized Buyers API.</li>
+<li>Снимок состояния конфигурации сохраняется.</li>
+<li>Действие появляется в глобальной временной шкале истории.</li>
 </ol>
-<p>If win rate drops or waste spikes, the operator goes to history, selects the change, previews the rollback, and confirms. The previous state is restored.</p>
-<p><strong>Atomic fact:</strong> Every pretargeting mutation in Cat-Scan is recorded with timestamp, user identity, old value, new value, and a full snapshot for rollback.</p>
-<h2 id="publisher-allowdeny-lists">Publisher allow/deny lists<a class="headerlink" href="#publisher-allowdeny-lists" title="Permanent link">&para;</a></h2>
-<p>Managing publisher blocks is especially painful in the native UI (full <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> round-trip for every change).</p>
-<p>Cat-Scan gives a per-config search + block/allow editor that supports bulk operations and immediate preview. This is one of the highest-ROI features for real seats.</p>
-<h2 id="why-this-matters-beyond-convenience">Why this matters beyond convenience<a class="headerlink" href="#why-this-matters-beyond-convenience" title="Permanent link">&para;</a></h2>
-<p>Without safe tooling, operators become conservative. They leave bad traffic flowing because "changing the config is risky and hard to undo." That conservatism directly costs money in wasted <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> and opportunity cost.</p>
-<p>The existence of preview + snapshot + rollback changes the risk calculus. Operators make more changes, faster, with measurable results.</p>
-<h2 id="implementation-references">Implementation references<a class="headerlink" href="#implementation-references" title="Permanent link">&para;</a></h2>
+<p>Если win rate падает или потери резко растут, оператор переходит в историю, выбирает изменение, просматривает откат и подтверждает. Предыдущее состояние восстанавливается.</p>
+<p><strong>Атомарный факт:</strong> Каждая мутация pretargeting в Cat-Scan записывается с временной меткой, идентификатором пользователя, старым значением, новым значением и полным снимком для отката.</p>
+<h2 id="_2">Списки разрешённых/заблокированных издателей<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Управление блокировками издателей особенно неудобно в нативном интерфейсе (полный цикл <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> для каждого изменения).</p>
+<p>Cat-Scan предоставляет редактор поиска + блокировки/разрешения на конфиг с поддержкой массовых операций и немедленным предпросмотром. Это одна из функций с наибольшей окупаемостью инвестиций для реальных мест.</p>
+<h2 id="_3">Почему это важно помимо удобства<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Без безопасного инструментария операторы становятся консервативными. Они оставляют плохой трафик, потому что «изменение конфига рискованно и трудно отменить». Этот консерватизм напрямую стоит денег из-за потраченного <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> и упущенной выгоды.</p>
+<p>Наличие предпросмотра + снимка + отката меняет расчёт риска. Операторы вносят больше изменений, быстрее, с измеримыми результатами.</p>
+<h2 id="_4">Ссылки на реализацию<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Manual chapter with screenshots: <a href="../../06-pretargeting/">Pretargeting Configuration</a></li>
-<li>Backend snapshot and apply logic: <a href="https://github.com/jenbrannstrom/rtbcat-platform/blob/main/services/pretargeting_service.py"><code>services/pretargeting_service.py</code></a> in the Cat-Scan platform</li>
-<li>Pretargeting router (apply/preview flows): <a href="https://github.com/jenbrannstrom/rtbcat-platform/blob/main/api/routers/settings/pretargeting.py"><code>api/routers/settings/pretargeting.py</code></a></li>
-<li>Platform overview: <a href="https://github.com/jenbrannstrom/rtbcat-platform">github.com/jenbrannstrom/rtbcat-platform</a></li>
+<li>Глава руководства со скриншотами: <a href="../../06-pretargeting/">Конфигурация Pretargeting</a></li>
+<li>Интерфейсные потоки истории изменений и отката</li>
+<li>Серверная логика снимков и применения в платформе Cat-Scan</li>
 </ul>
-<p>This workflow is one of the clearest demonstrations that the team behind Cat-Scan has actually operated Authorized Buyers (Google ADX / DoubleClick) seats at scale, not just read the API docs.</p>
-<p><strong>Last updated:</strong> June 2026<br />
-Part of the <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>.cat / Cat-Scan technical explainers.</p>
+<p>Этот рабочий процесс — одна из наглядных демонстраций того, что команда Cat-Scan фактически эксплуатировала места Authorized Buyers в масштабе, а не просто читала документацию API.</p>
+<p><strong>Последнее обновление:</strong> июнь 2026<br />
+Часть технических пояснений <abbr title="Торги в реальном времени — аукционный протокол, в котором рекламные показы покупаются и продаются за миллисекунды.">RTB</abbr>.cat / Cat-Scan.</p>
 
 
 
@@ -1859,12 +1860,41 @@ Part of the <abbr title="Торги в реальном времени — ау�
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Последнее обновление">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="12 июня 2026 г. 20:59:27 UTC">12 июня 2026 г. 20:59:27</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
 
 
                 
+  
+    <hr>
+    <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
+      Built from docs <code>830edf8</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="12 июня 2026 г. 20:59:27 UTC">12 июня 2026 г. 20:59:27</span>.
+    </p>
+  
+
               </article>
             </div>
           

@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="zh" class="no-js">
   <head>
@@ -6,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize your queries-per-second allocation.">
+        <meta name="description" content="Google 会向你发送数百种广告尺寸和数千个发布商。其中大多数没有匹配的素材或你的竞价器零出价。Cat-Scan 的三个维度视图将原始漏斗数字转化为可操作的排除列表。">
       
       
       
@@ -48,10 +49,10 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
-      
-        <title>QPS waste by publisher/geo/size - Cat-Scan Documentation</title>
-      
-    
+  
+    <title>在 Authorized Buyers 中按发布商、地理和尺寸分析 QPS 浪费 | Cat-Scan</title>
+  
+
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
@@ -104,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analyzing-qps-waste-by-publisher-geo-and-size-in-authorized-buyers" class="md-skip">
+        <a href="#authorized-buyers-qps" class="md-skip">
           跳转至
         </a>
       
@@ -140,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QPS waste by publisher/geo/size
+              在 Authorized Buyers 中按发布商、地理和尺寸分析 QPS 浪费 | Cat-Scan
             
           </span>
         </div>
@@ -375,7 +376,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    الرئيسية
   
 
     
@@ -418,7 +419,7 @@
   <span class="md-ellipsis">
     
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
     
@@ -434,7 +435,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
           </label>
@@ -454,7 +455,7 @@
   <span class="md-ellipsis">
     
   
-    What is Cat-Scan?
+    ما هو Cat-Scan؟
   
 
     
@@ -482,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    Login Errors
+    أخطاء تسجيل الدخول
   
 
     
@@ -510,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    Setting Up CSV Reports
+    إعداد تقارير CSV
   
 
     
@@ -563,7 +564,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers
+    التوضيحات الفنية
   
 
     
@@ -579,7 +580,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Explainers
+    التوضيحات الفنية
   
 
           </label>
@@ -599,7 +600,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers index
+    فهرس التوضيحات
   
 
     
@@ -627,7 +628,7 @@
   <span class="md-ellipsis">
     
   
-    Five CSV reports (2026)
+    تقارير CSV الخمسة (2026)
   
 
     
@@ -655,7 +656,7 @@
   <span class="md-ellipsis">
     
   
-    The QPS funnel for AB seats
+    قمع QPS لمقاعد AB
   
 
     
@@ -683,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting configs (the 10-config reality)
+    تكوينات الاستهداف المسبق (واقع الـ10 تكوينات)
   
 
     
@@ -711,7 +712,7 @@
   <span class="md-ellipsis">
     
   
-    Safe pretargeting changes + rollback
+    تغييرات الاستهداف المسبق الآمنة + التراجع
   
 
     
@@ -748,7 +749,7 @@
   <span class="md-ellipsis">
     
   
-    QPS waste by publisher/geo/size
+    هدر QPS حسب الناشر/الجغرافيا/الحجم
   
 
     
@@ -766,7 +767,7 @@
   <span class="md-ellipsis">
     
   
-    QPS waste by publisher/geo/size
+    هدر QPS حسب الناشر/الجغرافيا/الحجم
   
 
     
@@ -792,22 +793,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-three-views" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three views
+        三个视图
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The three views">
+    <nav class="md-nav" aria-label="三个视图">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#geographic-waste" class="md-nav__link">
+  <a href="#qpsgeo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Geographic waste
+        地理浪费（/qps/geo）
       
     </span>
   </a>
@@ -815,10 +816,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#publisher-waste" class="md-nav__link">
+  <a href="#qpspublisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Publisher waste
+        发布商浪费（/qps/publisher）
       
     </span>
   </a>
@@ -826,10 +827,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#size-waste" class="md-nav__link">
+  <a href="#qpssize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Size waste
+        尺寸浪费（/qps/size）
       
     </span>
   </a>
@@ -842,10 +843,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-the-data-is-built" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How the data is built
+        数据如何构建
       
     </span>
   </a>
@@ -853,10 +854,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-analysis-is-rare" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why this analysis is rare
+        为什么这种分析很少见
       
     </span>
   </a>
@@ -864,10 +865,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related
+        相关
       
     </span>
   </a>
@@ -897,7 +898,7 @@
   <span class="md-ellipsis">
     
   
-    Creative clustering & click macros
+    تجميع الإبداعات وتدقيق ماكرو النقر
   
 
     
@@ -925,7 +926,7 @@
   <span class="md-ellipsis">
     
   
-    How smaller agencies obtain & run AB seats
+    كيف تحصل الوكالات الصغيرة وتدير مقاعد AB
   
 
     
@@ -953,7 +954,7 @@
   <span class="md-ellipsis">
     
   
-    What Cat-Scan does *not* do
+    ما لا يفعله Cat-Scan
   
 
     
@@ -981,7 +982,7 @@
   <span class="md-ellipsis">
     
   
-    Bid filtering (the fifth report)
+    تصفية العروض (التقرير الخامس)
   
 
     
@@ -1060,7 +1061,7 @@
   <span class="md-ellipsis">
     
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
     
@@ -1076,7 +1077,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
           </label>
@@ -1096,7 +1097,7 @@
   <span class="md-ellipsis">
     
   
-    QPS Funnel
+    قمع QPS
   
 
     
@@ -1124,7 +1125,7 @@
   <span class="md-ellipsis">
     
   
-    Analyzing Waste
+    تحليل الهدر
   
 
     
@@ -1152,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    Managing Creatives
+    إدارة الإبداعات
   
 
     
@@ -1180,7 +1181,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting
+    الاستهداف المسبق
   
 
     
@@ -1208,7 +1209,7 @@
   <span class="md-ellipsis">
     
   
-    Optimizer (BYOM)
+    المحسن (BYOM)
   
 
     
@@ -1236,7 +1237,7 @@
   <span class="md-ellipsis">
     
   
-    Conversions
+    التحويلات
   
 
     
@@ -1264,7 +1265,7 @@
   <span class="md-ellipsis">
     
   
-    Data Import
+    استيراد البيانات
   
 
     
@@ -1292,7 +1293,7 @@
   <span class="md-ellipsis">
     
   
-    Reports
+    التقارير
   
 
     
@@ -1343,7 +1344,7 @@
   <span class="md-ellipsis">
     
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
     
@@ -1359,7 +1360,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
           </label>
@@ -1379,7 +1380,7 @@
   <span class="md-ellipsis">
     
   
-    Admin Navigation
+    التنقل الإداري
   
 
     
@@ -1407,7 +1408,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture
+    الهندسة المعمارية
   
 
     
@@ -1435,7 +1436,7 @@
   <span class="md-ellipsis">
     
   
-    Deployment
+    النشر
   
 
     
@@ -1463,7 +1464,7 @@
   <span class="md-ellipsis">
     
   
-    Health Monitoring
+    مراقبة الصحة
   
 
     
@@ -1491,7 +1492,7 @@
   <span class="md-ellipsis">
     
   
-    Database
+    قاعدة البيانات
   
 
     
@@ -1519,7 +1520,7 @@
   <span class="md-ellipsis">
     
   
-    Troubleshooting
+    استكشاف الأخطاء وإصلاحها
   
 
     
@@ -1547,7 +1548,7 @@
   <span class="md-ellipsis">
     
   
-    User Admin
+    إدارة المستخدمين
   
 
     
@@ -1575,7 +1576,7 @@
   <span class="md-ellipsis">
     
   
-    Integrations
+    التكاملات
   
 
     
@@ -1626,7 +1627,7 @@
   <span class="md-ellipsis">
     
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
     
@@ -1642,7 +1643,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
           </label>
@@ -1662,7 +1663,7 @@
   <span class="md-ellipsis">
     
   
-    API Reference
+    مرجع API
   
 
     
@@ -1690,7 +1691,7 @@
   <span class="md-ellipsis">
     
   
-    FAQ
+    الأسئلة الشائعة
   
 
     
@@ -1718,7 +1719,7 @@
   <span class="md-ellipsis">
     
   
-    Glossary
+    المسرد
   
 
     
@@ -1766,22 +1767,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-three-views" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three views
+        三个视图
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The three views">
+    <nav class="md-nav" aria-label="三个视图">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#geographic-waste" class="md-nav__link">
+  <a href="#qpsgeo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Geographic waste
+        地理浪费（/qps/geo）
       
     </span>
   </a>
@@ -1789,10 +1790,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#publisher-waste" class="md-nav__link">
+  <a href="#qpspublisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Publisher waste
+        发布商浪费（/qps/publisher）
       
     </span>
   </a>
@@ -1800,10 +1801,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#size-waste" class="md-nav__link">
+  <a href="#qpssize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Size waste
+        尺寸浪费（/qps/size）
       
     </span>
   </a>
@@ -1816,10 +1817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-the-data-is-built" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How the data is built
+        数据如何构建
       
     </span>
   </a>
@@ -1827,10 +1828,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-analysis-is-rare" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why this analysis is rare
+        为什么这种分析很少见
       
     </span>
   </a>
@@ -1838,10 +1839,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related
+        相关
       
     </span>
   </a>
@@ -1861,6 +1862,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -1868,47 +1870,45 @@
   
 
 
-<h1 id="analyzing-qps-waste-by-publisher-geo-and-size-in-authorized-buyers">Analyzing <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> waste by publisher, geo, and size in Authorized Buyers<a class="headerlink" href="#analyzing-qps-waste-by-publisher-geo-and-size-in-authorized-buyers" title="Permanent link">&para;</a></h1>
-<p><strong>Atomic fact:</strong> Google sends you hundreds of ad sizes and thousands of publishers. Most of them have zero matching creatives or zero bids from your bidder.</p>
-<p>The three dimension views in Cat-Scan (geo, publisher, size) turn the raw funnel numbers into actionable exclusion lists.</p>
-<h2 id="the-three-views">The three views<a class="headerlink" href="#the-three-views" title="Permanent link">&para;</a></h2>
-<h3 id="geographic-waste">Geographic waste<a class="headerlink" href="#geographic-waste" title="Permanent link">&para;</a></h3>
-<p>Shows <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>, bids, wins, spend, and waste ratio by country and city.</p>
-<p>Typical findings:
-- Large <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> from countries where you have no creatives or no budget.
-- Cities that receive disproportionate volume but almost no wins.
-- Entire regions that the bidder completely ignores.</p>
-<p>Action: Add the worst geos to the excluded list of the relevant pretargeting config.</p>
-<h3 id="publisher-waste">Publisher waste<a class="headerlink" href="#publisher-waste" title="Permanent link">&para;</a></h3>
-<p>Ranks domains and app bundles by volume received vs bids placed and spend.</p>
-<p>Typical findings:
-- High-<abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> publishers where the bidder bids on &lt;5% of requests.
-- Apps that deliver volume but zero wins (often due to floor or creative mismatch).
-- A long tail of low-quality inventory that still consumes your <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> allocation.</p>
-<p>Action: Use the per-config publisher editor to block the worst performers. This is dramatically easier than Google's <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> template dance.</p>
-<p><strong>Atomic fact:</strong> Cat-Scan's publisher block/allow editor works per pretargeting config and supports search + bulk changes with preview.</p>
-<h3 id="size-waste">Size waste<a class="headerlink" href="#size-waste" title="Permanent link">&para;</a></h3>
-<p>Google will happily send you 300+ different ad sizes even if you only have creatives for a handful.</p>
-<p>Typical finding: 80%+ of <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> in sizes for which you have no creative at all.</p>
-<p>Action: Explicitly list only the sizes you actually support in the pretargeting config. This is one of the highest-leverage single changes most new seats can make.</p>
-<h2 id="how-the-data-is-built">How the data is built<a class="headerlink" href="#how-the-data-is-built" title="Permanent link">&para;</a></h2>
-<p>All three views are computed from the joined five-report dataset after import. No additional Google API calls are required for the analysis itself (the pretargeting sync is separate).</p>
-<p>The same data powers the home-page funnel and the optimizer proposals.</p>
-<h2 id="why-this-analysis-is-rare">Why this analysis is rare<a class="headerlink" href="#why-this-analysis-is-rare" title="Permanent link">&para;</a></h2>
-<p>Most agencies never see these breakdowns because they never join the five CSVs and never build the per-dimension aggregates. They look at the high-level performance reports Google emails and assume "the bidder will sort it out."</p>
-<p>The bidder can only sort out what actually reaches it. Everything that reaches it but gets rejected has already cost you <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> allocation and infrastructure.</p>
-<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<h1 id="authorized-buyers-qps">在 Authorized Buyers 中按发布商、地理和尺寸分析 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 浪费<a class="headerlink" href="#authorized-buyers-qps" title="Permanent link">&para;</a></h1>
+<p><strong>原子事实：</strong> Google 会向你发送数百种广告尺寸和数千个发布商。其中大多数没有匹配的素材或你的竞价器零出价。</p>
+<p>Cat-Scan 中的三个维度视图（地理、发布商、尺寸）将原始漏斗数字转化为可操作的排除列表。</p>
+<h2 id="_1">三个视图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="qpsgeo">地理浪费（<code>/qps/geo</code>）<a class="headerlink" href="#qpsgeo" title="Permanent link">&para;</a></h3>
+<p>按国家和城市显示 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>、出价、胜出、花费和浪费率。</p>
+<p>典型发现：
+- 来自你没有素材或没有预算的国家的巨大 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr>。
+- 收到不成比例流量但几乎没有胜出的城市。
+- 竞价器完全忽略的整个地区。</p>
+<p>行动：在相关预定向配置的排除列表中添加最差的地理。</p>
+<h3 id="qpspublisher">发布商浪费（<code>/qps/publisher</code>）<a class="headerlink" href="#qpspublisher" title="Permanent link">&para;</a></h3>
+<p>按收到的量与出价和花费对域名和应用包进行排名。</p>
+<p>典型发现：
+- 竞价器对 &lt;5% 请求出价的高 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 发布商。
+- 提供流量但零胜出的应用（通常由于底价或素材不匹配）。
+- 仍然消耗你 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 分配的低质量库存长尾。</p>
+<p>行动：使用每个配置的发布商编辑器阻止表现最差的发布商。这比 Google 的 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr> 模板舞蹈容易得多。</p>
+<p><strong>原子事实：</strong> Cat-Scan 的发布商阻止/允许编辑器按预定向配置工作，并支持搜索 + 批量变更与预览。</p>
+<h3 id="qpssize">尺寸浪费（<code>/qps/size</code>）<a class="headerlink" href="#qpssize" title="Permanent link">&para;</a></h3>
+<p>Google 会很乐意向你发送 300+ 种不同的广告尺寸，即使你只为其中几种有素材。</p>
+<p>典型发现：80%+ 的 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 来自你根本没有匹配素材的尺寸。</p>
+<p>行动：在预定向配置中明确仅列出你实际支持的尺寸。这是对大多数新席位影响最大的单一变更之一。</p>
+<h2 id="_2">数据如何构建<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>所有三个视图都是在导入后从合并的五份报告数据集中计算得出的。分析本身不需要额外的 Google API 调用（预定向同步是单独的）。</p>
+<p>相同的数据为首页漏斗和优化器建议提供动力。</p>
+<h2 id="_3">为什么这种分析很少见<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>大多数机构从未见过这些拆分，因为他们从未合并过五份 <abbr title="逗号分隔值 — Google Authorized Buyers 用于导出报告的文件格式。">CSV</abbr>，也从未构建过每个维度的聚合。他们查看 Google 邮件发送的高级效果报告，并假设“竞价器会处理好”。</p>
+<p>竞价器只能处理实际到达它的流量。到达它但被拒绝的所有东西都已经 costing 你 <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 分配和基础设施。</p>
+<h2 id="_4">相关<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../qps-funnel/">The <abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> funnel</a></li>
-<li><a href="../pretargeting-configs/">Pretargeting configurations</a></li>
-<li><a href="../safe-pretargeting-changes/">Safe pretargeting changes</a></li>
-<li>Full manual treatment: <a href="../../04-analyzing-waste/">Analyzing Waste by Dimension</a></li>
-<li>Waste analysis source: <a href="https://github.com/jenbrannstrom/rtbcat-platform/tree/main/api/analysis"><code>api/analysis/</code></a> in the Cat-Scan platform</li>
-<li>Platform overview: <a href="https://github.com/jenbrannstrom/rtbcat-platform">github.com/jenbrannstrom/rtbcat-platform</a></li>
+<li><a href="../qps-funnel/"><abbr title="每秒查询数 — Google 向您的竞价器发送出价请求的速率。每个请求都消耗计算和带宽资源，因此浪费的 QPS 就是浪费的金钱。">QPS</abbr> 漏斗</a></li>
+<li><a href="../pretargeting-configs/">预定向配置</a></li>
+<li><a href="../safe-pretargeting-changes/">安全的预定向更改</a></li>
+<li>完整手册处理：<a href="../../04-analyzing-waste/">按维度分析浪费</a></li>
 </ul>
-<p><strong>Last updated:</strong> June 2026<br />
-Part of the <abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr>.cat / Cat-Scan technical explainers.<br />
-These three views are live in every Cat-Scan deployment (Google Authorized Buyers / Google ADX / DoubleClick Ad Exchange).</p>
+<p><strong>最后更新：</strong> 2026 年 6 月<br />
+<abbr title="实时竞价 — 广告展示在毫秒内买卖的拍卖协议。">RTB</abbr>.cat / Cat-Scan 技术说明的一部分。<br />
+这三个视图在每个 Cat-Scan 部署中都是实时的。</p>
 
 
 
@@ -1916,12 +1916,41 @@ These three views are live in every Cat-Scan deployment (Google Authorized Buyer
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年6月12日 20:59:27 UTC">2026年6月12日 20:59:27</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
 
 
                 
+  
+    <hr>
+    <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
+      Built from docs <code>830edf8</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年6月12日 20:59:27 UTC">2026年6月12日 20:59:27</span>.
+    </p>
+  
+
               </article>
             </div>
           

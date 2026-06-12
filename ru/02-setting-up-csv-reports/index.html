@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="ru" class="no-js">
   <head>
@@ -6,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cat-Scan is a QPS optimization platform for Google Authorized Buyers. Analyze bid-stream waste, manage creatives, tune pretargeting, and maximize your queries-per-second allocation.">
+        <meta name="description" content="Google Authorized Buyers не имеет Reporting API, поэтому Cat-Scan восстанавливает воронку из пяти CSV-отчётов по расписанию. Полный справочник метрик, измерений и инструкция по настройке.">
       
       
       
@@ -48,10 +49,10 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
-      
-        <title>Setting Up CSV Reports - Cat-Scan Documentation</title>
-      
-    
+  
+    <title>CSV-отчёты Authorized Buyers: 5 отчётов для Cat-Scan</title>
+  
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
@@ -104,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-your-csv-reports" class="md-skip">
+        <a href="#csv-" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -140,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setting Up CSV Reports
+              CSV-отчёты Authorized Buyers: 5 отчётов для Cat-Scan
             
           </span>
         </div>
@@ -375,7 +376,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    الرئيسية
   
 
     
@@ -420,7 +421,7 @@
   <span class="md-ellipsis">
     
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
     
@@ -436,7 +437,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 0: Getting Started
+    الجزء 0: البدء
   
 
           </label>
@@ -456,7 +457,7 @@
   <span class="md-ellipsis">
     
   
-    What is Cat-Scan?
+    ما هو Cat-Scan؟
   
 
     
@@ -484,7 +485,7 @@
   <span class="md-ellipsis">
     
   
-    Login Errors
+    أخطاء تسجيل الدخول
   
 
     
@@ -521,7 +522,7 @@
   <span class="md-ellipsis">
     
   
-    Setting Up CSV Reports
+    إعداد تقارير CSV
   
 
     
@@ -539,7 +540,7 @@
   <span class="md-ellipsis">
     
   
-    Setting Up CSV Reports
+    إعداد تقارير CSV
   
 
     
@@ -565,10 +566,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-five-reports-at-a-glance" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The five reports at a glance
+        Пять отчётов в двух словах
       
     </span>
   </a>
@@ -576,22 +577,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#complete-metrics-reference" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complete metrics reference
+        Полный справочник метрик
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Complete metrics reference">
+    <nav class="md-nav" aria-label="Полный справочник метрик">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#funnel-metrics-bidstream-pipeline" class="md-nav__link">
+  <a href="#pipeline-bidstream" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funnel metrics (bidstream pipeline)
+        Метрики воронки (pipeline bidstream)
       
     </span>
   </a>
@@ -599,10 +600,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#spend-and-cost-metrics" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spend and cost metrics
+        Метрики расходов и стоимости
       
     </span>
   </a>
@@ -610,10 +611,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#quality-and-viewability-metrics" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quality and viewability metrics
+        Метрики качества и видимости
       
     </span>
   </a>
@@ -621,10 +622,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bid-filtering-metrics" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bid filtering metrics
+        Метрики фильтрации ставок
       
     </span>
   </a>
@@ -632,10 +633,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimensions-grouping-columns" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dimensions (grouping columns)
+        Измерения (столбцы группировки)
       
     </span>
   </a>
@@ -648,22 +649,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-by-step-creating-each-report" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step-by-step: creating each report
+        Пошаговое создание каждого отчёта
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-step: creating each report">
+    <nav class="md-nav" aria-label="Пошаговое создание каждого отчёта">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-quality-report" class="md-nav__link">
+  <a href="#1-quality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Quality report
+        1. Отчёт Quality
       
     </span>
   </a>
@@ -671,10 +672,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-bids-in-auction-report" class="md-nav__link">
+  <a href="#2-bids-in-auction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Bids in Auction report
+        2. Отчёт Bids in Auction
       
     </span>
   </a>
@@ -682,10 +683,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-pipeline-geo-report" class="md-nav__link">
+  <a href="#3-pipeline-geo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Pipeline -- Geo report
+        3. Отчёт Pipeline -- Geo
       
     </span>
   </a>
@@ -693,10 +694,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-pipeline-publisher-report" class="md-nav__link">
+  <a href="#4-pipeline-publisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Pipeline -- Publisher report
+        4. Отчёт Pipeline -- Publisher
       
     </span>
   </a>
@@ -704,10 +705,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-bid-filtering-report" class="md-nav__link">
+  <a href="#5-bid-filtering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Bid Filtering report
+        5. Отчёт Bid Filtering
       
     </span>
   </a>
@@ -715,10 +716,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-filtering-reasons" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common filtering reasons
+        Распространённые причины фильтрации
       
     </span>
   </a>
@@ -731,10 +732,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scheduling-delivery" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scheduling delivery
+        Настройка расписания доставки
       
     </span>
   </a>
@@ -742,10 +743,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-your-setup" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying your setup
+        Проверка настройки
       
     </span>
   </a>
@@ -753,10 +754,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auto-detection" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Auto-detection
+        Автодетекция
       
     </span>
   </a>
@@ -764,10 +765,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-cat-scan-uses-each-metric" class="md-nav__link">
+  <a href="#cat-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How Cat-Scan uses each metric
+        Как Cat-Scan использует каждую метрику
       
     </span>
   </a>
@@ -775,10 +776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-mistakes" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common mistakes
+        Распространённые ошибки
       
     </span>
   </a>
@@ -786,10 +787,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next steps
+        Дальнейшие шаги
       
     </span>
   </a>
@@ -842,7 +843,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers
+    التوضيحات الفنية
   
 
     
@@ -858,7 +859,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Explainers
+    التوضيحات الفنية
   
 
           </label>
@@ -878,7 +879,7 @@
   <span class="md-ellipsis">
     
   
-    Explainers index
+    فهرس التوضيحات
   
 
     
@@ -906,7 +907,7 @@
   <span class="md-ellipsis">
     
   
-    Five CSV reports (2026)
+    تقارير CSV الخمسة (2026)
   
 
     
@@ -934,7 +935,7 @@
   <span class="md-ellipsis">
     
   
-    The QPS funnel for AB seats
+    قمع QPS لمقاعد AB
   
 
     
@@ -962,7 +963,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting configs (the 10-config reality)
+    تكوينات الاستهداف المسبق (واقع الـ10 تكوينات)
   
 
     
@@ -990,7 +991,7 @@
   <span class="md-ellipsis">
     
   
-    Safe pretargeting changes + rollback
+    تغييرات الاستهداف المسبق الآمنة + التراجع
   
 
     
@@ -1018,7 +1019,7 @@
   <span class="md-ellipsis">
     
   
-    QPS waste by publisher/geo/size
+    هدر QPS حسب الناشر/الجغرافيا/الحجم
   
 
     
@@ -1046,7 +1047,7 @@
   <span class="md-ellipsis">
     
   
-    Creative clustering & click macros
+    تجميع الإبداعات وتدقيق ماكرو النقر
   
 
     
@@ -1074,7 +1075,7 @@
   <span class="md-ellipsis">
     
   
-    How smaller agencies obtain & run AB seats
+    كيف تحصل الوكالات الصغيرة وتدير مقاعد AB
   
 
     
@@ -1102,7 +1103,7 @@
   <span class="md-ellipsis">
     
   
-    What Cat-Scan does *not* do
+    ما لا يفعله Cat-Scan
   
 
     
@@ -1130,7 +1131,7 @@
   <span class="md-ellipsis">
     
   
-    Bid filtering (the fifth report)
+    تصفية العروض (التقرير الخامس)
   
 
     
@@ -1209,7 +1210,7 @@
   <span class="md-ellipsis">
     
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
     
@@ -1225,7 +1226,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part I: Media Buyer Track
+    الجزء الأول: مسار مشتري الوسائط
   
 
           </label>
@@ -1245,7 +1246,7 @@
   <span class="md-ellipsis">
     
   
-    QPS Funnel
+    قمع QPS
   
 
     
@@ -1273,7 +1274,7 @@
   <span class="md-ellipsis">
     
   
-    Analyzing Waste
+    تحليل الهدر
   
 
     
@@ -1301,7 +1302,7 @@
   <span class="md-ellipsis">
     
   
-    Managing Creatives
+    إدارة الإبداعات
   
 
     
@@ -1329,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Pretargeting
+    الاستهداف المسبق
   
 
     
@@ -1357,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Optimizer (BYOM)
+    المحسن (BYOM)
   
 
     
@@ -1385,7 +1386,7 @@
   <span class="md-ellipsis">
     
   
-    Conversions
+    التحويلات
   
 
     
@@ -1413,7 +1414,7 @@
   <span class="md-ellipsis">
     
   
-    Data Import
+    استيراد البيانات
   
 
     
@@ -1441,7 +1442,7 @@
   <span class="md-ellipsis">
     
   
-    Reports
+    التقارير
   
 
     
@@ -1492,7 +1493,7 @@
   <span class="md-ellipsis">
     
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
     
@@ -1508,7 +1509,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part II: DevOps Track
+    الجزء الثاني: مسار DevOps
   
 
           </label>
@@ -1528,7 +1529,7 @@
   <span class="md-ellipsis">
     
   
-    Admin Navigation
+    التنقل الإداري
   
 
     
@@ -1556,7 +1557,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture
+    الهندسة المعمارية
   
 
     
@@ -1584,7 +1585,7 @@
   <span class="md-ellipsis">
     
   
-    Deployment
+    النشر
   
 
     
@@ -1612,7 +1613,7 @@
   <span class="md-ellipsis">
     
   
-    Health Monitoring
+    مراقبة الصحة
   
 
     
@@ -1640,7 +1641,7 @@
   <span class="md-ellipsis">
     
   
-    Database
+    قاعدة البيانات
   
 
     
@@ -1668,7 +1669,7 @@
   <span class="md-ellipsis">
     
   
-    Troubleshooting
+    استكشاف الأخطاء وإصلاحها
   
 
     
@@ -1696,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    User Admin
+    إدارة المستخدمين
   
 
     
@@ -1724,7 +1725,7 @@
   <span class="md-ellipsis">
     
   
-    Integrations
+    التكاملات
   
 
     
@@ -1775,7 +1776,7 @@
   <span class="md-ellipsis">
     
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
     
@@ -1791,7 +1792,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part III: Reference
+    الجزء الثالث: المرجع
   
 
           </label>
@@ -1811,7 +1812,7 @@
   <span class="md-ellipsis">
     
   
-    API Reference
+    مرجع API
   
 
     
@@ -1839,7 +1840,7 @@
   <span class="md-ellipsis">
     
   
-    FAQ
+    الأسئلة الشائعة
   
 
     
@@ -1867,7 +1868,7 @@
   <span class="md-ellipsis">
     
   
-    Glossary
+    المسرد
   
 
     
@@ -1915,10 +1916,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-five-reports-at-a-glance" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The five reports at a glance
+        Пять отчётов в двух словах
       
     </span>
   </a>
@@ -1926,22 +1927,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#complete-metrics-reference" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complete metrics reference
+        Полный справочник метрик
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Complete metrics reference">
+    <nav class="md-nav" aria-label="Полный справочник метрик">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#funnel-metrics-bidstream-pipeline" class="md-nav__link">
+  <a href="#pipeline-bidstream" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funnel metrics (bidstream pipeline)
+        Метрики воронки (pipeline bidstream)
       
     </span>
   </a>
@@ -1949,10 +1950,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#spend-and-cost-metrics" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spend and cost metrics
+        Метрики расходов и стоимости
       
     </span>
   </a>
@@ -1960,10 +1961,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#quality-and-viewability-metrics" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quality and viewability metrics
+        Метрики качества и видимости
       
     </span>
   </a>
@@ -1971,10 +1972,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bid-filtering-metrics" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bid filtering metrics
+        Метрики фильтрации ставок
       
     </span>
   </a>
@@ -1982,10 +1983,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimensions-grouping-columns" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dimensions (grouping columns)
+        Измерения (столбцы группировки)
       
     </span>
   </a>
@@ -1998,22 +1999,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-by-step-creating-each-report" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step-by-step: creating each report
+        Пошаговое создание каждого отчёта
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-step: creating each report">
+    <nav class="md-nav" aria-label="Пошаговое создание каждого отчёта">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-quality-report" class="md-nav__link">
+  <a href="#1-quality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Quality report
+        1. Отчёт Quality
       
     </span>
   </a>
@@ -2021,10 +2022,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-bids-in-auction-report" class="md-nav__link">
+  <a href="#2-bids-in-auction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Bids in Auction report
+        2. Отчёт Bids in Auction
       
     </span>
   </a>
@@ -2032,10 +2033,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-pipeline-geo-report" class="md-nav__link">
+  <a href="#3-pipeline-geo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Pipeline -- Geo report
+        3. Отчёт Pipeline -- Geo
       
     </span>
   </a>
@@ -2043,10 +2044,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-pipeline-publisher-report" class="md-nav__link">
+  <a href="#4-pipeline-publisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Pipeline -- Publisher report
+        4. Отчёт Pipeline -- Publisher
       
     </span>
   </a>
@@ -2054,10 +2055,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-bid-filtering-report" class="md-nav__link">
+  <a href="#5-bid-filtering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Bid Filtering report
+        5. Отчёт Bid Filtering
       
     </span>
   </a>
@@ -2065,10 +2066,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-filtering-reasons" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common filtering reasons
+        Распространённые причины фильтрации
       
     </span>
   </a>
@@ -2081,10 +2082,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scheduling-delivery" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scheduling delivery
+        Настройка расписания доставки
       
     </span>
   </a>
@@ -2092,10 +2093,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-your-setup" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying your setup
+        Проверка настройки
       
     </span>
   </a>
@@ -2103,10 +2104,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auto-detection" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Auto-detection
+        Автодетекция
       
     </span>
   </a>
@@ -2114,10 +2115,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-cat-scan-uses-each-metric" class="md-nav__link">
+  <a href="#cat-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How Cat-Scan uses each metric
+        Как Cat-Scan использует каждую метрику
       
     </span>
   </a>
@@ -2125,10 +2126,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-mistakes" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common mistakes
+        Распространённые ошибки
       
     </span>
   </a>
@@ -2136,10 +2137,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next steps
+        Дальнейшие шаги
       
     </span>
   </a>
@@ -2159,6 +2160,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -2166,334 +2168,325 @@
   
 
 
-<h1 id="setting-up-your-csv-reports">Setting Up Your <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> Reports<a class="headerlink" href="#setting-up-your-csv-reports" title="Permanent link">&para;</a></h1>
-<p><em>Audience: media buyers, account managers</em></p>
-<p>Before Cat-Scan can analyze anything, it needs data. Google Authorized Buyers
-has no Reporting API, so all data flows through <strong>five scheduled <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> reports</strong>
-that you create once in your Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr> account.</p>
+<h1 id="csv-">Настройка <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-отчётов<a class="headerlink" href="#csv-" title="Permanent link">&para;</a></h1>
+<p><em>Аудитория: медиа-байеры, менеджеры аккаунтов</em></p>
+<p>Прежде чем Cat-Scan сможет что-либо анализировать, ему нужны данные. Google Authorized Buyers не имеет Reporting API, поэтому все данные поступают через <strong>пять <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-отчётов по расписанию</strong>, которые вы создаёте единожды в своём аккаунте Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr>.</p>
 <div class="admonition warning">
-<p class="admonition-title">Why five separate reports?</p>
-<p>Google's reporting columns are not all compatible with each other. For
-example, "Bid requests" cannot appear in the same report as "Mobile app ID"
-or "Creative ID + Billing ID". To get full funnel visibility, you need five
-reports that Cat-Scan joins together automatically.</p>
+<p class="admonition-title">Почему именно пять отдельных отчётов?</p>
+<p>Столбцы отчётности Google не все совместимы друг с другом. Например, «Bid requests» не может появляться в одном отчёте вместе с «Mobile app ID» или «Creative ID + Billing ID». Чтобы получить полную видимость воронки, нужно пять отчётов, которые Cat-Scan автоматически объединяет.</p>
 </div>
-<h2 id="the-five-reports-at-a-glance">The five reports at a glance<a class="headerlink" href="#the-five-reports-at-a-glance" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Пять отчётов в двух словах<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>#</th>
-<th>Report name</th>
-<th>What it tells Cat-Scan</th>
-<th>Key columns</th>
+<th>Название отчёта</th>
+<th>Что он даёт Cat-Scan</th>
+<th>Ключевые столбцы</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
 <td><strong>Quality</strong></td>
-<td>Creative-level performance with viewability</td>
+<td>Эффективность на уровне креатива с видимостью</td>
 <td>Billing ID, Creative ID, Impressions, Spend, Active View</td>
 </tr>
 <tr>
 <td>2</td>
 <td><strong>Bids in Auction</strong></td>
-<td>Creative-level bid pipeline (bids -&gt; wins)</td>
+<td>Воронка ставок на уровне креатива (bids → wins)</td>
 <td>Creative ID, Bids, Bids in auction, Auctions won</td>
 </tr>
 <tr>
 <td>3</td>
 <td><strong>Pipeline -- Geo</strong></td>
-<td>Full bidstream funnel by country</td>
+<td>Полная воронка bidstream по странам</td>
 <td>Bid requests, Country, Reached queries, Impressions</td>
 </tr>
 <tr>
 <td>4</td>
 <td><strong>Pipeline -- Publisher</strong></td>
-<td>Full bidstream funnel by publisher</td>
+<td>Полная воронка bidstream по издателям</td>
 <td>Bid requests, Publisher ID, Publisher name</td>
 </tr>
 <tr>
 <td>5</td>
 <td><strong>Bid Filtering</strong></td>
-<td>Why Google is rejecting your bids</td>
+<td>Почему Google отклоняет ваши ставки</td>
 <td>Filtering reason, Bids, Opportunity cost</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="complete-metrics-reference">Complete metrics reference<a class="headerlink" href="#complete-metrics-reference" title="Permanent link">&para;</a></h2>
-<p>Every metric that Cat-Scan ingests, what it means, and which report carries it.</p>
-<h3 id="funnel-metrics-bidstream-pipeline">Funnel metrics (bidstream pipeline)<a class="headerlink" href="#funnel-metrics-bidstream-pipeline" title="Permanent link">&para;</a></h3>
-<p>These track the progression of a bid request through Google's auction system.
-Present in the <strong>Pipeline -- Geo</strong> and <strong>Pipeline -- Publisher</strong> reports.</p>
+<h2 id="_2">Полный справочник метрик<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Каждая метрика, которую Cat-Scan принимает, её значение и из какого отчёта она поступает.</p>
+<h3 id="pipeline-bidstream">Метрики воронки (pipeline bidstream)<a class="headerlink" href="#pipeline-bidstream" title="Permanent link">&para;</a></h3>
+<p>Они отслеживают прохождение bid request через аукционную систему Google. Присутствуют в отчётах <strong>Pipeline -- Geo</strong> и <strong>Pipeline -- Publisher</strong>.</p>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>Метрика</th>
+<th>Определение</th>
+<th>Единица</th>
+<th>Отчёт(ы)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Bid requests</strong></td>
-<td>Total bid requests Google sent to your bidder endpoint. This is the raw inbound volume -- the top of the funnel. Includes requests your bidder may not have responded to in time.</td>
-<td>count</td>
+<td>Всего bid requests, которые Google отправил на ваш endpoint. Это входящий объём в сыром виде — вершина воронки. Включает запросы, на которые ваш bidder мог не успеть ответить.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Reached queries</strong></td>
-<td>Bid requests that actually reached your bidder and got a response (successful or not). Lower than "Bid requests" if your bidder has latency issues or timeouts.</td>
-<td>count</td>
+<td>Bid requests, которые фактически достигли вашего bidder и получили ответ (успешный или нет). Ниже «Bid requests», если у вашего bidder есть проблемы с задержкой или таймаутами.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Inventory matches</strong></td>
-<td>Requests where your bidder found matching inventory (a creative that fits the request). This is the first filter: if you have no creative for the requested size/format, it stops here.</td>
-<td>count</td>
+<td>Запросы, по которым ваш bidder нашёл подходящий инвентарь (креатив, соответствующий запросу). Это первый фильтр: если у вас нет креатива для запрошенного размера/формата, процесс останавливается здесь.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Successful responses</strong></td>
-<td>Requests where your bidder returned a valid, parseable bid response (HTTP 200 with a well-formed bid). Excludes timeouts, errors, and no-bids.</td>
-<td>count</td>
+<td>Запросы, на которые ваш bidder вернул корректный, разбираемый ответ (HTTP 200 с правильно сформированной ставкой). Исключает таймауты, ошибки и отказы от ставки.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Bids</strong></td>
-<td>Actual bid responses your bidder placed. A subset of successful responses -- your bidder may respond successfully but choose not to bid (no-bid response).</td>
-<td>count</td>
+<td>Фактические ответы со ставками вашего bidder. Подмножество успешных ответов — bidder может ответить успешно, но не сделать ставку (no-bid response).</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Bids in Auction, Bid Filtering</td>
 </tr>
 <tr>
 <td><strong>Bids in auction</strong></td>
-<td>Bids that Google accepted into the auction. Bids can be rejected before auction entry due to filtering rules (creative disapproval, policy violations, floor price, pretargeting exclusions). The gap between "Bids" and "Bids in auction" is shown in the Bid Filtering report.</td>
-<td>count</td>
+<td>Ставки, которые Google допустил к аукциону. Ставки могут быть отклонены до входа в аукцион из-за правил фильтрации (отклонение креатива, нарушение политики, минимальная цена, исключения pretargeting). Разрыв между «Bids» и «Bids in auction» отображается в отчёте Bid Filtering.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Bids in Auction</td>
 </tr>
 <tr>
 <td><strong>Auctions won</strong></td>
-<td>Bids that won the auction. You pay for these. The gap between "Bids in auction" and "Auctions won" is competition -- other buyers outbid you.</td>
-<td>count</td>
+<td>Ставки, выигравшие аукцион. За них вы платите. Разрыв между «Bids in auction» и «Auctions won» — это конкуренция: другие покупатели перебили вас.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Bids in Auction</td>
 </tr>
 <tr>
 <td><strong>Impressions</strong></td>
-<td>Ads actually rendered in a user's browser or app after winning the auction. Slightly less than "Auctions won" due to ad rendering failures, page navigations before render, and ad blocker interference.</td>
-<td>count</td>
-<td>All five reports</td>
+<td>Объявления, фактически отображённые в браузере или приложении пользователя после выигрыша аукциона. Немного меньше «Auctions won» из-за сбоев рендеринга, навигации по страницам до рендеринга и вмешательства блокировщиков рекламы.</td>
+<td>кол-во</td>
+<td>Все пять отчётов</td>
 </tr>
 <tr>
 <td><strong>Clicks</strong></td>
-<td>User interactions (taps/clicks) on your served ads.</td>
-<td>count</td>
+<td>Взаимодействия пользователей (касания/клики) с вашими показанными объявлениями.</td>
+<td>кол-во</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher, Quality</td>
 </tr>
 </tbody>
 </table>
-<h3 id="spend-and-cost-metrics">Spend and cost metrics<a class="headerlink" href="#spend-and-cost-metrics" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Метрики расходов и стоимости<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>Метрика</th>
+<th>Определение</th>
+<th>Единица</th>
+<th>Отчёт(ы)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Spend</strong></td>
-<td>Total money spent on won impressions for the period. This is your actual media cost. Denominated in your account's currency (usually USD).</td>
-<td>currency (micros in raw data, dollars in UI)</td>
+<td>Общая сумма, потраченная на выигранные показы за период. Это ваша фактическая стоимость медиа. В валюте вашего аккаунта (обычно USD).</td>
+<td>валюта (micros в сырых данных, доллары в интерфейсе)</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Opportunity cost</strong></td>
-<td>Estimated revenue you lost because Google filtered your bids before they entered the auction. Calculated by Google based on historical win rates and CPMs for similar inventory. Useful for prioritizing which filtering reasons to fix first.</td>
-<td>currency</td>
+<td>Оценочный доход, упущенный из-за того, что Google отфильтровал ваши ставки до входа в аукцион. Рассчитывается Google на основе исторических показателей выигрышей и <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr> для аналогичного инвентаря. Полезно для расстановки приоритетов при исправлении причин фильтрации.</td>
+<td>валюта</td>
 <td>Bid Filtering</td>
 </tr>
 </tbody>
 </table>
-<h3 id="quality-and-viewability-metrics">Quality and viewability metrics<a class="headerlink" href="#quality-and-viewability-metrics" title="Permanent link">&para;</a></h3>
-<p>These are creative-level metrics from the <strong>Quality</strong> report. They measure
-what happens <em>after</em> the impression is served.</p>
+<h3 id="_4">Метрики качества и видимости<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Это метрики уровня креатива из отчёта <strong>Quality</strong>. Они измеряют то, что происходит <em>после</em> показа.</p>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>Метрика</th>
+<th>Определение</th>
+<th>Единица</th>
+<th>Отчёт(ы)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Active View viewable</strong></td>
-<td>Impressions that met the MRC viewability standard: at least 50% of the ad's pixels were in the viewable area of the browser for at least 1 continuous second (2 seconds for video). This is the industry standard for "was this ad actually seen."</td>
-<td>count</td>
+<td>Показы, соответствующие стандарту видимости MRC: не менее 50% пикселей объявления находились в видимой области браузера не менее 1 непрерывной секунды (2 секунды для видео). Это отраслевой стандарт «было ли объявление фактически увидено».</td>
+<td>кол-во</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Active View measurable</strong></td>
-<td>Impressions where viewability <em>could</em> be measured. Some environments (certain apps, cross-domain iframes, older browsers) block measurement. Viewability rate = Active View viewable / Active View measurable.</td>
-<td>count</td>
+<td>Показы, у которых видимость <em>можно было</em> измерить. Некоторые среды (определённые приложения, кросс-доменные iframe, старые браузеры) блокируют измерение. Коэффициент видимости = Active View viewable / Active View measurable.</td>
+<td>кол-во</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Video starts</strong></td>
-<td>Number of times a video creative began playing. Only populated for video format creatives.</td>
-<td>count</td>
+<td>Количество раз, когда видеокреатив начал воспроизводиться. Заполняется только для видеоформатов.</td>
+<td>кол-во</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Video completions</strong></td>
-<td>Number of times a video creative played to 100% completion (or to the skip point if skippable). Video completion rate = completions / starts.</td>
-<td>count</td>
+<td>Количество раз, когда видеокреатив воспроизведён до 100% (или до точки пропуска, если пропуск доступен). Коэффициент завершения видео = completions / starts.</td>
+<td>кол-во</td>
 <td>Quality</td>
 </tr>
 </tbody>
 </table>
-<h3 id="bid-filtering-metrics">Bid filtering metrics<a class="headerlink" href="#bid-filtering-metrics" title="Permanent link">&para;</a></h3>
-<p>From the <strong>Bid Filtering</strong> report. These tell you <em>why</em> bids are being
-rejected before they enter the auction.</p>
+<h3 id="_5">Метрики фильтрации ставок<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Из отчёта <strong>Bid Filtering</strong>. Они показывают <em>почему</em> ставки отклоняются до входа в аукцион.</p>
 <table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Definition</th>
-<th>Unit</th>
-<th>Report(s)</th>
+<th>Метрика</th>
+<th>Определение</th>
+<th>Единица</th>
+<th>Отчёт(ы)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Bids</strong></td>
-<td>Total bids your bidder placed (same definition as above). In this report, used as the denominator to calculate filtering rates.</td>
-<td>count</td>
+<td>Всего ставок вашего bidder (то же определение, что выше). В этом отчёте используется как знаменатель для расчёта показателей фильтрации.</td>
+<td>кол-во</td>
 <td>Bid Filtering</td>
 </tr>
 <tr>
 <td><strong>Bids in auction</strong></td>
-<td>Bids that survived filtering and entered the auction. <code>Bids - Bids in auction</code> = total filtered bids.</td>
-<td>count</td>
+<td>Ставки, прошедшие фильтрацию и вошедшие в аукцион. <code>Bids - Bids in auction</code> = общее число отфильтрованных ставок.</td>
+<td>кол-во</td>
 <td>Bid Filtering</td>
 </tr>
 <tr>
 <td><strong>Opportunity cost</strong></td>
-<td>See spend metrics above. In this report, broken down per filtering reason so you can see which reason costs you the most.</td>
-<td>currency</td>
+<td>См. метрики расходов выше. В этом отчёте разбит по причинам фильтрации, чтобы вы могли видеть, какая причина обходится вам дороже всего.</td>
+<td>валюта</td>
 <td>Bid Filtering</td>
 </tr>
 </tbody>
 </table>
-<h3 id="dimensions-grouping-columns">Dimensions (grouping columns)<a class="headerlink" href="#dimensions-grouping-columns" title="Permanent link">&para;</a></h3>
-<p>Dimensions are not metrics -- they are the axes along which metrics are broken
-down. Cat-Scan uses these to slice your data.</p>
+<h3 id="_6">Измерения (столбцы группировки)<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Измерения — это не метрики, а оси, по которым метрики разбиваются. Cat-Scan использует их для нарезки данных.</p>
 <table>
 <thead>
 <tr>
-<th>Dimension</th>
-<th>What it is</th>
-<th>Which reports</th>
+<th>Измерение</th>
+<th>Что это</th>
+<th>В каких отчётах</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Day</strong></td>
-<td>Calendar date (UTC). Required in all reports. Cat-Scan uses this for deduplication and time-series display.</td>
-<td>All five</td>
+<td>Календарная дата (UTC). Обязательна во всех отчётах. Cat-Scan использует это для дедупликации и отображения временных рядов.</td>
+<td>Все пять</td>
 </tr>
 <tr>
 <td><strong>Hour</strong></td>
-<td>Hour of day (0--23, UTC). Enables hourly granularity in pipeline analysis.</td>
+<td>Час дня (0--23, UTC). Обеспечивает почасовую детализацию в анализе воронки.</td>
 <td>Pipeline -- Geo, Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Country</strong></td>
-<td>Two-letter ISO country code (e.g., US, DE, IL). The geographic origin of the bid request.</td>
-<td>Quality, Bids in Auction, Pipeline -- Geo, Bid Filtering (optional)</td>
+<td>Двухбуквенный код страны ISO (например, US, DE, IL). Географическое происхождение bid request.</td>
+<td>Quality, Bids in Auction, Pipeline -- Geo, Bid Filtering (опционально)</td>
 </tr>
 <tr>
 <td><strong>Billing ID (Pretargeting config)</strong></td>
-<td>Numeric ID of the pretargeting config that accepted this traffic. Maps 1:1 to a config card in Cat-Scan.</td>
+<td>Числовой ID конфигурации pretargeting, принявшей этот трафик. Соответствует карточке конфигурации в Cat-Scan 1:1.</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Creative ID</strong></td>
-<td>Google's numeric ID for the creative asset. Links to the Creatives gallery in Cat-Scan.</td>
-<td>Quality, Bids in Auction, Bid Filtering (optional)</td>
+<td>Числовой ID Google для ресурса креатива. Ссылается на галерею креативов в Cat-Scan.</td>
+<td>Quality, Bids in Auction, Bid Filtering (опционально)</td>
 </tr>
 <tr>
 <td><strong>Creative size</strong></td>
-<td>Pixel dimensions of the creative (e.g., <code>300x250</code>, <code>728x90</code>). Used for size-based waste analysis.</td>
+<td>Пиксельные размеры креатива (например, <code>300x250</code>, <code>728x90</code>). Используется для анализа потерь по размерам.</td>
 <td>Quality</td>
 </tr>
 <tr>
 <td><strong>Creative format</strong></td>
-<td>The ad format: <code>DISPLAY_IMAGE</code>, <code>DISPLAY_HTML</code>, <code>VIDEO</code>, <code>NATIVE</code>.</td>
-<td>Quality (optional)</td>
+<td>Формат объявления: <code>DISPLAY_IMAGE</code>, <code>DISPLAY_HTML</code>, <code>VIDEO</code>, <code>NATIVE</code>.</td>
+<td>Quality (опционально)</td>
 </tr>
 <tr>
 <td><strong>Platform</strong></td>
-<td>Device platform: <code>DESKTOP</code>, <code>MOBILE_APP</code>, <code>MOBILE_WEB</code>, <code>CONNECTED_TV</code>.</td>
-<td>Quality (optional)</td>
+<td>Платформа устройства: <code>DESKTOP</code>, <code>MOBILE_APP</code>, <code>MOBILE_WEB</code>, <code>CONNECTED_TV</code>.</td>
+<td>Quality (опционально)</td>
 </tr>
 <tr>
 <td><strong>Environment</strong></td>
-<td>Where the ad was served: <code>WEB</code>, <code>APP</code>.</td>
-<td>Quality (optional)</td>
+<td>Где было показано объявление: <code>WEB</code>, <code>APP</code>.</td>
+<td>Quality (опционально)</td>
 </tr>
 <tr>
 <td><strong>App ID</strong></td>
-<td>Mobile app bundle ID (e.g., <code>com.example.app</code>). Only populated for in-app inventory.</td>
-<td>Quality (optional)</td>
+<td>Идентификатор пакета мобильного приложения (например, <code>com.example.app</code>). Заполняется только для in-app инвентаря.</td>
+<td>Quality (опционально)</td>
 </tr>
 <tr>
 <td><strong>App name</strong></td>
-<td>Human-readable app name.</td>
-<td>Quality (optional)</td>
+<td>Человекочитаемое название приложения.</td>
+<td>Quality (опционально)</td>
 </tr>
 <tr>
 <td><strong>Publisher ID</strong></td>
-<td>Numeric ID of the publisher (website or app).</td>
-<td>Quality (optional), Pipeline -- Publisher</td>
+<td>Числовой ID издателя (сайта или приложения).</td>
+<td>Quality (опционально), Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Publisher name</strong></td>
-<td>Human-readable publisher name.</td>
-<td>Quality (optional), Pipeline -- Publisher</td>
+<td>Человекочитаемое имя издателя.</td>
+<td>Quality (опционально), Pipeline -- Publisher</td>
 </tr>
 <tr>
 <td><strong>Publisher domain</strong></td>
-<td>The domain of the publisher's website (e.g., <code>news.example.com</code>).</td>
-<td>Quality (optional)</td>
+<td>Домен сайта издателя (например, <code>news.example.com</code>).</td>
+<td>Quality (опционально)</td>
 </tr>
 <tr>
 <td><strong>Buyer account ID</strong></td>
-<td>Your buyer account / seat ID. Needed when you run multiple seats.</td>
-<td>Bids in Auction, Bid Filtering (optional)</td>
+<td>ID вашего покупательского аккаунта / места. Нужен при управлении несколькими местами.</td>
+<td>Bids in Auction, Bid Filtering (опционально)</td>
 </tr>
 <tr>
 <td><strong>Filtering reason</strong></td>
-<td>Google's reason code for why a bid was filtered out before entering the auction (e.g., <code>CREATIVE_NOT_APPROVED</code>, <code>BID_BELOW_AUCTION_FLOOR</code>, <code>DISAPPROVED_BY_EXCHANGE</code>).</td>
+<td>Код причины Google, по которой ставка была отфильтрована до входа в аукцион (например, <code>CREATIVE_NOT_APPROVED</code>, <code>BID_BELOW_AUCTION_FLOOR</code>, <code>DISAPPROVED_BY_EXCHANGE</code>).</td>
 <td>Bid Filtering</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="step-by-step-creating-each-report">Step-by-step: creating each report<a class="headerlink" href="#step-by-step-creating-each-report" title="Permanent link">&para;</a></h2>
-<h3 id="1-quality-report">1. Quality report<a class="headerlink" href="#1-quality-report" title="Permanent link">&para;</a></h3>
-<p>This is your creative-level performance report with viewability and spend data.</p>
-<p><strong>In Google Authorized Buyers -&gt; Reporting -&gt; New Report:</strong></p>
+<h2 id="_7">Пошаговое создание каждого отчёта<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="1-quality">1. Отчёт Quality<a class="headerlink" href="#1-quality" title="Permanent link">&para;</a></h3>
+<p>Это отчёт об эффективности на уровне креатива с данными о видимости и расходах.</p>
+<p><strong>В Google Authorized Buyers → Reporting → New Report:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Настройка</th>
+<th>Значение</th>
 </tr>
 </thead>
 <tbody>
@@ -2523,22 +2516,20 @@ down. Cat-Scan uses these to slice your data.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-quality</code></p>
+<p><strong>Рекомендуемое имя файла:</strong> <code>catscan-quality</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This report must <strong>not</strong> include "Bid requests", "Bids", or "Bids in
-auction" -- those columns are incompatible with "Billing ID" in Google's
-reporting.</p>
+<p>Этот отчёт <strong>не должен</strong> включать «Bid requests», «Bids» или «Bids in
+auction» — эти столбцы несовместимы с «Billing ID» в отчётности Google.</p>
 </div>
 <hr />
-<h3 id="2-bids-in-auction-report">2. Bids in Auction report<a class="headerlink" href="#2-bids-in-auction-report" title="Permanent link">&para;</a></h3>
-<p>This report captures the bid pipeline at the creative level, filling in the
-metrics that the Quality report cannot include.</p>
+<h3 id="2-bids-in-auction">2. Отчёт Bids in Auction<a class="headerlink" href="#2-bids-in-auction" title="Permanent link">&para;</a></h3>
+<p>Этот отчёт фиксирует воронку ставок на уровне креатива, заполняя метрики, которые не может включить отчёт Quality.</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Настройка</th>
+<th>Значение</th>
 </tr>
 </thead>
 <tbody>
@@ -2560,22 +2551,20 @@ metrics that the Quality report cannot include.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-bidsinauction</code></p>
+<p><strong>Рекомендуемое имя файла:</strong> <code>catscan-bidsinauction</code></p>
 <div class="admonition info">
-<p class="admonition-title">How Cat-Scan joins these</p>
-<p>Quality + Bids in Auction are joined on <code>(Day, Creative ID)</code> to give you
-the full picture: from bids placed through impressions served and spend
-incurred.</p>
+<p class="admonition-title">Как Cat-Scan объединяет их</p>
+<p>Quality + Bids in Auction объединяются по <code>(Day, Creative ID)</code>, что даёт
+полную картину: от размещённых ставок до показанных impressions и понесённых расходов.</p>
 </div>
 <hr />
-<h3 id="3-pipeline-geo-report">3. Pipeline -- Geo report<a class="headerlink" href="#3-pipeline-geo-report" title="Permanent link">&para;</a></h3>
-<p>This is your top-of-funnel report: how many bid requests Google is sending you
-per country, and how many survive each stage of the funnel.</p>
+<h3 id="3-pipeline-geo">3. Отчёт Pipeline -- Geo<a class="headerlink" href="#3-pipeline-geo" title="Permanent link">&para;</a></h3>
+<p>Это отчёт верхней части воронки: сколько bid requests Google отправляет вам по странам и сколько из них проходит каждый этап воронки.</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Настройка</th>
+<th>Значение</th>
 </tr>
 </thead>
 <tbody>
@@ -2597,21 +2586,20 @@ per country, and how many survive each stage of the funnel.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-pipeline-geo-{account_id}-yesterday-UTC</code></p>
+<p><strong>Рекомендуемое имя файла:</strong> <code>catscan-pipeline-geo-{account_id}-yesterday-UTC</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do <strong>not</strong> add Creative ID, Billing ID, or App ID to this report. These
-columns are incompatible with "Bid requests".</p>
+<p><strong>Не</strong> добавляйте Creative ID, Billing ID или App ID в этот отчёт. Эти
+столбцы несовместимы с «Bid requests».</p>
 </div>
 <hr />
-<h3 id="4-pipeline-publisher-report">4. Pipeline -- Publisher report<a class="headerlink" href="#4-pipeline-publisher-report" title="Permanent link">&para;</a></h3>
-<p>Same as Pipeline -- Geo, but broken down by publisher instead of (or in
-addition to) geography.</p>
+<h3 id="4-pipeline-publisher">4. Отчёт Pipeline -- Publisher<a class="headerlink" href="#4-pipeline-publisher" title="Permanent link">&para;</a></h3>
+<p>То же, что Pipeline -- Geo, но разбито по издателям вместо (или в дополнение к) географии.</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Настройка</th>
+<th>Значение</th>
 </tr>
 </thead>
 <tbody>
@@ -2633,16 +2621,15 @@ addition to) geography.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-pipeline-{account_id}-yesterday-UTC</code></p>
+<p><strong>Рекомендуемое имя файла:</strong> <code>catscan-pipeline-{account_id}-yesterday-UTC</code></p>
 <hr />
-<h3 id="5-bid-filtering-report">5. Bid Filtering report<a class="headerlink" href="#5-bid-filtering-report" title="Permanent link">&para;</a></h3>
-<p>This report shows you <em>why</em> Google is filtering your bids before they enter the
-auction -- critical for diagnosing pretargeting issues.</p>
+<h3 id="5-bid-filtering">5. Отчёт Bid Filtering<a class="headerlink" href="#5-bid-filtering" title="Permanent link">&para;</a></h3>
+<p>Этот отчёт показывает <em>почему</em> Google фильтрует ваши ставки до входа в аукцион — критично для диагностики проблем pretargeting.</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Настройка</th>
+<th>Значение</th>
 </tr>
 </thead>
 <tbody>
@@ -2668,130 +2655,127 @@ auction -- critical for diagnosing pretargeting issues.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Suggested filename:</strong> <code>catscan-bid-filtering</code></p>
-<h3 id="common-filtering-reasons">Common filtering reasons<a class="headerlink" href="#common-filtering-reasons" title="Permanent link">&para;</a></h3>
-<p>These are the values you'll see in the <strong>Filtering reason</strong> dimension. Each
-one tells you a specific reason Google rejected your bid before auction entry.</p>
+<p><strong>Рекомендуемое имя файла:</strong> <code>catscan-bid-filtering</code></p>
+<h3 id="_8">Распространённые причины фильтрации<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>Это значения, которые вы увидите в измерении <strong>Filtering reason</strong>. Каждое из них указывает конкретную причину, по которой Google отклонил вашу ставку до входа в аукцион.</p>
 <table>
 <thead>
 <tr>
-<th>Filtering reason</th>
-<th>What it means</th>
-<th>What to do</th>
+<th>Причина фильтрации</th>
+<th>Что означает</th>
+<th>Что делать</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>CREATIVE_NOT_APPROVED</code></td>
-<td>The creative hasn't passed Google's review, or was disapproved</td>
-<td>Check creative status in Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr>. Fix policy violations.</td>
+<td>Креатив не прошёл проверку Google или был отклонён</td>
+<td>Проверьте статус креатива в Google <abbr title="Authorized Buyers — программатическая рекламная платформа Google (ранее AdX / DoubleClick Ad Exchange).">AB</abbr>. Устраните нарушения политики.</td>
 </tr>
 <tr>
 <td><code>BID_BELOW_AUCTION_FLOOR</code></td>
-<td>Your bid price was below the publisher's minimum <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr></td>
-<td>Raise bid or exclude low-value inventory via pretargeting</td>
+<td>Цена ставки ниже минимального <abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr> издателя</td>
+<td>Повысьте ставку или исключите малоценный инвентарь через pretargeting</td>
 </tr>
 <tr>
 <td><code>DISAPPROVED_BY_EXCHANGE</code></td>
-<td>Google's exchange-level policy blocked the bid</td>
-<td>Review Google's ad policies for the specific creative</td>
+<td>Политика Google на уровне биржи заблокировала ставку</td>
+<td>Проверьте рекламные политики Google для конкретного креатива</td>
 </tr>
 <tr>
 <td><code>FILTERED_BY_PRETARGETING</code></td>
-<td>Your own pretargeting rules excluded this traffic</td>
-<td>Intentional if your rules are correct; review if unexpected</td>
+<td>Ваши собственные правила pretargeting исключили этот трафик</td>
+<td>Намеренно, если правила верны; проверьте при неожиданном результате</td>
 </tr>
 <tr>
 <td><code>NO_MATCHING_CREATIVE</code></td>
-<td>The bid request asked for a size/format you don't have</td>
-<td>Upload creatives for the missing sizes, or exclude those sizes in pretargeting</td>
+<td>Bid request запросил размер/формат, которого у вас нет</td>
+<td>Загрузите креативы для недостающих размеров или исключите их в pretargeting</td>
 </tr>
 <tr>
 <td><code>CREATIVE_SIZE_MISMATCH</code></td>
-<td>Creative dimensions don't match the ad slot</td>
-<td>Check creative size vs. what the publisher requests</td>
+<td>Размеры креатива не соответствуют рекламному блоку</td>
+<td>Проверьте размер креатива против того, что запрашивает издатель</td>
 </tr>
 <tr>
 <td><code>LANDING_PAGE_DISAPPROVED</code></td>
-<td>The destination URL failed Google's review</td>
-<td>Fix the landing page or use a different URL</td>
+<td>Целевой URL не прошёл проверку Google</td>
+<td>Исправьте лендинг или используйте другой URL</td>
 </tr>
 <tr>
 <td><code>SSL_REQUIRED</code></td>
-<td>Publisher requires HTTPS but your creative or landing page uses HTTP</td>
-<td>Switch all assets and URLs to HTTPS</td>
+<td>Издатель требует HTTPS, но ваш креатив или лендинг использует HTTP</td>
+<td>Переведите все ресурсы и URL на HTTPS</td>
 </tr>
 <tr>
 <td><code>FREQUENCY_CAPPED</code></td>
-<td>User has already seen this creative too many times</td>
-<td>Expected behavior; adjust frequency caps if too aggressive</td>
+<td>Пользователь уже видел этот креатив слишком много раз</td>
+<td>Ожидаемое поведение; скорректируйте частотные ограничения, если они слишком агрессивны</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="scheduling-delivery">Scheduling delivery<a class="headerlink" href="#scheduling-delivery" title="Permanent link">&para;</a></h2>
-<p>For each of the five reports:</p>
+<h2 id="_9">Настройка расписания доставки<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Для каждого из пяти отчётов:</p>
 <ol>
-<li>Click <strong>Schedule</strong> in Google Authorized Buyers.</li>
-<li>Set frequency to <strong>Daily</strong>.</li>
-<li>Set delivery method:<ul>
-<li><strong>Email</strong> -- send to the Gmail account connected to Cat-Scan (enables
-    auto-import). See <a href="../09-data-import/">Data Import</a> for Gmail
-    auto-import setup.</li>
-<li><strong>Manual</strong> -- if you prefer to download and upload CSVs yourself via
+<li>Нажмите <strong>Schedule</strong> в Google Authorized Buyers.</li>
+<li>Установите частоту — <strong>Daily</strong>.</li>
+<li>Установите метод доставки:<ul>
+<li><strong>Email</strong> — отправить на Gmail-аккаунт, подключённый к Cat-Scan (включает
+    авто-импорт). Подробнее о настройке авто-импорта Gmail см. в разделе <a href="../09-data-import/">Импорт данных</a>.</li>
+<li><strong>Manual</strong> — если вы предпочитаете самостоятельно скачивать и загружать <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> через
     <code>/import</code>.</li>
 </ul>
 </li>
 </ol>
 <div class="admonition tip">
-<p class="admonition-title">Use Gmail auto-import</p>
-<p>Scheduling all five reports to email a connected Gmail account means
-Cat-Scan imports them automatically every day. No manual uploads needed
-after the initial setup.</p>
+<p class="admonition-title">Используйте авто-импорт Gmail</p>
+<p>Настройка доставки всех пяти отчётов на email подключённого аккаунта Gmail означает,
+что Cat-Scan импортирует их автоматически каждый день. После первоначальной настройки
+ручные загрузки не нужны.</p>
 </div>
-<h2 id="verifying-your-setup">Verifying your setup<a class="headerlink" href="#verifying-your-setup" title="Permanent link">&para;</a></h2>
-<p>After importing your first set of CSVs (manually or via Gmail):</p>
+<h2 id="_10">Проверка настройки<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>После импорта первого комплекта <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> (вручную или через Gmail):</p>
 <ol>
-<li>Go to <code>/import</code> in Cat-Scan.</li>
-<li>Check the <strong>Data Freshness Grid</strong> -- you should see "imported" for all five
-   report types for yesterday's date.</li>
-<li>If any cells show "missing", the corresponding report hasn't been received
-   yet.</li>
+<li>Перейдите в <code>/import</code> в Cat-Scan.</li>
+<li>Проверьте <strong>Data Freshness Grid</strong> — вы должны увидеть «imported» для всех пяти
+   типов отчётов за вчерашнюю дату.</li>
+<li>Если какие-либо ячейки показывают «missing», соответствующий отчёт ещё не получен.</li>
 </ol>
 <div class="highlight"><pre><span></span><code>              bidsinauction   quality   pipeline-geo   pipeline-publisher   bid-filtering
 2026-03-03    imported        imported  imported       imported             imported
 2026-03-02    imported        imported  imported       imported             imported
 </code></pre></div>
-<p>Once all five columns show green for yesterday, Cat-Scan has full data and
-every feature (funnel, waste analysis, recommendations, optimizer) will work.</p>
-<h2 id="auto-detection">Auto-detection<a class="headerlink" href="#auto-detection" title="Permanent link">&para;</a></h2>
-<p>You don't need to tell Cat-Scan which report you're uploading. The import
-system detects the report type automatically from the column headers:</p>
+<p>Когда все пять столбцов показывают зелёный цвет за вчерашнюю дату, у Cat-Scan есть полные данные и
+каждая функция (воронка, анализ потерь, рекомендации, оптимизатор) будет работать.</p>
+<h2 id="_11">Автодетекция<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>Вам не нужно сообщать Cat-Scan, какой отчёт вы загружаете. Система импорта
+автоматически определяет тип отчёта по заголовкам столбцов:</p>
 <ul>
-<li>Has <strong>Bid filtering reason</strong>? -&gt; Bid Filtering</li>
-<li>Has <strong>Bid requests</strong> + <strong>Publisher ID</strong>? -&gt; Pipeline -- Publisher</li>
-<li>Has <strong>Bid requests</strong> (no Publisher ID)? -&gt; Pipeline -- Geo</li>
-<li>Has <strong>Creative ID</strong> + <strong>Billing ID</strong>? -&gt; Quality</li>
-<li>Has <strong>Creative ID</strong> + <strong>Bids in auction</strong>? -&gt; Bids in Auction</li>
+<li>Есть <strong>Bid filtering reason</strong>? → Bid Filtering</li>
+<li>Есть <strong>Bid requests</strong> + <strong>Publisher ID</strong>? → Pipeline -- Publisher</li>
+<li>Есть <strong>Bid requests</strong> (без Publisher ID)? → Pipeline -- Geo</li>
+<li>Есть <strong>Creative ID</strong> + <strong>Billing ID</strong>? → Quality</li>
+<li>Есть <strong>Creative ID</strong> + <strong>Bids in auction</strong>? → Bids in Auction</li>
 </ul>
-<h2 id="how-cat-scan-uses-each-metric">How Cat-Scan uses each metric<a class="headerlink" href="#how-cat-scan-uses-each-metric" title="Permanent link">&para;</a></h2>
-<p>This maps raw <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr> metrics to what you see in the Cat-Scan UI.</p>
+<h2 id="cat-scan">Как Cat-Scan использует каждую метрику<a class="headerlink" href="#cat-scan" title="Permanent link">&para;</a></h2>
+<p>Это сопоставление сырых <abbr title="Значения, разделённые запятыми — формат файлов, используемый Google Authorized Buyers для экспорта отчётов.">CSV</abbr>-метрик с тем, что вы видите в интерфейсе Cat-Scan.</p>
 <table>
 <thead>
 <tr>
-<th>UI feature</th>
-<th>Metrics used</th>
-<th>Source report(s)</th>
+<th>Функция интерфейса</th>
+<th>Используемые метрики</th>
+<th>Исходный отчёт(ы)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> funnel</strong> (home page)</td>
+<td><strong>Воронка <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></strong> (главная страница)</td>
 <td>Bid requests, Reached queries, Bids, Bids in auction, Auctions won, Impressions, Clicks, Spend</td>
-<td>Pipeline (both) + Quality</td>
+<td>Pipeline (оба) + Quality</td>
 </tr>
 <tr>
-<td><strong>Waste % calculation</strong></td>
+<td><strong>Расчёт % потерь</strong></td>
 <td><code>(Bid requests - Bids) / Bid requests</code></td>
 <td>Pipeline</td>
 </tr>
@@ -2803,7 +2787,7 @@ system detects the report type automatically from the column headers:</p>
 <tr>
 <td><strong><abbr title="Показатель кликабельности — клики, разделённые на показы, выраженные в процентах.">CTR</abbr></strong></td>
 <td><code>Clicks / Impressions</code></td>
-<td>Any report with both</td>
+<td>Любой отчёт с обоими показателями</td>
 </tr>
 <tr>
 <td><strong><abbr title="Стоимость за тысячу — цена за 1 000 рекламных показов.">CPM</abbr></strong></td>
@@ -2821,91 +2805,91 @@ system detects the report type automatically from the column headers:</p>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Geo waste analysis</strong> (<code>/qps/geo</code>)</td>
-<td>Bid requests, Impressions, Spend by Country</td>
+<td><strong>Анализ потерь по гео</strong> (<code>/qps/geo</code>)</td>
+<td>Bid requests, Impressions, Spend по Country</td>
 <td>Pipeline -- Geo + Quality</td>
 </tr>
 <tr>
-<td><strong>Publisher waste</strong> (<code>/qps/publisher</code>)</td>
-<td>Bid requests, Impressions, Spend by Publisher</td>
+<td><strong>Потери по издателям</strong> (<code>/qps/publisher</code>)</td>
+<td>Bid requests, Impressions, Spend по Publisher</td>
 <td>Pipeline -- Publisher + Quality</td>
 </tr>
 <tr>
-<td><strong>Size waste</strong> (<code>/qps/size</code>)</td>
-<td>Impressions, Spend by Creative size</td>
+<td><strong>Потери по размерам</strong> (<code>/qps/size</code>)</td>
+<td>Impressions, Spend по Creative size</td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Filtering reasons</strong> (<code>/qps/filtering</code>)</td>
-<td>Bids, Bids in auction, Opportunity cost by Filtering reason</td>
+<td><strong>Причины фильтрации</strong> (<code>/qps/filtering</code>)</td>
+<td>Bids, Bids in auction, Opportunity cost по Filtering reason</td>
 <td>Bid Filtering</td>
 </tr>
 <tr>
-<td><strong>Config card metrics</strong></td>
-<td>Reached queries, Impressions, Spend by Billing ID</td>
+<td><strong>Метрики карточки конфига</strong></td>
+<td>Reached queries, Impressions, Spend по Billing ID</td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Creative performance</strong></td>
-<td>Impressions, Clicks, Spend, Active View viewable per Creative ID</td>
+<td><strong>Эффективность креатива</strong></td>
+<td>Impressions, Clicks, Spend, Active View viewable по Creative ID</td>
 <td>Quality</td>
 </tr>
 <tr>
-<td><strong>Optimizer scoring</strong></td>
-<td>All pipeline + quality metrics, aggregated by segment</td>
-<td>All five</td>
+<td><strong>Скоринг оптимизатора</strong></td>
+<td>Все метрики pipeline + quality, агрегированные по сегменту</td>
+<td>Все пять</td>
 </tr>
 </tbody>
 </table>
-<h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<h2 id="_12">Распространённые ошибки<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Mistake</th>
-<th>What happens</th>
-<th>Fix</th>
+<th>Ошибка</th>
+<th>Что происходит</th>
+<th>Исправление</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Adding "Bid requests" to the Quality report</td>
-<td>Google errors or returns incomplete data</td>
-<td>Remove "Bid requests" -- it's incompatible with "Billing ID"</td>
+<td>Добавление «Bid requests» в отчёт Quality</td>
+<td>Google выдаёт ошибку или возвращает неполные данные</td>
+<td>Удалите «Bid requests» — он несовместим с «Billing ID»</td>
 </tr>
 <tr>
-<td>Forgetting the Bid Filtering report</td>
-<td>Cat-Scan can't show you <em>why</em> bids are rejected</td>
-<td>Create the 5th report with "Filtering reason" dimension</td>
+<td>Отсутствие отчёта Bid Filtering</td>
+<td>Cat-Scan не может показать <em>почему</em> ставки отклоняются</td>
+<td>Создайте 5-й отчёт с измерением «Filtering reason»</td>
 </tr>
 <tr>
-<td>Using "Last 7 days" instead of "Yesterday"</td>
-<td>Overlapping data, larger files, slower imports</td>
-<td>Set to "Yesterday" and schedule daily</td>
+<td>Использование «Last 7 days» вместо «Yesterday»</td>
+<td>Пересекающиеся данные, большие файлы, медленный импорт</td>
+<td>Установите «Yesterday» и настройте ежедневное расписание</td>
 </tr>
 <tr>
-<td>Not scheduling -- only manual exports</td>
-<td>Data goes stale, health checks fail</td>
-<td>Schedule daily delivery via email</td>
+<td>Только ручной экспорт без расписания</td>
+<td>Данные устаревают, проверки работоспособности не проходят</td>
+<td>Настройте ежедневную доставку по email</td>
 </tr>
 <tr>
-<td>Missing "Hour" dimension on Pipeline reports</td>
-<td>No hourly granularity in <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> analysis</td>
-<td>Add Hour to Pipeline -- Geo and Pipeline -- Publisher</td>
+<td>Отсутствие измерения «Hour» в отчётах Pipeline</td>
+<td>Нет почасовой детализации в анализе <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></td>
+<td>Добавьте Hour в Pipeline -- Geo и Pipeline -- Publisher</td>
 </tr>
 <tr>
-<td>Missing optional metrics on Quality report</td>
-<td>No viewability or video data in Cat-Scan</td>
-<td>Add Active View viewable, Active View measurable, Video starts, Video completions</td>
+<td>Отсутствие опциональных метрик в отчёте Quality</td>
+<td>Нет данных о видимости или видео в Cat-Scan</td>
+<td>Добавьте Active View viewable, Active View measurable, Video starts, Video completions</td>
 </tr>
 </tbody>
 </table>
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h2 id="_13">Дальнейшие шаги<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../02-navigating-the-dashboard/">Admin Navigation</a>: sidebar layout and
-  setup checklist</li>
-<li><a href="../09-data-import/">Data Import</a>: detailed import mechanics, chunked
-  uploads, and troubleshooting</li>
-<li><a href="../03-qps-funnel/"><abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr> Funnel</a>: once data is flowing, start analyzing</li>
+<li><a href="../02-navigating-the-dashboard/">Админ-навигация</a>: структура боковой панели и
+  чеклист настройки</li>
+<li><a href="../09-data-import/">Импорт данных</a>: подробная механика импорта, фрагментированные
+  загрузки и устранение неисправностей</li>
+<li><a href="../03-qps-funnel/">Воронка <abbr title="Запросы в секунду — частота запросов на ставки, которые Google отправляет вашему биддеру. Каждый запрос стоит вычислительных ресурсов и пропускной способности, поэтому потраченный впустую QPS — это потраченные впустую деньги.">QPS</abbr></a>: как только данные начнут поступать, приступите к анализу</li>
 </ul>
 
 
@@ -2914,12 +2898,41 @@ system detects the report type automatically from the column headers:</p>
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Последнее обновление">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="12 июня 2026 г. 20:59:27 UTC">12 июня 2026 г. 20:59:27</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
 
 
                 
+  
+    <hr>
+    <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
+      Built from docs <code>830edf8</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="12 июня 2026 г. 20:59:27 UTC">12 июня 2026 г. 20:59:27</span>.
+    </p>
+  
+
               </article>
             </div>
           
