@@ -241,6 +241,15 @@ For each of the five reports:
     Cat-Scan imports them automatically every day. No manual uploads needed
     after the initial setup.
 
+!!! danger "If you go manual, export by email anyway — never the grid's Download CSV button"
+    The Query Tool's on-screen **Download CSV** rounds every value to
+    2 decimal places, which turns sub-cent spend rows (like $0.0004) into
+    $0.00 and silently deletes them. In a July 2026 test the downloaded file
+    was missing about **$1,950 out of an $18,500 day — ~10% of the money**.
+    The emailed report is a different, full-precision file (6 decimals) and is
+    the only export safe to import. Details in
+    [Data Import](09-data-import.md).
+
 ## Verifying your setup
 
 After importing your first set of CSVs (manually or via Gmail):
