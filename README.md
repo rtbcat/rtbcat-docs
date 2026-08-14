@@ -24,7 +24,7 @@ python -m venv .venv-build
 | `docs/<lang>/` | Per-language translations (same structure as English) |
 | `docs/explainers/` | Atomic, first-party technical notes (the AEO content) |
 | `hooks/freshness.py` | Injects build/commit SHA into `config.extra`; enriches `sitemap.xml` |
-| `hooks/nav_translations.py` | Rewrites sidebar nav labels per locale in `on_config` |
+| `hooks/nav_translations.py` | Rewrites each locale's sidebar labels on its fresh navigation tree |
 | `hooks/abbreviations.py` | Shared abbreviation/tooltip glossary |
 | `overrides/main.html` | Title override + the visible build-freshness line |
 | `mkdocs.yml` | Single source of truth for nav structure (English labels) |

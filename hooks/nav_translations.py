@@ -4,11 +4,11 @@ MkDocs hook for translating navigation labels per locale.
 This allows the sidebar (nav) to show Chinese (or other) titles while keeping
 the English nav definition in mkdocs.yml as the single source of truth for structure.
 
-The i18n plugin builds each language separately and calls on_config for each.
-We detect the current language and rewrite the nav titles using a translation map.
+The i18n plugin builds each language separately. We translate the Navigation
+object in ``on_nav`` so every locale works on the fresh tree created for that
+build. Mutating ``config.nav`` in ``on_config`` leaks labels between builds
+because mkdocs-static-i18n reuses the same config object for every locale.
 """
-
-import copy
 
 # Translations for nav section titles and link labels.
 # Keys are the exact strings from the English nav in mkdocs.yml.
@@ -31,7 +31,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "كيف تحصل الوكالات الصغيرة وتدير مقاعد AB",
         "What Cat-Scan does *not* do": "ما لا يفعله Cat-Scan",
         "Bid filtering (the fifth report)": "تصفية العروض (التقرير الخامس)",
-        "BYOM optimizer": "محسن BYOM (أحضر نموذجك الخاص)",
+        "Bring Your Own Optimizer (BYOM)": "محسن BYOM (أحضر نموذجك الخاص)",
         "Part I: Media Buyer Track": "الجزء الأول: مسار مشتري الوسائط",
         "QPS Funnel": "قمع QPS",
         "Analyzing Waste": "تحليل الهدر",
@@ -72,7 +72,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Hvordan mindre bureauer får og driver AB-pladser",
         "What Cat-Scan does *not* do": "Hvad Cat-Scan *ikke* gør",
         "Bid filtering (the fifth report)": "Budfiltrering (den femte rapport)",
-        "BYOM optimizer": "BYOM-optimering (medbring din egen model)",
+        "Bring Your Own Optimizer (BYOM)": "BYOM-optimering (medbring din egen model)",
         "Part I: Media Buyer Track": "Del I: Mediekøber-spor",
         "QPS Funnel": "QPS-tragt",
         "Analyzing Waste": "Analyse af spild",
@@ -113,7 +113,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Cómo las agencias pequeñas obtienen y operan asientos AB",
         "What Cat-Scan does *not* do": "Lo que Cat-Scan *no* hace",
         "Bid filtering (the fifth report)": "Filtrado de pujas (el quinto informe)",
-        "BYOM optimizer": "Optimizador BYOM (trae tu propio modelo)",
+        "Bring Your Own Optimizer (BYOM)": "Optimizador BYOM (trae tu propio modelo)",
         "Part I: Media Buyer Track": "Parte I: Ruta del comprador de medios",
         "QPS Funnel": "Embudo QPS",
         "Analyzing Waste": "Análisis de desperdicio",
@@ -154,7 +154,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Comment les petites agences obtiennent et gèrent des sièges AB",
         "What Cat-Scan does *not* do": "Ce que Cat-Scan ne fait *pas*",
         "Bid filtering (the fifth report)": "Filtrage des enchères (le cinquième rapport)",
-        "BYOM optimizer": "Optimiseur BYOM (apportez votre propre modèle)",
+        "Bring Your Own Optimizer (BYOM)": "Optimiseur BYOM (apportez votre propre modèle)",
         "Part I: Media Buyer Track": "Partie I : Parcours de l'acheteur média",
         "QPS Funnel": "Entonnoir QPS",
         "Analyzing Waste": "Analyse du gaspillage",
@@ -195,7 +195,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "כיצד סוכנויות קטנות משיגות ומפעילות מושבי AB",
         "What Cat-Scan does *not* do": "מה Cat-Scan *לא* עושה",
         "Bid filtering (the fifth report)": "סינון הצעות (הדוח החמישי)",
-        "BYOM optimizer": "אופטימייזר BYOM (הבא את המודל שלך)",
+        "Bring Your Own Optimizer (BYOM)": "אופטימייזר BYOM (הבא את המודל שלך)",
         "Part I: Media Buyer Track": "חלק I: מסלול קונה מדיה",
         "QPS Funnel": "משפך QPS",
         "Analyzing Waste": "ניתוח בזבוז",
@@ -236,7 +236,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Hoe kleinere bureaus AB-plaatsen verkrijgen en beheren",
         "What Cat-Scan does *not* do": "Wat Cat-Scan *niet* doet",
         "Bid filtering (the fifth report)": "Biedfiltering (het vijfde rapport)",
-        "BYOM optimizer": "BYOM-optimalisator (breng je eigen model mee)",
+        "Bring Your Own Optimizer (BYOM)": "BYOM-optimalisator (breng je eigen model mee)",
         "Part I: Media Buyer Track": "Deel I: Media Buyer-traject",
         "QPS Funnel": "QPS-trechter",
         "Analyzing Waste": "Analyse van verspilling",
@@ -277,7 +277,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Jak mniejsze agencje uzyskują i prowadzą miejsca AB",
         "What Cat-Scan does *not* do": "Czego Cat-Scan *nie* robi",
         "Bid filtering (the fifth report)": "Filtrowanie ofert (piąty raport)",
-        "BYOM optimizer": "Optymalizator BYOM (przynieś własny model)",
+        "Bring Your Own Optimizer (BYOM)": "Optymalizator BYOM (przynieś własny model)",
         "Part I: Media Buyer Track": "Część I: Ścieżka nabywcy mediów",
         "QPS Funnel": "Lejek QPS",
         "Analyzing Waste": "Analiza marnotrawstwa",
@@ -318,7 +318,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Как небольшие агентства получают и управляют местами AB",
         "What Cat-Scan does *not* do": "Чего Cat-Scan *не* делает",
         "Bid filtering (the fifth report)": "Фильтрация ставок (пятый отчёт)",
-        "BYOM optimizer": "Оптимизатор BYOM (принеси свою модель)",
+        "Bring Your Own Optimizer (BYOM)": "Оптимизатор BYOM (принеси свою модель)",
         "Part I: Media Buyer Track": "Часть I: Трек медиа-байера",
         "QPS Funnel": "Воронка QPS",
         "Analyzing Waste": "Анализ потерь",
@@ -359,7 +359,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "Як менші агентства отримують і керують місцями AB",
         "What Cat-Scan does *not* do": "Чого Cat-Scan *не* робить",
         "Bid filtering (the fifth report)": "Фільтрація ставок (п'ятий звіт)",
-        "BYOM optimizer": "Оптимізатор BYOM (принеси свою модель)",
+        "Bring Your Own Optimizer (BYOM)": "Оптимізатор BYOM (принеси свою модель)",
         "Part I: Media Buyer Track": "Частина I: Трек медіа-байера",
         "QPS Funnel": "Воронка QPS",
         "Analyzing Waste": "Аналіз втрат",
@@ -400,7 +400,7 @@ NAV_TRANSLATIONS = {
         "How smaller agencies obtain & run AB seats": "小型机构如何获得并运营 AB 席位",
         "What Cat-Scan does *not* do": "Cat-Scan 不做什么（及原因）",
         "Bid filtering (the fifth report)": "出价过滤（第五份报告）",
-        "BYOM optimizer": "自带模型优化器 (BYOM)",
+        "Bring Your Own Optimizer (BYOM)": "自带模型优化器 (BYOM)",
         "Part I: Media Buyer Track": "第 I 部分：媒体买家轨道",
         "QPS Funnel": "QPS 漏斗",
         "Analyzing Waste": "分析浪费",
@@ -426,40 +426,22 @@ NAV_TRANSLATIONS = {
     }
 }
 
-def _translate_nav(item, trans_map):
-    """Recursively translate nav item keys (titles) using the map. Values (file paths) stay the same."""
-    if isinstance(item, dict):
-        new_item = {}
-        for key, value in item.items():
-            translated_key = trans_map.get(key, key)
-            if isinstance(value, (dict, list)):
-                new_item[translated_key] = _translate_nav(value, trans_map)
-            else:
-                new_item[translated_key] = value
-        return new_item
-    elif isinstance(item, list):
-        return [_translate_nav(i, trans_map) for i in item]
-    return item
+def _translate_nav(items, trans_map):
+    """Recursively translate titles on a built MkDocs navigation tree."""
+    for item in items:
+        if hasattr(item, "title"):
+            item.title = trans_map.get(item.title, item.title)
 
-def on_config(config):
-    """Translate nav titles for non-English locales."""
-    # The i18n plugin sets the language in theme or we infer from build
-    language = None
-    try:
-        language = config.get("theme", {}).get("language")
-    except Exception:
-        pass
+        children = getattr(item, "children", None)
+        if children:
+            _translate_nav(children, trans_map)
 
-    if not language or language == "en":
-        return config
 
+def on_nav(nav, config, files):
+    """Translate the current locale's fresh navigation tree."""
+    language = config.theme.get("language")
     trans_map = NAV_TRANSLATIONS.get(language)
-    if not trans_map:
-        return config
+    if trans_map:
+        _translate_nav(nav, trans_map)
 
-    if "nav" in config and config["nav"]:
-        # Work on a copy to avoid mutating during reconfigure
-        original_nav = copy.deepcopy(config["nav"])
-        config["nav"] = _translate_nav(original_nav, trans_map)
-
-    return config
+    return nav
