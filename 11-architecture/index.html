@@ -1903,7 +1903,7 @@
 <p>Production runs on Hetzner after the cutover on 1 August 2026.
 The app host runs the API, dashboard and MCP containers.
 A separate database host runs Postgres.
-The previous GCP app and Cloud SQL source remain frozen.
+The previous GCP app and Cloud SQL source stay frozen.
 Keep their writers, timers and schedulers stopped.</p>
 <h2 id="request-paths">Request paths<a class="headerlink" href="#request-paths" title="Permanent link">&para;</a></h2>
 <table>
@@ -1974,7 +1974,7 @@ It sends the caller's token to the Agent API for each tool call.
 The API applies both token limits and current user permissions.</p>
 <p>The production Compose file binds service ports to the app host's loopback interface.
 It uses verified TLS for the private Postgres connection.
-Google service credentials remain on the API side of the connection.</p>
+Google service credentials stay on the API side of the connection.</p>
 <h2 id="data-processing">Data processing<a class="headerlink" href="#data-processing" title="Permanent link">&para;</a></h2>
 <p>The API uses calculated reporting tables for analytics requests.
 Batch requests must not aggregate the large raw <code>rtb_daily</code> table.
@@ -1983,18 +1983,18 @@ Canonical daily spend uses buyer totals.</p>
 <p>The scheduler adds refresh requests to a job queue.
 A worker processes one refresh job at a time under a database lock.
 A scheduler response means that the queue accepted the request.
-Use <code>/precompute/health</code> and the refresh ledger to determine completion.</p>
+Use <code>/precompute/health</code> and the refresh ledger to find the job status.</p>
 <p>BigQuery can hold raw archives and support batch operations.
 It is not the database for interactive dashboard requests.
 Publisher lookup gets current evidence from external sources.
 It does not automatically save a publisher directory.</p>
 <h2 id="release-controls">Release controls<a class="headerlink" href="#release-controls" title="Permanent link">&para;</a></h2>
-<p>Production uses images with fixed digests for an exact source commit.
+<p>Production uses images with fixed digests for a specified source commit.
 The build workflow produces the images and the release manifest.
 The deployment script applies that manifest to the app host.
 The API and MCP must come from the same release.</p>
-<p>Do not deploy the old GCP application or start its writers.
-Do not edit files inside production containers.
+<p>Do not deploy the previous GCP application or start its writers.
+Do not edit files in production containers.
 Use the current <a href="https://github.com/jenbrannstrom/rtbcat-platform/tree/main/scripts/hetzner">Hetzner deployment scripts</a> for release and rollback operations.
 Older deployment chapters can contain commands for the previous GCP system.</p>
 <h2 id="source-directories">Source directories<a class="headerlink" href="#source-directories" title="Permanent link">&para;</a></h2>
@@ -2061,7 +2061,7 @@ Older deployment chapters can contain commands for the previous GCP system.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:41:43 UTC">October 14, 2026 14:41:43</span>
   </span>
 
     
@@ -2078,8 +2078,8 @@ Older deployment chapters can contain commands for the previous GCP system.</p>
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>12b242c</code>
-      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>.
+      Built from docs <code>2f7f0be</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:41:43 UTC">October 14, 2026 14:41:43</span>.
     </p>
   
 

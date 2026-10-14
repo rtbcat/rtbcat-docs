@@ -1950,7 +1950,7 @@ The function does not select publishers by spend or contact companies.</p>
 <tr>
 <td>A declared manager's <code>sellers.json</code></td>
 <td>Business contacts and matching seller records</td>
-<td>A match needs the advertising-system domain and the exact seller ID.</td>
+<td>A match must have the same advertising-system domain and seller ID.</td>
 </tr>
 <tr>
 <td>Google Marketplace</td>
@@ -1966,23 +1966,23 @@ The result keeps this country information.</p>
 <p>A <code>DIRECT</code> seller entry identifies an account relationship.
 The entry does not prove that the seller manages the publisher.
 A Google parent profile does not prove a Google Multiple Customer Management relationship.
-A company-name match is a possible association that needs more evidence.</p>
+A company-name match is a possible association that must have more evidence.</p>
 <p>A missing result means that the identity is unknown.
-The sources do not prove exclusive rights or access through a buying route outside Google.
+The sources do not prove exclusive rights or access through a buying route that does not use Google.
 An app-store support address is not a verified advertising sales contact.</p>
 <h2 id="use-grok-or-another-mcp-client">Use Grok or another MCP client<a class="headerlink" href="#use-grok-or-another-mcp-client" title="Permanent link">&para;</a></h2>
 <p>The client must have an agent token with the <code>agent:publishers:read</code> permission.
 The token must also give access to the selected buyer account.
 See <a href="../19-agent-access/">MCP access</a> and <a href="../20-grok-bot/">Grok setup</a>.</p>
 <ol>
-<li>Ask the client to call <code>rtbcat_list_buyers</code>.</li>
+<li>Tell the client to call <code>rtbcat_list_buyers</code>.</li>
 <li>Select a buyer ID from the result.</li>
-<li>Ask the client to call <code>rtbcat_lookup_publisher</code> with that buyer ID and the app ID or domain.</li>
+<li>Tell the client to call <code>rtbcat_lookup_publisher</code> with that buyer ID and the app ID or domain.</li>
 <li>Examine the source URLs, <code>checked_at</code>, <code>partial</code> and truncation fields.</li>
 <li>Keep unknown identities and source failures in your report.</li>
 </ol>
 <p>For a company search, supply <code>publisher_name</code>.
-For example, use <code>AnyMind</code> to find visible profiles with that name.
+For example, use <code>AnyMind</code> to find profiles that you can see with that name.
 This search does not prove an association with a specified app.
 An explicit company search takes precedence over automatic Google seller-account matching.</p>
 <h2 id="use-the-api">Use the API<a class="headerlink" href="#use-the-api" title="Permanent link">&para;</a></h2>
@@ -1995,7 +1995,7 @@ Replace the buyer ID and app ID with the required values.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>Use an Android package name or a numeric Apple app ID for <code>app_id</code>.
-Use <code>domain</code> instead of <code>app_id</code> for a website.
+For a website, use <code>domain</code> as an alternative to <code>app_id</code>.
 With both fields, <code>domain</code> overrides the developer website for the app.
 The result marks this override as <code>provided_domain</code>.
 It does not claim that the app store supplied the domain.</p>
@@ -2013,21 +2013,21 @@ The command below gets public evidence for each app ID in the input file.</p>
 <p>Add <code>--domain-column COLUMN</code> for a domain column.
 Add <code>--buyer-id BUYER_ID --credentials /secure/service-account.json</code> for Google results.
 With a buyer ID and no credentials file, the command uses Google Application Default Credentials.</p>
-<p>The output <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> keeps the original columns and row sequence.
+<p>The output <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> keeps the input columns and row sequence.
 It adds columns for the evidence.
-Rows without an app ID or domain remain in the output with <code>identity_required</code>.
-The JSON file keeps the complete result within the lookup limits.
+Rows without an app ID or domain stay in the output with <code>identity_required</code>.
+The JSON file keeps all result data up to the lookup limits.
 Credentials do not enter either output file.</p>
 <h2 id="google-setup-and-limits">Google setup and limits<a class="headerlink" href="#google-setup-and-limits" title="Permanent link">&para;</a></h2>
 <p>Enable <code>authorizedbuyersmarketplace.googleapis.com</code> in the service account's Google Cloud project.
 Give that service account Marketplace access to the buyer account.
 API activation alone does not give access to a buyer.</p>
 <p>The API uses the buyer's linked active service account.
-It does not substitute another customer's account if that link fails.
-Public evidence can remain available when Google sends an error.</p>
-<p>The lookup distinguishes an empty result from an authentication failure, a rejected query and a timeout.
+It does not use a different customer's account if that link fails.
+Public evidence can stay available when Google sends an error.</p>
+<p>The lookup distinguishes an empty result from an authentication error, a rejected query and a timeout.
 For example, <code>no_visible_match</code> and <code>query_rejected</code> have different meanings.
-Do not report a source failure as proof that a publisher does not exist.</p>
+Do not report a source failure as proof that a publisher is absent.</p>
 <p>The Google tests on 14 October 2026 found these results:</p>
 <ul>
 <li>Seller-code and company-name filters worked.</li>
@@ -2046,7 +2046,7 @@ This function cannot reproduce every inventory association in the Authorized Buy
 <tbody>
 <tr>
 <td>API lookup time</td>
-<td>12 seconds; completed sections can remain in a partial result</td>
+<td>12 seconds; completed sections can stay in a partial result</td>
 </tr>
 <tr>
 <td>Declared managers with seller-file requests</td>
@@ -2067,7 +2067,7 @@ This function cannot reproduce every inventory association in the Authorized Buy
 </tbody>
 </table>
 <p>The <abbr title="Comma-Separated Values — the file format Google Authorized Buyers uses for report exports.">CSV</abbr> command processes rows in sequence.
-Store the output if you need a record of the lookup.
+Store the output to keep a record of the lookup.
 Cat-Scan does not automatically save these results as publisher records.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2096,7 +2096,7 @@ Cat-Scan does not automatically save these results as publisher records.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:41:43 UTC">October 14, 2026 14:41:43</span>
   </span>
 
     
@@ -2113,8 +2113,8 @@ Cat-Scan does not automatically save these results as publisher records.</p>
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>12b242c</code>
-      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>.
+      Built from docs <code>2f7f0be</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:41:43 UTC">October 14, 2026 14:41:43</span>.
     </p>
   
 
