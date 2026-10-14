@@ -1,105 +1,87 @@
 ---
-title: "RTB Architecture: FastAPI, Postgres, BigQuery | Cat-Scan"
-description: "Cat-Scan runs on one GCP VM: nginx, OAuth2 Proxy, Next.js, and a 118-route FastAPI API over Cloud SQL Postgres 15 plus BigQuery for batch RTB analytics."
+title: "Cat-Scan Architecture: API, MCP and Postgres"
+description: "Cat-Scan runs on Hetzner. The dashboard and MCP server use the API. A separate Postgres host supplies reporting data. Google supplies external services."
 ---
 
-# Chapter 11: Architecture Overview
+# Chapter 11: Architecture
 
-*Audience: DevOps, platform engineers*
+*Audience: System administrators and developers*
 
-## System topology
+Production runs on Hetzner after the cutover on 1 August 2026.
+The app host runs the API, dashboard and MCP containers.
+A separate database host runs Postgres.
+The previous GCP app and Cloud SQL source remain frozen.
+Keep their writers, timers and schedulers stopped.
 
-```
-                                    Internet
-                                       │
-                                 ┌─────┴─────┐
-                                 │   nginx    │  :443 (TLS termination)
-                                 └──┬──────┬──┘
-                                    │      │
-                          ┌─────────┘      └─────────┐
-                          │                          │
-                  ┌───────┴────────┐       ┌─────────┴─────────┐
-                  │  OAuth2 Proxy  │       │  Next.js Dashboard │  :3000
-                  │  (Google SSO)  │       │  (static + SSR)    │
-                  └───────┬────────┘       └───────────────────┘
-                          │
-                  ┌───────┴────────┐
-                  │   FastAPI API  │  :8000
-                  │  (118+ routes) │
-                  └───────┬────────┘
-                          │
-              ┌───────────┴───────────┐
-              │                       │
-    ┌─────────┴──────────┐   ┌────────┴────────┐
-    │ Cloud SQL Proxy    │   │   BigQuery       │
-    │ (Postgres sidecar) │   │ (batch analytics)│
-    └─────────┬──────────┘   └─────────────────┘
-              │
-    ┌─────────┴──────────┐
-    │  Cloud SQL         │
-    │  (Postgres 15)     │
-    └────────────────────┘
-```
+## Request paths
 
-## Container layout
+| Client | Path | Access control |
+|---|---|---|
+| Browser | HTTPS edge → dashboard and API → Postgres | App session and user permissions |
+| MCP client | HTTPS edge → MCP server → Agent API | Agent token and current buyer permissions |
+| Direct Agent API client | HTTPS edge → Agent API | Agent token and current buyer permissions |
+| Publisher lookup | API → app stores, publisher websites and Google Marketplace | Buyer permission and the selected service account |
 
-Production runs on a single GCP VM (`<PRODUCTION_VM>`, zone
-`<GCP_ZONE>`) using `docker-compose.yml`.
+The [Grok connection diagram](20-grok-bot.md#connection-path) shows the command-based connector path.
 
-| Container | Image | Port | Role |
-|-----------|-------|------|------|
-| `catscan-api` | `<GCP_REGION>-docker.pkg.dev/.../api:sha-XXXXXXX` | 8000 | FastAPI backend |
-| `catscan-dashboard` | `<GCP_REGION>-docker.pkg.dev/.../dashboard:sha-XXXXXXX` | 3000 | Next.js frontend |
-| `oauth2-proxy` | stock oauth2-proxy image | 4180 | Google OAuth2 authentication |
-| `cloudsql-proxy` | Google Cloud SQL Auth Proxy | 5432 | Postgres connection proxy |
-| `nginx` | stock nginx with config | 80/443 | Reverse proxy, TLS, routing |
+## Service boundaries
 
-## Auth trust chain
+| Service | Function |
+|---|---|
+| HTTPS edge | TLS termination and request routing |
+| `rtbcat-dashboard` | Next.js user interface |
+| `rtbcat-api` | Authentication, buyer permissions, data access and external requests |
+| `rtbcat-mcp` | Eight read tools that use the Agent API |
+| Postgres | Application data, reporting totals and calculated summaries |
 
-```
-Browser → nginx → OAuth2 Proxy → sets <AUTH_HEADER> header → nginx → API
-```
+The MCP process has no database connection or stored Google credential.
+It sends the caller's token to the Agent API for each tool call.
+The API applies both token limits and current user permissions.
 
-1. Browser hits nginx.
-2. nginx routes `/oauth2/*` to OAuth2 Proxy.
-3. OAuth2 Proxy authenticates via Google, sets `<AUTH_HEADER>` header.
-4. Subsequent requests pass through nginx with `<AUTH_HEADER>` intact.
-5. API reads `<AUTH_HEADER>` and trusts it (when `OAUTH2_PROXY_ENABLED=true`).
+The production Compose file binds service ports to the app host's loopback interface.
+It uses verified TLS for the private Postgres connection.
+Google service credentials remain on the API side of the connection.
 
-**Important:** The API only trusts `<AUTH_HEADER>` from internal traffic. External
-requests with a forged `<AUTH_HEADER>` header are rejected by nginx.
+## Data processing
 
-## Why two databases
+The API uses calculated reporting tables for analytics requests.
+Batch requests must not aggregate the large raw `rtb_daily` table.
+Creative performance uses calculated creative data.
+Canonical daily spend uses buyer totals.
 
-Cat-Scan uses both Postgres and BigQuery for different roles:
+The scheduler adds refresh requests to a job queue.
+A worker processes one refresh job at a time under a database lock.
+A scheduler response means that the queue accepted the request.
+Use `/precompute/health` and the refresh ledger to determine completion.
 
-| Concern | Postgres (Cloud SQL) | BigQuery |
-|---------|---------------------|----------|
-| **Role** | Operational database: serves the app | Data warehouse: stores raw data, runs batch analytics |
-| **Cost model** | Fixed hosting cost, unlimited queries | Pay per query based on data scanned |
-| **Latency** | Millisecond responses | 1--3 second overhead even for simple queries |
-| **Concurrency** | Handles hundreds of API connections | Not built for concurrent dashboard refreshes |
-| **Data** | Pre-aggregated summaries, configs, user data | Raw granular rows (millions per day) |
+BigQuery can hold raw archives and support batch operations.
+It is not the database for interactive dashboard requests.
+Publisher lookup gets current evidence from external sources.
+It does not automatically save a publisher directory.
 
-The pattern: BigQuery is the archive warehouse; Postgres is the store shelf.
-You don't send customers to rummage through the warehouse.
+## Release controls
 
-## Key codebase structure
+Production uses images with fixed digests for an exact source commit.
+The build workflow produces the images and the release manifest.
+The deployment script applies that manifest to the app host.
+The API and MCP must come from the same release.
 
-```
-/api/routers/       FastAPI route handlers (118+ endpoints)
-/services/          Business logic layer
-/storage/           Database access (Postgres repos, BigQuery clients)
-/dashboard/src/     Next.js 14 frontend (App Router)
-/scripts/           Operational and diagnostic scripts
-/docs/              Architecture docs and AI agent logs
-```
+Do not deploy the old GCP application or start its writers.
+Do not edit files inside production containers.
+Use the current [Hetzner deployment scripts](https://github.com/jenbrannstrom/rtbcat-platform/tree/main/scripts/hetzner) for release and rollback operations.
+Older deployment chapters can contain commands for the previous GCP system.
 
-The backend follows a **Router -> Service -> Repository** pattern. Routers
-handle HTTP; services contain business logic; repositories execute SQL.
+## Source directories
 
-## Related
+| Directory | Content |
+|---|---|
+| `api/routers/` | HTTP routes |
+| `services/` | Application operations |
+| `storage/` | Database access |
+| `mcp_server/` | MCP tools and transport |
+| `integrations/grok/` | Repository bridge in the release candidate |
+| `dashboard/src/` | User interface |
+| `deploy/hetzner/` | Production container configuration |
+| `scripts/hetzner/` | Deployment and rollback commands |
 
-- [Deployment](12-deployment.md): how the system gets deployed
-- [Database Operations](14-database.md): Postgres specifics
-- [Integrations](17-integrations.md): external service connections
+See [MCP access](19-agent-access.md), [Publisher research](18-publisher-research.md) and [Integrations](17-integrations.md).

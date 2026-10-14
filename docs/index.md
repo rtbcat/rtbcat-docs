@@ -5,6 +5,24 @@ description: "A typical Authorized Buyers seat wastes over half its QPS. Cat-Sca
 
 # Cat-Scan User Manual
 
+## MCP access and publisher research
+
+Cat-Scan has an MCP server with eight read tools.
+An AI client can get buyer data through an agent token with specified permissions.
+The private Grok Bot connection uses this server.
+
+Publisher research gets owner, manager, seller and contact evidence from public sources and Google Marketplace.
+Results include source URLs, lookup times and source failures.
+The function does not select publishers by spend or save a publisher directory.
+
+- [Publisher research](18-publisher-research.md): sources, result limits, API requests and CSV output.
+- [MCP and Agent API access](19-agent-access.md): tools, buyer permissions and token replacement.
+- [Grok Bot setup](20-grok-bot.md): private connector installation and access tests.
+
+The production services are available.
+The reusable repository bridge remains part of a release candidate.
+See the Grok guide for its current installation status.
+
 ## The problem in one picture
 
 ![QPS Funnel](assets/qps-funnel.svg)

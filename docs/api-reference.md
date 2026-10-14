@@ -9,6 +9,35 @@ This is a navigable index of Cat-Scan's 118+ API endpoints, grouped by
 domain. For full request/response schemas, see the interactive OpenAPI docs
 at `https://scan.rtb.cat/api/docs`.
 
+## Agent API and publisher research
+
+The paths below are application routes.
+Add `/api` after `https://scan.rtb.cat` when you use the public HTTPS edge.
+Agent data routes require an agent token with the applicable permissions.
+Token administration requires a user session with the `sudo` role.
+
+| Method | Path | Function |
+|---|---|---|
+| GET | `/agent/v1/me` | Get the token identity and permissions. |
+| GET | `/agent/v1/buyers` | Get permitted buyers. |
+| GET | `/agent/v1/stats-summary` | Get a buyer summary. |
+| GET | `/agent/v1/daily-spend` | Get canonical daily spend. |
+| GET | `/agent/v1/data-quality` | Get freshness and allocation evidence. |
+| GET | `/agent/v1/creatives` | Find creatives for a buyer. |
+| GET | `/agent/v1/creatives/{creative_id}` | Get creative details. |
+| GET | `/agent/v1/creatives/{creative_id}/assets` | Get asset reference URLs. |
+| POST | `/agent/v1/creative-performance/batch` | Get performance for selected creatives. |
+| POST | `/agent/v1/publisher-lookup` | Get publisher evidence with an agent token. |
+| POST | `/publisher-lookup` | Get publisher evidence with an app session. |
+| POST | `/agent/v1/tokens` | Create an agent token. |
+| GET | `/agent/v1/tokens` | List agent tokens. |
+| DELETE | `/agent/v1/tokens/{token_id}` | Revoke an agent token. |
+
+The separate MCP endpoint is `https://mcp.rtb.cat/mcp`.
+It uses authenticated Streamable HTTP.
+See [MCP access](19-agent-access.md) for tools, limits and token procedures.
+See [Publisher research](18-publisher-research.md) for request fields and evidence limits.
+
 ## Core / System
 
 | Method | Path | Purpose |

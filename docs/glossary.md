@@ -31,3 +31,35 @@ about it. The right column is how a DevOps engineer finds it in the system.
 | **Contract check** | (Not a buyer term) | `scripts/contracts_check.py`. Validates data contracts (non-negotiable rules from import to API output). Runs post-deploy. Blocks release on failure. |
 | **Cloud SQL Proxy** | (Not a buyer term) | Sidecar container providing authenticated access to Cloud SQL Postgres. Must be healthy before the API container starts. |
 | **<AUTH_HEADER> header** | (Not a buyer term) | HTTP header set by OAuth2 Proxy after Google authentication. Trusted by the API when `OAUTH2_PROXY_ENABLED=true`. Stripped by nginx for external requests. |
+
+
+## Agent access and publisher research terms
+
+The new feature guides use these technical terms with the meanings below.
+
+| Term | Meaning |
+|---|---|
+| **Agent API** | HTTP routes that give an external client access to specified Cat-Scan data. |
+| **Agent token** | A secret credential that connects a client to a user identity and permitted operations. |
+| **Token scope** | A permission for a specified group of API operations. |
+| **Buyer permission** | A user's right to get data for a buyer account. |
+| **MCP** | Model Context Protocol. A protocol that lets an AI client use specified application tools. |
+| **Streamable HTTP** | The HTTP transport that this MCP server uses. |
+| **Bridge** | Software that converts between two connector transports. |
+| **Canonical spend** | Spend from the authoritative buyer reporting totals. |
+| **Creative allocation** | The assignment of reporting totals to individual creatives. |
+| **Reconciled allocation** | An allocation that agrees with the comparison totals under the service's rules. |
+| **Cursor** | A value that identifies the next page of results. |
+| **Publisher owner** | The organization declared as the owner of a publisher property. |
+| **Publisher manager** | An organization declared as the manager of publisher inventory. |
+| **Authorized seller** | A seller account listed in the publisher's ads file. |
+| **Publisher profile** | Seller information visible through Google Marketplace. |
+| **Partial result** | A result with missing or failed source sections. |
+| **Truncation** | Omission of further entries because the result reached a stated limit. |
+| **Revocation** | Removal of a token's ability to authorize a request. |
+| **Release candidate** | A proposed release that has not passed all stable-release gates. |
+
+For computer operations, **revoke** means to remove a token's access.
+**Hash** means to calculate the stored digest of a token.
+**Configure** means to set application parameters.
+These meanings apply only to the stated computer operations.

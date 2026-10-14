@@ -27,7 +27,6 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.sections
     - navigation.top
@@ -111,6 +110,7 @@ nav:
       - Conversions: 08-conversions.md
       - Data Import: 09-data-import.md
       - Reports: 10-reading-reports.md
+      - Publisher Research: 18-publisher-research.md
   - "Part II: DevOps Track":
       - Admin Navigation: 02-navigating-the-dashboard.md
       - Architecture: 11-architecture.md
@@ -120,6 +120,8 @@ nav:
       - Troubleshooting: 15-troubleshooting.md
       - User Admin: 16-user-admin.md
       - Integrations: 17-integrations.md
+      - MCP and Agent Access: 19-agent-access.md
+      - Grok Bot Setup: 20-grok-bot.md
   - "Part III: Reference":
       - API Reference: api-reference.md
       - FAQ: faq.md

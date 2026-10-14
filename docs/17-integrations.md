@@ -96,6 +96,23 @@ External systems send conversion events to Cat-Scan via webhooks.
 - `GET /conversions/readiness`: whether conversion data is fresh enough
   to trust
 
+## MCP clients and Grok Bot
+
+External AI clients can use the [MCP server and Agent API](19-agent-access.md).
+An agent token limits each client to specified buyers and read operations.
+The private [Grok Bot connector](20-grok-bot.md) uses this access path.
+
+The Grok language provider above is a separate function.
+It classifies creative language inside Cat-Scan.
+It does not give Grok Bot access to buyer data.
+
+## Publisher sources and Google Marketplace
+
+[Publisher research](18-publisher-research.md) combines app stores, publisher declarations, manager seller files and visible Google Marketplace profiles.
+The service account needs Marketplace permission for the selected buyer.
+Enable `authorizedbuyersmarketplace.googleapis.com` in that account's Google Cloud project.
+Public evidence can remain available if the Google request fails.
+
 ## Related
 
 - [Architecture Overview](11-architecture.md): where integrations fit
