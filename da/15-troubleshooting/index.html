@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1584,6 +1612,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1886,16 +1970,16 @@
 <p><strong>Grundårsagsmønster:</strong> Datafriskheds­forespørgslen scanner store tabeller (<code>rtb_daily</code> med 84M rækker, <code>rtb_bidstream</code> med 21M rækker). Hvis forespørgsels­planen degraderer til en sekventiel scanning i stedet for at bruge indekser, kan det tage 160+ sekunder.</p>
 <p><strong>Detektion:</strong>
 1. Kald endpointet direkte fra VM'en:
-   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;&#39;</span>
+   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;'</span>
 </code></pre></div>
 2. Hvis det timer ud eller returnerer 500, tjek forespørgselsplanen:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
 <span class="s2">import os, psycopg</span>
-<span class="s2">conn = psycopg.connect(os.environ[&#39;POSTGRES_DSN&#39;])</span>
-<span class="s2">for r in conn.execute(&#39;EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;&#39;).fetchall():</span>
+<span class="s2">conn = psycopg.connect(os.environ['POSTGRES_DSN'])</span>
+<span class="s2">for r in conn.execute('EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;').fetchall():</span>
 <span class="s2">    print(list(r.values())[0])</span>
-<span class="s2">&quot;</span>
+<span class="s2">"</span>
 </code></pre></div>
 3. Kig efter <code>Parallel Seq Scan</code> på store tabeller. Det er problemet.</p>
 <p><strong>Løsningsmønster:</strong>
@@ -1905,7 +1989,7 @@
 <h2 id="gmail-importfejl">Gmail-importfejl<a class="headerlink" href="#gmail-importfejl" title="Permanent link">&para;</a></h2>
 <p><strong>Symptomer:</strong> Datafriskheds­gitteret viser "manglende" celler for nylige datoer. Importhistorikken har ingen nye poster.</p>
 <p><strong>Detektion:</strong>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>http://localhost:8000/gmail/status
 </code></pre></div></p>
 <p>Tjek: <code>last_reason</code>, <code>unread</code>-antal, <code>latest_metric_date</code>.</p>
@@ -1934,11 +2018,11 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
 <p><strong>Årsag:</strong> psycopg3 konverterer <code>%s</code> til <code>$1</code> for server-side parameterbinding, men PostgreSQL's <code>SET</code>-kommando understøtter ikke parameterplaceholders.</p>
 <p><strong>Løsning:</strong> Brug f-string med valideret integer:
 <div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SET statement_timeout = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SET statement_timeout = </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
 
 <span class="c1"># Right:</span>
 <span class="n">timeout_ms</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">statement_timeout_ms</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># validated int</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="fejl-i-runtime-sundhedsgate">Fejl i runtime-sundhedsgate<a class="headerlink" href="#fejl-i-runtime-sundhedsgate" title="Permanent link">&para;</a></h2>
 <p><strong>Symptom:</strong> Workflowet <code>v1-runtime-health-strict.yml</code> fejler.</p>
@@ -1995,7 +2079,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="5. marts 2026 04:15:14 UTC">5. marts 2026 04:15:14</span>.
     </p>
   
@@ -2060,7 +2144,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopieret til udklipsholderen", "clipboard.copy": "Kopi\u00e9r til udklipsholderen", "search.result.more.one": "1 resultat mere p\u00e5 denne side", "search.result.more.other": "# resultater mere p\u00e5 denne side", "search.result.none": "Ingen resultater fundet", "search.result.one": "1 resultat", "search.result.other": "# resultater", "search.result.placeholder": "Indtast s\u00f8geord", "search.result.term.missing": "Mangler", "select.version": "V\u00e6lg version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopieret til udklipsholderen", "clipboard.copy": "Kopi\u00e9r til udklipsholderen", "search.result.more.one": "1 resultat mere p\u00e5 denne side", "search.result.more.other": "# resultater mere p\u00e5 denne side", "search.result.none": "Ingen resultater fundet", "search.result.one": "1 resultat", "search.result.other": "# resultater", "search.result.placeholder": "Indtast s\u00f8geord", "search.result.term.missing": "Mangler", "select.version": "V\u00e6lg version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

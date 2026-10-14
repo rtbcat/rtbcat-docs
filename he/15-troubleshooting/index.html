@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1584,6 +1612,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1886,16 +1970,16 @@
 <p><strong>דפוס שורש הבעיה:</strong> שאילתת רעננות הנתונים סורקת טבלאות גדולות (<code>rtb_daily</code> עם 84M שורות, <code>rtb_bidstream</code> עם 21M שורות). אם תוכנית השאילתה מדרדרת לסריקה סדרתית במקום שימוש באינדקסים, זה יכול לקחת 160+ שניות.</p>
 <p><strong>זיהוי:</strong>
 1. גשו לנקודת הקצה ישירות מה-VM:
-   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;&#39;</span>
+   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;'</span>
 </code></pre></div>
 2. אם פוקע הזמן או מחזיר 500, בדקו את תוכנית השאילתה:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
 <span class="s2">import os, psycopg</span>
-<span class="s2">conn = psycopg.connect(os.environ[&#39;POSTGRES_DSN&#39;])</span>
-<span class="s2">for r in conn.execute(&#39;EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;&#39;).fetchall():</span>
+<span class="s2">conn = psycopg.connect(os.environ['POSTGRES_DSN'])</span>
+<span class="s2">for r in conn.execute('EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;').fetchall():</span>
 <span class="s2">    print(list(r.values())[0])</span>
-<span class="s2">&quot;</span>
+<span class="s2">"</span>
 </code></pre></div>
 3. חפשו <code>Parallel Seq Scan</code> על טבלאות גדולות. זו הבעיה.</p>
 <p><strong>דפוס תיקון:</strong>
@@ -1905,7 +1989,7 @@
 <h2 id="gmail">כשל ייבוא Gmail<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
 <p><strong>תסמינים:</strong> רשת רעננות הנתונים מציגה תאים "חסרים" לתאריכים אחרונים. להיסטוריית הייבוא אין רשומות עדכניות.</p>
 <p><strong>זיהוי:</strong>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>http://localhost:8000/gmail/status
 </code></pre></div></p>
 <p>בדקו: <code>last_reason</code>, מספר <code>unread</code>, <code>latest_metric_date</code>.</p>
@@ -1934,11 +2018,11 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
 <p><strong>סיבה:</strong> psycopg3 ממיר <code>%s</code> ל-<code>$1</code> עבור קישור פרמטרים בצד השרת, אבל פקודת <code>SET</code> של PostgreSQL אינה תומכת בממלאי מקום לפרמטרים.</p>
 <p><strong>תיקון:</strong> השתמשו ב-f-string עם מספר שלם מאומת:
 <div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SET statement_timeout = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SET statement_timeout = </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
 
 <span class="c1"># Right:</span>
 <span class="n">timeout_ms</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">statement_timeout_ms</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># validated int</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="_4">כשל שער תקינות בזמן ריצה<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p><strong>תסמין:</strong> תהליך <code>v1-runtime-health-strict.yml</code> נכשל.</p>
@@ -1995,7 +2079,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="5 במרץ 2026 04:15:14 UTC">5 במרץ 2026 04:15:14</span>.
     </p>
   
@@ -2060,7 +2144,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7", "clipboard.copy": "\u05d4\u05e2\u05ea\u05e7\u05d4 \u05dc\u05dc\u05d5\u05d7", "search.result.more.one": "\u05e2\u05d5\u05d3 \u05d0\u05d7\u05d3 \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.more.other": "\u05e2\u05d5\u05d3 # \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.none": "\u05d0\u05d9\u05df \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05ea\u05d5\u05d0\u05de\u05d9\u05dd", "search.result.one": "\u05de\u05e1\u05de\u05da1 \u05ea\u05d5\u05d0\u05dd", "search.result.other": "# \u05de\u05e1\u05de\u05da \u05ea\u05d5\u05d0\u05dd", "search.result.placeholder": "\u05d9\u05e9 \u05dc\u05d4\u05e7\u05dc\u05d9\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d7\u05e4\u05e9", "search.result.term.missing": "\u05d7\u05e1\u05e8", "select.version": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d2\u05e8\u05e1\u05d4"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7", "clipboard.copy": "\u05d4\u05e2\u05ea\u05e7\u05d4 \u05dc\u05dc\u05d5\u05d7", "search.result.more.one": "\u05e2\u05d5\u05d3 \u05d0\u05d7\u05d3 \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.more.other": "\u05e2\u05d5\u05d3 # \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.none": "\u05d0\u05d9\u05df \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05ea\u05d5\u05d0\u05de\u05d9\u05dd", "search.result.one": "\u05de\u05e1\u05de\u05da1 \u05ea\u05d5\u05d0\u05dd", "search.result.other": "# \u05de\u05e1\u05de\u05da \u05ea\u05d5\u05d0\u05dd", "search.result.placeholder": "\u05d9\u05e9 \u05dc\u05d4\u05e7\u05dc\u05d9\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d7\u05e4\u05e9", "search.result.term.missing": "\u05d7\u05e1\u05e8", "select.version": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d2\u05e8\u05e1\u05d4"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

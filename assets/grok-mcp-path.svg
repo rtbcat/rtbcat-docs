@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="270" viewBox="0 0 1000 270" role="img" aria-labelledby="title desc">
+  <title id="title">Grok connection to Cat-Scan</title>
+  <desc id="desc">Grok Bot uses a bridge on the Grok cloud computer. The bridge sends HTTPS requests to the MCP server. The Agent API applies token and buyer permissions before it gets reporting data or publisher evidence.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#0f766e"/></marker></defs>
+  <rect width="1000" height="270" rx="12" fill="#f0fdfa"/>
+  <g fill="#fff" stroke="#0f766e" stroke-width="2">
+    <rect x="20" y="75" width="160" height="90" rx="8"/>
+    <rect x="220" y="75" width="220" height="90" rx="8"/>
+    <rect x="500" y="75" width="180" height="90" rx="8"/>
+    <rect x="730" y="75" width="250" height="90" rx="8"/>
+  </g>
+  <g stroke="#0f766e" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M180 120 H218"/><path d="M440 120 H498"/><path d="M680 120 H728"/>
+  </g>
+  <g fill="#134e4a" text-anchor="middle" font-family="sans-serif" font-size="18">
+    <text x="100" y="115">Grok Bot</text><text x="100" y="142" font-size="14">Desktop interface</text>
+    <text x="330" y="115">MCP bridge</text><text x="330" y="142" font-size="14">Grok cloud computer</text>
+    <text x="590" y="115">Cat-Scan MCP</text><text x="590" y="142" font-size="14">Eight read tools</text>
+    <text x="855" y="115">Agent API</text><text x="855" y="142" font-size="14">Token and buyer permissions</text>
+    <text x="470" y="55" font-size="14">HTTPS + agent token</text>
+    <text x="855" y="210" font-size="15">Reporting data and publisher sources</text>
+  </g>
+  <path d="M855 165 V187" stroke="#0f766e" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

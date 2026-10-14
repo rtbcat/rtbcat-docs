@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1623,6 +1651,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2018,7 +2102,7 @@
 <p>Overweeg bij productiebelasting het toevoegen van <code>psycopg_pool</code> als verbindingsoverhead een knelpunt wordt.</p>
 <h2 id="statement-timeouts">Statement-timeouts<a class="headerlink" href="#statement-timeouts" title="Permanent link">&para;</a></h2>
 <p>Voor dure queries (bijv. dataversheid over grote tabellen) gebruikt de API <code>pg_query_with_timeout</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </code></pre></div>
 <p>Belangrijke details:
@@ -2028,8 +2112,8 @@
 - <code>SET LOCAL</code> voorkomt het probleem van een afgebroken transactie dat optreedt bij het gebruik van <code>SET</code> + <code>RESET</code> in een <code>try/finally</code>-blok (als de query wordt afgebroken door de timeout, komt de transactie in een afgebroken status terecht en mislukt <code>RESET</code>).</p>
 <h2 id="querypatroon-voor-dataversheid">Querypatroon voor dataversheid<a class="headerlink" href="#querypatroon-voor-dataversheid" title="Permanent link">&para;</a></h2>
 <p>Het dataversheidsendpoint moet weten welke datums data hebben per rapporttype. Het performante patroon gebruikt <code>generate_series</code> + <code>EXISTS</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">::</span><span class="nb">date</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">metric_date</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bidsinauction&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">csv_type</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">row_count</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">%</span><span class="n">s</span><span class="p">::</span><span class="nb">date</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1 day&#39;</span><span class="p">::</span><span class="nb">interval</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">::</span><span class="nb">date</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">metric_date</span><span class="p">,</span><span class="w"> </span><span class="s1">'bidsinauction'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">csv_type</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">row_count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">%</span><span class="n">s</span><span class="p">::</span><span class="nb">date</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'1 day'</span><span class="p">::</span><span class="nb">interval</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">rtb_daily</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">metric_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">::</span><span class="nb">date</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">buyer_account_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">s</span>
@@ -2091,7 +2175,7 @@
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="5 maart 2026 04:15:14 UTC">5 maart 2026 04:15:14</span>.
     </p>
   
@@ -2156,7 +2240,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

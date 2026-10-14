@@ -17,7 +17,7 @@
         <link rel="prev" href="../16-user-admin/">
       
       
-        <link rel="next" href="../api-reference/">
+        <link rel="next" href="../19-agent-access/">
       
       
         
@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1554,6 +1582,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcp-clients-and-grok-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP clients and Grok Bot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publisher-sources-and-google-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publisher sources and Google Marketplace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1568,6 +1618,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1805,6 +1911,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcp-clients-and-grok-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP clients and Grok Bot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publisher-sources-and-google-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publisher sources and Google Marketplace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1967,6 +2095,18 @@ needs to be active.</p>
 - <code>GET /conversions/health</code>: overall ingestion and aggregation health
 - <code>GET /conversions/readiness</code>: whether conversion data is fresh enough
   to trust</p>
+<h2 id="mcp-clients-and-grok-bot">MCP clients and Grok Bot<a class="headerlink" href="#mcp-clients-and-grok-bot" title="Permanent link">&para;</a></h2>
+<p>External AI clients can use the <a href="../19-agent-access/">MCP server and Agent API</a>.
+An agent token limits each client to specified buyers and read operations.
+The private <a href="../20-grok-bot/">Grok Bot connector</a> uses this access path.</p>
+<p>The Grok language provider above is a separate function.
+It classifies creative language inside Cat-Scan.
+It does not give Grok Bot access to buyer data.</p>
+<h2 id="publisher-sources-and-google-marketplace">Publisher sources and Google Marketplace<a class="headerlink" href="#publisher-sources-and-google-marketplace" title="Permanent link">&para;</a></h2>
+<p><a href="../18-publisher-research/">Publisher research</a> combines app stores, publisher declarations, manager seller files and visible Google Marketplace profiles.
+The service account needs Marketplace permission for the selected buyer.
+Enable <code>authorizedbuyersmarketplace.googleapis.com</code> in that account's Google Cloud project.
+Public evidence can remain available if the Google request fails.</p>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../11-architecture/">Architecture Overview</a>: where integrations fit</li>
@@ -1994,7 +2134,7 @@ needs to be active.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 12, 2026 20:59:27 UTC">June 12, 2026 20:59:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>
   </span>
 
     
@@ -2011,8 +2151,8 @@ needs to be active.</p>
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
-      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 12, 2026 20:59:27 UTC">June 12, 2026 20:59:27</span>.
+      Built from docs <code>12b242c</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>.
     </p>
   
 
@@ -2076,7 +2216,7 @@ needs to be active.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>

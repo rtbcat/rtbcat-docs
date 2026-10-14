@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1623,6 +1651,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2018,7 +2102,7 @@
 <p>Para cargas de trabajo en producción, considere agregar <code>psycopg_pool</code> si la sobrecarga de conexión se convierte en un cuello de botella.</p>
 <h2 id="tiempos-de-espera-de-sentencias">Tiempos de espera de sentencias<a class="headerlink" href="#tiempos-de-espera-de-sentencias" title="Permanent link">&para;</a></h2>
 <p>Para consultas costosas (por ejemplo, frescura de datos en tablas grandes), la API utiliza <code>pg_query_with_timeout</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </code></pre></div>
 <p>Detalles clave:
@@ -2028,8 +2112,8 @@
 - <code>SET LOCAL</code> evita el problema de transacción abortada que ocurre al usar <code>SET</code> + <code>RESET</code> en un bloque <code>try/finally</code> (si la consulta es cancelada por el timeout, la transacción entra en estado abortado y <code>RESET</code> falla).</p>
 <h2 id="patron-de-consulta-de-frescura-de-datos">Patrón de consulta de frescura de datos<a class="headerlink" href="#patron-de-consulta-de-frescura-de-datos" title="Permanent link">&para;</a></h2>
 <p>El endpoint de frescura de datos necesita saber qué fechas tienen datos para cada tipo de informe. El patrón eficiente utiliza <code>generate_series</code> + <code>EXISTS</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">::</span><span class="nb">date</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">metric_date</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bidsinauction&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">csv_type</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">row_count</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">%</span><span class="n">s</span><span class="p">::</span><span class="nb">date</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1 day&#39;</span><span class="p">::</span><span class="nb">interval</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">::</span><span class="nb">date</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">metric_date</span><span class="p">,</span><span class="w"> </span><span class="s1">'bidsinauction'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">csv_type</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">row_count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">%</span><span class="n">s</span><span class="p">::</span><span class="nb">date</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'1 day'</span><span class="p">::</span><span class="nb">interval</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">rtb_daily</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">metric_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">::</span><span class="nb">date</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">buyer_account_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">s</span>
@@ -2091,7 +2175,7 @@
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="5 de marzo de 2026 04:15:14 UTC">5 de marzo de 2026 04:15:14</span>.
     </p>
   
@@ -2156,7 +2240,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

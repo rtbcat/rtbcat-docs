@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://docs.rtb.cat/</loc>
-        <lastmod>2026-06-12T23:02:06+02:00</lastmod>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/" />
@@ -210,7 +210,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/11-architecture/</loc>
-        <lastmod>2026-06-12T23:02:06+02:00</lastmod>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/11-architecture/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/11-architecture/" />
@@ -306,7 +306,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/17-integrations/</loc>
-        <lastmod>2026-06-12T23:02:06+02:00</lastmod>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/17-integrations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/17-integrations/" />
@@ -321,8 +321,56 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/18-publisher-research/</loc>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/19-agent-access/</loc>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/20-grok-bot/</loc>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/api-reference/</loc>
-        <lastmod>2026-06-12T23:02:06+02:00</lastmod>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/api-reference/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/api-reference/" />
@@ -354,7 +402,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/glossary/</loc>
-        <lastmod>2026-06-12T23:02:06+02:00</lastmod>
+        <lastmod>2026-10-14T16:37:03+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/glossary/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/glossary/" />
@@ -1041,6 +1089,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/ar/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.229659+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/ar/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.231163+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/ar/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.232625+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/ar/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -1266,7 +1362,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:56.729979+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.254937+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.ar/" />
@@ -1282,7 +1378,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:56.731988+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.256470+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.da/" />
@@ -1298,7 +1394,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:56.733975+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.258009+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.es/" />
@@ -1314,7 +1410,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:56.736055+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.259513+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.fr/" />
@@ -1330,7 +1426,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:56.738042+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.260945+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.he/" />
@@ -1346,7 +1442,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:56.740049+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.262372+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations/" />
@@ -1362,7 +1458,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:56.742030+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.263784+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.nl/" />
@@ -1378,7 +1474,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:56.744144+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.265216+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.pl/" />
@@ -1394,7 +1490,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:56.746154+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.266627+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.ru/" />
@@ -1410,7 +1506,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:56.748136+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.268031+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.uk/" />
@@ -1426,7 +1522,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ar/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:56.750140+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.269441+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.zh/" />
@@ -1761,6 +1857,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/da/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.299688+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/da/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.301096+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/da/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.302573+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/da/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -1986,7 +2130,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:56.820149+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.323153+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -2002,7 +2146,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:56.822144+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.324554+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -2018,7 +2162,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:56.824144+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.325991+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -2034,7 +2178,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:56.826191+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.327426+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -2050,7 +2194,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:56.828195+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.328840+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -2066,7 +2210,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:56.830202+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.330311+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -2082,7 +2226,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:56.832197+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.331738+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -2098,7 +2242,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:56.834270+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.333183+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -2114,7 +2258,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:56.836286+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.334615+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -2130,7 +2274,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:56.838367+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.336088+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -2146,7 +2290,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/da/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:56.840622+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.337627+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -2481,6 +2625,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/es/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.368807+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/es/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.370273+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/es/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.371765+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/es/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -2706,7 +2898,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:56.910655+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.393599+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -2722,7 +2914,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:56.912770+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.395132+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -2738,7 +2930,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:56.914792+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.396627+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -2754,7 +2946,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:56.916784+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.398073+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -2770,7 +2962,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:56.918820+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.399550+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -2786,7 +2978,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:56.920939+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.400992+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -2802,7 +2994,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:56.922954+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.402439+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -2818,7 +3010,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:56.924969+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.403875+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -2834,7 +3026,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:56.926987+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.405344+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -2850,7 +3042,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:56.928998+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.406781+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -2866,7 +3058,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/es/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:56.930998+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.408215+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -3201,6 +3393,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/fr/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.438480+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/fr/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.439970+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/fr/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.441401+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/fr/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -3426,7 +3666,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.001169+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.461547+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -3442,7 +3682,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.003195+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.462924+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -3458,7 +3698,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.005201+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.464315+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -3474,7 +3714,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.007256+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.465732+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -3490,7 +3730,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.009276+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.467093+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -3506,7 +3746,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.011268+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.468487+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -3522,7 +3762,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.013318+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.469928+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -3538,7 +3778,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.015430+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.471311+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -3554,7 +3794,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.017447+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.472691+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -3570,7 +3810,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.019464+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.474076+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -3586,7 +3826,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/fr/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.021504+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.475519+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -3921,6 +4161,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/he/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.506028+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/he/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.507494+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/he/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.508932+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/he/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -4146,7 +4434,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.091894+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.529921+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -4162,7 +4450,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.093914+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.531353+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -4178,7 +4466,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.095913+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.532807+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -4194,7 +4482,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.098050+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.534234+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -4210,7 +4498,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.100116+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.535651+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -4226,7 +4514,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.102159+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.537068+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -4242,7 +4530,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.104300+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.538495+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -4258,7 +4546,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.106361+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.539976+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -4274,7 +4562,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.108414+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.541414+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -4290,7 +4578,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.110443+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.542848+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -4306,7 +4594,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/he/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.112534+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.544295+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -4641,6 +4929,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/nl/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.584917+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/nl/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.586381+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/nl/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.587884+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/nl/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -4866,7 +5202,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.182919+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.609054+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -4882,7 +5218,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.184923+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.610506+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -4898,7 +5234,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.186960+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.611932+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -4914,7 +5250,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.189011+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.613427+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -4930,7 +5266,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.191051+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.614857+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -4946,7 +5282,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.193065+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.616353+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -4962,7 +5298,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.195104+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.617784+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -4978,7 +5314,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.197129+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.619232+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -4994,7 +5330,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.199179+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.620656+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -5010,7 +5346,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.201190+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.622115+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -5026,7 +5362,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/nl/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.203318+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.623546+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -5361,6 +5697,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/pl/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.654111+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/pl/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.655540+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/pl/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.656928+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/pl/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -5586,7 +5970,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.273655+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.677052+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -5602,7 +5986,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.275680+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.678560+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -5618,7 +6002,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.277789+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.679942+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -5634,7 +6018,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.279909+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.681450+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -5650,7 +6034,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.281934+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.682836+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -5666,7 +6050,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.283968+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.684221+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -5682,7 +6066,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.285986+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.685714+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -5698,7 +6082,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.288062+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.687091+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -5714,7 +6098,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.290066+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.688460+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -5730,7 +6114,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.292092+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.689835+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -5746,7 +6130,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/pl/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.294142+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.691250+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -6081,6 +6465,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/ru/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.720752+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/ru/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.722157+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/ru/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.723560+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/ru/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -6306,7 +6738,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.364743+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.744628+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -6322,7 +6754,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.366834+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.746149+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -6338,7 +6770,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.368858+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.747692+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -6354,7 +6786,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.370891+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.749156+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -6370,7 +6802,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.372946+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.750595+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -6386,7 +6818,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.374996+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.752002+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -6402,7 +6834,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.377002+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.753540+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -6418,7 +6850,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.379068+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.754993+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -6434,7 +6866,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.381139+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.756583+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -6450,7 +6882,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.383171+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.758284+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -6466,7 +6898,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/ru/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.385244+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.759700+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -6801,6 +7233,54 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/uk/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.789910+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/uk/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.791381+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/uk/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.792890+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/uk/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -7026,7 +7506,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.455768+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.813923+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -7042,7 +7522,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.457782+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.815345+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -7058,7 +7538,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.459793+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.816819+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -7074,7 +7554,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.461897+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.818242+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -7090,7 +7570,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.463947+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.819647+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -7106,7 +7586,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.465975+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.821045+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -7122,7 +7602,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.467998+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.822526+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -7138,7 +7618,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.470132+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.823913+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -7154,7 +7634,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.472158+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.825382+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -7170,7 +7650,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.474166+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.826776+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -7186,7 +7666,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/uk/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.476176+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.828185+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />
@@ -7521,6 +8001,54 @@
         <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/17-integrations/" />
     <priority>0.7</priority></url>
     <url>
+        <loc>https://docs.rtb.cat/zh/18-publisher-research/</loc>
+        <lastmod>2026-10-14T14:39:33.858601+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/18-publisher-research/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/18-publisher-research/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/zh/19-agent-access/</loc>
+        <lastmod>2026-10-14T14:39:33.860064+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/19-agent-access/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/19-agent-access/" />
+    <priority>0.7</priority></url>
+    <url>
+        <loc>https://docs.rtb.cat/zh/20-grok-bot/</loc>
+        <lastmod>2026-10-14T14:39:33.861579+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="da" href="https://docs.rtb.cat/da/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.rtb.cat/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.rtb.cat/es/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.rtb.cat/fr/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://docs.rtb.cat/he/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://docs.rtb.cat/nl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://docs.rtb.cat/pl/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://docs.rtb.cat/ru/20-grok-bot/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://docs.rtb.cat/uk/20-grok-bot/" />
+    <priority>0.7</priority></url>
+    <url>
         <loc>https://docs.rtb.cat/zh/api-reference/</loc>
         <lastmod>2026-03-04T23:15:14-05:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -7746,7 +8274,7 @@
     <priority>0.9</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.ar/</loc>
-        <lastmod>2026-08-14T07:18:57.546643+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.881990+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.ar/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ar/" />
@@ -7762,7 +8290,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.da/</loc>
-        <lastmod>2026-08-14T07:18:57.548733+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.883404+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.da/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.da/" />
@@ -7778,7 +8306,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.es/</loc>
-        <lastmod>2026-08-14T07:18:57.550753+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.884792+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.es/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.es/" />
@@ -7794,7 +8322,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.fr/</loc>
-        <lastmod>2026-08-14T07:18:57.552817+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.886202+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.fr/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.fr/" />
@@ -7810,7 +8338,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.he/</loc>
-        <lastmod>2026-08-14T07:18:57.554846+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.887595+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.he/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.he/" />
@@ -7826,7 +8354,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations/</loc>
-        <lastmod>2026-08-14T07:18:57.556917+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.888971+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations/" />
@@ -7842,7 +8370,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.nl/</loc>
-        <lastmod>2026-08-14T07:18:57.558906+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.890370+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.nl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.nl/" />
@@ -7858,7 +8386,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.pl/</loc>
-        <lastmod>2026-08-14T07:18:57.560916+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.891749+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.pl/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.pl/" />
@@ -7874,7 +8402,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.ru/</loc>
-        <lastmod>2026-08-14T07:18:57.563034+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.893131+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.ru/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.ru/" />
@@ -7890,7 +8418,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.uk/</loc>
-        <lastmod>2026-08-14T07:18:57.565107+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.894594+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.uk/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.uk/" />
@@ -7906,7 +8434,7 @@
     <priority>0.7</priority></url>
     <url>
         <loc>https://docs.rtb.cat/zh/includes/abbreviations.zh/</loc>
-        <lastmod>2026-08-14T07:18:57.567132+00:00</lastmod>
+        <lastmod>2026-10-14T14:39:33.896086+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.rtb.cat/zh/includes/abbreviations.zh/" />
         <xhtml:link rel="alternate" hreflang="ar" href="https://docs.rtb.cat/ar/includes/abbreviations.zh/" />

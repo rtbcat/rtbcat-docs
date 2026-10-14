@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1584,6 +1612,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1895,16 +1979,16 @@ degrades to a sequential scan instead of using indexes, it can take 160+
 seconds.</p>
 <p><strong>Detection:</strong>
 1. Hit the endpoint directly from the VM:
-   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;&#39;</span>
+   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;'</span>
 </code></pre></div>
 2. If it times out or returns 500, check the query plan:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
 <span class="s2">import os, psycopg</span>
-<span class="s2">conn = psycopg.connect(os.environ[&#39;POSTGRES_DSN&#39;])</span>
-<span class="s2">for r in conn.execute(&#39;EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;&#39;).fetchall():</span>
+<span class="s2">conn = psycopg.connect(os.environ['POSTGRES_DSN'])</span>
+<span class="s2">for r in conn.execute('EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;').fetchall():</span>
 <span class="s2">    print(list(r.values())[0])</span>
-<span class="s2">&quot;</span>
+<span class="s2">"</span>
 </code></pre></div>
 3. Look for <code>Parallel Seq Scan</code> on large tables. This is the problem.</p>
 <p><strong>Fix pattern:</strong>
@@ -1917,7 +2001,7 @@ seconds.</p>
 <p><strong>Symptoms:</strong> Data freshness grid shows "missing" cells for recent dates.
 Import history has no recent entries.</p>
 <p><strong>Detection:</strong>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>http://localhost:8000/gmail/status
 </code></pre></div></p>
 <p>Check: <code>last_reason</code>, <code>unread</code> count, <code>latest_metric_date</code>.</p>
@@ -1949,11 +2033,11 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
 but PostgreSQL's <code>SET</code> command does not support parameter placeholders.</p>
 <p><strong>Fix:</strong> Use f-string with validated integer:
 <div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SET statement_timeout = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SET statement_timeout = </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
 
 <span class="c1"># Right:</span>
 <span class="n">timeout_ms</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">statement_timeout_ms</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># validated int</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="runtime-health-gate-failure">Runtime health gate failure<a class="headerlink" href="#runtime-health-gate-failure" title="Permanent link">&para;</a></h2>
 <p><strong>Symptom:</strong> <code>v1-runtime-health-strict.yml</code> workflow fails.</p>
@@ -2014,7 +2098,7 @@ but PostgreSQL's <code>SET</code> command does not support parameter placeholder
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 12, 2026 20:59:27 UTC">June 12, 2026 20:59:27</span>.
     </p>
   
@@ -2079,7 +2163,7 @@ but PostgreSQL's <code>SET</code> command does not support parameter placeholder
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>

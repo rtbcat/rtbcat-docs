@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1584,6 +1612,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1886,16 +1970,16 @@
 <p><strong>Шаблон першопричини:</strong> Запит актуальності даних сканує великі таблиці (<code>rtb_daily</code> на 84 млн рядків, <code>rtb_bidstream</code> на 21 млн рядків). Якщо план запиту деградує до послідовного сканування замість використання індексів, це може зайняти 160+ секунд.</p>
 <p><strong>Виявлення:</strong>
 1. Виконайте запит до ендпоінту безпосередньо з VM:
-   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;&#39;</span>
+   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;'</span>
 </code></pre></div>
 2. Якщо перевищено час очікування або повернуто 500, перевірте план запиту:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
 <span class="s2">import os, psycopg</span>
-<span class="s2">conn = psycopg.connect(os.environ[&#39;POSTGRES_DSN&#39;])</span>
-<span class="s2">for r in conn.execute(&#39;EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;&#39;).fetchall():</span>
+<span class="s2">conn = psycopg.connect(os.environ['POSTGRES_DSN'])</span>
+<span class="s2">for r in conn.execute('EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;').fetchall():</span>
 <span class="s2">    print(list(r.values())[0])</span>
-<span class="s2">&quot;</span>
+<span class="s2">"</span>
 </code></pre></div>
 3. Шукайте <code>Parallel Seq Scan</code> на великих таблицях. Це і є проблема.</p>
 <p><strong>Шаблон виправлення:</strong>
@@ -1905,7 +1989,7 @@
 <h2 id="gmail">Збій імпорту з Gmail<a class="headerlink" href="#gmail" title="Permanent link">&para;</a></h2>
 <p><strong>Симптоми:</strong> Сітка актуальності даних показує комірки "missing" для нещодавніх дат. В історії імпорту немає нових записів.</p>
 <p><strong>Виявлення:</strong>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>http://localhost:8000/gmail/status
 </code></pre></div></p>
 <p>Перевірте: <code>last_reason</code>, кількість <code>unread</code>, <code>latest_metric_date</code>.</p>
@@ -1934,11 +2018,11 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
 <p><strong>Причина:</strong> psycopg3 перетворює <code>%s</code> на <code>$1</code> для серверного прив'язування параметрів, але команда PostgreSQL <code>SET</code> не підтримує заповнювачі параметрів.</p>
 <p><strong>Виправлення:</strong> Використовуйте f-string з валідованим цілим числом:
 <div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SET statement_timeout = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SET statement_timeout = </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
 
 <span class="c1"># Right:</span>
 <span class="n">timeout_ms</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">statement_timeout_ms</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># validated int</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="_3">Збій шлюзу перевірки стану під час роботи<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><strong>Симптом:</strong> Робочий процес <code>v1-runtime-health-strict.yml</code> завершується з помилкою.</p>
@@ -1995,7 +2079,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="5 березня 2026 р. 04:15:14 UTC">5 березня 2026 р. 04:15:14</span>.
     </p>
   
@@ -2060,7 +2144,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

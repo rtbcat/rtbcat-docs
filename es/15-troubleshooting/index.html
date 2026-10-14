@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1584,6 +1612,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1886,16 +1970,16 @@
 <p><strong>Patrón de causa raíz:</strong> La consulta de frescura de datos escanea tablas grandes (<code>rtb_daily</code> con 84M de filas, <code>rtb_bidstream</code> con 21M de filas). Si el plan de consulta se degrada a un escaneo secuencial en lugar de usar índices, puede tardar más de 160 segundos.</p>
 <p><strong>Detección:</strong>
 1. Consulte el endpoint directamente desde la VM:
-   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;&#39;</span>
+   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>--max-time<span class="w"> </span><span class="m">60</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'http://localhost:8000/uploads/data-freshness?days=14&amp;buyer_id=&lt;ID&gt;'</span>
 </code></pre></div>
 2. Si se agota el tiempo o devuelve 500, verifique el plan de consulta:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>catscan-api<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span>
 <span class="s2">import os, psycopg</span>
-<span class="s2">conn = psycopg.connect(os.environ[&#39;POSTGRES_DSN&#39;])</span>
-<span class="s2">for r in conn.execute(&#39;EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;&#39;).fetchall():</span>
+<span class="s2">conn = psycopg.connect(os.environ['POSTGRES_DSN'])</span>
+<span class="s2">for r in conn.execute('EXPLAIN (ANALYZE, BUFFERS) &lt;query&gt;').fetchall():</span>
 <span class="s2">    print(list(r.values())[0])</span>
-<span class="s2">&quot;</span>
+<span class="s2">"</span>
 </code></pre></div>
 3. Busque <code>Parallel Seq Scan</code> en tablas grandes. Ese es el problema.</p>
 <p><strong>Patrón de solución:</strong>
@@ -1905,7 +1989,7 @@
 <h2 id="fallo-de-importacion-de-gmail">Fallo de importación de Gmail<a class="headerlink" href="#fallo-de-importacion-de-gmail" title="Permanent link">&para;</a></h2>
 <p><strong>Síntomas:</strong> La cuadrícula de frescura de datos muestra celdas "faltantes" para fechas recientes. El historial de importación no tiene entradas recientes.</p>
 <p><strong>Detección:</strong>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sS<span class="w"> </span>-H<span class="w"> </span><span class="s1">'&lt;AUTH_HEADER&gt;: &lt;SERVICE_EMAIL&gt;'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>http://localhost:8000/gmail/status
 </code></pre></div></p>
 <p>Verifique: <code>last_reason</code>, conteo de <code>unread</code>, <code>latest_metric_date</code>.</p>
@@ -1934,11 +2018,11 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
 <p><strong>Causa:</strong> psycopg3 convierte <code>%s</code> a <code>$1</code> para el enlace de parámetros del lado del servidor, pero el comando <code>SET</code> de PostgreSQL no soporta marcadores de parámetros.</p>
 <p><strong>Solución:</strong> Usar f-string con un entero validado:
 <div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SET statement_timeout = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SET statement_timeout = </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="n">timeout_ms</span><span class="p">,))</span>
 
 <span class="c1"># Right:</span>
 <span class="n">timeout_ms</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">statement_timeout_ms</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># validated int</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">"SET LOCAL statement_timeout = </span><span class="si">{</span><span class="n">timeout_ms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="fallo-en-la-puerta-de-salud-en-tiempo-de-ejecucion">Fallo en la puerta de salud en tiempo de ejecución<a class="headerlink" href="#fallo-en-la-puerta-de-salud-en-tiempo-de-ejecucion" title="Permanent link">&para;</a></h2>
 <p><strong>Síntoma:</strong> El flujo de trabajo <code>v1-runtime-health-strict.yml</code> falla.</p>
@@ -1995,7 +2079,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
+      Built from docs <code>12b242c</code>
       (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="5 de marzo de 2026 04:15:14 UTC">5 de marzo de 2026 04:15:14</span>.
     </p>
   
@@ -2060,7 +2144,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

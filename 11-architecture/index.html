@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cat-Scan runs on one GCP VM: nginx, OAuth2 Proxy, Next.js, and a 118-route FastAPI API over Cloud SQL Postgres 15 plus BigQuery for batch RTB analytics.">
+        <meta name="description" content="Cat-Scan runs on Hetzner. The dashboard and MCP server use the API. A separate Postgres host supplies reporting data. Google supplies external services.">
       
       
       
@@ -50,7 +50,7 @@
     
     
   
-    <title>RTB Architecture: FastAPI, Postgres, BigQuery | Cat-Scan</title>
+    <title>Cat-Scan Architecture: API, MCP and Postgres</title>
   
 
     
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-11-architecture-overview" class="md-skip">
+        <a href="#chapter-11-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RTB Architecture: FastAPI, Postgres, BigQuery | Cat-Scan
+              Cat-Scan Architecture: API, MCP and Postgres
             
           </span>
         </div>
@@ -1175,6 +1175,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-publisher-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publisher Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1331,10 +1359,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-topology" class="md-nav__link">
+  <a href="#request-paths" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System topology
+        Request paths
       
     </span>
   </a>
@@ -1342,10 +1370,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#container-layout" class="md-nav__link">
+  <a href="#service-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Container layout
+        Service boundaries
       
     </span>
   </a>
@@ -1353,10 +1381,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auth-trust-chain" class="md-nav__link">
+  <a href="#data-processing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Auth trust chain
+        Data processing
       
     </span>
   </a>
@@ -1364,10 +1392,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-two-databases" class="md-nav__link">
+  <a href="#release-controls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why two databases
+        Release controls
       
     </span>
   </a>
@@ -1375,21 +1403,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-codebase-structure" class="md-nav__link">
+  <a href="#source-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key codebase structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related
+        Source directories
       
     </span>
   </a>
@@ -1560,6 +1577,62 @@
     
   
     Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-agent-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP and Agent Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-grok-bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grok Bot Setup
   
 
     
@@ -1750,10 +1823,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-topology" class="md-nav__link">
+  <a href="#request-paths" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System topology
+        Request paths
       
     </span>
   </a>
@@ -1761,10 +1834,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#container-layout" class="md-nav__link">
+  <a href="#service-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Container layout
+        Service boundaries
       
     </span>
   </a>
@@ -1772,10 +1845,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auth-trust-chain" class="md-nav__link">
+  <a href="#data-processing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Auth trust chain
+        Data processing
       
     </span>
   </a>
@@ -1783,10 +1856,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-two-databases" class="md-nav__link">
+  <a href="#release-controls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why two databases
+        Release controls
       
     </span>
   </a>
@@ -1794,21 +1867,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-codebase-structure" class="md-nav__link">
+  <a href="#source-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key codebase structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related
+        Source directories
       
     </span>
   </a>
@@ -1836,152 +1898,149 @@
   
 
 
-<h1 id="chapter-11-architecture-overview">Chapter 11: Architecture Overview<a class="headerlink" href="#chapter-11-architecture-overview" title="Permanent link">&para;</a></h1>
-<p><em>Audience: DevOps, platform engineers</em></p>
-<h2 id="system-topology">System topology<a class="headerlink" href="#system-topology" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>                                    Internet
-                                       │
-                                 ┌─────┴─────┐
-                                 │   nginx    │  :443 (TLS termination)
-                                 └──┬──────┬──┘
-                                    │      │
-                          ┌─────────┘      └─────────┐
-                          │                          │
-                  ┌───────┴────────┐       ┌─────────┴─────────┐
-                  │  OAuth2 Proxy  │       │  Next.js Dashboard │  :3000
-                  │  (Google SSO)  │       │  (static + SSR)    │
-                  └───────┬────────┘       └───────────────────┘
-                          │
-                  ┌───────┴────────┐
-                  │   FastAPI API  │  :8000
-                  │  (118+ routes) │
-                  └───────┬────────┘
-                          │
-              ┌───────────┴───────────┐
-              │                       │
-    ┌─────────┴──────────┐   ┌────────┴────────┐
-    │ Cloud SQL Proxy    │   │   BigQuery       │
-    │ (Postgres sidecar) │   │ (batch analytics)│
-    └─────────┬──────────┘   └─────────────────┘
-              │
-    ┌─────────┴──────────┐
-    │  Cloud SQL         │
-    │  (Postgres 15)     │
-    └────────────────────┘
-</code></pre></div>
-<h2 id="container-layout">Container layout<a class="headerlink" href="#container-layout" title="Permanent link">&para;</a></h2>
-<p>Production runs on a single GCP VM (<code>&lt;PRODUCTION_VM&gt;</code>, zone
-<code>&lt;GCP_ZONE&gt;</code>) using <code>docker-compose.yml</code>.</p>
+<h1 id="chapter-11-architecture">Chapter 11: Architecture<a class="headerlink" href="#chapter-11-architecture" title="Permanent link">&para;</a></h1>
+<p><em>Audience: System administrators and developers</em></p>
+<p>Production runs on Hetzner after the cutover on 1 August 2026.
+The app host runs the API, dashboard and MCP containers.
+A separate database host runs Postgres.
+The previous GCP app and Cloud SQL source remain frozen.
+Keep their writers, timers and schedulers stopped.</p>
+<h2 id="request-paths">Request paths<a class="headerlink" href="#request-paths" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Container</th>
-<th>Image</th>
-<th>Port</th>
-<th>Role</th>
+<th>Client</th>
+<th>Path</th>
+<th>Access control</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>catscan-api</code></td>
-<td><code>&lt;GCP_REGION&gt;-docker.pkg.dev/.../api:sha-XXXXXXX</code></td>
-<td>8000</td>
-<td>FastAPI backend</td>
+<td>Browser</td>
+<td>HTTPS edge → dashboard and API → Postgres</td>
+<td>App session and user permissions</td>
 </tr>
 <tr>
-<td><code>catscan-dashboard</code></td>
-<td><code>&lt;GCP_REGION&gt;-docker.pkg.dev/.../dashboard:sha-XXXXXXX</code></td>
-<td>3000</td>
-<td>Next.js frontend</td>
+<td>MCP client</td>
+<td>HTTPS edge → MCP server → Agent API</td>
+<td>Agent token and current buyer permissions</td>
 </tr>
 <tr>
-<td><code>oauth2-proxy</code></td>
-<td>stock oauth2-proxy image</td>
-<td>4180</td>
-<td>Google OAuth2 authentication</td>
+<td>Direct Agent API client</td>
+<td>HTTPS edge → Agent API</td>
+<td>Agent token and current buyer permissions</td>
 </tr>
 <tr>
-<td><code>cloudsql-proxy</code></td>
-<td>Google Cloud SQL Auth Proxy</td>
-<td>5432</td>
-<td>Postgres connection proxy</td>
-</tr>
-<tr>
-<td><code>nginx</code></td>
-<td>stock nginx with config</td>
-<td>80/443</td>
-<td>Reverse proxy, TLS, routing</td>
+<td>Publisher lookup</td>
+<td>API → app stores, publisher websites and Google Marketplace</td>
+<td>Buyer permission and the selected service account</td>
 </tr>
 </tbody>
 </table>
-<h2 id="auth-trust-chain">Auth trust chain<a class="headerlink" href="#auth-trust-chain" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>Browser → nginx → OAuth2 Proxy → sets &lt;AUTH_HEADER&gt; header → nginx → API
-</code></pre></div>
-<ol>
-<li>Browser hits nginx.</li>
-<li>nginx routes <code>/oauth2/*</code> to OAuth2 Proxy.</li>
-<li>OAuth2 Proxy authenticates via Google, sets <code>&lt;AUTH_HEADER&gt;</code> header.</li>
-<li>Subsequent requests pass through nginx with <code>&lt;AUTH_HEADER&gt;</code> intact.</li>
-<li>API reads <code>&lt;AUTH_HEADER&gt;</code> and trusts it (when <code>OAUTH2_PROXY_ENABLED=true</code>).</li>
-</ol>
-<p><strong>Important:</strong> The API only trusts <code>&lt;AUTH_HEADER&gt;</code> from internal traffic. External
-requests with a forged <code>&lt;AUTH_HEADER&gt;</code> header are rejected by nginx.</p>
-<h2 id="why-two-databases">Why two databases<a class="headerlink" href="#why-two-databases" title="Permanent link">&para;</a></h2>
-<p>Cat-Scan uses both Postgres and BigQuery for different roles:</p>
+<p>The <a href="../20-grok-bot/#connection-path">Grok connection diagram</a> shows the command-based connector path.</p>
+<h2 id="service-boundaries">Service boundaries<a class="headerlink" href="#service-boundaries" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Concern</th>
-<th>Postgres (Cloud SQL)</th>
-<th>BigQuery</th>
+<th>Service</th>
+<th>Function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Role</strong></td>
-<td>Operational database: serves the app</td>
-<td>Data warehouse: stores raw data, runs batch analytics</td>
+<td>HTTPS edge</td>
+<td>TLS termination and request routing</td>
 </tr>
 <tr>
-<td><strong>Cost model</strong></td>
-<td>Fixed hosting cost, unlimited queries</td>
-<td>Pay per query based on data scanned</td>
+<td><code>rtbcat-dashboard</code></td>
+<td>Next.js user interface</td>
 </tr>
 <tr>
-<td><strong>Latency</strong></td>
-<td>Millisecond responses</td>
-<td>1--3 second overhead even for simple queries</td>
+<td><code>rtbcat-api</code></td>
+<td>Authentication, buyer permissions, data access and external requests</td>
 </tr>
 <tr>
-<td><strong>Concurrency</strong></td>
-<td>Handles hundreds of API connections</td>
-<td>Not built for concurrent dashboard refreshes</td>
+<td><code>rtbcat-mcp</code></td>
+<td>Eight read tools that use the Agent API</td>
 </tr>
 <tr>
-<td><strong>Data</strong></td>
-<td>Pre-aggregated summaries, configs, user data</td>
-<td>Raw granular rows (millions per day)</td>
+<td>Postgres</td>
+<td>Application data, reporting totals and calculated summaries</td>
 </tr>
 </tbody>
 </table>
-<p>The pattern: BigQuery is the archive warehouse; Postgres is the store shelf.
-You don't send customers to rummage through the warehouse.</p>
-<h2 id="key-codebase-structure">Key codebase structure<a class="headerlink" href="#key-codebase-structure" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>/api/routers/       FastAPI route handlers (118+ endpoints)
-/services/          Business logic layer
-/storage/           Database access (Postgres repos, BigQuery clients)
-/dashboard/src/     Next.js 14 frontend (App Router)
-/scripts/           Operational and diagnostic scripts
-/docs/              Architecture docs and AI agent logs
-</code></pre></div>
-<p>The backend follows a <strong>Router -&gt; Service -&gt; Repository</strong> pattern. Routers
-handle HTTP; services contain business logic; repositories execute SQL.</p>
-<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../12-deployment/">Deployment</a>: how the system gets deployed</li>
-<li><a href="../14-database/">Database Operations</a>: Postgres specifics</li>
-<li><a href="../17-integrations/">Integrations</a>: external service connections</li>
-</ul>
+<p>The MCP process has no database connection or stored Google credential.
+It sends the caller's token to the Agent API for each tool call.
+The API applies both token limits and current user permissions.</p>
+<p>The production Compose file binds service ports to the app host's loopback interface.
+It uses verified TLS for the private Postgres connection.
+Google service credentials remain on the API side of the connection.</p>
+<h2 id="data-processing">Data processing<a class="headerlink" href="#data-processing" title="Permanent link">&para;</a></h2>
+<p>The API uses calculated reporting tables for analytics requests.
+Batch requests must not aggregate the large raw <code>rtb_daily</code> table.
+Creative performance uses calculated creative data.
+Canonical daily spend uses buyer totals.</p>
+<p>The scheduler adds refresh requests to a job queue.
+A worker processes one refresh job at a time under a database lock.
+A scheduler response means that the queue accepted the request.
+Use <code>/precompute/health</code> and the refresh ledger to determine completion.</p>
+<p>BigQuery can hold raw archives and support batch operations.
+It is not the database for interactive dashboard requests.
+Publisher lookup gets current evidence from external sources.
+It does not automatically save a publisher directory.</p>
+<h2 id="release-controls">Release controls<a class="headerlink" href="#release-controls" title="Permanent link">&para;</a></h2>
+<p>Production uses images with fixed digests for an exact source commit.
+The build workflow produces the images and the release manifest.
+The deployment script applies that manifest to the app host.
+The API and MCP must come from the same release.</p>
+<p>Do not deploy the old GCP application or start its writers.
+Do not edit files inside production containers.
+Use the current <a href="https://github.com/jenbrannstrom/rtbcat-platform/tree/main/scripts/hetzner">Hetzner deployment scripts</a> for release and rollback operations.
+Older deployment chapters can contain commands for the previous GCP system.</p>
+<h2 id="source-directories">Source directories<a class="headerlink" href="#source-directories" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api/routers/</code></td>
+<td>HTTP routes</td>
+</tr>
+<tr>
+<td><code>services/</code></td>
+<td>Application operations</td>
+</tr>
+<tr>
+<td><code>storage/</code></td>
+<td>Database access</td>
+</tr>
+<tr>
+<td><code>mcp_server/</code></td>
+<td>MCP tools and transport</td>
+</tr>
+<tr>
+<td><code>integrations/grok/</code></td>
+<td>Repository bridge in the release candidate</td>
+</tr>
+<tr>
+<td><code>dashboard/src/</code></td>
+<td>User interface</td>
+</tr>
+<tr>
+<td><code>deploy/hetzner/</code></td>
+<td>Production container configuration</td>
+</tr>
+<tr>
+<td><code>scripts/hetzner/</code></td>
+<td>Deployment and rollback commands</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../19-agent-access/">MCP access</a>, <a href="../18-publisher-research/">Publisher research</a> and <a href="../17-integrations/">Integrations</a>.</p>
 
 
 
@@ -2002,7 +2061,7 @@ handle HTTP; services contain business logic; repositories execute SQL.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 12, 2026 20:59:27 UTC">June 12, 2026 20:59:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>
   </span>
 
     
@@ -2019,8 +2078,8 @@ handle HTTP; services contain business logic; repositories execute SQL.</p>
   
     <hr>
     <p class="catscan-freshness" style="font-size:.72rem;opacity:.7;margin-top:1.2rem">
-      Built from docs <code>638f93f</code>
-      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 12, 2026 20:59:27 UTC">June 12, 2026 20:59:27</span>.
+      Built from docs <code>12b242c</code>
+      (platform <code>N/A</code>) — last updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 14, 2026 14:37:03 UTC">October 14, 2026 14:37:03</span>.
     </p>
   
 
@@ -2084,7 +2143,7 @@ handle HTTP; services contain business logic; repositories execute SQL.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
