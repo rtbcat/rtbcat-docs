@@ -10,7 +10,7 @@ description: "Cat-Scan runs on Hetzner. The dashboard and MCP server use the API
 Production runs on Hetzner after the cutover on 1 August 2026.
 The app host runs the API, dashboard and MCP containers.
 A separate database host runs Postgres.
-The previous GCP app and Cloud SQL source remain frozen.
+The previous GCP app and Cloud SQL source stay frozen.
 Keep their writers, timers and schedulers stopped.
 
 ## Request paths
@@ -40,7 +40,7 @@ The API applies both token limits and current user permissions.
 
 The production Compose file binds service ports to the app host's loopback interface.
 It uses verified TLS for the private Postgres connection.
-Google service credentials remain on the API side of the connection.
+Google service credentials stay on the API side of the connection.
 
 ## Data processing
 
@@ -52,7 +52,7 @@ Canonical daily spend uses buyer totals.
 The scheduler adds refresh requests to a job queue.
 A worker processes one refresh job at a time under a database lock.
 A scheduler response means that the queue accepted the request.
-Use `/precompute/health` and the refresh ledger to determine completion.
+Use `/precompute/health` and the refresh ledger to find the job status.
 
 BigQuery can hold raw archives and support batch operations.
 It is not the database for interactive dashboard requests.
@@ -61,13 +61,13 @@ It does not automatically save a publisher directory.
 
 ## Release controls
 
-Production uses images with fixed digests for an exact source commit.
+Production uses images with fixed digests for a specified source commit.
 The build workflow produces the images and the release manifest.
 The deployment script applies that manifest to the app host.
 The API and MCP must come from the same release.
 
-Do not deploy the old GCP application or start its writers.
-Do not edit files inside production containers.
+Do not deploy the previous GCP application or start its writers.
+Do not edit files in production containers.
 Use the current [Hetzner deployment scripts](https://github.com/jenbrannstrom/rtbcat-platform/tree/main/scripts/hetzner) for release and rollback operations.
 Older deployment chapters can contain commands for the previous GCP system.
 

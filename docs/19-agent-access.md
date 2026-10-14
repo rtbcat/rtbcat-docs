@@ -1,6 +1,6 @@
 ---
 title: "MCP and Agent API Access | Cat-Scan"
-description: "Connect an AI client to eight read tools. Set buyer permissions, create an agent token, inspect data quality and remove access."
+description: "Connect an AI client to eight read tools. Set buyer permissions, create an agent token, examine data quality and remove access."
 ---
 
 # MCP and Agent API access
@@ -28,22 +28,23 @@ The MCP server does not store Google credentials or connect directly to the data
 | `rtbcat_check_data_quality` | Compare canonical spend with creative allocation. |
 | `rtbcat_lookup_publisher` | Get current publisher, manager, seller and contact evidence. |
 
-Reporting requests have a maximum date range of 90 days, including both end dates.
-Creative search gives a maximum of 100 rows per page.
-Use the returned cursor without changes to get the next page.
+Reporting requests have a maximum date range of 90 days, with the start and end dates.
+Creative search gives a maximum of 100 rows for each page.
+Use the supplied cursor without changes to get the next page.
 
-## Create an agent token
+## Make an agent token
 
-You need a Cat-Scan administrator session with the `sudo` role.
-Create a separate token for each client or workflow.
+You must have a Cat-Scan administrator session with the `sudo` role.
+Make a separate token for each client or workflow.
 
 1. Open **Admin → Agent tokens** at `/admin/agent-tokens`.
-2. Select the user identity for the token.
-3. Select the permitted buyer accounts.
-4. Select the necessary permissions from the table below.
-5. Set the expiry period.
-6. Create the token.
-7. Put the token in the client's secret store.
+2. Select **Mint token** to open the form.
+3. Select the user identity for the token.
+4. Select the permitted buyer accounts.
+5. Select the necessary permissions from the table below.
+6. Set the expiry period.
+7. Select **Mint token** in the form.
+8. Put the token in the client's secret store.
 
 | Permission | Access |
 |---|---|
@@ -57,8 +58,8 @@ The app shows the full token once.
 Do not put the token in chat messages, source files or command arguments.
 The database stores a hash of the token.
 
-An explicit buyer list remains fixed.
-Create a replacement token to add a buyer to that list.
+An explicit buyer list stays fixed.
+Make a replacement token to add a buyer to that list.
 For a user without the `sudo` role, `all_granted_buyers` follows the user's current buyer permissions.
 Both modes apply the user's current permissions on each request.
 
@@ -69,13 +70,13 @@ Set the server URL to `https://mcp.rtb.cat/mcp`.
 Configure the `Authorization` header with `Bearer` followed by the token.
 Use the client's secret substitution function for the token value.
 
-Client configuration formats can differ.
+Client configuration formats can be different.
 For a command-based Grok connector, use [Grok setup](20-grok-bot.md).
 
-1. Ask the client to list the MCP tools.
+1. Tell the client to list the MCP tools.
 2. Make sure that the list has the eight tools shown above.
 3. Call `rtbcat_list_buyers`.
-4. Make sure that the returned buyers agree with the token's permitted buyers.
+4. Make sure that the buyers in the result agree with the token's permitted buyers.
 5. Request data for one permitted buyer.
 
 A tool list alone does not prove data access.
@@ -91,7 +92,7 @@ Canonical daily spend comes from the buyer's reporting totals.
 Creative spend comes from allocation to individual creatives.
 The MCP server withholds creative spend figures when that allocation is not reconciled.
 The result then contains `spend_figures_withheld: true` and the allocation evidence.
-Do not substitute zero for a withheld or missing value.
+Do not replace a withheld or missing value with zero.
 
 Creative performance does not include clicks.
 It gives `clicks_available: false` and `total_clicks: null`.
@@ -104,17 +105,17 @@ See [Publisher research](18-publisher-research.md) for source limits and partial
 
 For planned token replacement:
 
-1. Create a replacement token before the old token expires.
+1. Make a replacement token before the previous token expires.
 2. Replace the token in the client's secret store.
 3. Restart the client connector if necessary.
-4. Call `rtbcat_list_buyers` to test access.
-5. Revoke the old token in **Admin → Agent tokens**.
+4. Call `rtbcat_list_buyers` for an access test.
+5. Revoke the previous token in **Admin → Agent tokens**.
 
 If a token is exposed, revoke that token immediately.
 Revocation stops access on the next tool call.
 It does not require a server restart.
 
-## Fault isolation
+## Find the cause of a fault
 
 | Result | Action |
 |---|---|
@@ -125,6 +126,6 @@ It does not require a server restart.
 | Public publisher evidence without Google evidence | Examine the Google status in the result. |
 
 `GET /health` on the MCP host shows the service's enabled state.
-A successful health response does not prove that the token can get data.
+A satisfactory health response does not prove that the token can get data.
 
 See the [API reference](https://docs.rtb.cat/api-reference/#agent-api-and-publisher-research) for direct HTTP routes.
