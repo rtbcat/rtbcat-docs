@@ -34,14 +34,14 @@ You must have these items:
 See [MCP access](19-agent-access.md) for token creation.
 
 The existing private connection uses an adapter on Grok's cloud computer.
-The reusable repository bridge is included in [version 0.10.0](https://github.com/jenbrannstrom/rtbcat-platform/releases/tag/v0.10.0).
+The reusable repository bridge is included in [version 0.10.1](https://github.com/jenbrannstrom/rtbcat-platform/releases/tag/v0.10.1).
 That version contains `integrations/grok/stdio_bridge.py`.
 A repository update does not automatically replace an existing private connector.
 
 ## Install the bridge
 
 1. Tell Grok to clone the platform repository on its cloud computer.
-2. Select the `v0.10.0` release tag.
+2. Select the `v0.10.1` release tag.
 3. Make a Python environment.
 4. Install the MCP requirements.
 
@@ -50,7 +50,7 @@ The commands for these steps follow.
 ```bash
 git clone https://github.com/jenbrannstrom/rtbcat-platform.git /workspace/rtbcat-platform
 cd /workspace/rtbcat-platform
-git checkout v0.10.0
+git checkout v0.10.1
 python3 -m venv /workspace/rtbcat-mcp-venv
 /workspace/rtbcat-mcp-venv/bin/pip install -r requirements-mcp.txt
 ```

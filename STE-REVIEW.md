@@ -23,11 +23,13 @@ standard. The standard itself is not copied into this repository.
   review. It is not a complete automated conformity test or certification.
 
 The guides describe the deployed MCP/API and the existing private Grok
-connection separately from the reusable bridge in the release candidate.
-They do not claim a stable release, saved publisher directory, verified
+connection separately from the released reusable bridge.
+They do not claim a saved publisher directory, verified
 management mandate from DIRECT entries, or automatic spend qualification.
 
 The new guides are English. Other locales use the configured English fallback
 until translations exist. Navigation uses normal page loads because the
 localization plugin reports that instant navigation is incompatible with its
 contextual language switcher.
+
+Release 0.10.1: review the new browser requirements and dependency policy with the same writing rules.

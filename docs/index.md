@@ -20,8 +20,15 @@ The function does not select publishers by spend or save a publisher directory.
 - [Grok Bot setup](20-grok-bot.md): private connector installation and access tests.
 
 The production services are available.
-The reusable repository bridge remains part of a release candidate.
+The reusable repository bridge is included in the public release.
 See the Grok guide for its current installation status.
+
+## Dashboard browser requirements
+
+Version 0.10.1 removes the temporary dependency exception from the release checks.
+The dashboard requires Chrome 111+, Firefox 128+ or Safari 16.4+.
+Use a current browser version.
+The MCP tools and token permissions are unchanged.
 
 ## The problem in one picture
 

@@ -65,6 +65,8 @@ Production uses images with fixed digests for a specified source commit.
 The build workflow produces the images and the release manifest.
 The deployment script applies that manifest to the app host.
 The API and MCP must come from the same release.
+All reported npm vulnerabilities block release.
+There are no dependency exceptions.
 
 Do not deploy the previous GCP application or start its writers.
 Do not edit files in production containers.
@@ -79,7 +81,7 @@ Older deployment chapters can contain commands for the previous GCP system.
 | `services/` | Application operations |
 | `storage/` | Database access |
 | `mcp_server/` | MCP tools and transport |
-| `integrations/grok/` | Repository bridge in the release candidate |
+| `integrations/grok/` | Released repository bridge |
 | `dashboard/src/` | User interface |
 | `deploy/hetzner/` | Production container configuration |
 | `scripts/hetzner/` | Deployment and rollback commands |
